@@ -1,0 +1,6 @@
+- **DHCP**: Network protocol that automatically assigns IP addresses and communication settings.
+- **Client-server model**: DHCP server assigns IPs, while devices (clients) request them.
+- **Simplification**: Removes the need for manual device configuration.
+- **Scalability**: Used in networks of all sizes, from small home setups to large infrastructures (ISPs, campuses).
+- **Compatibility**: Supports both IPv4 and IPv6 (known as DHCPv6).
+- **Routers**: Many home routers include a built-in DHCP server.
