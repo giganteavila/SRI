@@ -5,24 +5,24 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../" rel="prev"/>
-<link href="../01.-KVM/01.-Redes%20en%20KVM/" rel="next"/>
-<link href="../../assets/images/favicon.png" rel="icon"/>
+<link href="../../01.-Crear%20proyecto%20en%20GitHub/" rel="prev"/>
+<link href="../02.-Aprovisionamiento%20ligero%20de%20discos/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.0, mkdocs-material-9.5.35" name="generator"/>
-<title>01.-Crear proyecto en GitHub - SRI</title>
-<link href="../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>01.-Redes en KVM - SRI</title>
+<link href="../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="green" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#crear-proyecto-en-github">
+<a class="md-skip" href="#redes-en-kvm">
           Saltar a contenido
         </a>
 </div>
@@ -30,7 +30,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Cabecera" class="md-header__inner md-grid">
-<a aria-label="SRI" class="md-header__button md-logo" data-md-component="logo" href="../.." title="SRI">
+<a aria-label="SRI" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="SRI">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              01.-Crear proyecto en GitHub
+              01.-Redes en KVM
             
           </span>
 </div>
@@ -100,7 +100,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../..">
         
   
     
@@ -110,7 +110,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../01.-DHCP/">
+<a class="md-tabs__link" href="../../../01.-DHCP/">
           
   
     
@@ -120,7 +120,7 @@
         </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../">
+<a class="md-tabs__link" href="../../">
           
   
     
@@ -139,14 +139,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navegación" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="SRI" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="SRI">
+<a aria-label="SRI" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="SRI">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     SRI
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
     Home
   </span>
@@ -155,7 +155,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../01.-DHCP/">
+<a class="md-nav__link" href="../../../01.-DHCP/">
 <span class="md-ellipsis">
     01.-DHCP
   </span>
@@ -171,7 +171,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/01.-History/">
+<a class="md-nav__link" href="../../../01.-DHCP/01.-History/">
 <span class="md-ellipsis">
     01.-History
   </span>
@@ -180,7 +180,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../01.-DHCP/02.-Overview/">
+<a class="md-nav__link" href="../../../01.-DHCP/02.-Overview/">
 <span class="md-ellipsis">
     02.-Overview
   </span>
@@ -196,21 +196,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/02.-Overview/01.-How%20DHCP%20Works/">
+<a class="md-nav__link" href="../../../01.-DHCP/02.-Overview/01.-How%20DHCP%20Works/">
 <span class="md-ellipsis">
     01.-How DHCP Works
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/02.-Overview/02.-IP%20Address%20Allocation%20Methods/">
+<a class="md-nav__link" href="../../../01.-DHCP/02.-Overview/02.-IP%20Address%20Allocation%20Methods/">
 <span class="md-ellipsis">
     02.-IP Address Allocation Methods
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/02.-Overview/03.-Additional%20Notes/">
+<a class="md-nav__link" href="../../../01.-DHCP/02.-Overview/03.-Additional%20Notes/">
 <span class="md-ellipsis">
     03.-Additional Notes
   </span>
@@ -222,7 +222,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../01.-DHCP/03.-Operation%20Process/">
+<a class="md-nav__link" href="../../../01.-DHCP/03.-Operation%20Process/">
 <span class="md-ellipsis">
     03.-Operation Process
   </span>
@@ -238,35 +238,35 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/03.-Operation%20Process/01.-Discovery/">
+<a class="md-nav__link" href="../../../01.-DHCP/03.-Operation%20Process/01.-Discovery/">
 <span class="md-ellipsis">
     01.-Discovery
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/03.-Operation%20Process/02.-Offer/">
+<a class="md-nav__link" href="../../../01.-DHCP/03.-Operation%20Process/02.-Offer/">
 <span class="md-ellipsis">
     02.-Offer
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/03.-Operation%20Process/03.-Request/">
+<a class="md-nav__link" href="../../../01.-DHCP/03.-Operation%20Process/03.-Request/">
 <span class="md-ellipsis">
     03.-Request
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/03.-Operation%20Process/04.-Acknowledgement/">
+<a class="md-nav__link" href="../../../01.-DHCP/03.-Operation%20Process/04.-Acknowledgement/">
 <span class="md-ellipsis">
     04.-Acknowledgement
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/03.-Operation%20Process/05.-Additional%20Steps/">
+<a class="md-nav__link" href="../../../01.-DHCP/03.-Operation%20Process/05.-Additional%20Steps/">
 <span class="md-ellipsis">
     05.-Additional Steps
   </span>
@@ -276,7 +276,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/04.-Client%20configuration%20parameters/">
+<a class="md-nav__link" href="../../../01.-DHCP/04.-Client%20configuration%20parameters/">
 <span class="md-ellipsis">
     04.-Client configuration parameters
   </span>
@@ -285,7 +285,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../01.-DHCP/05.-DHCP%20Options/">
+<a class="md-nav__link" href="../../../01.-DHCP/05.-DHCP%20Options/">
 <span class="md-ellipsis">
     05.-DHCP Options
   </span>
@@ -301,35 +301,35 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/05.-DHCP%20Options/01.-Main%20Categories%20of%20DHCP%20Options/">
+<a class="md-nav__link" href="../../../01.-DHCP/05.-DHCP%20Options/01.-Main%20Categories%20of%20DHCP%20Options/">
 <span class="md-ellipsis">
     01.-Main Categories of DHCP Options
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/05.-DHCP%20Options/02.-Important%20DHCP%20Extensions/">
+<a class="md-nav__link" href="../../../01.-DHCP/05.-DHCP%20Options/02.-Important%20DHCP%20Extensions/">
 <span class="md-ellipsis">
     02.-Important DHCP Extensions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/05.-DHCP%20Options/03.-DHCP%20Message%20Types/">
+<a class="md-nav__link" href="../../../01.-DHCP/05.-DHCP%20Options/03.-DHCP%20Message%20Types/">
 <span class="md-ellipsis">
     03.-DHCP Message Types
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/05.-DHCP%20Options/04.-Client%20Vendor%20Identification/">
+<a class="md-nav__link" href="../../../01.-DHCP/05.-DHCP%20Options/04.-Client%20Vendor%20Identification/">
 <span class="md-ellipsis">
     04.-Client Vendor Identification
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/05.-DHCP%20Options/05.-Other%20Relevant%20Extensions/">
+<a class="md-nav__link" href="../../../01.-DHCP/05.-DHCP%20Options/05.-Other%20Relevant%20Extensions/">
 <span class="md-ellipsis">
     05.-Other Relevant Extensions
   </span>
@@ -341,7 +341,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_7" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../01.-DHCP/06.-Relaying/">
+<a class="md-nav__link" href="../../../01.-DHCP/06.-Relaying/">
 <span class="md-ellipsis">
     06.-Relaying
   </span>
@@ -357,28 +357,28 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/06.-Relaying/01.-DHCP%20Relay%20Process/">
+<a class="md-nav__link" href="../../../01.-DHCP/06.-Relaying/01.-DHCP%20Relay%20Process/">
 <span class="md-ellipsis">
     01.-DHCP Relay Process
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/06.-Relaying/02.-Special%20Considerations/">
+<a class="md-nav__link" href="../../../01.-DHCP/06.-Relaying/02.-Special%20Considerations/">
 <span class="md-ellipsis">
     02.-Special Considerations
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/06.-Relaying/04.-Benefits/">
+<a class="md-nav__link" href="../../../01.-DHCP/06.-Relaying/04.-Benefits/">
 <span class="md-ellipsis">
     04.-Benefits
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-DHCP/06.-Relaying/08.-Client%20states/">
+<a class="md-nav__link" href="../../../01.-DHCP/06.-Relaying/08.-Client%20states/">
 <span class="md-ellipsis">
     08.-Client states
   </span>
@@ -393,7 +393,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     99.-Disaster Drawer
   </span>
@@ -408,17 +408,38 @@
             99.-Disaster Drawer
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../01.-Crear%20proyecto%20en%20GitHub/">
+<span class="md-ellipsis">
+    01.-Crear proyecto en GitHub
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    01.-KVM
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            01.-KVM
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    01.-Crear proyecto en GitHub
+    01.-Redes en KVM
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    01.-Crear proyecto en GitHub
+    01.-Redes en KVM
   </span>
 </a>
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
@@ -428,59 +449,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crear-un-nuevo-repositorio-en-github">
+<a class="md-nav__link" href="#redes-en-kvm">
 <span class="md-ellipsis">
-      Crear un nuevo repositorio en GitHub
+      Redes en KVM
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#subir-tu-proyecto-local-a-github">
+<a class="md-nav__link" href="#componentes-clave">
 <span class="md-ellipsis">
-      Subir tu proyecto local a GitHub
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verificacion">
-<span class="md-ellipsis">
-      Verificación
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#recomendaciones-adicionales">
-<span class="md-ellipsis">
-      Recomendaciones adicionales
+      Componentes clave
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-<span class="md-ellipsis">
-    01.-KVM
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_3">
-<span class="md-nav__icon md-icon"></span>
-            01.-KVM
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01.-KVM/01.-Redes%20en%20KVM/">
-<span class="md-ellipsis">
-    01.-Redes en KVM
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../01.-KVM/02.-Aprovisionamiento%20ligero%20de%20discos/">
+<a class="md-nav__link" href="../02.-Aprovisionamiento%20ligero%20de%20discos/">
 <span class="md-ellipsis">
     02.-Aprovisionamiento ligero de discos
   </span>
@@ -507,30 +493,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crear-un-nuevo-repositorio-en-github">
+<a class="md-nav__link" href="#redes-en-kvm">
 <span class="md-ellipsis">
-      Crear un nuevo repositorio en GitHub
+      Redes en KVM
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#subir-tu-proyecto-local-a-github">
+<a class="md-nav__link" href="#componentes-clave">
 <span class="md-ellipsis">
-      Subir tu proyecto local a GitHub
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verificacion">
-<span class="md-ellipsis">
-      Verificación
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#recomendaciones-adicionales">
-<span class="md-ellipsis">
-      Recomendaciones adicionales
+      Componentes clave
     </span>
 </a>
 </li>
@@ -541,57 +513,29 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="crear-proyecto-en-github">Crear proyecto en GitHub<a class="headerlink" href="#crear-proyecto-en-github" title="Permanent link">¶</a></h1>
-<h2 id="crear-un-nuevo-repositorio-en-github">Crear un nuevo repositorio en GitHub<a class="headerlink" href="#crear-un-nuevo-repositorio-en-github" title="Permanent link">¶</a></h2>
-<ol>
-<li>Inicia sesión en tu cuenta de GitHub.</li>
-<li>En la esquina superior derecha de cualquier página, haz clic en el símbolo "+" y selecciona "Nuevo repositorio".</li>
-<li>Escribe un nombre corto y descriptivo para tu repositorio.</li>
-<li>Opcionalmente, añade una descripción del proyecto.</li>
-<li>Elige la visibilidad del repositorio (público o privado).</li>
-<li>No selecciones la opción de inicializar el repositorio con un README, ya que vas a subir un proyecto existente.</li>
-<li>Haz clic en "Crear repositorio".</li>
-</ol>
-<h2 id="subir-tu-proyecto-local-a-github">Subir tu proyecto local a GitHub<a class="headerlink" href="#subir-tu-proyecto-local-a-github" title="Permanent link">¶</a></h2>
-<p>Una vez creado el repositorio, GitHub te mostrará instrucciones para subir un proyecto existente. Sigue estos pasos en tu terminal local:</p>
-<ol>
-<li>
-<p>Abre la terminal y navega al directorio de tu proyecto local.</p>
-</li>
-<li>
-<p>Inicializa el repositorio Git local (si aún no lo has hecho):
-   <code>git init</code></p>
-</li>
-<li>
-<p>Añade todos los archivos de tu proyecto al repositorio:
-   <code>git add .</code></p>
-</li>
-<li>
-<p>Realiza el primer commit:
-   <code>git commit -m "Primer commit: Subida inicial del proyecto"</code></p>
-</li>
-<li>
-<p>Añade la URL del repositorio remoto de GitHub:
-   <code>git remote add origin https://github.com/tu-usuario/nombre-del-repositorio.git</code></p>
-</li>
-<li>
-<p>Cambia el nombre de la rama principal de master a main:</p>
-</li>
-</ol>
-<p><code>bash
-   git branch -M main</code></p>
-<ol>
-<li>Sube los cambios al repositorio remoto:</li>
-</ol>
-<p><code>git push -u origin main</code></p>
-<h2 id="verificacion">Verificación<a class="headerlink" href="#verificacion" title="Permanent link">¶</a></h2>
-<p>Después de completar estos pasos, actualiza la página de tu repositorio en GitHub. Deberías ver todos los archivos de tu proyecto local ahora en GitHub.</p>
-<h2 id="recomendaciones-adicionales">Recomendaciones adicionales<a class="headerlink" href="#recomendaciones-adicionales" title="Permanent link">¶</a></h2>
+<h1>01.-Redes en KVM</h1>
+<h2 id="redes-en-kvm">Redes en KVM<a class="headerlink" href="#redes-en-kvm" title="Permanent link">¶</a></h2>
+<p>KVM ofrece varias opciones para configurar redes virtuales:</p>
+<p><strong>Bridge Mode</strong>:</p>
 <ul>
-<li>Si tu proyecto incluye archivos grandes o sensibles, considera usar un archivo <code>.gitignore</code> para excluirlos del control de versiones.</li>
-<li>Asegúrate de tener un README.md en tu proyecto que explique qué hace y cómo utilizarlo.</li>
-<li>Si estás utilizando GitHub Pages para publicar tu sitio, asegúrate de que tu estructura de archivos sea correcta y que tengas un archivo <code>index.html</code> en la raíz o en la carpeta <code>/docs</code>, dependiendo de tu configuración.</li>
+<li>Permite que las VMs aparezcan como dispositivos directamente conectados a la red física.</li>
+<li>Utiliza bridges de Linux para compartir conexiones entre interfaces físicas y virtuales.</li>
+<li>Ideal para entornos donde las VMs necesitan acceso directo a la red local.</li>
 </ul>
+<p><strong>Routed Mode</strong>:</p>
+<ul>
+<li>Crea una red virtual aislada para las VMs.</li>
+<li>El host KVM actúa como router, enmascarando las VMs.</li>
+<li>Útil cuando se requiere mayor control y aislamiento de las VMs.</li>
+</ul>
+<h2 id="componentes-clave">Componentes clave<a class="headerlink" href="#componentes-clave" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Hipervisor</strong>: KVM convierte el kernel de Linux en un hipervisor tipo 1.</li>
+<li><strong>QEMU</strong>: Emulador que trabaja en conjunto con KVM para proporcionar virtualización completa.</li>
+<li><strong>libvirt</strong>: Capa de gestión que facilita la configuración y ejecución de VMs.</li>
+<li><strong>Bridges</strong>: Utilizados para conectar las interfaces virtuales (TAPs) con las interfaces físicas.</li>
+<li><strong>TAPs</strong>: Interfaces de software que emulan las NICs virtuales de las VMs.</li>
+</ol>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -619,9 +563,9 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
-<script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
-<script src="../../javascripts/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+<script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
