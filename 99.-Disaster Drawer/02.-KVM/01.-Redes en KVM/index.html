@@ -5,10 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../01.-Redes%20en%20KVM/" rel="prev"/>
+<link href="../" rel="prev"/>
+<link href="../02.-Aprovisionamiento%20ligero%20de%20discos/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.0, mkdocs-material-9.5.35" name="generator"/>
-<title>02.-Aprovisionamiento ligero de discos - SRI</title>
+<title>01.-Redes en KVM - SRI</title>
 <link href="../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creacion-de-la-imagen-de-disco">
+<a class="md-skip" href="#redes-en-kvm">
           Saltar a contenido
         </a>
 </div>
@@ -45,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              02.-Aprovisionamiento ligero de discos
+              01.-Redes en KVM
             
           </span>
 </div>
@@ -416,36 +417,33 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
-    01.-KVM
+    02.-KVM
   </span>
+</a>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="true" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
-            01.-KVM
+            02.-KVM
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../01.-Redes%20en%20KVM/">
-<span class="md-ellipsis">
-    01.-Redes en KVM
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    02.-Aprovisionamiento ligero de discos
+    01.-Redes en KVM
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    02.-Aprovisionamiento ligero de discos
+    01.-Redes en KVM
   </span>
 </a>
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
@@ -455,42 +453,28 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-imagen-de-disco">
+<a class="md-nav__link" href="#redes-en-kvm">
 <span class="md-ellipsis">
-      Creación de la imagen de disco
+      Redes en KVM
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuracion-en-virt-manager">
+<a class="md-nav__link" href="#componentes-clave">
 <span class="md-ellipsis">
-      Configuración en virt-manager
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configuracion-en-linea-de-comandos">
-<span class="md-ellipsis">
-      Configuración en línea de comandos
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ventajas-del-aprovisionamiento-ligero">
-<span class="md-ellipsis">
-      Ventajas del aprovisionamiento ligero
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#consideraciones-importantes">
-<span class="md-ellipsis">
-      Consideraciones importantes
+      Componentes clave
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02.-Aprovisionamiento%20ligero%20de%20discos/">
+<span class="md-ellipsis">
+    02.-Aprovisionamiento ligero de discos
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -513,37 +497,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-imagen-de-disco">
+<a class="md-nav__link" href="#redes-en-kvm">
 <span class="md-ellipsis">
-      Creación de la imagen de disco
+      Redes en KVM
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuracion-en-virt-manager">
+<a class="md-nav__link" href="#componentes-clave">
 <span class="md-ellipsis">
-      Configuración en virt-manager
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configuracion-en-linea-de-comandos">
-<span class="md-ellipsis">
-      Configuración en línea de comandos
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ventajas-del-aprovisionamiento-ligero">
-<span class="md-ellipsis">
-      Ventajas del aprovisionamiento ligero
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#consideraciones-importantes">
-<span class="md-ellipsis">
-      Consideraciones importantes
+      Componentes clave
     </span>
 </a>
 </li>
@@ -554,55 +517,29 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>02.-Aprovisionamiento ligero de discos</h1>
-<p>Para crear una máquina virtual cuyo espacio físico de almacenamiento crezca según la demanda, ocupando menos espacio en disco  inicialmente, puedes utilizar el aprovisionamiento ligero (thin  provisioning) con imágenes de disco de expansión dinámica. Esto se puede lograr de la siguiente manera:</p>
-<h2 id="creacion-de-la-imagen-de-disco">Creación de la imagen de disco<a class="headerlink" href="#creacion-de-la-imagen-de-disco" title="Permanent link">¶</a></h2>
-<ol>
-<li>Utiliza el formato qcow2 (QEMU Copy-On-Write versión 2) para la imagen de disco:</li>
-</ol>
-<pre><code>text
-qemu-img create -f qcow2 nombre_imagen.qcow2 tamaño_virtual
-</code></pre>
-<p>Por ejemplo:</p>
-<pre><code>text
-qemu-img create -f qcow2 mi_vm_disco.qcow2 50G
-</code></pre>
-<p>Este comando crea una imagen de disco que aparecerá como un disco  de 50 GB para la máquina virtual, pero inicialmente ocupará muy poco  espacio en el host.</p>
-<h2 id="configuracion-en-virt-manager">Configuración en virt-manager<a class="headerlink" href="#configuracion-en-virt-manager" title="Permanent link">¶</a></h2>
-<p>Si estás usando virt-manager para crear la VM:</p>
-<ol>
-<li>En el paso de configuración del almacenamiento, selecciona "Select or create custom storage".</li>
-<li>Haz clic en "Manage..." y luego en "Add Pool" para crear un nuevo pool si es necesario.</li>
-<li>Selecciona el pool y haz clic en "Create new volume".</li>
-<li>En el diálogo de creación de volumen: Elige el formato "qcow2" Establece el tamaño máximo deseado Asegúrate de que "Allocation" esté configurado en 0 para thin provisioning</li>
-</ol>
-<h2 id="configuracion-en-linea-de-comandos">Configuración en línea de comandos<a class="headerlink" href="#configuracion-en-linea-de-comandos" title="Permanent link">¶</a></h2>
-<p>Si prefieres usar la línea de comandos:</p>
-<ol>
-<li>Crea la imagen de disco como se mostró anteriormente.</li>
-<li>Al definir la VM con <code>virt-install</code>, usa la opción <code>--disk</code>:</li>
-</ol>
-<pre><code>textvirt-install --name mi_vm --memory 2048 --vcpus 2 \
-  --disk path=/ruta/a/mi_vm_disco.qcow2,format=qcow2,bus=virtio \
-  --os-variant=rhel8.0 \
-  # ... otras opciones necesarias
-</code></pre>
-<h2 id="ventajas-del-aprovisionamiento-ligero">Ventajas del aprovisionamiento ligero<a class="headerlink" href="#ventajas-del-aprovisionamiento-ligero" title="Permanent link">¶</a></h2>
+<h1>01.-Redes en KVM</h1>
+<h2 id="redes-en-kvm">Redes en KVM<a class="headerlink" href="#redes-en-kvm" title="Permanent link">¶</a></h2>
+<p>KVM ofrece varias opciones para configurar redes virtuales:</p>
+<p><strong>Bridge Mode</strong>:</p>
 <ul>
-<li><strong>Eficiencia en el uso del espacio</strong>: La imagen solo crecerá cuando se escriban datos reales en el disco virtual.</li>
-<li><strong>Flexibilidad</strong>: Puedes "sobreprovisionar" el almacenamiento, asignando más espacio virtual del que físicamente tienes disponible.</li>
+<li>Permite que las VMs aparezcan como dispositivos directamente conectados a la red física.</li>
+<li>Utiliza bridges de Linux para compartir conexiones entre interfaces físicas y virtuales.</li>
+<li>Ideal para entornos donde las VMs necesitan acceso directo a la red local.</li>
 </ul>
-<h2 id="consideraciones-importantes">Consideraciones importantes<a class="headerlink" href="#consideraciones-importantes" title="Permanent link">¶</a></h2>
+<p><strong>Routed Mode</strong>:</p>
+<ul>
+<li>Crea una red virtual aislada para las VMs.</li>
+<li>El host KVM actúa como router, enmascarando las VMs.</li>
+<li>Útil cuando se requiere mayor control y aislamiento de las VMs.</li>
+</ul>
+<h2 id="componentes-clave">Componentes clave<a class="headerlink" href="#componentes-clave" title="Permanent link">¶</a></h2>
 <ol>
-<li><strong>Monitoreo</strong>: Es crucial monitorear el crecimiento real de las imágenes para evitar quedarse sin espacio en el host.</li>
-<li><strong>Rendimiento</strong>: Las imágenes de expansión dinámica pueden tener un ligero impacto en el rendimiento comparado con imágenes de tamaño fijo.</li>
-<li><strong>Fragmentación</strong>: Con el tiempo, estas imágenes pueden fragmentarse, lo que puede afectar el rendimiento.</li>
-<li><strong>Compactación</strong>: Periódicamente, puedes necesitar compactar las imágenes para liberar espacio no utilizado:</li>
+<li><strong>Hipervisor</strong>: KVM convierte el kernel de Linux en un hipervisor tipo 1.</li>
+<li><strong>QEMU</strong>: Emulador que trabaja en conjunto con KVM para proporcionar virtualización completa.</li>
+<li><strong>libvirt</strong>: Capa de gestión que facilita la configuración y ejecución de VMs.</li>
+<li><strong>Bridges</strong>: Utilizados para conectar las interfaces virtuales (TAPs) con las interfaces físicas.</li>
+<li><strong>TAPs</strong>: Interfaces de software que emulan las NICs virtuales de las VMs.</li>
 </ol>
-<pre><code>text
-qemu-img convert -O qcow2 imagen_original.qcow2 imagen_compactada.qcow2
-</code></pre>
-<p>Utilizando estas técnicas, podrás crear máquinas virtuales que  inicialmente ocupen poco espacio en disco y crezcan según sea necesario, optimizando el uso del almacenamiento en tu sistema host.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
