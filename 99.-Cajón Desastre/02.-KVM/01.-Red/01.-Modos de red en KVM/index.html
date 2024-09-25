@@ -5,10 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../../01.-Red/02.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/" rel="prev"/>
+<link href="../../" rel="prev"/>
+<link href="../02.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/" rel="next"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.0, mkdocs-material-9.5.35" name="generator"/>
-<title>01.-Aprovisionamiento ligero de discos - SRI</title>
+<title>01.-Modos de red en KVM - SRI</title>
 <link href="../../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creacion-de-la-imagen-de-disco">
+<a class="md-skip" href="#nat-network-address-translation">
           Saltar a contenido
         </a>
 </div>
@@ -45,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              01.-Aprovisionamiento ligero de discos
+              01.-Modos de red en KVM
             
           </span>
 </div>
@@ -124,7 +125,7 @@
   
     
   
-  99.-Disaster Drawer
+  99.-Cajón Desastre
 
         </a>
 </li>
@@ -394,7 +395,7 @@
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
-    99.-Disaster Drawer
+    99.-Cajón Desastre
   </span>
 </a>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -404,7 +405,7 @@
 <nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-            99.-Disaster Drawer
+            99.-Cajón Desastre
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -432,62 +433,31 @@
             02.-KVM
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_3_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
 <span class="md-ellipsis">
     01.-Red
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_3_2_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="true" aria-labelledby="__nav_3_3_2_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
             01.-Red
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Red/01.-Redes%20en%20KVM/">
-<span class="md-ellipsis">
-    01.-Redes en KVM
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Red/02.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
-<span class="md-ellipsis">
-    02.-Configuración de red en modo bridge
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
-<span class="md-ellipsis">
-    02.-Almacenamiento
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_3_3_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_3_3">
-<span class="md-nav__icon md-icon"></span>
-            02.-Almacenamiento
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    01.-Aprovisionamiento ligero de discos
+    01.-Modos de red en KVM
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    01.-Aprovisionamiento ligero de discos
+    01.-Modos de red en KVM
   </span>
 </a>
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
@@ -497,42 +467,108 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-imagen-de-disco">
+<a class="md-nav__link" href="#nat-network-address-translation">
 <span class="md-ellipsis">
-      Creación de la imagen de disco
+      NAT (Network Address Translation)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuracion-en-virt-manager">
+<a class="md-nav__link" href="#bridge-mode">
 <span class="md-ellipsis">
-      Configuración en virt-manager
+      Bridge Mode
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuracion-en-linea-de-comandos">
+<a class="md-nav__link" href="#routed-mode">
 <span class="md-ellipsis">
-      Configuración en línea de comandos
+      Routed Mode
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ventajas-del-aprovisionamiento-ligero">
+<a class="md-nav__link" href="#isolated-mode">
 <span class="md-ellipsis">
-      Ventajas del aprovisionamiento ligero
+      Isolated Mode
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#consideraciones-importantes">
+<a class="md-nav__link" href="#macvtap">
 <span class="md-ellipsis">
-      Consideraciones importantes
+      MacVTap
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pci-passthrough">
+<span class="md-ellipsis">
+      PCI Passthrough
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vlan-virtual-lan">
+<span class="md-ellipsis">
+      VLAN (Virtual LAN)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-vswitch">
+<span class="md-ellipsis">
+      Open vSwitch
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#componentes-clave">
+<span class="md-ellipsis">
+      Componentes clave
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
+<span class="md-ellipsis">
+    02.-Configuración de red en modo bridge
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Index/">
+<span class="md-ellipsis">
+    Index
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    02.-Almacenamiento
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_3">
+<span class="md-nav__icon md-icon"></span>
+            02.-Almacenamiento
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02.-Almacenamiento/01.-Aprovisionamiento%20ligero%20de%20discos/">
+<span class="md-ellipsis">
+    01.-Aprovisionamiento ligero de discos
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -558,37 +594,65 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-imagen-de-disco">
+<a class="md-nav__link" href="#nat-network-address-translation">
 <span class="md-ellipsis">
-      Creación de la imagen de disco
+      NAT (Network Address Translation)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuracion-en-virt-manager">
+<a class="md-nav__link" href="#bridge-mode">
 <span class="md-ellipsis">
-      Configuración en virt-manager
+      Bridge Mode
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuracion-en-linea-de-comandos">
+<a class="md-nav__link" href="#routed-mode">
 <span class="md-ellipsis">
-      Configuración en línea de comandos
+      Routed Mode
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ventajas-del-aprovisionamiento-ligero">
+<a class="md-nav__link" href="#isolated-mode">
 <span class="md-ellipsis">
-      Ventajas del aprovisionamiento ligero
+      Isolated Mode
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#consideraciones-importantes">
+<a class="md-nav__link" href="#macvtap">
 <span class="md-ellipsis">
-      Consideraciones importantes
+      MacVTap
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pci-passthrough">
+<span class="md-ellipsis">
+      PCI Passthrough
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vlan-virtual-lan">
+<span class="md-ellipsis">
+      VLAN (Virtual LAN)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-vswitch">
+<span class="md-ellipsis">
+      Open vSwitch
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#componentes-clave">
+<span class="md-ellipsis">
+      Componentes clave
     </span>
 </a>
 </li>
@@ -599,55 +663,63 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>01.-Aprovisionamiento ligero de discos</h1>
-<p>Para crear una máquina virtual cuyo espacio físico de almacenamiento crezca según la demanda, ocupando menos espacio en disco  inicialmente, puedes utilizar el aprovisionamiento ligero (thin  provisioning) con imágenes de disco de expansión dinámica. Esto se puede lograr de la siguiente manera:</p>
-<h2 id="creacion-de-la-imagen-de-disco">Creación de la imagen de disco<a class="headerlink" href="#creacion-de-la-imagen-de-disco" title="Permanent link">¶</a></h2>
-<ol>
-<li>Utiliza el formato qcow2 (QEMU Copy-On-Write versión 2) para la imagen de disco:</li>
-</ol>
-<pre><code>text
-qemu-img create -f qcow2 nombre_imagen.qcow2 tamaño_virtual
-</code></pre>
-<p>Por ejemplo:</p>
-<pre><code>text
-qemu-img create -f qcow2 mi_vm_disco.qcow2 50G
-</code></pre>
-<p>Este comando crea una imagen de disco que aparecerá como un disco  de 50 GB para la máquina virtual, pero inicialmente ocupará muy poco  espacio en el host.</p>
-<h2 id="configuracion-en-virt-manager">Configuración en virt-manager<a class="headerlink" href="#configuracion-en-virt-manager" title="Permanent link">¶</a></h2>
-<p>Si estás usando virt-manager para crear la VM:</p>
-<ol>
-<li>En el paso de configuración del almacenamiento, selecciona "Select or create custom storage".</li>
-<li>Haz clic en "Manage..." y luego en "Add Pool" para crear un nuevo pool si es necesario.</li>
-<li>Selecciona el pool y haz clic en "Create new volume".</li>
-<li>En el diálogo de creación de volumen: Elige el formato "qcow2" Establece el tamaño máximo deseado Asegúrate de que "Allocation" esté configurado en 0 para thin provisioning</li>
-</ol>
-<h2 id="configuracion-en-linea-de-comandos">Configuración en línea de comandos<a class="headerlink" href="#configuracion-en-linea-de-comandos" title="Permanent link">¶</a></h2>
-<p>Si prefieres usar la línea de comandos:</p>
-<ol>
-<li>Crea la imagen de disco como se mostró anteriormente.</li>
-<li>Al definir la VM con <code>virt-install</code>, usa la opción <code>--disk</code>:</li>
-</ol>
-<pre><code>textvirt-install --name mi_vm --memory 2048 --vcpus 2 \
-  --disk path=/ruta/a/mi_vm_disco.qcow2,format=qcow2,bus=virtio \
-  --os-variant=rhel8.0 \
-  # ... otras opciones necesarias
-</code></pre>
-<h2 id="ventajas-del-aprovisionamiento-ligero">Ventajas del aprovisionamiento ligero<a class="headerlink" href="#ventajas-del-aprovisionamiento-ligero" title="Permanent link">¶</a></h2>
+<h2 id="nat-network-address-translation">NAT (Network Address Translation)<a class="headerlink" href="#nat-network-address-translation" title="Permanent link">¶</a></h2>
+<p>Es el modo predeterminado. Las VMs pueden acceder a la red externa, pero no son directamente accesibles desde fuera. Utiliza iptables para enmascarar el tráfico de las VMs.</p>
 <ul>
-<li><strong>Eficiencia en el uso del espacio</strong>: La imagen solo crecerá cuando se escriban datos reales en el disco virtual.</li>
-<li><strong>Flexibilidad</strong>: Puedes "sobreprovisionar" el almacenamiento, asignando más espacio virtual del que físicamente tienes disponible.</li>
+<li>Caso de uso: Entorno de desarrollo donde las VMs necesitan acceso a Internet pero no requieren ser accesibles desde fuera.</li>
+<li>Ejemplo: Un desarrollador ejecutando múltiples VMs para probar diferentes configuraciones de software.</li>
 </ul>
-<h2 id="consideraciones-importantes">Consideraciones importantes<a class="headerlink" href="#consideraciones-importantes" title="Permanent link">¶</a></h2>
+<h2 id="bridge-mode">Bridge Mode<a class="headerlink" href="#bridge-mode" title="Permanent link">¶</a></h2>
+<p>Conecta las VMs directamente a la red física del host. Las VMs aparecen como dispositivos independientes en la red.</p>
+<ul>
+<li>Caso de uso: Servidores virtuales que necesitan aparecer como dispositivos independientes en la red local.</li>
+<li>Ejemplo: Una pequeña empresa virtualizando sus servidores de correo, web y base de datos, cada uno con su propia dirección IP en la LAN.</li>
+</ul>
+<h2 id="routed-mode">Routed Mode<a class="headerlink" href="#routed-mode" title="Permanent link">¶</a></h2>
+<p>Crea una red virtual separada para las VMs. El host actúa como router entre la red virtual y la red física.</p>
+<ul>
+<li>Caso de uso: Crear una subred aislada para un grupo de VMs con acceso controlado a la red principal.</li>
+<li>Ejemplo: Un laboratorio de pruebas de seguridad donde se necesita aislar las VMs potencialmente maliciosas.</li>
+</ul>
+<h2 id="isolated-mode">Isolated Mode<a class="headerlink" href="#isolated-mode" title="Permanent link">¶</a></h2>
+<p>Las VMs pueden comunicarse entre sí y con el host, pero no tienen acceso a la red externa. Útil para entornos de prueba o simulaciones aisladas.</p>
+<ul>
+<li>Caso de uso: Entornos de prueba completamente aislados sin acceso a redes externas.</li>
+<li>Ejemplo: Simulación de una red corporativa para entrenamiento de personal de TI sin riesgo de afectar la red real.</li>
+</ul>
+<h2 id="macvtap">MacVTap<a class="headerlink" href="#macvtap" title="Permanent link">¶</a></h2>
+<p>Permite que las VMs se conecten directamente a la interfaz física del host. Ofrece mejor rendimiento que el modo bridge en algunos casos.</p>
+<ul>
+<li>Caso de uso: VMs que requieren alto rendimiento de red y acceso directo a la interfaz física.</li>
+<li>Ejemplo: Un servidor de streaming de video virtualizado que necesita máximo ancho de banda.</li>
+</ul>
+<h2 id="pci-passthrough">PCI Passthrough<a class="headerlink" href="#pci-passthrough" title="Permanent link">¶</a></h2>
+<p>Asigna un dispositivo de red físico directamente a una VM. Proporciona el mejor rendimiento, pero limita la flexibilidad.</p>
+<ul>
+<li>Caso de uso: VM que requiere acceso exclusivo y de alto rendimiento a una NIC física.</li>
+<li>Ejemplo: Un firewall virtualizado que necesita control total sobre una interfaz de red dedicada.</li>
+</ul>
+<h2 id="vlan-virtual-lan">VLAN (Virtual LAN)<a class="headerlink" href="#vlan-virtual-lan" title="Permanent link">¶</a></h2>
+<p>Permite crear redes virtuales separadas sobre la misma infraestructura física. Útil para aislar el tráfico entre diferentes grupos de VMs.</p>
+<ul>
+<li>Caso de uso: Separar el tráfico de diferentes departamentos o clientes en una infraestructura virtualizada compartida.</li>
+<li>Ejemplo: Un proveedor de servicios gestionados que ofrece entornos virtuales aislados para múltiples clientes.</li>
+</ul>
+<h2 id="open-vswitch">Open vSwitch<a class="headerlink" href="#open-vswitch" title="Permanent link">¶</a></h2>
+<p>Un switch virtual que ofrece capacidades avanzadas de networking. Soporta VLAN, túneles, y políticas de red más complejas.</p>
+<ul>
+<li>Caso de uso: Implementación de redes definidas por software (SDN) en un entorno de nube privada.</li>
+<li>Ejemplo: Un centro de datos virtualizado que requiere políticas de red complejas y dinámicas entre cientos de VMs.</li>
+</ul>
+<p>Como has podido comprobar, cada modo tiene sus propias ventajas y casos de uso  específicos, permitiendo a los administradores de sistemas configurar la red de las VMs de manera flexible según las necesidades del entorno.</p>
+<h1 id="componentes-clave">Componentes clave<a class="headerlink" href="#componentes-clave" title="Permanent link">¶</a></h1>
 <ol>
-<li><strong>Monitoreo</strong>: Es crucial monitorear el crecimiento real de las imágenes para evitar quedarse sin espacio en el host.</li>
-<li><strong>Rendimiento</strong>: Las imágenes de expansión dinámica pueden tener un ligero impacto en el rendimiento comparado con imágenes de tamaño fijo.</li>
-<li><strong>Fragmentación</strong>: Con el tiempo, estas imágenes pueden fragmentarse, lo que puede afectar el rendimiento.</li>
-<li><strong>Compactación</strong>: Periódicamente, puedes necesitar compactar las imágenes para liberar espacio no utilizado:</li>
+<li><strong>Hipervisor</strong>: KVM convierte el kernel de Linux en un hipervisor tipo 1.</li>
+<li><strong>QEMU</strong>: Emulador que trabaja en conjunto con KVM para proporcionar virtualización completa.</li>
+<li><strong>libvirt</strong>: Capa de gestión que facilita la configuración y ejecución de VMs.</li>
+<li><strong>Bridges</strong>: Utilizados para conectar las interfaces virtuales (TAPs) con las interfaces físicas.</li>
+<li><strong>TAPs</strong>: Interfaces de software que emulan las NICs virtuales de las VMs.</li>
 </ol>
-<pre><code>text
-qemu-img convert -O qcow2 imagen_original.qcow2 imagen_compactada.qcow2
-</code></pre>
-<p>Utilizando estas técnicas, podrás crear máquinas virtuales que  inicialmente ocupen poco espacio en disco y crezcan según sea necesario, optimizando el uso del almacenamiento en tu sistema host.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
