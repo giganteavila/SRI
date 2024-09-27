@@ -712,15 +712,15 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>02.-Puentes de Red (Network Bridges)</h1>
-<h3 id="21-que-es-un-puente-de-red"><strong>2.1. ¿Qué es un Puente de Red?</strong><a class="headerlink" href="#21-que-es-un-puente-de-red" title="Permanent link">¶</a></h3>
+<h3 id="21-que-es-un-puente-de-red">2.1. ¿Qué es un Puente de Red?<a class="headerlink" href="#21-que-es-un-puente-de-red" title="Permanent link">¶</a></h3>
 <p>Un <strong>puente de red</strong> (bridge) es un dispositivo de red virtual que opera en la <strong>capa 2</strong> (Enlace de Datos) del modelo OSI. Su función principal es conectar múltiples segmentos de red como si fueran una sola red física. En términos más simples, un bridge permite que diferentes interfaces de red se comuniquen entre sí directamente.</p>
-<h3 id="22-como-funcionan-los-puentes"><strong>2.2. ¿Cómo Funcionan los Puentes?</strong><a class="headerlink" href="#22-como-funcionan-los-puentes" title="Permanent link">¶</a></h3>
+<h3 id="22-como-funcionan-los-puentes">2.2. ¿Cómo Funcionan los Puentes?<a class="headerlink" href="#22-como-funcionan-los-puentes" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Operación en Capa 2</strong>: Al funcionar en la capa de enlace de datos, los puentes trabajan con direcciones MAC para filtrar y reenviar tráfico.</li>
 <li><strong>Aprendizaje de MACs</strong>: Un bridge mantiene una tabla de direcciones MAC aprendidas, asociando cada MAC con una interfaz específica. Esto permite que el bridge reenvíe el tráfico solo al destino correcto, reduciendo el tráfico innecesario.</li>
 <li><strong>Transparencia</strong>: Para los dispositivos conectados al bridge, parece que están todos en la misma red física, aunque estén conectados a diferentes interfaces físicas o virtuales.</li>
 </ul>
-<h3 id="23-uso-de-puentes-en-virtualizacion"><strong>2.3. Uso de Puentes en Virtualización</strong><a class="headerlink" href="#23-uso-de-puentes-en-virtualizacion" title="Permanent link">¶</a></h3>
+<h3 id="23-uso-de-puentes-en-virtualizacion">2.3. Uso de Puentes en Virtualización<a class="headerlink" href="#23-uso-de-puentes-en-virtualizacion" title="Permanent link">¶</a></h3>
 <p>En el contexto de la virtualización (como con KVM/QEMU):</p>
 <ul>
 <li><strong>Conexión Directa a la Red Física</strong>: Al conectar las interfaces de las máquinas virtuales a un bridge, estas pueden comunicarse directamente con la red física, obteniendo direcciones IP del mismo servidor DHCP que el host o cualquier otro servidor en la red.</li>

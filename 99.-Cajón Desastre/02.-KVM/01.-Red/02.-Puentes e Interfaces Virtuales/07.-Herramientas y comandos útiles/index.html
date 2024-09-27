@@ -22,6 +22,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#71-comandos-ip-y-bridge">
+          Saltar a contenido
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -533,11 +536,135 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    07.-Herramientas y comandos útiles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     07.-Herramientas y comandos útiles
   </span>
 </a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#71-comandos-ip-y-bridge">
+<span class="md-ellipsis">
+      7.1. Comandos ip y bridge
+    </span>
+</a>
+<nav aria-label="7.1. Comandos ip y bridge" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crear-un-bridge">
+<span class="md-ellipsis">
+      Crear un Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anadir-una-interfaz-al-bridge">
+<span class="md-ellipsis">
+      Añadir una Interfaz al Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mostrar-configuracion-del-bridge">
+<span class="md-ellipsis">
+      Mostrar Configuración del Bridge
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72-nmcli-networkmanager-command-line">
+<span class="md-ellipsis">
+      7.2. nmcli (NetworkManager Command Line)
+    </span>
+</a>
+<nav aria-label="7.2. nmcli (NetworkManager Command Line)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#listar-conexiones">
+<span class="md-ellipsis">
+      Listar Conexiones
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crear-un-bridge_1">
+<span class="md-ellipsis">
+      Crear un Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agregar-una-interface-fisica-al-bridge">
+<span class="md-ellipsis">
+      Agregar una Interface Física al Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modificar-la-configuracion-del-bridge">
+<span class="md-ellipsis">
+      Modificar la Configuración del Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activar-una-conexion">
+<span class="md-ellipsis">
+      Activar una Conexión
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#73-bridge-utils">
+<span class="md-ellipsis">
+      7.3. bridge-utils
+    </span>
+</a>
+<nav aria-label="7.3. bridge-utils" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion">
+<span class="md-ellipsis">
+      Instalación
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mostrar-informacion-del-bridge">
+<span class="md-ellipsis">
+      Mostrar Información del Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anadir-una-interfaz-al-bridge_1">
+<span class="md-ellipsis">
+      Añadir una Interfaz al Bridge
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../08.-Consideraciones%20de%20Seguridad/">
@@ -640,6 +767,122 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#71-comandos-ip-y-bridge">
+<span class="md-ellipsis">
+      7.1. Comandos ip y bridge
+    </span>
+</a>
+<nav aria-label="7.1. Comandos ip y bridge" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crear-un-bridge">
+<span class="md-ellipsis">
+      Crear un Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anadir-una-interfaz-al-bridge">
+<span class="md-ellipsis">
+      Añadir una Interfaz al Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mostrar-configuracion-del-bridge">
+<span class="md-ellipsis">
+      Mostrar Configuración del Bridge
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72-nmcli-networkmanager-command-line">
+<span class="md-ellipsis">
+      7.2. nmcli (NetworkManager Command Line)
+    </span>
+</a>
+<nav aria-label="7.2. nmcli (NetworkManager Command Line)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#listar-conexiones">
+<span class="md-ellipsis">
+      Listar Conexiones
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crear-un-bridge_1">
+<span class="md-ellipsis">
+      Crear un Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agregar-una-interface-fisica-al-bridge">
+<span class="md-ellipsis">
+      Agregar una Interface Física al Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modificar-la-configuracion-del-bridge">
+<span class="md-ellipsis">
+      Modificar la Configuración del Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activar-una-conexion">
+<span class="md-ellipsis">
+      Activar una Conexión
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#73-bridge-utils">
+<span class="md-ellipsis">
+      7.3. bridge-utils
+    </span>
+</a>
+<nav aria-label="7.3. bridge-utils" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion">
+<span class="md-ellipsis">
+      Instalación
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mostrar-informacion-del-bridge">
+<span class="md-ellipsis">
+      Mostrar Información del Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anadir-una-interfaz-al-bridge_1">
+<span class="md-ellipsis">
+      Añadir una Interfaz al Bridge
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -647,55 +890,47 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>07.-Herramientas y comandos útiles</h1>
-<p>7.1. ip y bridge Commands</p>
-<pre><code>Crear un Bridge:
-
-bash
+<h2 id="71-comandos-ip-y-bridge">7.1. Comandos <code>ip</code> y <code>bridge</code><a class="headerlink" href="#71-comandos-ip-y-bridge" title="Permanent link">¶</a></h2>
+<h3 id="crear-un-bridge">Crear un Bridge<a class="headerlink" href="#crear-un-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">sudo ip link add name br0 type bridge
+sudo ip link set dev br0 up
 </code></pre>
-<p>sudo ip link add name br0 type bridge
-sudo ip link set dev br0 up</p>
-<p>Añadir una Interfaz al Bridge:</p>
-<p>bash</p>
-<p>sudo ip link set dev enp0s25 master br0
-sudo ip link set dev enp0s25 up</p>
-<p>Mostrar Configuración del Bridge:</p>
-<p>bash</p>
-<pre><code>bridge link show br0
+<h3 id="anadir-una-interfaz-al-bridge">Añadir una Interfaz al Bridge<a class="headerlink" href="#anadir-una-interfaz-al-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">sudo ip link set dev enp0s25 master br0
+sudo ip link set dev enp0s25 up
 </code></pre>
-<p>7.2. nmcli (NetworkManager Command Line)</p>
-<pre><code>Listar Conexiones:
-
-bash
+<h3 id="mostrar-configuracion-del-bridge">Mostrar Configuración del Bridge<a class="headerlink" href="#mostrar-configuracion-del-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">bridge link show br0
 </code></pre>
-<p>nmcli connection show</p>
-<p>Crear un Bridge:</p>
-<p>bash</p>
-<p>nmcli connection add type bridge autoconnect yes con-name br0 ifname br0</p>
-<p>Agregar una Interface Física al Bridge:</p>
-<p>bash</p>
-<p>nmcli connection add type bridge-slave autoconnect yes con-name enp0s25-slave ifname enp0s25 master br0</p>
-<p>Modificar la Configuración del Bridge:</p>
-<p>bash</p>
-<p>nmcli connection modify br0 ipv4.method auto
-nmcli connection modify br0 ipv6.method ignore</p>
-<p>Activar una Conexión:</p>
-<p>bash</p>
-<pre><code>nmcli connection up br0
+<h2 id="72-nmcli-networkmanager-command-line">7.2. nmcli (NetworkManager Command Line)<a class="headerlink" href="#72-nmcli-networkmanager-command-line" title="Permanent link">¶</a></h2>
+<h3 id="listar-conexiones">Listar Conexiones<a class="headerlink" href="#listar-conexiones" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">nmcli connection show
+</code></pre>
+<h3 id="crear-un-bridge_1">Crear un Bridge<a class="headerlink" href="#crear-un-bridge_1" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">nmcli connection add type bridge autoconnect yes con-name br0 ifname br0
+</code></pre>
+<h3 id="agregar-una-interface-fisica-al-bridge">Agregar una Interface Física al Bridge<a class="headerlink" href="#agregar-una-interface-fisica-al-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">nmcli connection add type bridge-slave autoconnect yes con-name enp0s25-slave ifname enp0s25 master br0
+</code></pre>
+<h3 id="modificar-la-configuracion-del-bridge">Modificar la Configuración del Bridge<a class="headerlink" href="#modificar-la-configuracion-del-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">nmcli connection modify br0 ipv4.method auto
+nmcli connection modify br0 ipv6.method ignore
+</code></pre>
+<h3 id="activar-una-conexion">Activar una Conexión<a class="headerlink" href="#activar-una-conexion" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">nmcli connection up br0
 nmcli connection up enp0s25-slave
 </code></pre>
-<p>7.3. bridge-utils</p>
-<p>Aunque muchas funcionalidades están ahora integradas en el comando ip, bridge-utils sigue siendo útil para algunas operaciones.</p>
-<pre><code>Instalación:
-
-bash
+<h2 id="73-bridge-utils">7.3. bridge-utils<a class="headerlink" href="#73-bridge-utils" title="Permanent link">¶</a></h2>
+<p>Aunque muchas funcionalidades están ahora integradas en el comando <code>ip</code>, <code>bridge-utils</code> sigue siendo útil para algunas operaciones.</p>
+<h3 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">sudo pacman -S bridge-utils
 </code></pre>
-<p>sudo pacman -S bridge-utils</p>
-<p>Mostrar Información del Bridge:</p>
-<p>bash</p>
-<p>brctl show</p>
-<p>Añadir una Interfaz al Bridge:</p>
-<p>bash</p>
-<p>sudo brctl addif br0 enp0s25</p>
+<h3 id="mostrar-informacion-del-bridge">Mostrar Información del Bridge<a class="headerlink" href="#mostrar-informacion-del-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">brctl show
+</code></pre>
+<h3 id="anadir-una-interfaz-al-bridge_1">Añadir una Interfaz al Bridge<a class="headerlink" href="#anadir-una-interfaz-al-bridge_1" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">sudo brctl addif br0 enp0s25
+</code></pre>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

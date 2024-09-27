@@ -712,17 +712,17 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>08.-Consideraciones de Seguridad</h1>
-<h3 id="81-aislamiento-del-host"><strong>8.1. Aislamiento del Host</strong><a class="headerlink" href="#81-aislamiento-del-host" title="Permanent link">¶</a></h3>
+<h2 id="81-aislamiento-del-host"><strong>8.1. Aislamiento del Host</strong><a class="headerlink" href="#81-aislamiento-del-host" title="Permanent link">¶</a></h2>
 <p>Para evitar que el host interactúe con las VMs a través del bridge:</p>
 <ul>
 <li><strong>No Asignar IP al Bridge</strong>: Si el host no necesita comunicarse en esa red, no le asignes una dirección IP al bridge.</li>
 <li><strong>Reglas de Firewall</strong>: Utiliza <code>iptables</code> o <code>firewalld</code> para bloquear el tráfico entre el host y las interfaces del bridge.</li>
 </ul>
-<h3 id="82-filtrado-de-macs"><strong>8.2. Filtrado de MACs</strong><a class="headerlink" href="#82-filtrado-de-macs" title="Permanent link">¶</a></h3>
+<h2 id="82-filtrado-de-macs"><strong>8.2. Filtrado de MACs</strong><a class="headerlink" href="#82-filtrado-de-macs" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Control de Acceso</strong>: Configura reglas para permitir solo ciertas direcciones MAC en el bridge, limitando qué dispositivos pueden conectarse.</li>
 </ul>
-<h3 id="83-monitoreo-y-logging"><strong>8.3. Monitoreo y Logging</strong><a class="headerlink" href="#83-monitoreo-y-logging" title="Permanent link">¶</a></h3>
+<h2 id="83-monitoreo-y-logging"><strong>8.3. Monitoreo y Logging</strong><a class="headerlink" href="#83-monitoreo-y-logging" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Supervisión del Tráfico</strong>: Utiliza herramientas como <code>tcpdump</code>, <code>wireshark</code> o <code>iftop</code> para monitorear el tráfico en el bridge.</li>
 <li><strong>Logs de NetworkManager</strong>: Revisa los logs de NetworkManager para solucionar problemas de configuración.</li>

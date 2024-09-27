@@ -22,6 +22,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#31-tipos-comunes-de-interfaces-virtuales">
+          Saltar a contenido
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -505,11 +508,103 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    03.-Interfaces Virtuales en Linux
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     03.-Interfaces Virtuales en Linux
   </span>
 </a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-tipos-comunes-de-interfaces-virtuales">
+<span class="md-ellipsis">
+      3.1. Tipos Comunes de Interfaces Virtuales
+    </span>
+</a>
+<nav aria-label="3.1. Tipos Comunes de Interfaces Virtuales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bridge-br0-br1">
+<span class="md-ellipsis">
+      Bridge (br0, br1, ...)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#taptun-interfaces-tap0-tun0">
+<span class="md-ellipsis">
+      TAP/TUN Interfaces (tap0, tun0, ...)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#veth-pairs-veth0-veth1">
+<span class="md-ellipsis">
+      Veth Pairs (veth0, veth1, ...)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vlans-eth010-eth020">
+<span class="md-ellipsis">
+      VLANs (eth0.10, eth0.20, ...)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-creacion-y-gestion-de-interfaces-virtuales">
+<span class="md-ellipsis">
+      3.2. Creación y Gestión de Interfaces Virtuales
+    </span>
+</a>
+<nav aria-label="3.2. Creación y Gestión de Interfaces Virtuales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creacion-de-un-bridge-con-ip">
+<span class="md-ellipsis">
+      Creación de un Bridge con ip:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asignacion-de-una-ip-al-bridge">
+<span class="md-ellipsis">
+      Asignación de una IP al Bridge:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anadir-una-interfaz-fisica-al-bridge">
+<span class="md-ellipsis">
+      Añadir una Interfaz Física al Bridge:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-la-configuracion">
+<span class="md-ellipsis">
+      Verificar la Configuración
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../04.-Creaci%C3%B3n%20y%20Gesti%C3%B3n%20de%20Puentes%20con%20NetworkManager/">
@@ -640,6 +735,90 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-tipos-comunes-de-interfaces-virtuales">
+<span class="md-ellipsis">
+      3.1. Tipos Comunes de Interfaces Virtuales
+    </span>
+</a>
+<nav aria-label="3.1. Tipos Comunes de Interfaces Virtuales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bridge-br0-br1">
+<span class="md-ellipsis">
+      Bridge (br0, br1, ...)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#taptun-interfaces-tap0-tun0">
+<span class="md-ellipsis">
+      TAP/TUN Interfaces (tap0, tun0, ...)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#veth-pairs-veth0-veth1">
+<span class="md-ellipsis">
+      Veth Pairs (veth0, veth1, ...)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vlans-eth010-eth020">
+<span class="md-ellipsis">
+      VLANs (eth0.10, eth0.20, ...)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-creacion-y-gestion-de-interfaces-virtuales">
+<span class="md-ellipsis">
+      3.2. Creación y Gestión de Interfaces Virtuales
+    </span>
+</a>
+<nav aria-label="3.2. Creación y Gestión de Interfaces Virtuales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creacion-de-un-bridge-con-ip">
+<span class="md-ellipsis">
+      Creación de un Bridge con ip:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asignacion-de-una-ip-al-bridge">
+<span class="md-ellipsis">
+      Asignación de una IP al Bridge:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anadir-una-interfaz-fisica-al-bridge">
+<span class="md-ellipsis">
+      Añadir una Interfaz Física al Bridge:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-la-configuracion">
+<span class="md-ellipsis">
+      Verificar la Configuración
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -647,43 +826,45 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>03.-Interfaces Virtuales en Linux</h1>
-<p>3.1. Tipos Comunes de Interfaces Virtuales</p>
-<pre><code>Bridge (br0, br1, ...)
-    Función: Conecta múltiples interfaces (físicas y virtuales) en una sola red lógica.
-    Uso: Principal en virtualización para conectar VMs a la red física.
-
-TAP/TUN Interfaces (tap0, tun0, ...)
-    TAP: Interfaz de red virtual que opera en la capa 2 (Ethernet).
-    TUN: Interfaz de red virtual que opera en la capa 3 (IP).
-    Uso: Común en configuraciones de VPN y en virtualización para crear interfaces de red virtuales.
-
-Veth Pairs (veth0, veth1, ...)
-    Descripción: Pares de interfaces virtuales conectadas entre sí, similares a un cable Ethernet.
-    Uso: Útiles para conectar namespaces de red o contenedores.
-
-VLANs (eth0.10, eth0.20, ...)
-    Descripción: Interfaces virtuales que representan VLANs específicas en una interfaz física.
-    Uso: Separación lógica de tráfico en redes corporativas.
+<h2 id="31-tipos-comunes-de-interfaces-virtuales">3.1. Tipos Comunes de Interfaces Virtuales<a class="headerlink" href="#31-tipos-comunes-de-interfaces-virtuales" title="Permanent link">¶</a></h2>
+<h3 id="bridge-br0-br1">Bridge (br0, br1, ...)<a class="headerlink" href="#bridge-br0-br1" title="Permanent link">¶</a></h3>
+<ul>
+<li>Función: Conecta múltiples interfaces (físicas y virtuales) en una sola red lógica.</li>
+<li>Uso: Principal en virtualización para conectar VMs a la red física.</li>
+</ul>
+<h3 id="taptun-interfaces-tap0-tun0">TAP/TUN Interfaces (tap0, tun0, ...)<a class="headerlink" href="#taptun-interfaces-tap0-tun0" title="Permanent link">¶</a></h3>
+<ul>
+<li>TAP: Interfaz de red virtual que opera en la capa 2 (Ethernet).</li>
+<li>TUN: Interfaz de red virtual que opera en la capa 3 (IP).</li>
+<li>Uso: Común en configuraciones de VPN y en virtualización para crear interfaces de red virtuales.</li>
+</ul>
+<h3 id="veth-pairs-veth0-veth1">Veth Pairs (veth0, veth1, ...)<a class="headerlink" href="#veth-pairs-veth0-veth1" title="Permanent link">¶</a></h3>
+<ul>
+<li>Descripción: Pares de interfaces virtuales conectadas entre sí, similares a un cable Ethernet.</li>
+<li>Uso: Útiles para conectar namespaces de red o contenedores.</li>
+</ul>
+<h3 id="vlans-eth010-eth020">VLANs (eth0.10, eth0.20, ...)<a class="headerlink" href="#vlans-eth010-eth020" title="Permanent link">¶</a></h3>
+<p>Descripción: Interfaces virtuales que representan VLANs específicas en una interfaz física.
+Uso: Separación lógica de tráfico en redes corporativas.</p>
+<h2 id="32-creacion-y-gestion-de-interfaces-virtuales">3.2. Creación y Gestión de Interfaces Virtuales<a class="headerlink" href="#32-creacion-y-gestion-de-interfaces-virtuales" title="Permanent link">¶</a></h2>
+<h3 id="creacion-de-un-bridge-con-ip">Creación de un Bridge con ip:<a class="headerlink" href="#creacion-de-un-bridge-con-ip" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">sudo ip link add name br0 type bridge
+sudo ip link set dev br0 up
 </code></pre>
-<p>3.2. Creación y Gestión de Interfaces Virtuales</p>
-<pre><code>Creación de un Bridge con ip:
-
-bash
+<h3 id="asignacion-de-una-ip-al-bridge">Asignación de una IP al Bridge:<a class="headerlink" href="#asignacion-de-una-ip-al-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">sudo ip addr add 192.168.1.100/24 dev br0
 </code></pre>
-<p>sudo ip link add name br0 type bridge
-sudo ip link set dev br0 up</p>
-<p>Asignación de una IP al Bridge:</p>
-<p>bash</p>
-<p>sudo ip addr add 192.168.1.100/24 dev br0</p>
-<p>Añadir una Interfaz Física al Bridge:</p>
-<p>bash</p>
-<p>sudo ip link set dev enp0s25 master br0
-sudo ip link set dev enp0s25 up</p>
-<p>Verificar la Configuración:</p>
-<p>bash</p>
-<p>bridge link
-ip addr show br0</p>
-<p>Uso de NetworkManager (nmcli): NetworkManager simplifica la gestión de interfaces y puentes, permitiendo configuraciones más persistentes y fáciles de manejar.</p>
+<h3 id="anadir-una-interfaz-fisica-al-bridge">Añadir una Interfaz Física al Bridge:<a class="headerlink" href="#anadir-una-interfaz-fisica-al-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">sudo ip link set dev enp0s25 master br0
+sudo ip link set dev enp0s25 up
+</code></pre>
+<h3 id="verificar-la-configuracion">Verificar la Configuración<a class="headerlink" href="#verificar-la-configuracion" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">bridge link
+ip addr show br0
+</code></pre>
+<ul>
+<li>Uso de NetworkManager (<code>nmcli</code>): NetworkManager simplifica la gestión de interfaces y puentes, permitiendo configuraciones más persistentes y fáciles de manejar.</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

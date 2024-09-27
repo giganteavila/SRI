@@ -561,9 +561,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#63-tap-interfaces-y-qemukvm">
+<a class="md-nav__link" href="#63-interfaces-tap-y-qemukvm">
 <span class="md-ellipsis">
-      6.3. Tap Interfaces y QEMU/KVM
+      6.3. Interfaces Tap y QEMU/KVM
     </span>
 </a>
 </li>
@@ -698,9 +698,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#63-tap-interfaces-y-qemukvm">
+<a class="md-nav__link" href="#63-interfaces-tap-y-qemukvm">
 <span class="md-ellipsis">
-      6.3. Tap Interfaces y QEMU/KVM
+      6.3. Interfaces Tap y QEMU/KVM
     </span>
 </a>
 </li>
@@ -712,19 +712,19 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>06.-Gestión Avanzada de Puentes e Interfaces Vrituales</h1>
-<h3 id="61-vlans-y-puentes"><strong>6.1. VLANs y Puentes</strong><a class="headerlink" href="#61-vlans-y-puentes" title="Permanent link">¶</a></h3>
+<h2 id="61-vlans-y-puentes"><strong>6.1. VLANs y Puentes</strong><a class="headerlink" href="#61-vlans-y-puentes" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>VLANs</strong>: Los puentes pueden manejar VLANs para segmentar el tráfico. Esto se hace creando interfaces VLAN y agregándolas al bridge.</li>
 <li><strong>Configuración</strong>: Añadir interfaces VLAN (<code>eth0.10</code>, <code>eth0.20</code>, ...) y conectarlas al bridge para separar el tráfico según las VLANs.</li>
 </ul>
-<h3 id="62-bonding-y-agregacion-de-enlaces"><strong>6.2. Bonding y Agregación de Enlaces</strong><a class="headerlink" href="#62-bonding-y-agregacion-de-enlaces" title="Permanent link">¶</a></h3>
+<h2 id="62-bonding-y-agregacion-de-enlaces"><strong>6.2. Bonding y Agregación de Enlaces</strong><a class="headerlink" href="#62-bonding-y-agregacion-de-enlaces" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Bonding</strong>: Combina múltiples interfaces físicas en una sola interfaz lógica para redundancia o aumento de ancho de banda.</li>
 <li><strong>Uso con Bridges</strong>: Los enlaces bond pueden ser agregados a un bridge para proporcionar una conexión más robusta a las máquinas virtuales.</li>
 </ul>
-<h3 id="63-tap-interfaces-y-qemukvm"><strong>6.3. Tap Interfaces y QEMU/KVM</strong><a class="headerlink" href="#63-tap-interfaces-y-qemukvm" title="Permanent link">¶</a></h3>
+<h2 id="63-interfaces-tap-y-qemukvm"><strong>6.3. Interfaces Tap y QEMU/KVM</strong><a class="headerlink" href="#63-interfaces-tap-y-qemukvm" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Tap Interfaces</strong>: Son interfaces virtuales que permiten que QEMU/KVM interactúe directamente con el puente.</li>
+<li><strong>Tap Interfaces</strong>1: Son interfaces virtuales que permiten que QEMU/KVM interactúe directamente con el puente.</li>
 <li><strong>Uso</strong>: Al iniciar una VM con QEMU/KVM, se puede especificar el uso de una interfaz tap para conectarse al bridge, permitiendo que la VM se comunique directamente con la red.</li>
 </ul>
 </article>

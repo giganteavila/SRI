@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#crear-el-bridge">
+<a class="md-skip" href="#paso-1-crear-el-bridge-br0">
           Saltar a contenido
         </a>
 </div>
@@ -550,11 +550,78 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    09.-Ejemplo Práctico:Configuración Completa con NetworkManager
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     09.-Ejemplo Práctico:Configuración Completa con NetworkManager
   </span>
 </a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paso-1-crear-el-bridge-br0">
+<span class="md-ellipsis">
+      Paso 1: Crear el Bridge br0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paso-2-conectar-las-vms-al-bridge">
+<span class="md-ellipsis">
+      Paso 2: Conectar las VMs al Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paso-3-aislar-el-host-del-bridge">
+<span class="md-ellipsis">
+      Paso 3: Aislar el Host del Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paso-4-verificacion">
+<span class="md-ellipsis">
+      Paso 4: Verificación
+    </span>
+</a>
+<nav aria-label="Paso 4: Verificación" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-direccion-ip-del-bridge">
+<span class="md-ellipsis">
+      Verificar Dirección IP del Bridge:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-conectividad-de-la-vm">
+<span class="md-ellipsis">
+      Verificar Conectividad de la VM:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-aislamiento-del-host">
+<span class="md-ellipsis">
+      Verificar Aislamiento del Host:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../10.-Resumen%20y%20Mejores%20Pr%C3%A1cticas/">
@@ -643,71 +710,142 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paso-1-crear-el-bridge-br0">
+<span class="md-ellipsis">
+      Paso 1: Crear el Bridge br0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paso-2-conectar-las-vms-al-bridge">
+<span class="md-ellipsis">
+      Paso 2: Conectar las VMs al Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paso-3-aislar-el-host-del-bridge">
+<span class="md-ellipsis">
+      Paso 3: Aislar el Host del Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paso-4-verificacion">
+<span class="md-ellipsis">
+      Paso 4: Verificación
+    </span>
+</a>
+<nav aria-label="Paso 4: Verificación" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-direccion-ip-del-bridge">
+<span class="md-ellipsis">
+      Verificar Dirección IP del Bridge:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-conectividad-de-la-vm">
+<span class="md-ellipsis">
+      Verificar Conectividad de la VM:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-aislamiento-del-host">
+<span class="md-ellipsis">
+      Verificar Aislamiento del Host:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<p>Supongamos que deseas configurar un bridge br0 que conecta tus VMs directamente a la red física, permitiendo que obtengan direcciones IP de un servidor DHCP externo, y deseas aislar el host de esta red.
-Paso 1: Crear el Bridge br0</p>
-<p>bash</p>
-<h1 id="crear-el-bridge">Crear el bridge<a class="headerlink" href="#crear-el-bridge" title="Permanent link">¶</a></h1>
-<p>nmcli connection add type bridge autoconnect yes con-name br0 ifname br0</p>
-<h1 id="agregar-la-interfaz-fisica-al-bridge">Agregar la interfaz física al bridge<a class="headerlink" href="#agregar-la-interfaz-fisica-al-bridge" title="Permanent link">¶</a></h1>
-<p>nmcli connection add type bridge-slave autoconnect yes con-name enp0s25-slave ifname enp0s25 master br0</p>
-<h1 id="configurar-el-bridge-para-obtener-ip-via-dhcp">Configurar el bridge para obtener IP vía DHCP<a class="headerlink" href="#configurar-el-bridge-para-obtener-ip-via-dhcp" title="Permanent link">¶</a></h1>
-<p>nmcli connection modify br0 ipv4.method auto
-nmcli connection modify br0 ipv6.method ignore</p>
-<h1 id="desactivar-la-asignacion-de-ip-en-la-interfaz-fisica-ya-manejado-por-bridge-slave">Desactivar la asignación de IP en la interfaz física (ya manejado por bridge-slave)<a class="headerlink" href="#desactivar-la-asignacion-de-ip-en-la-interfaz-fisica-ya-manejado-por-bridge-slave" title="Permanent link">¶</a></h1>
-<h1 id="activar-las-conexiones">Activar las conexiones<a class="headerlink" href="#activar-las-conexiones" title="Permanent link">¶</a></h1>
-<p>nmcli connection up br0
-nmcli connection up enp0s25-slave</p>
-<p>Paso 2: Conectar las VMs al Bridge</p>
-<p>Usando virsh:</p>
-<p>bash</p>
-<h1 id="apagar-la-vm-si-esta-en-ejecucion">Apagar la VM si está en ejecución<a class="headerlink" href="#apagar-la-vm-si-esta-en-ejecucion" title="Permanent link">¶</a></h1>
-<p>virsh shutdown <nombre_de_vm></nombre_de_vm></p>
-<h1 id="editar-la-configuracion-de-la-vm">Editar la configuración de la VM<a class="headerlink" href="#editar-la-configuracion-de-la-vm" title="Permanent link">¶</a></h1>
-<p>virsh edit <nombre_de_vm></nombre_de_vm></p>
-<p>En el archivo XML de la VM, modifica la sección <interface>:</interface></p>
-<p>xml</p>
-<p><interface type="bridge">
-<mac address="52:54:00:xx:xx:xx"></mac>
-<source bridge="br0"/>
-<model type="virtio"></model>
-<address bus="0x00" domain="0x0000" function="0x0" slot="0x03" type="pci"></address></interface></p>
-<p></p>
-<p>Guardar y cerrar el editor, luego iniciar la VM:</p>
-<p>bash</p>
-<p>virsh start <nombre_de_vm></nombre_de_vm></p>
-<p>Paso 3: Aislar el Host del Bridge</p>
-<p>Implementar reglas de iptables para bloquear el tráfico entre el host y el bridge br0:</p>
-<p>bash</p>
-<h1 id="bloquear-trafico-entrante-desde-br0-hacia-el-host">Bloquear tráfico entrante desde br0 hacia el host<a class="headerlink" href="#bloquear-trafico-entrante-desde-br0-hacia-el-host" title="Permanent link">¶</a></h1>
-<p>sudo iptables -A INPUT -i br0 -j DROP</p>
-<h1 id="bloquear-trafico-saliente-desde-el-host-hacia-br0">Bloquear tráfico saliente desde el host hacia br0<a class="headerlink" href="#bloquear-trafico-saliente-desde-el-host-hacia-br0" title="Permanent link">¶</a></h1>
-<p>sudo iptables -A OUTPUT -o br0 -j DROP</p>
-<h1 id="guardar-las-reglas-para-que-persistan-tras-reinicios">Guardar las reglas para que persistan tras reinicios<a class="headerlink" href="#guardar-las-reglas-para-que-persistan-tras-reinicios" title="Permanent link">¶</a></h1>
-<p>sudo iptables-save | sudo tee /etc/iptables/iptables.rules</p>
-<h1 id="habilitar-el-servicio-de-iptables-para-restaurar-las-reglas-al-inicio">Habilitar el servicio de iptables para restaurar las reglas al inicio<a class="headerlink" href="#habilitar-el-servicio-de-iptables-para-restaurar-las-reglas-al-inicio" title="Permanent link">¶</a></h1>
-<p>sudo systemctl enable iptables
-sudo systemctl start iptables</p>
-<p>Paso 4: Verificación</p>
-<pre><code>Verificar Dirección IP del Bridge:
+<h1>09.-Ejemplo Práctico:Configuración Completa con NetworkManager</h1>
+<p>Supongamos que deseas configurar un bridge <code>br0</code> que conecta tus VMs directamente a la red física, permitiendo que obtengan direcciones IP de un servidor DHCP externo, y deseas aislar el host de esta red.</p>
+<h2 id="paso-1-crear-el-bridge-br0">Paso 1: Crear el Bridge <code>br0</code><a class="headerlink" href="#paso-1-crear-el-bridge-br0" title="Permanent link">¶</a></h2>
+<pre><code class="language-bash"># Crear el bridge
+nmcli connection add type bridge autoconnect yes con-name br0 ifname br0
 
-bash
+# Agregar la interfaz física al bridge
+nmcli connection add type bridge-slave autoconnect yes con-name enp0s25-slave ifname enp0s25 master br0
+
+# Configurar el bridge para obtener IP vía DHCP
+nmcli connection modify br0 ipv4.method auto
+nmcli connection modify br0 ipv6.method ignore
+
+# Desactivar la asignación de IP en la interfaz física (ya manejado por bridge-slave)
+
+# Activar las conexiones
+nmcli connection up br0
+nmcli connection up enp0s25-slave
 </code></pre>
-<p>ip addr show br0</p>
-<p>Deberías ver una dirección IP asignada por el servidor DHCP externo.</p>
-<p>Verificar Conectividad de la VM:</p>
-<pre><code>Inicia la VM y verifica que obtiene una dirección IP del mismo servidor DHCP.
-Comprueba que la VM puede acceder a Internet y otros recursos de la red.
+<h2 id="paso-2-conectar-las-vms-al-bridge">Paso 2: Conectar las VMs al Bridge<a class="headerlink" href="#paso-2-conectar-las-vms-al-bridge" title="Permanent link">¶</a></h2>
+<p>Usando <code>virsh</code>:</p>
+<pre><code class="language-bash"># Apagar la VM si está en ejecución
+virsh shutdown &lt;nombre_de_vm&gt;
+
+# Editar la configuración de la VM
+virsh edit &lt;nombre_de_vm&gt;
+
+En el archivo XML de la VM, modifica la sección &lt;interface&gt;:
+
+xml
+
+&lt;interface type='bridge'&gt;
+  &lt;mac address='52:54:00:xx:xx:xx'/&gt;
+  &lt;source bridge='br0'/&gt;
+  &lt;model type='virtio'/&gt;
+  &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/&gt;
+&lt;/interface&gt;
 </code></pre>
-<p>Verificar Aislamiento del Host:</p>
-<pre><code>Desde el host, intenta hacer ping a la dirección IP de la VM. Debería fallar.
-Desde la VM, intenta hacer ping al host. Debería fallar.
+<p>Guardar y cerrar el editor, luego iniciar la VM:</p>
+<pre><code class="language-bash">virsh start &lt;nombre_de_vm&gt;
 </code></pre>
+<h2 id="paso-3-aislar-el-host-del-bridge">Paso 3: Aislar el Host del Bridge<a class="headerlink" href="#paso-3-aislar-el-host-del-bridge" title="Permanent link">¶</a></h2>
+<p>Implementar reglas de iptables para bloquear el tráfico entre el host y el bridge br0:</p>
+<pre><code class="language-bash"># Bloquear tráfico entrante desde br0 hacia el host
+sudo iptables -A INPUT -i br0 -j DROP
+
+# Bloquear tráfico saliente desde el host hacia br0
+sudo iptables -A OUTPUT -o br0 -j DROP
+
+# Guardar las reglas para que persistan tras reinicios
+sudo iptables-save | sudo tee /etc/iptables/iptables.rules
+
+# Habilitar el servicio de iptables para restaurar las reglas al inicio
+sudo systemctl enable iptables
+sudo systemctl start iptables
+</code></pre>
+<h2 id="paso-4-verificacion">Paso 4: Verificación<a class="headerlink" href="#paso-4-verificacion" title="Permanent link">¶</a></h2>
+<h3 id="verificar-direccion-ip-del-bridge">Verificar Dirección IP del Bridge:<a class="headerlink" href="#verificar-direccion-ip-del-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">ip addr show br0
+</code></pre>
+<p>Deberíamos ver una dirección IP asignada por el servidor DHCP externo.</p>
+<h3 id="verificar-conectividad-de-la-vm">Verificar Conectividad de la VM:<a class="headerlink" href="#verificar-conectividad-de-la-vm" title="Permanent link">¶</a></h3>
+<ul>
+<li>Inicia la VM y verifica que obtiene una dirección IP del mismo servidor DHCP.</li>
+<li>Comprueba que la VM puede acceder a Internet y otros recursos de la red.</li>
+</ul>
+<h3 id="verificar-aislamiento-del-host">Verificar Aislamiento del Host:<a class="headerlink" href="#verificar-aislamiento-del-host" title="Permanent link">¶</a></h3>
+<ul>
+<li>Desde el host, intentamos hacer ping a la dirección IP de la VM. Debería fallar.</li>
+<li>Desde la VM, intentamos hacer ping al host. Debería fallar.</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

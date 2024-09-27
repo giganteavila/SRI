@@ -22,6 +22,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#41-creacion-de-un-bridge-con-nmcli">
+          Saltar a contenido
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -512,11 +515,114 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    04.-Creación y Gestión de Puentes con NetworkManager
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     04.-Creación y Gestión de Puentes con NetworkManager
   </span>
 </a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-creacion-de-un-bridge-con-nmcli">
+<span class="md-ellipsis">
+      4.1. Creación de un Bridge con nmcli
+    </span>
+</a>
+<nav aria-label="4.1. Creación de un Bridge con nmcli" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crear-el-bridge-br0">
+<span class="md-ellipsis">
+      Crear el Bridge br0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agregar-la-interfaz-fisica-al-bridge">
+<span class="md-ellipsis">
+      Agregar la Interfaz Física al Bridge:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configurar-br0-para-obtener-ip-via-dhcp">
+<span class="md-ellipsis">
+      Configurar br0 para Obtener IP vía DHCP:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activar-las-conexiones">
+<span class="md-ellipsis">
+      Activar las Conexiones
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-verificacion-de-la-configuracion">
+<span class="md-ellipsis">
+      4.2. Verificación de la Configuración
+    </span>
+</a>
+<nav aria-label="4.2. Verificación de la Configuración" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-interfaces-del-bridge">
+<span class="md-ellipsis">
+      Verificar Interfaces del Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-direccion-ip-del-bridge">
+<span class="md-ellipsis">
+      Verificar Dirección IP del Bridge
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-conectar-maquinas-virtuales-al-bridge">
+<span class="md-ellipsis">
+      4.3. Conectar Máquinas Virtuales al Bridge
+    </span>
+</a>
+<nav aria-label="4.3. Conectar Máquinas Virtuales al Bridge" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usando-virsh">
+<span class="md-ellipsis">
+      Usando virsh
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usando-virt-manager">
+<span class="md-ellipsis">
+      Usando virt-manager
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../05.-Funcionamiento%20Interno%20de%20los%20Puentes%20e%20Interfaces%20Virtuales/">
@@ -640,6 +746,101 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-creacion-de-un-bridge-con-nmcli">
+<span class="md-ellipsis">
+      4.1. Creación de un Bridge con nmcli
+    </span>
+</a>
+<nav aria-label="4.1. Creación de un Bridge con nmcli" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crear-el-bridge-br0">
+<span class="md-ellipsis">
+      Crear el Bridge br0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agregar-la-interfaz-fisica-al-bridge">
+<span class="md-ellipsis">
+      Agregar la Interfaz Física al Bridge:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configurar-br0-para-obtener-ip-via-dhcp">
+<span class="md-ellipsis">
+      Configurar br0 para Obtener IP vía DHCP:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activar-las-conexiones">
+<span class="md-ellipsis">
+      Activar las Conexiones
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-verificacion-de-la-configuracion">
+<span class="md-ellipsis">
+      4.2. Verificación de la Configuración
+    </span>
+</a>
+<nav aria-label="4.2. Verificación de la Configuración" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-interfaces-del-bridge">
+<span class="md-ellipsis">
+      Verificar Interfaces del Bridge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verificar-direccion-ip-del-bridge">
+<span class="md-ellipsis">
+      Verificar Dirección IP del Bridge
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-conectar-maquinas-virtuales-al-bridge">
+<span class="md-ellipsis">
+      4.3. Conectar Máquinas Virtuales al Bridge
+    </span>
+</a>
+<nav aria-label="4.3. Conectar Máquinas Virtuales al Bridge" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usando-virsh">
+<span class="md-ellipsis">
+      Usando virsh
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usando-virt-manager">
+<span class="md-ellipsis">
+      Usando virt-manager
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -647,51 +848,46 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>04.-Creación y Gestión de Puentes con NetworkManager</h1>
-<p>Dado que estás utilizando NetworkManager, es recomendable gestionar los puentes a través de él para asegurar configuraciones persistentes y coherentes.
-4.1. Creación de un Bridge con nmcli</p>
-<p>Supongamos que tu interfaz física es enp0s25.</p>
-<pre><code>Crear el Bridge br0:
-
-bash
+<p>Dado que vamos a utilizar NetworkManager, es recomendable gestionar los puentes a través de él para asegurar configuraciones persistentes y coherentes.</p>
+<h2 id="41-creacion-de-un-bridge-con-nmcli">4.1. Creación de un Bridge con <code>nmcli</code><a class="headerlink" href="#41-creacion-de-un-bridge-con-nmcli" title="Permanent link">¶</a></h2>
+<p>Supongamos que tu interfaz física es <code>enp0s25</code>.</p>
+<h3 id="crear-el-bridge-br0">Crear el Bridge <code>br0</code><a class="headerlink" href="#crear-el-bridge-br0" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">nmcli connection add type bridge autoconnect yes con-name br0 ifname br0
 </code></pre>
-<p>nmcli connection add type bridge autoconnect yes con-name br0 ifname br0</p>
-<p>Agregar la Interfaz Física al Bridge:</p>
-<p>bash</p>
-<p>nmcli connection add type bridge-slave autoconnect yes con-name enp0s25-slave ifname enp0s25 master br0</p>
-<p>Configurar br0 para Obtener IP vía DHCP:</p>
-<p>bash</p>
-<p>nmcli connection modify br0 ipv4.method auto
-nmcli connection modify br0 ipv6.method ignore</p>
-<p>Desactivar la Asignación de IP en enp0s25-slave: En realidad, NetworkManager ya maneja esto automáticamente al establecer el tipo de conexión como bridge-slave. No necesitas (y no debes) asignar métodos IP directamente a una conexión bridge-slave.</p>
-<p>Activar las Conexiones:</p>
-<p>bash</p>
-<pre><code>nmcli connection up br0
-nmcli connection up enp0s25-slave
+<h3 id="agregar-la-interfaz-fisica-al-bridge">Agregar la Interfaz Física al Bridge:<a class="headerlink" href="#agregar-la-interfaz-fisica-al-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">nmcli connection add type bridge-slave autoconnect yes con-name enp0s25-slave ifname enp0s25 master br0
 </code></pre>
-<p>4.2. Verificación de la Configuración</p>
-<pre><code>Verificar Interfaces del Bridge:
-
-bash
+<h3 id="configurar-br0-para-obtener-ip-via-dhcp">Configurar <code>br0</code> para Obtener IP vía DHCP:<a class="headerlink" href="#configurar-br0-para-obtener-ip-via-dhcp" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">nmcli connection modify br0 ipv4.method auto
+nmcli connection modify br0 ipv6.method ignore
 </code></pre>
-<p>bridge link show br0</p>
-<p>Verificar Dirección IP del Bridge:</p>
-<p>bash</p>
-<pre><code>ip addr show br0
+<ul>
+<li>Desactivar la Asignación de IP en enp0s25-slave: En realidad, NetworkManager ya maneja esto automáticamente al establecer el tipo de conexión como bridge-slave. No necesitamo (ni debemos) asignar métodos IP directamente a una conexión bridge-slave.</li>
+</ul>
+<h3 id="activar-las-conexiones">Activar las Conexiones<a class="headerlink" href="#activar-las-conexiones" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">    nmcli connection up br0
+    nmcli connection up enp0s25-slave
 </code></pre>
-<p>4.3. Conectar Máquinas Virtuales al Bridge</p>
+<h2 id="42-verificacion-de-la-configuracion">4.2. Verificación de la Configuración<a class="headerlink" href="#42-verificacion-de-la-configuracion" title="Permanent link">¶</a></h2>
+<h3 id="verificar-interfaces-del-bridge">Verificar Interfaces del Bridge<a class="headerlink" href="#verificar-interfaces-del-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">bridge link show br0
+</code></pre>
+<h3 id="verificar-direccion-ip-del-bridge">Verificar Dirección IP del Bridge<a class="headerlink" href="#verificar-direccion-ip-del-bridge" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">    ip addr show br0
+</code></pre>
+<h2 id="43-conectar-maquinas-virtuales-al-bridge">4.3. Conectar Máquinas Virtuales al Bridge<a class="headerlink" href="#43-conectar-maquinas-virtuales-al-bridge" title="Permanent link">¶</a></h2>
 <p>Una vez que el bridge está configurado y activo, las máquinas virtuales pueden conectarse a él para obtener direcciones IP del servidor DHCP externo.</p>
-<pre><code>Usando virsh:
-
-bash
+<h3 id="usando-virsh">Usando <code>virsh</code><a class="headerlink" href="#usando-virsh" title="Permanent link">¶</a></h3>
+<pre><code class="language-bash">virsh attach-interface --domain &lt;nombre_de_vm&gt; --type bridge --source br0 --model virtio --config --live
 </code></pre>
-<p>virsh attach-interface --domain <nombre_de_vm> --type bridge --source br0 --model virtio --config --live</nombre_de_vm></p>
-<p>Usando Virt-Manager:</p>
-<pre><code>Abre Virt-Manager.
-Selecciona la VM y ve a Detalles.
-En Hardware, selecciona la Interfaz de red.
-Cambia la fuente de red a Bridge br0.
-Guarda y reinicia la VM.
-</code></pre>
+<h3 id="usando-virt-manager">Usando <code>virt-manager</code><a class="headerlink" href="#usando-virt-manager" title="Permanent link">¶</a></h3>
+<ul>
+<li>Abrir <code>virt-manager</code></li>
+<li>Seleccionar la VM e ir a Detalles</li>
+<li>En Hardware, seleccionar la Interfaz de red</li>
+<li>Cambiar la fuente de red a Bridge <code>br0</code></li>
+<li>Guardar y reiniciar la VM.</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

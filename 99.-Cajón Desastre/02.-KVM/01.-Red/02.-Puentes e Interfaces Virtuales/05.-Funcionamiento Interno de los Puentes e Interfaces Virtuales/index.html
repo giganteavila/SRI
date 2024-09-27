@@ -542,7 +542,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#51-flujo-de-trafico-en-un-bridge">
 <span class="md-ellipsis">
-      5.1. Flujo de Tráfico en un Bridge
+      ## 5.1. Flujo de Tráfico en un Bridge
     </span>
 </a>
 </li>
@@ -686,7 +686,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#51-flujo-de-trafico-en-un-bridge">
 <span class="md-ellipsis">
-      5.1. Flujo de Tráfico en un Bridge
+      ## 5.1. Flujo de Tráfico en un Bridge
     </span>
 </a>
 </li>
@@ -712,33 +712,28 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales</h1>
-<h3 id="51-flujo-de-trafico-en-un-bridge"><strong>5.1. Flujo de Tráfico en un Bridge</strong><a class="headerlink" href="#51-flujo-de-trafico-en-un-bridge" title="Permanent link">¶</a></h3>
+<h3 id="51-flujo-de-trafico-en-un-bridge">## 5.1. Flujo de Tráfico en un Bridge<a class="headerlink" href="#51-flujo-de-trafico-en-un-bridge" title="Permanent link">¶</a></h3>
 <ol>
 <li>
 <p><strong>Recepción de Paquetes</strong>: Cuando una interfaz (física o virtual) conectada al bridge recibe un paquete, el bridge examina la dirección MAC de destino.</p>
 </li>
 <li>
-<p>Consulta de la Tabla MAC</p>
+<p><strong>Consulta de la Tabla MAC</strong>: El bridge consulta su tabla de direcciones MAC para determinar a qué interfaz debe reenviar el paquete.</p>
 </li>
-</ol>
-<dl>
-<dd>El bridge consulta su tabla de direcciones MAC para determinar a qué interfaz debe reenviar el paquete.</dd>
-</dl>
-<ul>
 <li><strong>Si la MAC está en la tabla</strong>: Reenvía el paquete únicamente a la interfaz correspondiente.</li>
 <li>
-<p><strong>Si la MAC no está en la tabla</strong>: Reenvía el paquete a todas las interfaces excepto la de origen (flooding).</p>
+<p><strong>Si la MAC no está en la tabla</strong>: Reenvía el paquete a todas las interfaces excepto a la de origen (flooding).</p>
 </li>
 <li>
 <p><strong>Aprendizaje de MACs</strong>: Al recibir paquetes, el bridge aprende qué MAC está asociada a qué interfaz, actualizando su tabla.</p>
 </li>
-</ul>
-<h3 id="52-interfaces-virtuales-en-el-bridge"><strong>5.2. Interfaces Virtuales en el Bridge</strong><a class="headerlink" href="#52-interfaces-virtuales-en-el-bridge" title="Permanent link">¶</a></h3>
+</ol>
+<h2 id="52-interfaces-virtuales-en-el-bridge">5.2. Interfaces Virtuales en el Bridge<a class="headerlink" href="#52-interfaces-virtuales-en-el-bridge" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Puertas de Enlace Virtuales</strong>: Las máquinas virtuales, al conectarse a través del bridge, aparecen como dispositivos en la misma red lógica que las interfaces físicas.</li>
 <li><strong>Separación de Trafico</strong>: Aunque todas las interfaces están en el mismo bridge, las reglas de firewall (como <code>iptables</code>) pueden usarse para aislar el tráfico entre ellas o hacia el host.</li>
 </ul>
-<h3 id="53-aislamiento-entre-host-y-puente"><strong>5.3. Aislamiento entre Host y Puente</strong><a class="headerlink" href="#53-aislamiento-entre-host-y-puente" title="Permanent link">¶</a></h3>
+<h2 id="53-aislamiento-entre-host-y-puente">5.3. Aislamiento entre Host y Puente<a class="headerlink" href="#53-aislamiento-entre-host-y-puente" title="Permanent link">¶</a></h2>
 <p>Para aislar el host de las máquinas virtuales en el bridge:</p>
 <ul>
 <li><strong>Reglas de Firewall</strong>: Utilizar <code>iptables</code> o <code>firewalld</code> para bloquear el tráfico entre el host y las interfaces del bridge.</li>
