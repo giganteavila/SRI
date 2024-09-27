@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../05.-Funcionamiento%20Interno%20de%20los%20Puentes%20e%20Interfaces%20Virtuales/" rel="prev"/>
-<link href="../07.-Herramientas%20y%20comandos%20%C3%BAtiles/" rel="next"/>
+<link href="../07.-Herramientas%20y%20comandos%20%C3%BAtiles/" rel="prev"/>
+<link href="../09.-Ejemplo%20Pr%C3%A1ctico%3AConfiguraci%C3%B3n%20Completa%20con%20NetworkManager/" rel="next"/>
 <link href="../../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.35" name="generator"/>
-<title>06.-Gestión Avanzada de Puentes e Interfaces Vrituales - SRI</title>
+<title>08.-Consideraciones de Seguridad - SRI</title>
 <link href="../../../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
 <link href="../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#61-vlans-y-puentes">
+<a class="md-skip" href="#81-aislamiento-del-host">
           Saltar a contenido
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              06.-Gestión Avanzada de Puentes e Interfaces Vrituales
+              08.-Consideraciones de Seguridad
             
           </span>
 </div>
@@ -482,14 +482,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3_2_2" id="__nav_3_3_2_2_label" tabindex="0">
 <span class="md-ellipsis">
-    01.-Puentes e Interfaces Virtuales
+    02.-Puentes e Interfaces Virtuales
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_3_3_2_2_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_3_3_2_2">
 <span class="md-nav__icon md-icon"></span>
-            01.-Puentes e Interfaces Virtuales
+            02.-Puentes e Interfaces Virtuales
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -527,17 +527,31 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06.-Gesti%C3%B3n%20Avanzada%20de%20Puentes%20e%20Interfaces%20Vrituales/">
+<span class="md-ellipsis">
+    06.-Gestión Avanzada de Puentes e Interfaces Vrituales
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07.-Herramientas%20y%20comandos%20%C3%BAtiles/">
+<span class="md-ellipsis">
+    07.-Herramientas y comandos útiles
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    06.-Gestión Avanzada de Puentes e Interfaces Vrituales
+    08.-Consideraciones de Seguridad
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    06.-Gestión Avanzada de Puentes e Interfaces Vrituales
+    08.-Consideraciones de Seguridad
   </span>
 </a>
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
@@ -547,42 +561,28 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#61-vlans-y-puentes">
+<a class="md-nav__link" href="#81-aislamiento-del-host">
 <span class="md-ellipsis">
-      6.1. VLANs y Puentes
+      8.1. Aislamiento del Host
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#62-bonding-y-agregacion-de-enlaces">
+<a class="md-nav__link" href="#82-filtrado-de-macs">
 <span class="md-ellipsis">
-      6.2. Bonding y Agregación de Enlaces
+      8.2. Filtrado de MACs
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#63-tap-interfaces-y-qemukvm">
+<a class="md-nav__link" href="#83-monitoreo-y-logging">
 <span class="md-ellipsis">
-      6.3. Tap Interfaces y QEMU/KVM
+      8.3. Monitoreo y Logging
     </span>
 </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../07.-Herramientas%20y%20comandos%20%C3%BAtiles/">
-<span class="md-ellipsis">
-    07.-Herramientas y comandos útiles
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../08.-Consideraciones%20de%20Seguridad/">
-<span class="md-ellipsis">
-    08.-Consideraciones de Seguridad
-  </span>
-</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../09.-Ejemplo%20Pr%C3%A1ctico%3AConfiguraci%C3%B3n%20Completa%20con%20NetworkManager/">
@@ -609,30 +609,23 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Puentes%20e%20intefaces%20virtuales/">
+<a class="md-nav__link" href="../../03.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
-    01.-Puentes e intefaces virtuales
+    03.-Configuración de red en modo bridge
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
+<a class="md-nav__link" href="../../04.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
 <span class="md-ellipsis">
-    02.-Configuración de red en modo bridge
+    04.-Configurar el interfaz puente con NetworkManager
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
+<a class="md-nav__link" href="../../05.-Configurar%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
-    03.-Configurar el interfaz puente con NetworkManager
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Configurar%20red%20en%20modo%20bridge/">
-<span class="md-ellipsis">
-    04.-Configurar red en modo bridge
+    05.-Configurar red en modo bridge
   </span>
 </a>
 </li>
@@ -691,23 +684,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#61-vlans-y-puentes">
+<a class="md-nav__link" href="#81-aislamiento-del-host">
 <span class="md-ellipsis">
-      6.1. VLANs y Puentes
+      8.1. Aislamiento del Host
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#62-bonding-y-agregacion-de-enlaces">
+<a class="md-nav__link" href="#82-filtrado-de-macs">
 <span class="md-ellipsis">
-      6.2. Bonding y Agregación de Enlaces
+      8.2. Filtrado de MACs
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#63-tap-interfaces-y-qemukvm">
+<a class="md-nav__link" href="#83-monitoreo-y-logging">
 <span class="md-ellipsis">
-      6.3. Tap Interfaces y QEMU/KVM
+      8.3. Monitoreo y Logging
     </span>
 </a>
 </li>
@@ -718,21 +711,21 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>06.-Gestión Avanzada de Puentes e Interfaces Vrituales</h1>
-<h3 id="61-vlans-y-puentes"><strong>6.1. VLANs y Puentes</strong><a class="headerlink" href="#61-vlans-y-puentes" title="Permanent link">¶</a></h3>
+<h1>08.-Consideraciones de Seguridad</h1>
+<h3 id="81-aislamiento-del-host"><strong>8.1. Aislamiento del Host</strong><a class="headerlink" href="#81-aislamiento-del-host" title="Permanent link">¶</a></h3>
+<p>Para evitar que el host interactúe con las VMs a través del bridge:</p>
 <ul>
-<li><strong>VLANs</strong>: Los puentes pueden manejar VLANs para segmentar el tráfico. Esto se hace creando interfaces VLAN y agregándolas al bridge.</li>
-<li><strong>Configuración</strong>: Añadir interfaces VLAN (<code>eth0.10</code>, <code>eth0.20</code>, ...) y conectarlas al bridge para separar el tráfico según las VLANs.</li>
+<li><strong>No Asignar IP al Bridge</strong>: Si el host no necesita comunicarse en esa red, no le asignes una dirección IP al bridge.</li>
+<li><strong>Reglas de Firewall</strong>: Utiliza <code>iptables</code> o <code>firewalld</code> para bloquear el tráfico entre el host y las interfaces del bridge.</li>
 </ul>
-<h3 id="62-bonding-y-agregacion-de-enlaces"><strong>6.2. Bonding y Agregación de Enlaces</strong><a class="headerlink" href="#62-bonding-y-agregacion-de-enlaces" title="Permanent link">¶</a></h3>
+<h3 id="82-filtrado-de-macs"><strong>8.2. Filtrado de MACs</strong><a class="headerlink" href="#82-filtrado-de-macs" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Bonding</strong>: Combina múltiples interfaces físicas en una sola interfaz lógica para redundancia o aumento de ancho de banda.</li>
-<li><strong>Uso con Bridges</strong>: Los enlaces bond pueden ser agregados a un bridge para proporcionar una conexión más robusta a las máquinas virtuales.</li>
+<li><strong>Control de Acceso</strong>: Configura reglas para permitir solo ciertas direcciones MAC en el bridge, limitando qué dispositivos pueden conectarse.</li>
 </ul>
-<h3 id="63-tap-interfaces-y-qemukvm"><strong>6.3. Tap Interfaces y QEMU/KVM</strong><a class="headerlink" href="#63-tap-interfaces-y-qemukvm" title="Permanent link">¶</a></h3>
+<h3 id="83-monitoreo-y-logging"><strong>8.3. Monitoreo y Logging</strong><a class="headerlink" href="#83-monitoreo-y-logging" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Tap Interfaces</strong>: Son interfaces virtuales que permiten que QEMU/KVM interactúe directamente con el puente.</li>
-<li><strong>Uso</strong>: Al iniciar una VM con QEMU/KVM, se puede especificar el uso de una interfaz tap para conectarse al bridge, permitiendo que la VM se comunique directamente con la red.</li>
+<li><strong>Supervisión del Tráfico</strong>: Utiliza herramientas como <code>tcpdump</code>, <code>wireshark</code> o <code>iftop</code> para monitorear el tráfico en el bridge.</li>
+<li><strong>Logs de NetworkManager</strong>: Revisa los logs de NetworkManager para solucionar problemas de configuración.</li>
 </ul>
 </article>
 </div>

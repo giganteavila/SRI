@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../01.-Introducci%C3%B3n%20a%20las%20redes%20en%20linux/" rel="prev"/>
-<link href="../03.-Interfaces%20Virtuales%20en%20Linux/" rel="next"/>
+<link href="../../01.-Modos%20de%20red%20en%20KVM/" rel="prev"/>
+<link href="../02.-Puentes%20de%20Red%20%28Network%20Bridges%29/" rel="next"/>
 <link href="../../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.35" name="generator"/>
-<title>02.-Puentes de Red (Network Bridges) - SRI</title>
+<title>01.-Introducción a las redes en linux - SRI</title>
 <link href="../../../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
 <link href="../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,9 +22,6 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#21-que-es-un-puente-de-red">
-          Saltar a contenido
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -46,7 +43,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              02.-Puentes de Red (Network Bridges)
+              01.-Introducción a las redes en linux
             
           </span>
 </div>
@@ -482,65 +479,30 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3_2_2" id="__nav_3_3_2_2_label" tabindex="0">
 <span class="md-ellipsis">
-    01.-Puentes e Interfaces Virtuales
+    02.-Puentes e Interfaces Virtuales
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_3_3_2_2_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_3_3_2_2">
 <span class="md-nav__icon md-icon"></span>
-            01.-Puentes e Interfaces Virtuales
+            02.-Puentes e Interfaces Virtuales
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../01.-Introducci%C3%B3n%20a%20las%20redes%20en%20linux/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     01.-Introducción a las redes en linux
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    02.-Puentes de Red (Network Bridges)
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02.-Puentes%20de%20Red%20%28Network%20Bridges%29/">
 <span class="md-ellipsis">
     02.-Puentes de Red (Network Bridges)
   </span>
 </a>
-<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#21-que-es-un-puente-de-red">
-<span class="md-ellipsis">
-      2.1. ¿Qué es un Puente de Red?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#22-como-funcionan-los-puentes">
-<span class="md-ellipsis">
-      2.2. ¿Cómo Funcionan los Puentes?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#23-uso-de-puentes-en-virtualizacion">
-<span class="md-ellipsis">
-      2.3. Uso de Puentes en Virtualización
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../03.-Interfaces%20Virtuales%20en%20Linux/">
@@ -609,30 +571,23 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Puentes%20e%20intefaces%20virtuales/">
+<a class="md-nav__link" href="../../03.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
-    01.-Puentes e intefaces virtuales
+    03.-Configuración de red en modo bridge
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
+<a class="md-nav__link" href="../../04.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
 <span class="md-ellipsis">
-    02.-Configuración de red en modo bridge
+    04.-Configurar el interfaz puente con NetworkManager
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
+<a class="md-nav__link" href="../../05.-Configurar%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
-    03.-Configurar el interfaz puente con NetworkManager
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Configurar%20red%20en%20modo%20bridge/">
-<span class="md-ellipsis">
-    04.-Configurar red en modo bridge
+    05.-Configurar red en modo bridge
   </span>
 </a>
 </li>
@@ -685,53 +640,18 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#21-que-es-un-puente-de-red">
-<span class="md-ellipsis">
-      2.1. ¿Qué es un Puente de Red?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#22-como-funcionan-los-puentes">
-<span class="md-ellipsis">
-      2.2. ¿Cómo Funcionan los Puentes?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#23-uso-de-puentes-en-virtualizacion">
-<span class="md-ellipsis">
-      2.3. Uso de Puentes en Virtualización
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>02.-Puentes de Red (Network Bridges)</h1>
-<h3 id="21-que-es-un-puente-de-red"><strong>2.1. ¿Qué es un Puente de Red?</strong><a class="headerlink" href="#21-que-es-un-puente-de-red" title="Permanent link">¶</a></h3>
-<p>Un <strong>puente de red</strong> (bridge) es un dispositivo de red virtual que opera en la <strong>capa 2</strong> (Enlace de Datos) del modelo OSI. Su función principal es conectar múltiples segmentos de red como si fueran una sola red física. En términos más simples, un bridge permite que diferentes interfaces de red se comuniquen entre sí directamente.</p>
-<h3 id="22-como-funcionan-los-puentes"><strong>2.2. ¿Cómo Funcionan los Puentes?</strong><a class="headerlink" href="#22-como-funcionan-los-puentes" title="Permanent link">¶</a></h3>
+<h1>01.-Introducción a las redes en linux</h1>
+<p>Antes de sumergirnos en puentes e interfaces virtuales, es útil entender cómo se gestionan las redes en Linux:</p>
 <ul>
-<li><strong>Operación en Capa 2</strong>: Al funcionar en la capa de enlace de datos, los puentes trabajan con direcciones MAC para filtrar y reenviar tráfico.</li>
-<li><strong>Aprendizaje de MACs</strong>: Un bridge mantiene una tabla de direcciones MAC aprendidas, asociando cada MAC con una interfaz específica. Esto permite que el bridge reenvíe el tráfico solo al destino correcto, reduciendo el tráfico innecesario.</li>
-<li><strong>Transparencia</strong>: Para los dispositivos conectados al bridge, parece que están todos en la misma red física, aunque estén conectados a diferentes interfaces físicas o virtuales.</li>
-</ul>
-<h3 id="23-uso-de-puentes-en-virtualizacion"><strong>2.3. Uso de Puentes en Virtualización</strong><a class="headerlink" href="#23-uso-de-puentes-en-virtualizacion" title="Permanent link">¶</a></h3>
-<p>En el contexto de la virtualización (como con KVM/QEMU):</p>
-<ul>
-<li><strong>Conexión Directa a la Red Física</strong>: Al conectar las interfaces de las máquinas virtuales a un bridge, estas pueden comunicarse directamente con la red física, obteniendo direcciones IP del mismo servidor DHCP que el host o cualquier otro servidor en la red.</li>
-<li><strong>Flexibilidad</strong>: Permite una mayor flexibilidad en la configuración de redes virtuales, incluyendo la posibilidad de aislar el tráfico entre VMs o entre el host y las VMs.</li>
+<li><strong>Interfaces Físicas</strong>: Son las tarjetas de red reales del sistema, como <code>eth0</code>, <code>enp0s25</code>, <code>wlan0</code>, etc.</li>
+<li><strong>Interfaces Virtuales</strong>: Son interfaces creadas por software para propósitos específicos, como virtualización, túneles VPN, o puentes de red. Ejemplos:  <code>br0</code> (bridge), <code>vnet0</code> (interfaz de VM), <code>tun0</code> (túnel VPN), etc.</li>
+<li><strong>Herramientas de Gestión</strong>: En Linux, puedes gestionar las redes usando herramientas como <code>ip</code>, <code>ifconfig</code> (más antiguo), <code>bridge-utils</code>, <code>nmcli</code> (NetworkManager), entre otras.</li>
 </ul>
 </article>
 </div>

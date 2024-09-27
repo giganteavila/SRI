@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../04.-Creaci%C3%B3n%20y%20Gesti%C3%B3n%20de%20Puentes%20con%20NetworkManager/" rel="prev"/>
-<link href="../06.-Gesti%C3%B3n%20Avanzada%20de%20Puentes%20e%20Interfaces%20Vrituales/" rel="next"/>
+<link href="../03.-Interfaces%20Virtuales%20en%20Linux/" rel="prev"/>
+<link href="../05.-Funcionamiento%20Interno%20de%20los%20Puentes%20e%20Interfaces%20Virtuales/" rel="next"/>
 <link href="../../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.35" name="generator"/>
-<title>05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales - SRI</title>
+<title>04.-Creación y Gestión de Puentes con NetworkManager - SRI</title>
 <link href="../../../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
 <link href="../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,9 +22,6 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#51-flujo-de-trafico-en-un-bridge">
-          Saltar a contenido
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -46,7 +43,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales
+              04.-Creación y Gestión de Puentes con NetworkManager
             
           </span>
 </div>
@@ -482,14 +479,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3_2_2" id="__nav_3_3_2_2_label" tabindex="0">
 <span class="md-ellipsis">
-    01.-Puentes e Interfaces Virtuales
+    02.-Puentes e Interfaces Virtuales
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_3_3_2_2_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_3_3_2_2">
 <span class="md-nav__icon md-icon"></span>
-            01.-Puentes e Interfaces Virtuales
+            02.-Puentes e Interfaces Virtuales
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -513,55 +510,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../04.-Creaci%C3%B3n%20y%20Gesti%C3%B3n%20de%20Puentes%20con%20NetworkManager/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     04.-Creación y Gestión de Puentes con NetworkManager
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05.-Funcionamiento%20Interno%20de%20los%20Puentes%20e%20Interfaces%20Virtuales/">
 <span class="md-ellipsis">
     05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales
   </span>
 </a>
-<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#51-flujo-de-trafico-en-un-bridge">
-<span class="md-ellipsis">
-      5.1. Flujo de Tráfico en un Bridge
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#52-interfaces-virtuales-en-el-bridge">
-<span class="md-ellipsis">
-      5.2. Interfaces Virtuales en el Bridge
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#53-aislamiento-entre-host-y-puente">
-<span class="md-ellipsis">
-      5.3. Aislamiento entre Host y Puente
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../06.-Gesti%C3%B3n%20Avanzada%20de%20Puentes%20e%20Interfaces%20Vrituales/">
@@ -609,30 +571,23 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Puentes%20e%20intefaces%20virtuales/">
+<a class="md-nav__link" href="../../03.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
-    01.-Puentes e intefaces virtuales
+    03.-Configuración de red en modo bridge
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
+<a class="md-nav__link" href="../../04.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
 <span class="md-ellipsis">
-    02.-Configuración de red en modo bridge
+    04.-Configurar el interfaz puente con NetworkManager
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
+<a class="md-nav__link" href="../../05.-Configurar%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
-    03.-Configurar el interfaz puente con NetworkManager
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Configurar%20red%20en%20modo%20bridge/">
-<span class="md-ellipsis">
-    04.-Configurar red en modo bridge
+    05.-Configurar red en modo bridge
   </span>
 </a>
 </li>
@@ -685,72 +640,58 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#51-flujo-de-trafico-en-un-bridge">
-<span class="md-ellipsis">
-      5.1. Flujo de Tráfico en un Bridge
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#52-interfaces-virtuales-en-el-bridge">
-<span class="md-ellipsis">
-      5.2. Interfaces Virtuales en el Bridge
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#53-aislamiento-entre-host-y-puente">
-<span class="md-ellipsis">
-      5.3. Aislamiento entre Host y Puente
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales</h1>
-<h3 id="51-flujo-de-trafico-en-un-bridge"><strong>5.1. Flujo de Tráfico en un Bridge</strong><a class="headerlink" href="#51-flujo-de-trafico-en-un-bridge" title="Permanent link">¶</a></h3>
-<ol>
-<li>
-<p><strong>Recepción de Paquetes</strong>: Cuando una interfaz (física o virtual) conectada al bridge recibe un paquete, el bridge examina la dirección MAC de destino.</p>
-</li>
-<li>
-<p>Consulta de la Tabla MAC</p>
-</li>
-</ol>
-<dl>
-<dd>El bridge consulta su tabla de direcciones MAC para determinar a qué interfaz debe reenviar el paquete.</dd>
-</dl>
-<ul>
-<li><strong>Si la MAC está en la tabla</strong>: Reenvía el paquete únicamente a la interfaz correspondiente.</li>
-<li>
-<p><strong>Si la MAC no está en la tabla</strong>: Reenvía el paquete a todas las interfaces excepto la de origen (flooding).</p>
-</li>
-<li>
-<p><strong>Aprendizaje de MACs</strong>: Al recibir paquetes, el bridge aprende qué MAC está asociada a qué interfaz, actualizando su tabla.</p>
-</li>
-</ul>
-<h3 id="52-interfaces-virtuales-en-el-bridge"><strong>5.2. Interfaces Virtuales en el Bridge</strong><a class="headerlink" href="#52-interfaces-virtuales-en-el-bridge" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong>Puertas de Enlace Virtuales</strong>: Las máquinas virtuales, al conectarse a través del bridge, aparecen como dispositivos en la misma red lógica que las interfaces físicas.</li>
-<li><strong>Separación de Trafico</strong>: Aunque todas las interfaces están en el mismo bridge, las reglas de firewall (como <code>iptables</code>) pueden usarse para aislar el tráfico entre ellas o hacia el host.</li>
-</ul>
-<h3 id="53-aislamiento-entre-host-y-puente"><strong>5.3. Aislamiento entre Host y Puente</strong><a class="headerlink" href="#53-aislamiento-entre-host-y-puente" title="Permanent link">¶</a></h3>
-<p>Para aislar el host de las máquinas virtuales en el bridge:</p>
-<ul>
-<li><strong>Reglas de Firewall</strong>: Utilizar <code>iptables</code> o <code>firewalld</code> para bloquear el tráfico entre el host y las interfaces del bridge.</li>
-<li><strong>Configuración del Bridge</strong>: Asegurarse de que el host no tenga una dirección IP en el bridge, evitando así la comunicación directa.</li>
-</ul>
+<h1>04.-Creación y Gestión de Puentes con NetworkManager</h1>
+<p>Dado que estás utilizando NetworkManager, es recomendable gestionar los puentes a través de él para asegurar configuraciones persistentes y coherentes.
+4.1. Creación de un Bridge con nmcli</p>
+<p>Supongamos que tu interfaz física es enp0s25.</p>
+<pre><code>Crear el Bridge br0:
+
+bash
+</code></pre>
+<p>nmcli connection add type bridge autoconnect yes con-name br0 ifname br0</p>
+<p>Agregar la Interfaz Física al Bridge:</p>
+<p>bash</p>
+<p>nmcli connection add type bridge-slave autoconnect yes con-name enp0s25-slave ifname enp0s25 master br0</p>
+<p>Configurar br0 para Obtener IP vía DHCP:</p>
+<p>bash</p>
+<p>nmcli connection modify br0 ipv4.method auto
+nmcli connection modify br0 ipv6.method ignore</p>
+<p>Desactivar la Asignación de IP en enp0s25-slave: En realidad, NetworkManager ya maneja esto automáticamente al establecer el tipo de conexión como bridge-slave. No necesitas (y no debes) asignar métodos IP directamente a una conexión bridge-slave.</p>
+<p>Activar las Conexiones:</p>
+<p>bash</p>
+<pre><code>nmcli connection up br0
+nmcli connection up enp0s25-slave
+</code></pre>
+<p>4.2. Verificación de la Configuración</p>
+<pre><code>Verificar Interfaces del Bridge:
+
+bash
+</code></pre>
+<p>bridge link show br0</p>
+<p>Verificar Dirección IP del Bridge:</p>
+<p>bash</p>
+<pre><code>ip addr show br0
+</code></pre>
+<p>4.3. Conectar Máquinas Virtuales al Bridge</p>
+<p>Una vez que el bridge está configurado y activo, las máquinas virtuales pueden conectarse a él para obtener direcciones IP del servidor DHCP externo.</p>
+<pre><code>Usando virsh:
+
+bash
+</code></pre>
+<p>virsh attach-interface --domain <nombre_de_vm> --type bridge --source br0 --model virtio --config --live</nombre_de_vm></p>
+<p>Usando Virt-Manager:</p>
+<pre><code>Abre Virt-Manager.
+Selecciona la VM y ve a Detalles.
+En Hardware, selecciona la Interfaz de red.
+Cambia la fuente de red a Bridge br0.
+Guarda y reinicia la VM.
+</code></pre>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../08.-Consideraciones%20de%20Seguridad/" rel="prev"/>
-<link href="../10.-Resumen%20y%20Mejores%20Pr%C3%A1cticas/" rel="next"/>
+<link href="../01.-Introducci%C3%B3n%20a%20las%20redes%20en%20linux/" rel="prev"/>
+<link href="../03.-Interfaces%20Virtuales%20en%20Linux/" rel="next"/>
 <link href="../../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.35" name="generator"/>
-<title>09.-Ejemplo Práctico:Configuración Completa con NetworkManager - SRI</title>
+<title>02.-Puentes de Red (Network Bridges) - SRI</title>
 <link href="../../../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
 <link href="../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#crear-el-bridge">
+<a class="md-skip" href="#21-que-es-un-puente-de-red">
           Saltar a contenido
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              09.-Ejemplo Práctico:Configuración Completa con NetworkManager
+              02.-Puentes de Red (Network Bridges)
             
           </span>
 </div>
@@ -482,14 +482,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3_2_2" id="__nav_3_3_2_2_label" tabindex="0">
 <span class="md-ellipsis">
-    01.-Puentes e Interfaces Virtuales
+    02.-Puentes e Interfaces Virtuales
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_3_3_2_2_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_3_3_2_2">
 <span class="md-nav__icon md-icon"></span>
-            01.-Puentes e Interfaces Virtuales
+            02.-Puentes e Interfaces Virtuales
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -499,12 +499,48 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../02.-Puentes%20de%20Red%20%28Network%20Bridges%29/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    02.-Puentes de Red (Network Bridges)
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     02.-Puentes de Red (Network Bridges)
   </span>
 </a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-que-es-un-puente-de-red">
+<span class="md-ellipsis">
+      2.1. ¿Qué es un Puente de Red?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-como-funcionan-los-puentes">
+<span class="md-ellipsis">
+      2.2. ¿Cómo Funcionan los Puentes?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-uso-de-puentes-en-virtualizacion">
+<span class="md-ellipsis">
+      2.3. Uso de Puentes en Virtualización
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../03.-Interfaces%20Virtuales%20en%20Linux/">
@@ -548,9 +584,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../09.-Ejemplo%20Pr%C3%A1ctico%3AConfiguraci%C3%B3n%20Completa%20con%20NetworkManager/">
 <span class="md-ellipsis">
     09.-Ejemplo Práctico:Configuración Completa con NetworkManager
   </span>
@@ -574,30 +609,23 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Puentes%20e%20intefaces%20virtuales/">
+<a class="md-nav__link" href="../../03.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
-    01.-Puentes e intefaces virtuales
+    03.-Configuración de red en modo bridge
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
+<a class="md-nav__link" href="../../04.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
 <span class="md-ellipsis">
-    02.-Configuración de red en modo bridge
+    04.-Configurar el interfaz puente con NetworkManager
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
+<a class="md-nav__link" href="../../05.-Configurar%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
-    03.-Configurar el interfaz puente con NetworkManager
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Configurar%20red%20en%20modo%20bridge/">
-<span class="md-ellipsis">
-    04.-Configurar red en modo bridge
+    05.-Configurar red en modo bridge
   </span>
 </a>
 </li>
@@ -650,71 +678,54 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-que-es-un-puente-de-red">
+<span class="md-ellipsis">
+      2.1. ¿Qué es un Puente de Red?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-como-funcionan-los-puentes">
+<span class="md-ellipsis">
+      2.2. ¿Cómo Funcionan los Puentes?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-uso-de-puentes-en-virtualizacion">
+<span class="md-ellipsis">
+      2.3. Uso de Puentes en Virtualización
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<p>Supongamos que deseas configurar un bridge br0 que conecta tus VMs directamente a la red física, permitiendo que obtengan direcciones IP de un servidor DHCP externo, y deseas aislar el host de esta red.
-Paso 1: Crear el Bridge br0</p>
-<p>bash</p>
-<h1 id="crear-el-bridge">Crear el bridge<a class="headerlink" href="#crear-el-bridge" title="Permanent link">¶</a></h1>
-<p>nmcli connection add type bridge autoconnect yes con-name br0 ifname br0</p>
-<h1 id="agregar-la-interfaz-fisica-al-bridge">Agregar la interfaz física al bridge<a class="headerlink" href="#agregar-la-interfaz-fisica-al-bridge" title="Permanent link">¶</a></h1>
-<p>nmcli connection add type bridge-slave autoconnect yes con-name enp0s25-slave ifname enp0s25 master br0</p>
-<h1 id="configurar-el-bridge-para-obtener-ip-via-dhcp">Configurar el bridge para obtener IP vía DHCP<a class="headerlink" href="#configurar-el-bridge-para-obtener-ip-via-dhcp" title="Permanent link">¶</a></h1>
-<p>nmcli connection modify br0 ipv4.method auto
-nmcli connection modify br0 ipv6.method ignore</p>
-<h1 id="desactivar-la-asignacion-de-ip-en-la-interfaz-fisica-ya-manejado-por-bridge-slave">Desactivar la asignación de IP en la interfaz física (ya manejado por bridge-slave)<a class="headerlink" href="#desactivar-la-asignacion-de-ip-en-la-interfaz-fisica-ya-manejado-por-bridge-slave" title="Permanent link">¶</a></h1>
-<h1 id="activar-las-conexiones">Activar las conexiones<a class="headerlink" href="#activar-las-conexiones" title="Permanent link">¶</a></h1>
-<p>nmcli connection up br0
-nmcli connection up enp0s25-slave</p>
-<p>Paso 2: Conectar las VMs al Bridge</p>
-<p>Usando virsh:</p>
-<p>bash</p>
-<h1 id="apagar-la-vm-si-esta-en-ejecucion">Apagar la VM si está en ejecución<a class="headerlink" href="#apagar-la-vm-si-esta-en-ejecucion" title="Permanent link">¶</a></h1>
-<p>virsh shutdown <nombre_de_vm></nombre_de_vm></p>
-<h1 id="editar-la-configuracion-de-la-vm">Editar la configuración de la VM<a class="headerlink" href="#editar-la-configuracion-de-la-vm" title="Permanent link">¶</a></h1>
-<p>virsh edit <nombre_de_vm></nombre_de_vm></p>
-<p>En el archivo XML de la VM, modifica la sección <interface>:</interface></p>
-<p>xml</p>
-<p><interface type="bridge">
-<mac address="52:54:00:xx:xx:xx"></mac>
-<source bridge="br0"/>
-<model type="virtio"></model>
-<address bus="0x00" domain="0x0000" function="0x0" slot="0x03" type="pci"></address></interface></p>
-<p></p>
-<p>Guardar y cerrar el editor, luego iniciar la VM:</p>
-<p>bash</p>
-<p>virsh start <nombre_de_vm></nombre_de_vm></p>
-<p>Paso 3: Aislar el Host del Bridge</p>
-<p>Implementar reglas de iptables para bloquear el tráfico entre el host y el bridge br0:</p>
-<p>bash</p>
-<h1 id="bloquear-trafico-entrante-desde-br0-hacia-el-host">Bloquear tráfico entrante desde br0 hacia el host<a class="headerlink" href="#bloquear-trafico-entrante-desde-br0-hacia-el-host" title="Permanent link">¶</a></h1>
-<p>sudo iptables -A INPUT -i br0 -j DROP</p>
-<h1 id="bloquear-trafico-saliente-desde-el-host-hacia-br0">Bloquear tráfico saliente desde el host hacia br0<a class="headerlink" href="#bloquear-trafico-saliente-desde-el-host-hacia-br0" title="Permanent link">¶</a></h1>
-<p>sudo iptables -A OUTPUT -o br0 -j DROP</p>
-<h1 id="guardar-las-reglas-para-que-persistan-tras-reinicios">Guardar las reglas para que persistan tras reinicios<a class="headerlink" href="#guardar-las-reglas-para-que-persistan-tras-reinicios" title="Permanent link">¶</a></h1>
-<p>sudo iptables-save | sudo tee /etc/iptables/iptables.rules</p>
-<h1 id="habilitar-el-servicio-de-iptables-para-restaurar-las-reglas-al-inicio">Habilitar el servicio de iptables para restaurar las reglas al inicio<a class="headerlink" href="#habilitar-el-servicio-de-iptables-para-restaurar-las-reglas-al-inicio" title="Permanent link">¶</a></h1>
-<p>sudo systemctl enable iptables
-sudo systemctl start iptables</p>
-<p>Paso 4: Verificación</p>
-<pre><code>Verificar Dirección IP del Bridge:
-
-bash
-</code></pre>
-<p>ip addr show br0</p>
-<p>Deberías ver una dirección IP asignada por el servidor DHCP externo.</p>
-<p>Verificar Conectividad de la VM:</p>
-<pre><code>Inicia la VM y verifica que obtiene una dirección IP del mismo servidor DHCP.
-Comprueba que la VM puede acceder a Internet y otros recursos de la red.
-</code></pre>
-<p>Verificar Aislamiento del Host:</p>
-<pre><code>Desde el host, intenta hacer ping a la dirección IP de la VM. Debería fallar.
-Desde la VM, intenta hacer ping al host. Debería fallar.
-</code></pre>
+<h1>02.-Puentes de Red (Network Bridges)</h1>
+<h3 id="21-que-es-un-puente-de-red"><strong>2.1. ¿Qué es un Puente de Red?</strong><a class="headerlink" href="#21-que-es-un-puente-de-red" title="Permanent link">¶</a></h3>
+<p>Un <strong>puente de red</strong> (bridge) es un dispositivo de red virtual que opera en la <strong>capa 2</strong> (Enlace de Datos) del modelo OSI. Su función principal es conectar múltiples segmentos de red como si fueran una sola red física. En términos más simples, un bridge permite que diferentes interfaces de red se comuniquen entre sí directamente.</p>
+<h3 id="22-como-funcionan-los-puentes"><strong>2.2. ¿Cómo Funcionan los Puentes?</strong><a class="headerlink" href="#22-como-funcionan-los-puentes" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Operación en Capa 2</strong>: Al funcionar en la capa de enlace de datos, los puentes trabajan con direcciones MAC para filtrar y reenviar tráfico.</li>
+<li><strong>Aprendizaje de MACs</strong>: Un bridge mantiene una tabla de direcciones MAC aprendidas, asociando cada MAC con una interfaz específica. Esto permite que el bridge reenvíe el tráfico solo al destino correcto, reduciendo el tráfico innecesario.</li>
+<li><strong>Transparencia</strong>: Para los dispositivos conectados al bridge, parece que están todos en la misma red física, aunque estén conectados a diferentes interfaces físicas o virtuales.</li>
+</ul>
+<h3 id="23-uso-de-puentes-en-virtualizacion"><strong>2.3. Uso de Puentes en Virtualización</strong><a class="headerlink" href="#23-uso-de-puentes-en-virtualizacion" title="Permanent link">¶</a></h3>
+<p>En el contexto de la virtualización (como con KVM/QEMU):</p>
+<ul>
+<li><strong>Conexión Directa a la Red Física</strong>: Al conectar las interfaces de las máquinas virtuales a un bridge, estas pueden comunicarse directamente con la red física, obteniendo direcciones IP del mismo servidor DHCP que el host o cualquier otro servidor en la red.</li>
+<li><strong>Flexibilidad</strong>: Permite una mayor flexibilidad en la configuración de redes virtuales, incluyendo la posibilidad de aislar el tráfico entre VMs o entre el host y las VMs.</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
