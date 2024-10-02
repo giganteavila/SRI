@@ -5,16 +5,17 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="01.-KVM/" rel="next"/>
-<link href="assets/images/favicon.png" rel="icon"/>
+<link href="../01.-Main%20Categories%20of%20DHCP%20Options/" rel="prev"/>
+<link href="../03.-DHCP%20Message%20Types/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.35" name="generator"/>
-<title>SRI</title>
-<link href="assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>02.-Important DHCP Extensions - SRI</title>
+<link href="../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="green" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -26,7 +27,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Cabecera" class="md-header__inner md-grid">
-<a aria-label="SRI" class="md-header__button md-logo" data-md-component="logo" href="." title="SRI">
+<a aria-label="SRI" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="SRI">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -42,7 +43,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Home
+              02.-Important DHCP Extensions
             
           </span>
 </div>
@@ -95,8 +96,8 @@
 <nav aria-label="Pestañas" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
 <ul class="md-tabs__list">
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href=".">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
         
   
     
@@ -106,7 +107,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="01.-KVM/">
+<a class="md-tabs__link" href="../../../01.-KVM/">
           
   
     
@@ -115,8 +116,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="02.-DHCP/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
           
   
     
@@ -126,7 +127,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="99.-Caj%C3%B3n%20Desastre/">
+<a class="md-tabs__link" href="../../../99.-Caj%C3%B3n%20Desastre/">
           
   
     
@@ -145,15 +146,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navegación" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="SRI" class="md-nav__button md-logo" data-md-component="logo" href="." title="SRI">
+<a aria-label="SRI" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="SRI">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     SRI
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href=".">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
     Home
   </span>
@@ -162,7 +162,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="01.-KVM/">
+<a class="md-nav__link" href="../../../01.-KVM/">
 <span class="md-ellipsis">
     01.-KVM
   </span>
@@ -180,7 +180,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="01.-KVM/01.-Red/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/">
 <span class="md-ellipsis">
     01.-Red
   </span>
@@ -196,7 +196,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/01.-Modos%20de%20red%20en%20KVM/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/01.-Modos%20de%20red%20en%20KVM/">
 <span class="md-ellipsis">
     01.-Modos de red en KVM
   </span>
@@ -217,84 +217,84 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/01.-Introducci%C3%B3n%20a%20las%20redes%20en%20linux/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/01.-Introducci%C3%B3n%20a%20las%20redes%20en%20linux/">
 <span class="md-ellipsis">
     01.-Introducción a las redes en linux
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/02.-Puentes%20de%20Red%20%28Network%20Bridges%29/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/02.-Puentes%20de%20Red%20%28Network%20Bridges%29/">
 <span class="md-ellipsis">
     02.-Puentes de Red (Network Bridges)
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/03.-Interfaces%20Virtuales%20en%20Linux/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/03.-Interfaces%20Virtuales%20en%20Linux/">
 <span class="md-ellipsis">
     03.-Interfaces Virtuales en Linux
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/04.-Gesti%C3%B3n%20de%20Puentes%20con%20NetworkManager/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/04.-Gesti%C3%B3n%20de%20Puentes%20con%20NetworkManager/">
 <span class="md-ellipsis">
     04.-Gestión de Puentes con NetworkManager
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/05.-Funcionamiento%20Interno%20de%20los%20Puentes%20e%20Interfaces%20Virtuales/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/05.-Funcionamiento%20Interno%20de%20los%20Puentes%20e%20Interfaces%20Virtuales/">
 <span class="md-ellipsis">
     05.-Funcionamiento Interno de los Puentes e Interfaces Virtuales
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/06.-Gesti%C3%B3n%20Avanzada%20de%20Puentes%20e%20Interfaces%20Virtuales/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/06.-Gesti%C3%B3n%20Avanzada%20de%20Puentes%20e%20Interfaces%20Virtuales/">
 <span class="md-ellipsis">
     06.-Gestión Avanzada de Puentes e Interfaces Virtuales
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/07.-Herramientas%20y%20comandos%20%C3%BAtiles/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/07.-Herramientas%20y%20comandos%20%C3%BAtiles/">
 <span class="md-ellipsis">
     07.-Herramientas y comandos útiles
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/08.-Consideraciones%20de%20Seguridad/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/08.-Consideraciones%20de%20Seguridad/">
 <span class="md-ellipsis">
     08.-Consideraciones de Seguridad
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/09.-Ejemplo%20Pr%C3%A1ctico%3AConfiguraci%C3%B3n%20Completa%20con%20NetworkManager/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/09.-Ejemplo%20Pr%C3%A1ctico%3AConfiguraci%C3%B3n%20Completa%20con%20NetworkManager/">
 <span class="md-ellipsis">
     09.-Ejemplo Práctico:Configuración Completa con NetworkManager
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/10.-Resumen%20y%20Mejores%20Pr%C3%A1cticas/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/10.-Resumen%20y%20Mejores%20Pr%C3%A1cticas/">
 <span class="md-ellipsis">
     10.-Resumen y Mejores Prácticas
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/11.-Recursos%20adicionales/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/11.-Recursos%20adicionales/">
 <span class="md-ellipsis">
     11.-Recursos adicionales
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/Testeo%20de%20DHCP/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/02.-Puentes%20e%20Interfaces%20Virtuales/Testeo%20de%20DHCP/">
 <span class="md-ellipsis">
     Testeo de DHCP
   </span>
@@ -304,28 +304,28 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/03.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/03.-Configuraci%C3%B3n%20de%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
     03.-Configuración de red en modo bridge
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/04.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/04.-Configurar%20el%20interfaz%20puente%20con%20NetworkManager/">
 <span class="md-ellipsis">
     04.-Configurar el interfaz puente con NetworkManager
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/05.-Configurar%20red%20en%20modo%20bridge/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/05.-Configurar%20red%20en%20modo%20bridge/">
 <span class="md-ellipsis">
     05.-Configurar red en modo bridge
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/01.-Red/NetPlan%20vs%20Network%20Manager%20vs%20systemd/">
+<a class="md-nav__link" href="../../../01.-KVM/01.-Red/NetPlan%20vs%20Network%20Manager%20vs%20systemd/">
 <span class="md-ellipsis">
     NetPlan vs Network Manager vs systemd
   </span>
@@ -349,7 +349,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="01.-KVM/02.-Almacenamiento/01.-Aprovisionamiento%20ligero%20de%20discos/">
+<a class="md-nav__link" href="../../../01.-KVM/02.-Almacenamiento/01.-Aprovisionamiento%20ligero%20de%20discos/">
 <span class="md-ellipsis">
     01.-Aprovisionamiento ligero de discos
   </span>
@@ -361,26 +361,26 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="02.-DHCP/">
+<a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     02.-DHCP
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             02.-DHCP
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/01.-History/">
+<a class="md-nav__link" href="../../01.-History/">
 <span class="md-ellipsis">
     01.-History
   </span>
@@ -389,7 +389,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="02.-DHCP/02.-Overview/">
+<a class="md-nav__link" href="../../02.-Overview/">
 <span class="md-ellipsis">
     02.-Overview
   </span>
@@ -405,21 +405,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/02.-Overview/01.-How%20DHCP%20Works/">
+<a class="md-nav__link" href="../../02.-Overview/01.-How%20DHCP%20Works/">
 <span class="md-ellipsis">
     01.-How DHCP Works
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/02.-Overview/02.-IP%20Address%20Allocation%20Methods/">
+<a class="md-nav__link" href="../../02.-Overview/02.-IP%20Address%20Allocation%20Methods/">
 <span class="md-ellipsis">
     02.-IP Address Allocation Methods
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/02.-Overview/03.-Additional%20Notes/">
+<a class="md-nav__link" href="../../02.-Overview/03.-Additional%20Notes/">
 <span class="md-ellipsis">
     03.-Additional Notes
   </span>
@@ -431,7 +431,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="02.-DHCP/03.-Operation%20Process/">
+<a class="md-nav__link" href="../../03.-Operation%20Process/">
 <span class="md-ellipsis">
     03.-Operation Process
   </span>
@@ -447,35 +447,35 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/03.-Operation%20Process/01.-Discovery/">
+<a class="md-nav__link" href="../../03.-Operation%20Process/01.-Discovery/">
 <span class="md-ellipsis">
     01.-Discovery
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/03.-Operation%20Process/02.-Offer/">
+<a class="md-nav__link" href="../../03.-Operation%20Process/02.-Offer/">
 <span class="md-ellipsis">
     02.-Offer
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/03.-Operation%20Process/03.-Request/">
+<a class="md-nav__link" href="../../03.-Operation%20Process/03.-Request/">
 <span class="md-ellipsis">
     03.-Request
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/03.-Operation%20Process/04.-Acknowledgement/">
+<a class="md-nav__link" href="../../03.-Operation%20Process/04.-Acknowledgement/">
 <span class="md-ellipsis">
     04.-Acknowledgement
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/03.-Operation%20Process/05.-Additional%20Steps/">
+<a class="md-nav__link" href="../../03.-Operation%20Process/05.-Additional%20Steps/">
 <span class="md-ellipsis">
     05.-Additional Steps
   </span>
@@ -485,16 +485,16 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/04.-Client%20configuration%20parameters/">
+<a class="md-nav__link" href="../../04.-Client%20configuration%20parameters/">
 <span class="md-ellipsis">
     04.-Client configuration parameters
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="02.-DHCP/05.-DHCP%20Options/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     05.-DHCP Options
   </span>
@@ -503,42 +503,43 @@
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_6">
 <span class="md-nav__icon md-icon"></span>
             05.-DHCP Options
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/05.-DHCP%20Options/01.-Main%20Categories%20of%20DHCP%20Options/">
+<a class="md-nav__link" href="../01.-Main%20Categories%20of%20DHCP%20Options/">
 <span class="md-ellipsis">
     01.-Main Categories of DHCP Options
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/05.-DHCP%20Options/02.-Important%20DHCP%20Extensions/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     02.-Important DHCP Extensions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/05.-DHCP%20Options/03.-DHCP%20Message%20Types/">
+<a class="md-nav__link" href="../03.-DHCP%20Message%20Types/">
 <span class="md-ellipsis">
     03.-DHCP Message Types
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/05.-DHCP%20Options/04.-Client%20Vendor%20Identification/">
+<a class="md-nav__link" href="../04.-Client%20Vendor%20Identification/">
 <span class="md-ellipsis">
     04.-Client Vendor Identification
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/05.-DHCP%20Options/05.-Other%20Relevant%20Extensions/">
+<a class="md-nav__link" href="../05.-Other%20Relevant%20Extensions/">
 <span class="md-ellipsis">
     05.-Other Relevant Extensions
   </span>
@@ -550,7 +551,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_7" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="02.-DHCP/06.-Relaying/">
+<a class="md-nav__link" href="../../06.-Relaying/">
 <span class="md-ellipsis">
     06.-Relaying
   </span>
@@ -566,28 +567,28 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/06.-Relaying/01.-DHCP%20Relay%20Process/">
+<a class="md-nav__link" href="../../06.-Relaying/01.-DHCP%20Relay%20Process/">
 <span class="md-ellipsis">
     01.-DHCP Relay Process
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/06.-Relaying/02.-Special%20Considerations/">
+<a class="md-nav__link" href="../../06.-Relaying/02.-Special%20Considerations/">
 <span class="md-ellipsis">
     02.-Special Considerations
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/06.-Relaying/04.-Benefits/">
+<a class="md-nav__link" href="../../06.-Relaying/04.-Benefits/">
 <span class="md-ellipsis">
     04.-Benefits
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="02.-DHCP/06.-Relaying/08.-Client%20states/">
+<a class="md-nav__link" href="../../06.-Relaying/08.-Client%20states/">
 <span class="md-ellipsis">
     08.-Client states
   </span>
@@ -602,7 +603,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="99.-Caj%C3%B3n%20Desastre/">
+<a class="md-nav__link" href="../../../99.-Caj%C3%B3n%20Desastre/">
 <span class="md-ellipsis">
     99.-Cajón Desastre
   </span>
@@ -632,14 +633,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="99.-Caj%C3%B3n%20Desastre/01.-Publicaci%C3%B3n%20con%20MkDocs/01.-Crear%20proyecto%20en%20GitHub/">
+<a class="md-nav__link" href="../../../99.-Caj%C3%B3n%20Desastre/01.-Publicaci%C3%B3n%20con%20MkDocs/01.-Crear%20proyecto%20en%20GitHub/">
 <span class="md-ellipsis">
     01.-Crear proyecto en GitHub
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="99.-Caj%C3%B3n%20Desastre/01.-Publicaci%C3%B3n%20con%20MkDocs/02.-Guia/">
+<a class="md-nav__link" href="../../../99.-Caj%C3%B3n%20Desastre/01.-Publicaci%C3%B3n%20con%20MkDocs/02.-Guia/">
 <span class="md-ellipsis">
     02.-Guia
   </span>
@@ -666,8 +667,14 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Home</h1>
-<p><a href="./01.-DHCP/index.md">01.-DHCP</a></p>
+<h1>02.-Important DHCP Extensions</h1>
+<ul>
+<li>Requested IP address</li>
+<li>IP address lease time</li>
+<li>DHCP message type</li>
+<li>Server identifier</li>
+<li>Maximum DHCP message size</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -695,9 +702,9 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
-<script src="assets/javascripts/bundle.56dfad97.min.js"></script>
-<script src="javascripts/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+<script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
