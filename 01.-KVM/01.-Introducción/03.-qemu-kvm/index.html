@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#introduccion-a-qemukvm">
+<a class="md-skip" href="#dispositivos-paravirtualizados">
           Saltar a contenido
         </a>
 </div>
@@ -770,7 +770,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="introduccion-a-qemukvm">Introducción a QEMU/KVM<a class="headerlink" href="#introduccion-a-qemukvm" title="Permanent link">¶</a></h1>
+<h1>03.-qemu-kvm</h1>
 <p>De acuerdo con la <a href="https://wiki.qemu.org/Main_Page">wiki de QEMU</a>, "<a href="https://www.qemu.org/">QEMU</a> es un emulador genérico y de código abierto de máquinas virtuales.". Se puede usar como emulador, permitiendo ejecutar sistemas operativos de una determinada arquitectura (por ejemplo ARM) sobre otra arquitectura (por ejemplo amd64). Pero también, puede ofrecer una solución de virtualización completa, usando hipervidores como KVM para utilizar las extensiones del procesador para la virtualización y ofrecer un rendimiento mayor.</p>
 <p><a href="https://www.linux-kvm.org/page/Main_Page">KVM</a>, la Maquina virtual basada en el kernel (Kernel-based Virtual Machine), es un hipervisor de tipo 1 integrado al kernel de Linux. Es una solución de virtualización completa para Linux, que contienen las extensiones de virtualización Intel VT o AMD-V. Se compone de un módulo del kernel <code>kvm.ko</code>, que provee la infraestructura de virtualización base, y un módulo específico para el tipo de procesador, <code>kvm-intel.ko</code> o <code>kvm-amd.ko</code>.</p>
 <p>Por lo tanto, podemos usar QEMU junto a KVM para permitir la ejecución de máquinas virtuales utilizando imágenes de disco que contienen sistemas operativos sin modificar. Cada máquina virtual tiene su propio hardware virtualizado: una tarjeta de red, discos duros, tarjeta gráfica, ...</p>
