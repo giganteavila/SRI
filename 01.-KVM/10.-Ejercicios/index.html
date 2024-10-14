@@ -1304,7 +1304,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="ejercicios-kvm">Ejercicios KVM<a class="headerlink" href="#ejercicios-kvm" title="Permanent link">¶</a></h1>
 <h2 id="ejercicio-1-verificacion-del-soporte-de-virtualizacion-en-el-host">Ejercicio 1: Verificación del Soporte de Virtualización en el Host<a class="headerlink" href="#ejercicio-1-verificacion-del-soporte-de-virtualizacion-en-el-host" title="Permanent link">¶</a></h2>
-<p><strong>Tarea</strong>: Ejecuta el comando <code>egrep -c '(vmx|svm)' /proc/cpuinfo</code> en tu máquina host para verificar si el procesador soporta virtualización por hardware (Intel VT o AMD-V).</p>
+<p><strong>Tarea</strong>: Ejecuta el comando <code>egrep -E -c '(vmx|svm)' /proc/cpuinfo</code> en tu máquina host para verificar si el procesador soporta virtualización por hardware (Intel VT o AMD-V).</p>
 <p><strong>Instrucciones</strong>:</p>
 <ul>
 <li>Abre una terminal en tu sistema Linux.</li>
@@ -1340,7 +1340,7 @@
   --ram 2048 \
   --vcpus 2 \
   --disk path=/var/lib/libvirt/images/ubuntu.qcow2,size=10 \
-  --location ./Desktop/ubuntu-24.04.1-live-server-amd64.iso,kernel=casper/vmlinuz,initrd=casper/initrd \
+  --location ~/&lt;nombre_distribución&gt;,kernel=casper/vmlinuz,initrd=casper/initrd \
   --os-variant ubuntu24.04 \
   --network bridge=virbr0 \
   --graphics none \
@@ -1352,10 +1352,18 @@
 <hr/>
 <h2 id="ejercicio-4-creacion-de-un-disco-virtual-adicional-para-una-mv-existente">Ejercicio 4: Creación de un Disco Virtual Adicional para una MV Existente<a class="headerlink" href="#ejercicio-4-creacion-de-un-disco-virtual-adicional-para-una-mv-existente" title="Permanent link">¶</a></h2>
 <p><strong>Tarea</strong>: Añadir un segundo disco virtual de 5GB a una máquina virtual existente.
-<strong>Instrucciones</strong>:
-- Detén la máquina virtual con virsh shutdown <nombremv>.
-- Usa el comando virsh edit <nombremv> para editar la configuración XML de la máquina.
-- Añade la siguiente sección en el archivo XML:</nombremv></nombremv></p>
+<strong>Instrucciones</strong>:</p>
+<ul>
+<li>
+<p>Detén la máquina virtual con <code>virsh shutdown &lt;nombreMV&gt;</code>.</p>
+</li>
+<li>
+<p>Usa el comando <code>virsh edit &lt;nombreMV&gt;</code> para editar la configuración XML de la máquina.</p>
+</li>
+<li>
+<p>Añade la siguiente sección en el archivo XML:</p>
+</li>
+</ul>
 <pre><code class="language-xml">&lt;disk type='file' device='disk'&gt;
    &lt;driver name='qemu' type='qcow2'/&gt;
    &lt;source file='/var/lib/libvirt/images/disk2.qcow2'/&gt;
@@ -1365,7 +1373,8 @@
 <ul>
 <li>Guarda el archivo y arranca la MV de nuevo.</li>
 </ul>
-<p><strong>Objetivo</strong>: Familiarizarse con la administración de almacenamiento adicional en una MV.</p>
+<p><strong>Objetivo</strong>: Familiarizarse con la administración de almacenamiento adicional en una MV.
+<strong>¡ OJO !:</strong>: Debes crear el disco virtual previamente. </p>
 <hr/>
 <h2 id="ejercicio-5-migracion-en-vivo-de-una-mv-a-otro-host">Ejercicio 5: Migración en Vivo de una MV a Otro Host<a class="headerlink" href="#ejercicio-5-migracion-en-vivo-de-una-mv-a-otro-host" title="Permanent link">¶</a></h2>
 <p><strong>Tarea</strong>: Realizar una migración en vivo de una máquina virtual desde un host KVM a otro sin detenerla.
@@ -1377,7 +1386,12 @@
 <ul>
 <li>Verifica que la MV sigue ejecutándose en el host destino con virsh list.</li>
 </ul>
-<p><strong>Objetivo</strong>: Ejecutar una migración en vivo para mejorar la disponibilidad y el mantenimiento de sistemas.</p>
+<p><strong>Objetivo</strong>: Ejecutar una migración en vivo para mejorar la disponibilidad y el mantenimiento de sistemas.
+<strong>¡ OJO !</strong>: Antes de realizar la migración en vivo, asegúrate de que los siguientes aspectos están configurados correctamente en ambos hosts (origen y destino):
+- Ambos hosts deben usar KVM/QEMU con libvirt.
+- SSH sin contraseña: Configura la autenticación sin contraseña entre el host origen y destino mediante claves SSH.
+- Almacenamiento compartido o accesible: Asegúrate de que el almacenamiento de la máquina virtual (imágenes de disco) está accesible desde ambos hosts (por ejemplo, a través de NFS, iSCSI, etc.). La migración en vivo requiere que los archivos de disco de la VM sean accesibles desde el host de destino.
+- Ambos hosts deben tener las mismas versiones de QEMU/KVM y libvirt para asegurar la compatibilidad.</p>
 <hr/>
 <h2 id="ejercicio-6-uso-de-snapshots-en-mvs">Ejercicio 6: Uso de Snapshots en MVs<a class="headerlink" href="#ejercicio-6-uso-de-snapshots-en-mvs" title="Permanent link">¶</a></h2>
 <p><strong>Tarea</strong>: Crear un snapshot de una máquina virtual en funcionamiento y restaurarla a ese punto después de realizar cambios en el sistema operativo.
