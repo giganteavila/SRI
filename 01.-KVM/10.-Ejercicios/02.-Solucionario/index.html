@@ -816,16 +816,12 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_1" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/">
+<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
 <span class="md-ellipsis">
     01.-Características Principales
   </span>
-</a>
-<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
-</div>
 <nav aria-expanded="false" aria-labelledby="__nav_3_2_1_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_1">
 <span class="md-nav__icon md-icon"></span>
@@ -1162,6 +1158,37 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+<span class="md-ellipsis">
+    07.-Ejercicios
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_8">
+<span class="md-nav__icon md-icon"></span>
+            07.-Ejercicios
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../02.-SSH/07.-Ejercicios/01.-Descripci%C3%B3n%20del%20laboratorio/">
+<span class="md-ellipsis">
+    01.-Descripción del laboratorio
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../02.-SSH/07.-Ejercicios/02.-Ejercicios/">
+<span class="md-ellipsis">
+    02.-Ejercicios
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1451,6 +1478,11 @@ La máquina virtual <code>UbuntuVM</code> aparece en la lista con el estado <str
 <pre><code class="language-bash">virsh shutdown UbuntuVM
 </code></pre>
 <ul>
+<li>Crear un Disco Virtual con <code>qemu-img</code> y Añadirlo con <code>virsh</code></li>
+</ul>
+<pre><code>qemu-img create -f qcow2 /var/lib/libvirt/images/disk1.qcow2 5G
+</code></pre>
+<ul>
 <li>Edición del archivo XML de la MV para agregar un segundo disco:</li>
 </ul>
 <pre><code class="language-bash">virsh edit UbuntuVM
@@ -1460,9 +1492,14 @@ La máquina virtual <code>UbuntuVM</code> aparece en la lista con el estado <str
 </ul>
 <pre><code class="language-xml">&lt;disk type='file' device='disk'&gt;
   &lt;driver name='qemu' type='qcow2'/&gt;
-  &lt;source file='/var/lib/libvirt/images/disk2.qcow2'/&gt;
+  &lt;source file='/var/lib/libvirt/images/disk1.qcow2'/&gt;
   &lt;target dev='vdb' bus='virtio'/&gt;
 &lt;/disk&gt;
+</code></pre>
+<ul>
+<li>También se puede hacer la asociación usando el comando <code>virsh-attach-disk</code>del siguiente modo:</li>
+</ul>
+<pre><code>virsh attach-disk &lt;nombre-de-la-vm&gt; /var/lib/libvirt/images/disk1.qcow2 vdb --targetbus virtio --persistent
 </code></pre>
 <ul>
 <li>Inicio la MV de nuevo:</li>
