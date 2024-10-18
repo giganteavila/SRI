@@ -1496,36 +1496,36 @@
 <h3 id="pasos-para-copiar-una-maquina-virtual">Pasos para copiar una máquina virtual:<a class="headerlink" href="#pasos-para-copiar-una-maquina-virtual" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>Ubicación de los archivos de imagen de disco:</strong>
-   Los archivos de disco de la máquina virtual suelen estar en <code>/var/lib/libvirt/images/</code> por defecto si estás utilizando <code>libvirt</code>. Sin embargo, la ubicación puede variar según tu configuración. Si tienes una imagen en otro lugar, puedes buscarla utilizando un comando como:</li>
+Los archivos de disco de la máquina virtual suelen estar en <code>/var/lib/libvirt/images/</code> por defecto si estás utilizando <code>libvirt</code>. Sin embargo, la ubicación puede variar según tu configuración. Si tienes una imagen en otro lugar, puedes buscarla utilizando un comando como:</li>
 </ol>
-<p><code>bash
-   virsh domblklist &lt;nombre_de_la_VM&gt;</code></p>
+<pre><code class="language-bash">virsh domblklist &lt;nombre_de_la_VM&gt;
+</code></pre>
 <p>Esto te mostrará las rutas de los discos asociados a esa máquina virtual.</p>
 <ol>
 <li><strong>Copiar el archivo de imagen:</strong>
-   Una vez que encuentres el archivo de imagen, puedes copiarlo a otra ubicación o máquina utilizando <code>cp</code> o herramientas como <code>rsync</code> para transferencias remotas. Ejemplo:</li>
+Una vez que encuentres el archivo de imagen, puedes copiarlo a otra ubicación o máquina utilizando <code>cp</code> o herramientas como <code>rsync</code> para transferencias remotas. Ejemplo:</li>
 </ol>
-<p><code>bash
-   cp /var/lib/libvirt/images/mi_vm.qcow2 /ruta/destino/mi_vm_copia.qcow2</code></p>
+<pre><code class="language-bash">cp /var/lib/libvirt/images/mi_vm.qcow2 /ruta/destino/mi_vm_copia.qcow2
+</code></pre>
 <p>O si deseas copiarlo a otra máquina usando <code>rsync</code>:</p>
-<p><code>bash
-   rsync -avz /var/lib/libvirt/images/mi_vm.qcow2 usuario@otra_maquina:/ruta/destino/</code></p>
+<pre><code class="language-bash">rsync -avz /var/lib/libvirt/images/mi_vm.qcow2 usuario@otra_maquina:/ruta/destino/
+</code></pre>
 <ol>
 <li><strong>Copiar el archivo de configuración XML (si usas libvirt):</strong>
-   El archivo de configuración XML se encuentra generalmente en <code>/etc/libvirt/qemu/</code>. Puedes encontrarlo usando:</li>
+El archivo de configuración XML se encuentra generalmente en <code>/etc/libvirt/qemu/</code>. Puedes encontrarlo usando:</li>
 </ol>
-<p><code>bash
-   virsh dumpxml &lt;nombre_de_la_VM&gt; &gt; /ruta/destino/mi_vm.xml</code></p>
+<pre><code class="language-bash">virsh dumpxml &lt;nombre_de_la_VM&gt; &gt; /ruta/destino/mi_vm.xml
+</code></pre>
 <p>Este comando exportará la configuración actual de la máquina virtual en un archivo XML.</p>
 <ol>
 <li><strong>Importar la máquina virtual copiada:</strong>
-   Una vez que hayas copiado tanto el archivo de imagen como el archivo XML, puedes crear una nueva máquina virtual utilizando el archivo XML. Esto se hace usando el siguiente comando:</li>
+Una vez que hayas copiado tanto el archivo de imagen como el archivo XML, puedes crear una nueva máquina virtual utilizando el archivo XML. Esto se hace usando el siguiente comando:</li>
 </ol>
-<p><code>bash
-   virsh define /ruta/destino/mi_vm.xml</code></p>
+<pre><code class="language-bash">virsh define /ruta/destino/mi_vm.xml
+</code></pre>
 <p>Luego, puedes verificar que la máquina virtual esté definida correctamente:</p>
-<p><code>bash
-   virsh list --all</code></p>
+<pre><code class="language-bash">virsh list --all
+</code></pre>
 <h3 id="consideraciones-adicionales">Consideraciones adicionales:<a class="headerlink" href="#consideraciones-adicionales" title="Permanent link">¶</a></h3>
 <ul>
 <li>
@@ -1533,9 +1533,11 @@
 </li>
 <li>
 <p>Puedes generar un nuevo UUID con el siguiente comando:</p>
-<p><code>bash
-uuidgen</code></p>
 </li>
+</ul>
+<p><code>bash
+ uuidgen</code></p>
+<ul>
 <li>
 <p>Luego, edita el archivo XML y reemplaza el UUID y el nombre de la máquina virtual.</p>
 </li>
