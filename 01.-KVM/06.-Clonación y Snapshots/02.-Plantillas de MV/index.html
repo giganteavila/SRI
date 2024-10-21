@@ -205,9 +205,9 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Introducci%C3%B3n/01.-%C2%BFQu%C3%A9%20es%20la%20virtualizaci%C3%B3n%3F/">
+<a class="md-nav__link" href="../../01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/">
 <span class="md-ellipsis">
-    01.-¿Qué es la virtualización?
+    01.-Qué es la virtualización
   </span>
 </a>
 </li>
@@ -285,9 +285,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota/">
+<a class="md-nav__link" href="../../02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/">
 <span class="md-ellipsis">
-    05.-Conexión remota
+    05.-Conexión remota a libvirt
   </span>
 </a>
 </li>
@@ -1339,8 +1339,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>02.-Plantillas de MV</h1>
-<p>Una plantilla de máquina virtual, o simplemente <strong>plantilla</strong> es una imagen preconfigurada de un sistema operativo que puede utilizarse para desplegar rápidamente
-máquinas virtuales. El uso de plantillas permite evitar muchas tareas repetitivas de instalación y configuración. El resultado es la creación de máquinas virtuales totalmente instaladas y listas para funcionar en menos tiempo de lo que tardaría una instalación manual.</p>
+<p>Una plantilla de máquina virtual, o simplemente <strong>plantilla</strong> es una <em>imagen preconfigurada de un sistema operativo</em> que puede utilizarse para desplegar rápidamente máquinas virtuales. El uso de plantillas permite evitar muchas tareas repetitivas de instalación y configuración. El resultado es la creación de máquinas virtuales totalmente instaladas y listas para funcionar en menos tiempo de lo que tardaría una instalación manual.</p>
 <p>Con la herramienta <code>virt-clone</code> hemos creado un clon de una máquina virtual, es decir, una copia de una máquina. Una plantilla es una <em>copia maestra</em> que podemos utilizar para crear muchos clones.</p>
 <p>Una vez tengamos una plantilla, tendremos dos manera de crear las nuevas máquinas:</p>
 <ul>
@@ -1349,31 +1348,42 @@ máquinas virtuales. El uso de plantillas permite evitar muchas tareas repetitiv
 </ul>
 <h2 id="creacion-de-plantillas">Creación de plantillas<a class="headerlink" href="#creacion-de-plantillas" title="Permanent link">¶</a></h2>
 <p>Tendríamos que realizar tres pasos fundamentales:</p>
-<p>En primer lugar, crear e instalar un nueva máquina virtual e instalarle todo el software necesario. A partir de esa máquina vamos a crear la plantilla.</p>
-<p>En segundo lugar, vamos a generalizar la imagen, es decir, vamos a eliminar toda la información que debería ser única en una máquina ( contiene identificadores que deberían ser únicos (como el machine ID, direcciones MAC, claves SSH de host, hostname, ...). De tal forma, que las máquinas clonadas, regenerarán esta información de for ma única al iniciarlas.</p>
+<ol>
+<li>
+<p><strong>Crear e instalar</strong> un nueva máquina virtual e instalarle todo el software necesario. <em>A partir de esa máquina vamos a crear la plantilla</em>.</p>
+</li>
+<li>
+<p><strong>Generalizar la imagen</strong>, es decir, vamos a eliminar toda la información que debería ser única en una máquina ya que contiene identificadores que deberían ser únicos (como el ID de la máquina, direcciones MAC, claves SSH de host, hostname, ...). De tal forma, que las máquinas clonadas, regenerarán esta información de forma única al iniciarlas.</p>
 <p>En máquinas Linux vamos a usar la utilidad <code>virt-sysprep</code>, para máquinas Windows podemos usar los mecanismos propios de generalización que posee: <a href="https://docs.microsoft.com/es-es/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11">sysprep</a>.</p>
 <p>Para poder utilizar <code>virt-sysprep</code> tenemos que instalar el siguiente paquete:</p>
-<pre><code>apt-get install libguestfs-tools
-</code></pre>
-<p><a href="https://libguestfs.org/virt-sysprep.1.html"><code>virt-sysprep</code></a> puede trabajar con un fichero de imaǵen, usando la opción <code>-a</code>, pero en nuestro caso vamos indicarle una máquina virtual, usando el parámetro <code>-d</code>.</p>
+<p><code>bash
+$ apt-get install libguestfs-tools</code></p>
+<p>En distribuciones basadas en Arch puede que el paquete se encuentre en <code>guestfs-tools</code>.</p>
+<p><code>bash
+$ pacman -S guestfs-tools</code></p>
+<p><a href="https://libguestfs.org/virt-sysprep.1.html"><code>virt-sysprep</code></a> puede trabajar con un fichero de imagen, usando la opción <code>-a</code>, pero en nuestro caso vamos indicarle una máquina virtual, usando el parámetro <code>-d</code>.</p>
 <p>Vamos a suponer que vamos a convertir en plantilla nuestra máquina <code>prueba1</code> que tiene un sistema GNU/Linux Debian 11 instalado. Nuestra máquina original tiene que estar parada. Y para generalizarla, ejecutamos como superusuario:</p>
-<pre><code>sudo virt-sysprep -d prueba1 --hostname plantilla-debian11
+<p><code>bash
+$ sudo virt-sysprep -d prueba1 --hostname plantilla-debian11
 [   0.0] Examining the guest ...
-...
-</code></pre>
+...</code></p>
 <p><code>virt-sysprep</code> tienes muchas opciones de configuración, hemos usado el parámetro <code>-hostname</code> para cambiar el nombre de la máquina de la plantilla.</p>
-<p>En último lugar, tenemos que evitar ejecutar está máquina de nuevo, ya que la generalización que hemos hecho se perdería. Para conseguirlo vamos a <strong>configurar la imagen original de solo lectura</strong>, de esta manera al intentar ejecutar la plantilla nos dará un error. Para ello como superusuario:</p>
-<pre><code>/var/lib/libvirt/images# chmod -w prueba1.qcow2 
-</code></pre>
+</li>
+<li>
+<p>En último lugar, tenemos que evitar ejecutar está máquina de nuevo, ya que la generalización que hemos hecho se perdería. Para conseguirlo vamos a <strong>configurar la imagen original de solo lectura</strong>, de esta manera al intentar ejecutar la plantilla nos dará un error. Para ello, como superusuario ejecutamos:</p>
+<p><code>bash
+/var/lib/libvirt/images# chmod -w prueba1.qcow2</code></p>
 <p>Además, vamos a cambiar el nombre a la máquina para recordar que es un plantilla:</p>
-<pre><code>virsh -c qemu:///system domrename prueba1 plantilla-prueba1
-Domain successfully renamed
-</code></pre>
+<p><code>bash
+$ virsh -c qemu:///system domrename prueba1 plantilla-prueba1
+Domain successfully renamed</code></p>
 <p>Este cambio también se podría hacer con <code>virt-manager</code>.</p>
 <p>Si intentamos ejecutar la plantilla, nos dará un error:</p>
 <p><img alt="plantilla" src="../img/plantilla1.png"/></p>
 <p>En cualquier momento podemos cambiar la configuración de la plantilla. Todas las nuevas máquinas clonadas a partir de ella tendrán la misma configuración.</p>
 <p>Ya tenemos la plantilla lista para ser clonada. Lo veremos en los siguientes apartados.</p>
+</li>
+</ol>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
