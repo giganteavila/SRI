@@ -507,6 +507,31 @@
       Creación de plantillas
     </span>
 </a>
+<nav aria-label="Creación de plantillas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-crear-e-instalar">
+<span class="md-ellipsis">
+      1. Crear e instalar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2generalizar-la-imagen">
+<span class="md-ellipsis">
+      2.Generalizar la imagen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-configurar-maquina-de-solo-lectura">
+<span class="md-ellipsis">
+      3. Configurar máquina de sólo lectura
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1330,6 +1355,31 @@
       Creación de plantillas
     </span>
 </a>
+<nav aria-label="Creación de plantillas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-crear-e-instalar">
+<span class="md-ellipsis">
+      1. Crear e instalar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2generalizar-la-imagen">
+<span class="md-ellipsis">
+      2.Generalizar la imagen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-configurar-maquina-de-solo-lectura">
+<span class="md-ellipsis">
+      3. Configurar máquina de sólo lectura
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1348,42 +1398,39 @@
 </ul>
 <h2 id="creacion-de-plantillas">Creación de plantillas<a class="headerlink" href="#creacion-de-plantillas" title="Permanent link">¶</a></h2>
 <p>Tendríamos que realizar tres pasos fundamentales:</p>
-<ol>
-<li>
-<p><strong>Crear e instalar</strong> un nueva máquina virtual e instalarle todo el software necesario. <em>A partir de esa máquina vamos a crear la plantilla</em>.</p>
-</li>
-<li>
-<p><strong>Generalizar la imagen</strong>, es decir, vamos a eliminar toda la información que debería ser única en una máquina ya que contiene identificadores que deberían ser únicos (como el ID de la máquina, direcciones MAC, claves SSH de host, hostname, ...). De tal forma, que las máquinas clonadas, regenerarán esta información de forma única al iniciarlas.</p>
-<p>En máquinas Linux vamos a usar la utilidad <code>virt-sysprep</code>, para máquinas Windows podemos usar los mecanismos propios de generalización que posee: <a href="https://docs.microsoft.com/es-es/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11">sysprep</a>.</p>
-<p>Para poder utilizar <code>virt-sysprep</code> tenemos que instalar el siguiente paquete:</p>
-<p><code>bash
-$ apt-get install libguestfs-tools</code></p>
+<h3 id="1-crear-e-instalar">1. Crear e instalar<a class="headerlink" href="#1-crear-e-instalar" title="Permanent link">¶</a></h3>
+<p>Hemos de crear una nueva máquina virtual e instalarle todo el software necesario. <em>A partir de esa máquina vamos a crear la plantilla</em>.</p>
+<h3 id="2generalizar-la-imagen">2.Generalizar la imagen<a class="headerlink" href="#2generalizar-la-imagen" title="Permanent link">¶</a></h3>
+<p>Vamos a <strong>eliminar toda la información</strong> que debería ser única en una máquina ya que contiene identificadores que deberían ser únicos (como el ID de la máquina, direcciones MAC, claves SSH de host, hostname, ...). De tal forma, que las máquinas clonadas, regenerarán esta información de forma única al iniciarlas.</p>
+<p>En máquinas Linux vamos a usar la utilidad <code>virt-sysprep</code>; para máquinas Windows podemos usar los mecanismos propios de generalización que posee: <a href="https://docs.microsoft.com/es-es/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11">sysprep</a>.
+Para poder utilizar <code>virt-sysprep</code> tenemos que instalar el siguiente paquete:</p>
+<pre><code class="language-bash">    $ apt-get install libguestfs-tools
+</code></pre>
 <p>En distribuciones basadas en Arch puede que el paquete se encuentre en <code>guestfs-tools</code>.</p>
-<p><code>bash
-$ pacman -S guestfs-tools</code></p>
+<pre><code class="language-bash">    $ pacman -S guestfs-tools
+</code></pre>
 <p><a href="https://libguestfs.org/virt-sysprep.1.html"><code>virt-sysprep</code></a> puede trabajar con un fichero de imagen, usando la opción <code>-a</code>, pero en nuestro caso vamos indicarle una máquina virtual, usando el parámetro <code>-d</code>.</p>
-<p>Vamos a suponer que vamos a convertir en plantilla nuestra máquina <code>prueba1</code> que tiene un sistema GNU/Linux Debian 11 instalado. Nuestra máquina original tiene que estar parada. Y para generalizarla, ejecutamos como superusuario:</p>
-<p><code>bash
-$ sudo virt-sysprep -d prueba1 --hostname plantilla-debian11
-[   0.0] Examining the guest ...
-...</code></p>
-<p><code>virt-sysprep</code> tienes muchas opciones de configuración, hemos usado el parámetro <code>-hostname</code> para cambiar el nombre de la máquina de la plantilla.</p>
-</li>
-<li>
-<p>En último lugar, tenemos que evitar ejecutar está máquina de nuevo, ya que la generalización que hemos hecho se perdería. Para conseguirlo vamos a <strong>configurar la imagen original de solo lectura</strong>, de esta manera al intentar ejecutar la plantilla nos dará un error. Para ello, como superusuario ejecutamos:</p>
-<p><code>bash
-/var/lib/libvirt/images# chmod -w prueba1.qcow2</code></p>
+<p>Vamos a suponer que vamos a convertir en plantilla nuestra máquina <code>VM</code> que tiene un sistema GNU/Linux Ubuntu Server instalado. Nuestra máquina original tiene que estar <strong>parada</strong>. Y para generalizarla, ejecutamos como superusuario:</p>
+<pre><code class="language-bash">
+    $ sudo virt-sysprep -d VM --hostname TplUbuntuServer
+
+    [   0.0] Examining the guest ...
+    ...
+</code></pre>
+<p>En <code>virt-sysprep</code> tienes muchas opciones de configuración, hemos usado el parámetro <code>-hostname</code> para cambiar el nombre de la máquina de la plantilla.</p>
+<h3 id="3-configurar-maquina-de-solo-lectura">3. Configurar máquina de sólo lectura<a class="headerlink" href="#3-configurar-maquina-de-solo-lectura" title="Permanent link">¶</a></h3>
+<p>En último lugar, tenemos que evitar ejecutar esta máquina de nuevo, ya que la generalización que hemos hecho se perdería. Para conseguirlo vamos a <strong>configurar la imagen original de solo lectura</strong>, de esta manera al intentar ejecutar la plantilla nos dará un error. Para ello, como superusuario ejecutamos:</p>
+<pre><code class="language-bash">    /var/lib/libvirt/images# sudo chmod -w VM.qcow2 
+</code></pre>
 <p>Además, vamos a cambiar el nombre a la máquina para recordar que es un plantilla:</p>
-<p><code>bash
-$ virsh -c qemu:///system domrename prueba1 plantilla-prueba1
-Domain successfully renamed</code></p>
+<pre><code class="language-bash">$ virsh -c qemu:///system domrename VM TplUbuntuServer
+Domain successfully renamed
+</code></pre>
 <p>Este cambio también se podría hacer con <code>virt-manager</code>.</p>
-<p>Si intentamos ejecutar la plantilla, nos dará un error:</p>
-<p><img alt="plantilla" src="../img/plantilla1.png"/></p>
+<p>Si intentamos ejecutar la plantilla, nos dará un error:
+<img alt="plantilla" src="../img/plantilla1.png"/></p>
 <p>En cualquier momento podemos cambiar la configuración de la plantilla. Todas las nuevas máquinas clonadas a partir de ella tendrán la misma configuración.</p>
 <p>Ya tenemos la plantilla lista para ser clonada. Lo veremos en los siguientes apartados.</p>
-</li>
-</ol>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

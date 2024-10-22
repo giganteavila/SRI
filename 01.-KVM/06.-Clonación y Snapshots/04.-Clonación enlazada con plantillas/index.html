@@ -1412,14 +1412,15 @@
 <h2 id="creacion-de-imagenes-de-disco-con-backing-store">Creación de imágenes de disco con backing store<a class="headerlink" href="#creacion-de-imagenes-de-disco-con-backing-store" title="Permanent link">¶</a></h2>
 <p>Para no complicar la creación de volúmenes con backing store vamos a indicar el tamaño del nuevo volumen igual al de la imagen base. Como la imagen base ya tiene guardado un sistema de archivos con un tamaño determinado, el hecho de que creemos una nueva imagen con más tamaño no conlleva el redimensionado del sistema de archivo. Este cambio de tamaño se podría realizar, pero con operaciones un poco más complejas.</p>
 <p>Para asegurarnos de crear un volumen del mismo tamaño que la imagen base vamos comprobar su tamaño:</p>
-<pre><code>virsh -c qemu:///system domblkinfo plantilla-prueba1 vda --human
+<pre><code class="language-bash">
+virsh -c qemu:///system domblkinfo plantilla-prueba1 vda --human
 Capacidad:      10,000 GiB
 ...
 </code></pre>
 <p>También lo podemos ver con <code>virt-manager</code>:</p>
 <p><img alt="plantilla" src="../img/plantilla5.png"/></p>
 <p>Para crear la nueva imagen basada en la imagen base de la plantilla, podemos crear el volumen con <code>virsh</code>:</p>
-<pre><code>virsh -c qemu:///system vol-create-as default clone2.qcow2 10G --format qcow2 --backing-vol prueba1.qcow2 --backing-vol-format qcow2 
+<pre><code class="language-bash">virsh -c qemu:///system vol-create-as default clone2.qcow2 10G --format qcow2 --backing-vol prueba1.qcow2 --backing-vol-format qcow2
 </code></pre>
 <p>O podemos usar la aplicación <code>qemu-img</code> y posterior refrescamos el pool <code>default</code>:</p>
 <pre><code>cd /var/lib/libvirt/images

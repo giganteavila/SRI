@@ -1370,7 +1370,7 @@
 <p>La clonación completa a partir de una plantilla es similar a la clonación de máquinas virtuales que vimos en un punto anterior.</p>
 <h2 id="uso-virt-clone-para-realizar-la-clonacion">Uso virt-clone para realizar la clonación<a class="headerlink" href="#uso-virt-clone-para-realizar-la-clonacion" title="Permanent link">¶</a></h2>
 <p>Podemos usar el siguiente comando para realizar la clonación:</p>
-<pre><code>virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone1 --auto-clone
+<pre><code>virt-clone --connect=qemu:///system --original TplUbuntuServer --name VM --auto-clone --file VM.qcow2
 </code></pre>
 <p>Recuerda que puedes usar el parámetro <code>--file</code> para indicar el nombre de la imagen de la nueva máquina que clonamos.</p>
 <p>El proceso puede ser lento, ya que se hace una copia completa de la imagen original a la de la nueva máquina virtual.</p>
