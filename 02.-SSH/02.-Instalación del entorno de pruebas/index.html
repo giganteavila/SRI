@@ -1332,7 +1332,7 @@ PrintMotd no
 AcceptEnv LANG LC_*
 Subsystem    sftp    /usr/lib/openssh/sftp-server
 </code></pre>
-<p>Sin embargo, en el caso de <code>ssh</code> hay muchas opciones que no vienen definidas y que se asume un valor por defecto, lo que puede resultar confuso. Sin embargo podemos utilizar la opción <code>-T: extended test mode</code> que comprueba la validez del fichero de configuración y muestra las opciones efectivas que se aplican (las que están habilitadas de forma explícita y las que tienen valores por defecto (en sistemas GNU/linux <code>sshd</code> sólo puede ejecutarlo un usuario privilegiado):</p>
+<p>Sin embargo, en el caso de <code>ssh</code> hay muchas opciones que no vienen definidas y que se asume un valor por defecto, lo que puede resultar confuso. Sin embargo podemos utilizar la opción <code>-T: extended test mode</code> que comprueba la validez del fichero de configuración y muestra las opciones efectivas que se aplican (las que están habilitadas de forma explícita y las que tienen valores por defecto (en sistemas GNU/Linux <code>sshd</code> solo puede ejecutarlo un usuario privilegiado):</p>
 <pre><code class="language-bash">sshd -T
 ...
 port 22
