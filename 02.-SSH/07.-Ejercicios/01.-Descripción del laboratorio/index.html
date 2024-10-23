@@ -1460,7 +1460,18 @@
 <li>VM3: <code>192.168.1.13</code></li>
 <li><strong>Máscara de subred</strong>: <code>255.255.255.0</code></li>
 <li><strong>Puerta de enlace (gateway)</strong>: No es estrictamente necesario para la práctica, ya que la comunicación será local.</li>
+<li>Por ejemplo, para establecer la dirección ip de la máquina virtual VM1 debemos usar los comandos:</li>
 </ul>
+<pre><code class="language-bash">$ sudo nmcli connection modify ethernet-enp1s0-1 ipv4.addresses 192.168.1.11/24 ipv4.method manual
+$ sudo nmcli connection up ethernet-enp1s-1
+</code></pre>
+<ul>
+<li>Si queremos olvidarnos de las direcciones IP y utilizar los nombre de host en su lugar, debemos cambiar la configuración de los ficheros <code>/etc/hosts</code> añadiendo las entradas de los correspondientes equipos.</li>
+</ul>
+<pre><code class="language-bash">192.168.1.11 VM1
+192.168.1.12 VM2
+192.168.1.13 VM3
+</code></pre>
 <p>Documentación:</p>
 <ul>
 <li><a href="../../../99.-Anexos/01.-Recorrido%20hist%C3%B3rico%20de%20la%20gesti%C3%B3n%20de%20redes%20en%20Linux/">Recorrido histórico de la gestión de redes en Linux</a></li>
