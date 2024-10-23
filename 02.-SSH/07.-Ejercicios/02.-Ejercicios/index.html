@@ -1414,7 +1414,7 @@
 <p>Comprobar la instalación del servicio SSH y su estado en una máquina virtual.</p>
 <p><strong>Instrucciones</strong>:</p>
 <ul>
-<li>Verifica si el servicio <code>openssh-server</code> está instalado usando:</li>
+<li>Verifica si el servicio <code>openssh-server</code> está instalado usando en VM2 y en VM3:</li>
 </ul>
 <pre><code class="language-bash">$ dpkg -l | grep openssh-server
 </code></pre>
@@ -1428,9 +1428,18 @@
 </ul>
 <pre><code class="language-bash">$ systemctl status ssh
 </code></pre>
-<p><strong>Captura de pantalla solicitada</strong>:</p>
 <ul>
-<li>Captura el resultado del comando <code>systemctl status ssh</code> mostrando el estado del servicio SSH en ejecución.</li>
+<li>Arranca el servicio con:</li>
+</ul>
+<pre><code class="language-bash">    $ systemctl start ssh
+</code></pre>
+<ul>
+<li>
+<p><strong>Captura de pantalla solicitada</strong>:</p>
+</li>
+<li>
+<p>Captura el resultado del comando <code>systemctl status ssh</code> mostrando el estado del servicio SSH en ejecución.</p>
+</li>
 </ul>
 <p><strong>Solución</strong>:</p>
 <ul>
