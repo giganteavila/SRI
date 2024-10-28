@@ -1315,6 +1315,17 @@
       1.-Crear la red aislada red_intra con bridge br-intra
     </span>
 </a>
+<nav aria-label="1.-Crear la red aislada red_intra con bridge br-intra" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ejecuta-estos-comandos-para-crear-la-red">
+<span class="md-ellipsis">
+      Ejecuta estos comandos para crear la red:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#2-crear-la-maquina-virtual-router">
@@ -1322,6 +1333,52 @@
       2.-Crear la máquina virtual router
     </span>
 </a>
+<nav aria-label="2.-Crear la máquina virtual router" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usa-virt-install-para-crear-esta-maquina-con-debian-12-conectada-a-br0-red-publica-y-br-intra-red-interna">
+<span class="md-ellipsis">
+      Usa virt-install para crear esta máquina con Debian 12 conectada a br0 (red pública) y br-intra (red interna):
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configura-el-usuario-y-ssh">
+<span class="md-ellipsis">
+      Configura el usuario y SSH:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anade-el-usuario-user">
+<span class="md-ellipsis">
+      Añade el usuario user:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dar-permisos-sudo-sin-contrasena">
+<span class="md-ellipsis">
+      Dar permisos sudo sin contraseña:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configura-las-claves-publicas-para-el-acceso-sin-contrasena">
+<span class="md-ellipsis">
+      Configura las claves públicas para el acceso sin contraseña:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configura-la-ip-estatica-en-la-segunda-interfaz-de-red">
+<span class="md-ellipsis">
+      Configura la IP estática en la segunda interfaz de red:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#3-crear-la-maquina-servidornas">
@@ -1329,6 +1386,24 @@
       3.-Crear la máquina servidorNAS
     </span>
 </a>
+<nav aria-label="3.-Crear la máquina servidorNAS" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#utiliza-virt-install-para-crear-esta-maquina-con-alpine-linux-320-y-asignarle-un-disco-de-15-gb">
+<span class="md-ellipsis">
+      Utiliza virt-install para crear esta máquina con Alpine Linux 3.20 y asignarle un disco de 15 GB:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dentro-de-servidornas-configura">
+<span class="md-ellipsis">
+      Dentro de servidorNAS, configura:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#4-crear-los-contenedores-lxc-servidordhcp-y-servidorweb">
@@ -1336,6 +1411,24 @@
       4.-Crear los contenedores LXC servidorDHCP y servidorWeb
     </span>
 </a>
+<nav aria-label="4.-Crear los contenedores LXC servidorDHCP y servidorWeb" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instala-lxc">
+<span class="md-ellipsis">
+      Instala LXC:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crea-los-contenedores-y-configura-sus-direcciones-ip">
+<span class="md-ellipsis">
+      Crea los contenedores y configura sus direcciones IP:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#5-configurar-el-router-para-realizar-snat">
@@ -1343,6 +1436,31 @@
       5.-Configurar el router para realizar SNAT
     </span>
 </a>
+<nav aria-label="5.-Configurar el router para realizar SNAT" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activa-el-reenvio-de-paquetes">
+<span class="md-ellipsis">
+      Activa el reenvío de paquetes:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configura-la-regla-de-iptables-para-nat">
+<span class="md-ellipsis">
+      Configura la regla de iptables para NAT:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guarda-la-configuracion-de-iptables-para-que-sea-persistente">
+<span class="md-ellipsis">
+      Guarda la configuración de iptables para que sea persistente:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#resumen">
@@ -1457,6 +1575,17 @@
       1.-Crear la red aislada red_intra con bridge br-intra
     </span>
 </a>
+<nav aria-label="1.-Crear la red aislada red_intra con bridge br-intra" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ejecuta-estos-comandos-para-crear-la-red">
+<span class="md-ellipsis">
+      Ejecuta estos comandos para crear la red:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#2-crear-la-maquina-virtual-router">
@@ -1464,6 +1593,52 @@
       2.-Crear la máquina virtual router
     </span>
 </a>
+<nav aria-label="2.-Crear la máquina virtual router" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usa-virt-install-para-crear-esta-maquina-con-debian-12-conectada-a-br0-red-publica-y-br-intra-red-interna">
+<span class="md-ellipsis">
+      Usa virt-install para crear esta máquina con Debian 12 conectada a br0 (red pública) y br-intra (red interna):
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configura-el-usuario-y-ssh">
+<span class="md-ellipsis">
+      Configura el usuario y SSH:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anade-el-usuario-user">
+<span class="md-ellipsis">
+      Añade el usuario user:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dar-permisos-sudo-sin-contrasena">
+<span class="md-ellipsis">
+      Dar permisos sudo sin contraseña:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configura-las-claves-publicas-para-el-acceso-sin-contrasena">
+<span class="md-ellipsis">
+      Configura las claves públicas para el acceso sin contraseña:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configura-la-ip-estatica-en-la-segunda-interfaz-de-red">
+<span class="md-ellipsis">
+      Configura la IP estática en la segunda interfaz de red:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#3-crear-la-maquina-servidornas">
@@ -1471,6 +1646,24 @@
       3.-Crear la máquina servidorNAS
     </span>
 </a>
+<nav aria-label="3.-Crear la máquina servidorNAS" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#utiliza-virt-install-para-crear-esta-maquina-con-alpine-linux-320-y-asignarle-un-disco-de-15-gb">
+<span class="md-ellipsis">
+      Utiliza virt-install para crear esta máquina con Alpine Linux 3.20 y asignarle un disco de 15 GB:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dentro-de-servidornas-configura">
+<span class="md-ellipsis">
+      Dentro de servidorNAS, configura:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#4-crear-los-contenedores-lxc-servidordhcp-y-servidorweb">
@@ -1478,6 +1671,24 @@
       4.-Crear los contenedores LXC servidorDHCP y servidorWeb
     </span>
 </a>
+<nav aria-label="4.-Crear los contenedores LXC servidorDHCP y servidorWeb" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instala-lxc">
+<span class="md-ellipsis">
+      Instala LXC:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crea-los-contenedores-y-configura-sus-direcciones-ip">
+<span class="md-ellipsis">
+      Crea los contenedores y configura sus direcciones IP:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#5-configurar-el-router-para-realizar-snat">
@@ -1485,6 +1696,31 @@
       5.-Configurar el router para realizar SNAT
     </span>
 </a>
+<nav aria-label="5.-Configurar el router para realizar SNAT" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activa-el-reenvio-de-paquetes">
+<span class="md-ellipsis">
+      Activa el reenvío de paquetes:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configura-la-regla-de-iptables-para-nat">
+<span class="md-ellipsis">
+      Configura la regla de iptables para NAT:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guarda-la-configuracion-de-iptables-para-que-sea-persistente">
+<span class="md-ellipsis">
+      Guarda la configuración de iptables para que sea persistente:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#resumen">
@@ -1547,7 +1783,7 @@ Todas las operaciones se tienen que hacer desde la línea de comandos:</p>
 </ol>
 <h2 id="solucion">Solución<a class="headerlink" href="#solucion" title="Permanent link">¶</a></h2>
 <h3 id="1-crear-la-red-aislada-red_intra-con-bridge-br-intra">1.-Crear la red aislada <code>red_intra</code> con <code>bridge</code> <code>br-intra</code><a class="headerlink" href="#1-crear-la-red-aislada-red_intra-con-bridge-br-intra" title="Permanent link">¶</a></h3>
-<p>Ejecuta estos comandos para crear la red:</p>
+<h4 id="ejecuta-estos-comandos-para-crear-la-red">Ejecuta estos comandos para crear la red:<a class="headerlink" href="#ejecuta-estos-comandos-para-crear-la-red" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash"># Crear el bridge
 sudo nmcli connection add type bridge ifname br-intra con-name br-intra
 
@@ -1556,7 +1792,7 @@ sudo nmcli connection modify br-intra connection.autoconnect yes
 sudo nmcli connection up br-intra
 </code></pre>
 <h3 id="2-crear-la-maquina-virtual-router">2.-Crear la máquina virtual <code>router</code><a class="headerlink" href="#2-crear-la-maquina-virtual-router" title="Permanent link">¶</a></h3>
-<p>Usa <code>virt-install</code> para crear esta máquina con Debian 12 conectada a <code>br0</code> (red pública) y <code>br-intra</code> (red interna):</p>
+<h4 id="usa-virt-install-para-crear-esta-maquina-con-debian-12-conectada-a-br0-red-publica-y-br-intra-red-interna">Usa <code>virt-install</code> para crear esta máquina con Debian 12 conectada a <code>br0</code> (red pública) y <code>br-intra</code> (red interna):<a class="headerlink" href="#usa-virt-install-para-crear-esta-maquina-con-debian-12-conectada-a-br0-red-publica-y-br-intra-red-interna" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">virt-install \
   --name router-tunombre \
   --os-variant debian10 \
@@ -1570,38 +1806,39 @@ sudo nmcli connection up br-intra
   --location 'http://deb.debian.org/debian/dists/bookworm/main/installer-amd64/' \
   --extra-args 'console=ttyS0,115200n8 serial'
 </code></pre>
-<p>Una vez creada, sigue estos pasos de configuración dentro de la máquina:</p>
-<p><strong>Configura el usuario y SSH:</strong></p>
 <ul>
-<li>Añade el usuario <code>user</code>:</li>
+<li>Una vez creada, sigue estos pasos de configuración dentro de la máquina:</li>
 </ul>
+<h4 id="configura-el-usuario-y-ssh">Configura el usuario y SSH:<a class="headerlink" href="#configura-el-usuario-y-ssh" title="Permanent link">¶</a></h4>
+<h4 id="anade-el-usuario-user">Añade el usuario <code>user</code>:<a class="headerlink" href="#anade-el-usuario-user" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">sudo adduser user
 </code></pre>
-<ul>
-<li>Dar permisos <code>sudo</code> sin contraseña:</li>
-</ul>
+<h4 id="dar-permisos-sudo-sin-contrasena">Dar permisos <code>sudo</code> sin contraseña:<a class="headerlink" href="#dar-permisos-sudo-sin-contrasena" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">echo 'user ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/user
 </code></pre>
-<ul>
-<li>Configura las claves públicas para el acceso sin contraseña:</li>
-</ul>
+<h4 id="configura-las-claves-publicas-para-el-acceso-sin-contrasena">Configura las claves públicas para el acceso sin contraseña:<a class="headerlink" href="#configura-las-claves-publicas-para-el-acceso-sin-contrasena" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">sudo mkdir -p /home/user/.ssh
 echo 'tu_clave_publica' | sudo tee -a /home/user/.ssh/authorized_keys
 echo 'mi_clave_publica' | sudo tee -a /home/user/.ssh/authorized_keys
 sudo chown -R user:user /home/user/.ssh
 sudo chmod 600 /home/user/.ssh/authorized_keys
 </code></pre>
-<p><strong>Configura la IP estática en la segunda interfaz de red:</strong> Edita <code>/etc/network/interfaces</code> y agrega:</p>
+<h4 id="configura-la-ip-estatica-en-la-segunda-interfaz-de-red">Configura la IP estática en la segunda interfaz de red:<a class="headerlink" href="#configura-la-ip-estatica-en-la-segunda-interfaz-de-red" title="Permanent link">¶</a></h4>
+<ul>
+<li>Edita <code>/etc/network/interfaces</code> y agrega:</li>
+</ul>
 <pre><code class="language-bash">auto ensXX  # reemplaza "ensXX" por la interfaz de red interna
 iface ensXX inet static
     address 192.168.200.1
     netmask 255.255.255.0
 </code></pre>
-<p>Configura el arranque automático:</p>
+<ul>
+<li>Configura el arranque automático:</li>
+</ul>
 <pre><code class="language-bash">virsh autostart router-tunombre
 </code></pre>
 <h3 id="3-crear-la-maquina-servidornas">3.-Crear la máquina <code>servidorNAS</code><a class="headerlink" href="#3-crear-la-maquina-servidornas" title="Permanent link">¶</a></h3>
-<p>Utiliza <code>virt-install</code> para crear esta máquina con Alpine Linux 3.20 y asignarle un disco de 15 GB:</p>
+<h4 id="utiliza-virt-install-para-crear-esta-maquina-con-alpine-linux-320-y-asignarle-un-disco-de-15-gb">Utiliza <code>virt-install</code> para crear esta máquina con Alpine Linux 3.20 y asignarle un disco de 15 GB:<a class="headerlink" href="#utiliza-virt-install-para-crear-esta-maquina-con-alpine-linux-320-y-asignarle-un-disco-de-15-gb" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">virt-install \
   --name nas-tunombre \
   --os-variant alpine \
@@ -1613,30 +1850,26 @@ iface ensXX inet static
   --console pty,target_type=serial \
   --location 'http://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/'
 </code></pre>
-<p>Dentro de <code>servidorNAS</code>, configura:</p>
-<ol>
-<li>
-<p><strong>Usuario y SSH:</strong></p>
+<h4 id="dentro-de-servidornas-configura">Dentro de <code>servidorNAS</code>, configura:<a class="headerlink" href="#dentro-de-servidornas-configura" title="Permanent link">¶</a></h4>
 <ul>
-<li>Crea el usuario <code>user</code> y permite el acceso por SSH sin contraseña como en la máquina <code>router</code>.</li>
-<li><strong>Configura la IP estática:</strong></li>
+<li>Usuario y SSH:
+    Crea el usuario <code>user</code> y permite el acceso por SSH sin contraseña como en la máquina <code>router</code>.</li>
+<li>Configura la IP estática:</li>
 </ul>
-</li>
-</ol>
 <pre><code class="language-bash">ip addr add 192.168.200.2/24 dev eth0
 </code></pre>
-<p><strong>Configura el arranque automático:</strong></p>
+<ul>
+<li>Configura el arranque automático:</li>
+</ul>
 <pre><code class="language-bash">virsh autostart nas-tunombre
 </code></pre>
 <h3 id="4-crear-los-contenedores-lxc-servidordhcp-y-servidorweb">4.-Crear los contenedores LXC <code>servidorDHCP</code> y <code>servidorWeb</code><a class="headerlink" href="#4-crear-los-contenedores-lxc-servidordhcp-y-servidorweb" title="Permanent link">¶</a></h3>
-<ol>
-<li><strong>Instala LXC:</strong></li>
-</ol>
+<h4 id="instala-lxc">Instala LXC:<a class="headerlink" href="#instala-lxc" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">sudo apt install lxc -y
 </code></pre>
-<p><strong>Crea los contenedores y configura sus direcciones IP:</strong></p>
+<h4 id="crea-los-contenedores-y-configura-sus-direcciones-ip">Crea los contenedores y configura sus direcciones IP:<a class="headerlink" href="#crea-los-contenedores-y-configura-sus-direcciones-ip" title="Permanent link">¶</a></h4>
 <ul>
-<li><strong>Servidor DHCP</strong>:</li>
+<li>Servidor DHCP:</li>
 </ul>
 <pre><code class="language-bash">sudo lxc-create -n servidorDHCP -t debian -- --release bookworm
 sudo lxc-start -n servidorDHCP
@@ -1654,12 +1887,8 @@ sudo lxc-attach -n servidorWeb
 ip addr add 192.168.200.4/24 dev eth0
 </code></pre>
 <ul>
-<li>
-<p><strong>Configura el acceso SSH en ambos contenedores</strong> y asigna tu clave pública y la mía en <code>/root/.ssh/authorized_keys</code>.</p>
-</li>
-<li>
-<p><strong>Configura el arranque automático</strong> y límites de memoria:</p>
-</li>
+<li>Configurar el acceso SSH en ambos contenedores y asigna tu clave pública en <code>/root/.ssh/authorized_keys</code>.</li>
+<li>Configurar el arranque automático y límites de memoria:</li>
 </ul>
 <pre><code class="language-bash">sudo lxc-autostart -n servidorDHCP
 sudo lxc-autostart -n servidorWeb
@@ -1667,21 +1896,17 @@ sudo lxc-cgroup -n servidorDHCP memory.limit_in_bytes 512M
 sudo lxc-cgroup -n servidorWeb memory.limit_in_bytes 512M
 </code></pre>
 <h3 id="5-configurar-el-router-para-realizar-snat">5.-Configurar el <code>router</code> para realizar SNAT<a class="headerlink" href="#5-configurar-el-router-para-realizar-snat" title="Permanent link">¶</a></h3>
-<ol>
-<li>
-<p><strong>Activa el reenvío de paquetes</strong>:</p>
+<h4 id="activa-el-reenvio-de-paquetes">Activa el reenvío de paquetes:<a class="headerlink" href="#activa-el-reenvio-de-paquetes" title="Permanent link">¶</a></h4>
 <p>En <code>/etc/sysctl.conf</code>, añade:</p>
-</li>
-</ol>
 <pre><code class="language-bash">net.ipv4.ip_forward=1
 </code></pre>
 <p>Aplica los cambios:</p>
 <pre><code class="language-bash">sudo sysctl -p
 </code></pre>
-<p><strong>Configura la regla de iptables para NAT</strong>:</p>
+<h4 id="configura-la-regla-de-iptables-para-nat">Configura la regla de iptables para NAT:<a class="headerlink" href="#configura-la-regla-de-iptables-para-nat" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 </code></pre>
-<p><strong>Guarda la configuración de iptables</strong> para que sea persistente:</p>
+<h4 id="guarda-la-configuracion-de-iptables-para-que-sea-persistente">Guarda la configuración de iptables para que sea persistente:<a class="headerlink" href="#guarda-la-configuracion-de-iptables-para-que-sea-persistente" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">sudo apt install iptables-persistent
 sudo netfilter-persistent save
 </code></pre>
