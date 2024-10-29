@@ -1107,6 +1107,13 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../02.-SSH/Archive.tar">
+<span class="md-ellipsis">
+    Archive
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1324,13 +1331,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cambia-el-nombre-de-la-maquina-a-plantilla-cliente-tunombre-en-el-archivo-etchostname">
-<span class="md-ellipsis">
-      Cambia el nombre de la máquina a plantilla-cliente-tunombre en el archivo /etc/hostname.
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -1430,6 +1430,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../99.-Anexos/07.-Manual%20B%C3%A1sico%20de%20NAT%20e%20IPTABLES/">
+<span class="md-ellipsis">
+    07.-Manual Básico de NAT e IPTABLES
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1477,13 +1484,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cambia-el-nombre-de-la-maquina-a-plantilla-cliente-tunombre-en-el-archivo-etchostname">
-<span class="md-ellipsis">
-      Cambia el nombre de la máquina a plantilla-cliente-tunombre en el archivo /etc/hostname.
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -1525,10 +1525,11 @@
 </ul>
 <h3 id="captura">Captura<a class="headerlink" href="#captura" title="Permanent link">¶</a></h3>
 <p>Captura de pantalla donde se demuestre que la plantilla no se puede ejecutar.</p>
+<hr/>
 <h3 id="solucion">Solución<a class="headerlink" href="#solucion" title="Permanent link">¶</a></h3>
 <h4 id="creacion-de-la-maquina-virtual">Creación de la máquina virtual:<a class="headerlink" href="#creacion-de-la-maquina-virtual" title="Permanent link">¶</a></h4>
 <pre><code class="language-bash">  virt-install \
-    --name plantilla-cliente-tunombre \
+    --name plantilla-cliente-&lt;tunombre&gt; \
     --os-variant debian10 \
     --ram 1024 \
     --vcpus 1 \
@@ -1540,15 +1541,17 @@
 </code></pre>
 <h5 id="durante-la-instalacion-asegurate-de">Durante la instalación, asegúrate de:<a class="headerlink" href="#durante-la-instalacion-asegurate-de" title="Permanent link">¶</a></h5>
 <ul>
-<li>Configurar el usuario debian con contraseña debian.
-    Habilitar sudo sin contraseña para debian editando <code>/etc/sudoers</code> y agregando:</li>
+<li>Configurar el usuario <code>debian</code> con contraseña <code>debian</code>.
+    Habilitar <code>sudo</code> sin contraseña para <code>debian</code> editando <code>/etc/sudoers</code> y agregando:</li>
 </ul>
 <pre><code class="language-text">debian ALL=(ALL) NOPASSWD:ALL
 </code></pre>
 <ul>
-<li>Instalar el servidor SSH (puedes instalarlo ejecutando apt install ssh una vez creada la máquina).</li>
+<li>Instalar el servidor SSH (puedes instalarlo ejecutando <code>apt install ssh</code> una vez creada la máquina).</li>
 </ul>
-<h5 id="cambia-el-nombre-de-la-maquina-a-plantilla-cliente-tunombre-en-el-archivo-etchostname">Cambia el nombre de la máquina a <code>plantilla-cliente-tunombre</code> en el archivo <code>/etc/hostname</code>.<a class="headerlink" href="#cambia-el-nombre-de-la-maquina-a-plantilla-cliente-tunombre-en-el-archivo-etchostname" title="Permanent link">¶</a></h5>
+<blockquote>
+<p>Cambia el nombre de la máquina a <code>plantilla-cliente-&lt;tunombre&gt;</code> en el archivo <code>/etc/hostname</code>.</p>
+</blockquote>
 <h4 id="conversion-a-plantilla">Conversión a plantilla<a class="headerlink" href="#conversion-a-plantilla" title="Permanent link">¶</a></h4>
 <p>Una vez configurada la máquina, apágala y realiza un respaldo para reutilizarla como plantilla. Puedes hacerlo creando un snapshot o simplemente copiando la imagen.</p>
 <p>Para verificar el espacio en disco ocupado inicialmente, utiliza:</p>

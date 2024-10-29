@@ -1129,6 +1129,13 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../02.-SSH/Archive.tar">
+<span class="md-ellipsis">
+    Archive
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1380,6 +1387,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../99.-Anexos/07.-Manual%20B%C3%A1sico%20de%20NAT%20e%20IPTABLES/">
+<span class="md-ellipsis">
+    07.-Manual Básico de NAT e IPTABLES
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1413,31 +1427,31 @@
 <article class="md-content__inner md-typeset">
 <h1>02.-Instalacion</h1>
 <p>Para trabajar con el sistema de virtualización QEMU/KVM + libvirt en nuestra distribución Linux Debian/Ubuntu, vamos a instalar los siguientes paquetes:</p>
-<pre><code class="language-bash">$ apt install qemu-system libvirt-clients libvirt-daemon-system
+<pre><code class="language-bash">$ sudo apt install qemu-system libvirt-clients libvirt-daemon-system
 </code></pre>
 <p>libvirt proporciona varios mecanismos para conectarse a un hipervisor qemu-kvm.</p>
 <p>Podemos obtener las versiones de las aplicaciones que hemos instalado, ejecutando:</p>
 <pre><code class="language-bash">$ virsh version
-Compilada con biblioteca: libvirt 7.0.0
-Uso de biblioteca: libvirt  7.0.0
-Utilizando API: QEMU 7.0.0
-Ejecutando hypervisor: QEMU 5.2.0
+Compiled against library: libvirt 10.8.0
+Using library: libvirt 10.8.0
+Using API: QEMU 10.8.0
+Running hypervisor: QEMU 9.1.0
 </code></pre>
 <h2 id="conexion-a-qemukvm">Conexión a QEMU/KVM<a class="headerlink" href="#conexion-a-qemukvm" title="Permanent link">¶</a></h2>
 <p>Vamos a usar la utilidad <code>virsh</code>, que nos proporciona una shell completa para el manejo de <code>libvirt</code>. Con el comando <code>list</code> mostramos las máquinas virtuales que hemos creado.</p>
 <p>Con un usuario sin privilegios ejecutamos:</p>
-<pre><code>$ virsh list
+<pre><code class="language-bash">$ virsh list
 </code></pre>
 <p>Estaríamos haciendo una conexión local con un usuario no privilegiado (estaríamos conectando con la URI <code>qemu:///session</code> y estaríamos mostrando las máquinas virtuales de este usuario.</p>
 <p>Si por el contrario, como <code>root</code> ejecutamos:</p>
-<pre><code>root@kvm:~# virsh list
+<pre><code class="language-bash">root@kvm:~# virsh list
 </code></pre>
 <p>Estaríamos haciendo una conexión local privilegiada (estaríamos conectando con la URI <code>qemu:///system</code>) y mostraríamos las máquinas virtuales del sistema.</p>
 <p>Si queremos que un usuario sin privilegios pueda hacer conexiones privilegiadas, el usuario debe pertenecer el grupo <code>libvirt</code>:</p>
-<pre><code>root@kvm:~# adduser usuario libvirt
+<pre><code class="language-bash">root@kvm:~# adduser usuario libvirt
 </code></pre>
 <p>Para que el usuario <code>usuario</code> haga una conexión privilegiada tendrá que indicar explícitamente la conexión a la URI <code>qemu:///system</code>:</p>
-<pre><code>usuario@kvm:~$ virsh -c qemu:///system list
+<pre><code class="language-bash">usuario@kvm:~$ virsh -c qemu:///system list
 </code></pre>
 <p>De forma alternativa y según la <a href="https://wiki.debian.org/es/KVM#M.2BAOE-quinas_virtuales_del_usuario_y_del_sistema">wiki de Debian</a>, podemos usar la variable de entorno <code>LIBVIRT_DEFAULT_URI</code> con el siguiente comando:</p>
 <pre><code class="language-bash">export LIBVIRT_DEFAULT_URI='qemu:///system'
