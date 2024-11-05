@@ -1,106 +1,207 @@
 
-<!DOCTYPE html>
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../03.-Clonaci%C3%B3n%20completa%20con%20plantillas/">
+      
+      
+        <link rel="next" href="../05.-Snapshots%20de%20MV/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>04.-Clonación enlazada con plantillas - SRI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
 
-<html class="no-js" lang="es">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" rel="prev"/>
-<link href="../05.-Snapshots%20de%20MV/" rel="next"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.5.35" name="generator"/>
-<title>04.-Clonación enlazada con plantillas - SRI</title>
-<link href="../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-</head>
-<body data-md-color-accent="green" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#creacion-de-imagenes-de-disco-con-backing-store">
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creacion-de-imagenes-de-disco-con-backing-store" class="md-skip">
           Saltar a contenido
         </a>
-</div>
-<div data-md-component="announce">
-</div>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
 <header class="md-header" data-md-component="header">
-<nav aria-label="Cabecera" class="md-header__inner md-grid">
-<a aria-label="SRI" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="SRI">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="SRI" class="md-header__button md-logo" aria-label="SRI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             SRI
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               04.-Clonación enlazada con plantillas
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="green" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue-grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="green" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
-</label>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
 </form>
-<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-</label>
-<nav aria-label="Buscar" class="md-search__options">
-<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-</button>
-</nav>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-<ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</nav>
+    
+    
+  </nav>
+  
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Pestañas" class="md-tabs" data-md-component="tabs">
-<div class="md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -108,9 +209,20 @@
   Home
 
       </a>
-</li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../">
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -118,9 +230,19 @@
   01.-KVM
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../02.-SSH/">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../02.-SSH/" class="md-tabs__link">
           
   
     
@@ -128,9 +250,19 @@
   02.-SSH
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../03.-DHCP/">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../03.-DHCP/" class="md-tabs__link">
           
   
     
@@ -138,9 +270,19 @@
   03.-DHCP
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../99.-Anexos/">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../99.-Anexos/" class="md-tabs__link">
           
   
     
@@ -148,1355 +290,4141 @@
   99.-Anexos
 
         </a>
-</li>
-</ul>
-</div>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navegación" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="SRI" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="SRI">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
-</a>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SRI" class="md-nav__button md-logo" aria-label="SRI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
     SRI
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
-<span class="md-ellipsis">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Home
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     01.-KVM
   </span>
-</a>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
             01.-KVM
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     01.-Introducción
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
             01.-Introducción
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Qué es la virtualización
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Introducci%C3%B3n/02.-Tipos/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Tipos
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Introducci%C3%B3n/03.-qemu-kvm/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-qemu-kvm
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Introducci%C3%B3n/04.-libvirt/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-libvirt
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../01.-Introducci%C3%B3n/05.-LXC/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-LXC
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     02.-Instalación
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_3">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
             02.-Instalación
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Escenario de instalación
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Instalaci%C3%B3n/02.-Instalacion/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.-Instalaci%C3%B3n/02.-Instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Instalacion
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Conexión local no privilegiada a libvirt
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Conexión local privilegiada a libvirt
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Conexión remota a libvirt
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     03.-Creación de MV desde el CLI
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_4">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
             03.-Creación de MV desde el CLI
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Creación de MV con virt-install
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Características de la MV
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Gestión de MV con virsh
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Definición XML de una MV
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Modificación de una MV
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     04.-Creación de MV con virt-manager
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_5">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
             04.-Creación de MV con virt-manager
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Primeros pasos con virt-manager
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Creación de MV linux
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Gestión de MV
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Detalles de las MV
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Creación de MV Wndows
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     05.-Almacenamiento
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_6">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
             05.-Almacenamiento
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Introducción al almacenamiento
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Introducción al almacenamiento en QEMU⁄KVM + libvirt
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Gestión de Pools de Almacenamiento
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Gestión de volúmenes de almacenamiento con libvirt
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Gestión de volúmenes de almacenamiento con herramientas específicas
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     06.-Trabajar con volúmenes en las máquinas virtuales
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_7" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07.-Compresión de imágenes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     06.-Clonación y Snapshots
   </span>
-</a>
-<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
             06.-Clonación y Snapshots
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Clonación de máquinas virtuales
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../02.-Plantillas%20de%20MV/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02.-Plantillas%20de%20MV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Plantillas de MV
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../03.-Clonaci%C3%B3n%20completa%20con%20plantillas/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Clonación completa con plantillas
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
     04.-Clonación enlazada con plantillas
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-<span class="md-ellipsis">
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
     04.-Clonación enlazada con plantillas
   </span>
-</a>
-<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-imagenes-de-disco-con-backing-store">
-<span class="md-ellipsis">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-imagenes-de-disco-con-backing-store" class="md-nav__link">
+    <span class="md-ellipsis">
       Creación de imágenes de disco con backing store
     </span>
-</a>
-<nav aria-label="Creación de imágenes de disco con backing store" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#informacion-sobre-imagenes-de-con-disco-con-backing-store">
-<span class="md-ellipsis">
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de imágenes de disco con backing store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacion-sobre-imagenes-de-con-disco-con-backing-store" class="md-nav__link">
+    <span class="md-ellipsis">
       Información sobre imágenes de con disco con backing store
     </span>
-</a>
+  </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-install">
-<span class="md-ellipsis">
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-install" class="md-nav__link">
+    <span class="md-ellipsis">
       Creación de la nueva máquina a partir de la imagen con backing store con virt-install
     </span>
-</a>
+  </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-manager">
-<span class="md-ellipsis">
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-manager" class="md-nav__link">
+    <span class="md-ellipsis">
       Creación de la nueva máquina a partir de la imagen con backing store con virt-manager
     </span>
-</a>
+  </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-clone">
-<span class="md-ellipsis">
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-clone" class="md-nav__link">
+    <span class="md-ellipsis">
       Creación de la nueva máquina a partir de la imagen con backing store con virt-clone
     </span>
-</a>
+  </a>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../05.-Snapshots%20de%20MV/">
-<span class="md-ellipsis">
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.-Snapshots%20de%20MV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Snapshots de MV
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     07.-Redes
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_8">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
             07.-Redes
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../07.-Redes/01.-Introduccion/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07.-Redes/01.-Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Introduccion
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Definicón de RV (Privadas)
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../07.-Redes/03.-Gesti%C3%B3n%20de%20RV/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07.-Redes/03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Gestión de RV
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Creación de un Puerte Externo con Linux Bridge
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Gestión de Redes Puentes (Públicas)
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     06.-Configuración de red en MV
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     08.-LXC
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_9_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_9">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
             08.-LXC
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../08.-LXC/01.-Introduccion%20a%20LXC/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Introduccion a LXC
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Creación y gestión de contenedores
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Configuración de contenedores LXC
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../08.-LXC/04.-Redes%20en%20LXC/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Redes en LXC
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../08.-LXC/05.-Almacenamiento%20en%20LXC/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Almacenamiento en LXC
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     06.-Introducción a LXD
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     09.-Anexos
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_10_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_10">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
             09.-Anexos
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Uso de los puertos USB en KVM
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../09.-Anexos/02.-Copiar%20y%20Pegar/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Copiar y Pegar
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_11" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../10.-Pr%C3%A1cticas/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../10.-Pr%C3%A1cticas/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     10.-Prácticas
   </span>
-</a>
-<label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_11_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_11">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
             10.-Prácticas
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Instrucciones para la captura
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../10.-Pr%C3%A1cticas/02.-Solucionario/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Solucionario
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../02.-SSH/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../02.-SSH/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     02.-SSH
   </span>
-</a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
             02.-SSH
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     01.-Introducción
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
             01.-Introducción
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     01.-Características Principales
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_1_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_1">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
             01.-Características Principales
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/01.-Precedentes.%20%60telnet%60%2C%20%60rlogin%60%20y%20%60rsh%60/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/01.-Precedentes.%20%60telnet%60%2C%20%60rlogin%60%20y%20%60rsh%60/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Precedentes. `telnet`, `rlogin` y `rsh`
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/02.-Cifrado%20Completo/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/02.-Cifrado%20Completo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Cifrado Completo
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/03.-Historia%20de%20%60ssh%60/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/03.-Historia%20de%20%60ssh%60/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Historia de `ssh`
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/04.-OpenSSH/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/04.-OpenSSH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-OpenSSH
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     02.-Criptografía
   </span>
-</a>
-<label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_2_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
             02.-Criptografía
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/01.-Criptograf%C3%ADa%20de%20clave%20sim%C3%A9trica/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/01.-Criptograf%C3%ADa%20de%20clave%20sim%C3%A9trica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Criptografía de clave simétrica
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/02.-Clave%20asim%C3%A9trica%20o%20de%20clave%20p%C3%BAblica/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/02.-Clave%20asim%C3%A9trica%20o%20de%20clave%20p%C3%BAblica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Clave asimétrica o de clave pública
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/03.-Funciones%20Hash/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/03.-Funciones%20Hash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Funciones Hash
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2_3" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     03.-Métodos de autenticación
   </span>
-</a>
-<label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_3_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_3">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
             03.-Métodos de autenticación
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/01.-Contrase%C3%B1a/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/01.-Contrase%C3%B1a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Contraseña
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/02.-Clave%20P%C3%BAblica/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/02.-Clave%20P%C3%BAblica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Clave Pública
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/03.-Kerberos/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/03.-Kerberos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Kerberos
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/04.-GSSAPI/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/04.-GSSAPI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-GSSAPI
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2_4" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     04.-Funcionamiento
   </span>
-</a>
-<label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_4_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_4">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_4">
+            <span class="md-nav__icon md-icon"></span>
             04.-Funcionamiento
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/01.-Fase%201%20%28Negociaci%C3%B3n%29/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/01.-Fase%201%20%28Negociaci%C3%B3n%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Fase 1 (Negociación)
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/02.-Fase%202%20%28Autenticaci%C3%B3n%29/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/02.-Fase%202%20%28Autenticaci%C3%B3n%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Fase 2 (Autenticación)
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/02.-Instalaci%C3%B3n%20del%20entorno%20de%20pruebas/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/02.-Instalaci%C3%B3n%20del%20entorno%20de%20pruebas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Instalación del entorno de pruebas
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     03.-Uso de ssh
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_4">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
             03.-Uso de ssh
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/03.-Uso%20de%20ssh/01.-Autenticaci%C3%B3n%20con%20usuario%20y%20contrase%C3%B1a/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/01.-Autenticaci%C3%B3n%20con%20usuario%20y%20contrase%C3%B1a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Autenticación con usuario y contraseña
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/03.-Uso%20de%20ssh/02.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/02.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Autenticación con claves pública-privada
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/03.-Uso%20de%20ssh/03.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada%20y%20frase%20de%20paso/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/03.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada%20y%20frase%20de%20paso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Autenticación con claves pública-privada y frase de paso
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/03.-Uso%20de%20ssh/04.-%60ssh-agent%60/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/04.-%60ssh-agent%60/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-`ssh-agent`
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/03.-Uso%20de%20ssh/05.-Gesti%C3%B3n%20de%20ficheros.%20%60authorized_keys%60%20y%20%60known_hosts%60/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/05.-Gesti%C3%B3n%20de%20ficheros.%20%60authorized_keys%60%20y%20%60known_hosts%60/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Gestión de ficheros. `authorized_keys` y `known_hosts`
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/03.-Uso%20de%20ssh/06.-Forwarding/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/06.-Forwarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     06.-Forwarding
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     04.-Configuración de ssh
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_5">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
             04.-Configuración de ssh
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/01.-Configuraci%C3%B3n%20del%20cliente%20ssh/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/01.-Configuraci%C3%B3n%20del%20cliente%20ssh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Configuración del cliente ssh
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/02.-Configuraci%C3%B3n%20del%20servidor%20ssh/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/02.-Configuraci%C3%B3n%20del%20servidor%20ssh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Configuración del servidor ssh
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     05.-Transferencia de ficheros a través de ssh
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_6">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
             05.-Transferencia de ficheros a través de ssh
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/01.-Uso%20de%20%60scp%60/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/01.-Uso%20de%20%60scp%60/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Uso de `scp`
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/02.-Uso%20de%20%60sftp%60/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/02.-Uso%20de%20%60sftp%60/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Uso de `sftp`
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_7" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     06.-Túneles SSH
   </span>
-</a>
-<label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_7_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_7">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
             06.-Túneles SSH
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/01.-Local%20forwarding/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/01.-Local%20forwarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Local forwarding
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/02.-Remote%20forwarding/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/02.-Remote%20forwarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Remote forwarding
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/03.-Forwarding%20din%C3%A1mico/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/03.-Forwarding%20din%C3%A1mico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Forwarding dinámico
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     07.-Prácticas
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_8_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_8">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
             07.-Prácticas
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/07.-Pr%C3%A1cticas/01.-Descripci%C3%B3n%20del%20laboratorio/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/07.-Pr%C3%A1cticas/01.-Descripci%C3%B3n%20del%20laboratorio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Descripción del laboratorio
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/07.-Pr%C3%A1cticas/02.-Ejercicios/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/07.-Pr%C3%A1cticas/02.-Ejercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Ejercicios
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02.-SSH/Archive.tar">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.-SSH/Archive.tar" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Archive
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../03.-DHCP/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../03.-DHCP/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     03.-DHCP
   </span>
-</a>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
             03.-DHCP
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/01.-Introducci%C3%B3n%20a%20DHCP/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/01.-Introducci%C3%B3n%20a%20DHCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Introducción a DHCP
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/02.-Funcionamiento%20del%20Protocolo%20DHCP/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/02.-Funcionamiento%20del%20Protocolo%20DHCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Funcionamiento del Protocolo DHCP
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     03.Fases del Proceso DHCP
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_4">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
             03.Fases del Proceso DHCP
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/01.-Discover%20%28Descubrimiento%29/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/01.-Discover%20%28Descubrimiento%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Discover (Descubrimiento)
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/02.-Offer%20%28Oferta%29/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/02.-Offer%20%28Oferta%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Offer (Oferta)
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/03.-Request%20%28Solicitud%29/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/03.-Request%20%28Solicitud%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Request (Solicitud)
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/04.-Acknowledge%20%28Confirmaci%C3%B3n%29/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/04.-Acknowledge%20%28Confirmaci%C3%B3n%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Acknowledge (Confirmación)
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/04.-Componentes%20del%20Servidor%20DHCP/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/04.-Componentes%20del%20Servidor%20DHCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Componentes del Servidor DHCP
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/05.-Configuraci%C3%B3n%20de%20un%20Servidor%20DHCP/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/05.-Configuraci%C3%B3n%20de%20un%20Servidor%20DHCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Configuración de un Servidor DHCP
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/06.-Ventajas%20de%20DHCP/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/06.-Ventajas%20de%20DHCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     06.-Ventajas de DHCP
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/07.-Escenarios%20de%20uso/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/07.-Escenarios%20de%20uso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     07.-Escenarios de uso
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/08.-Glosario%20de%20t%C3%A9rminos/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/08.-Glosario%20de%20t%C3%A9rminos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     08.-Glosario de términos
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/09.-Conclusi%C3%B3n/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/09.-Conclusi%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     09.-Conclusión
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     10.-Prácticas
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_11_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_11">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
+            <span class="md-nav__icon md-icon"></span>
             10.-Prácticas
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/10.-Pr%C3%A1cticas/01.-El%20servidor%20ISC%20DHCP/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/01.-El%20servidor%20ISC%20DHCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-El servidor ISC DHCP
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/10.-Pr%C3%A1cticas/02.-El%20servidor%20Kea%20DHCP/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/02.-El%20servidor%20Kea%20DHCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-El servidor Kea DHCP
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4_11_3" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     03.-Escenario de prácticas
   </span>
-</a>
-<label class="md-nav__link" for="__nav_4_11_3" id="__nav_4_11_3_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_4_11_3_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_11_3">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_11_3" id="__nav_4_11_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11_3">
+            <span class="md-nav__icon md-icon"></span>
             03.-Escenario de prácticas
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/01.-Creaci%C3%B3n%20de%20la%20plantilla%20para%20las%20m%C3%A1quinas%20clientes%20escenario%20de%20pr%C3%A1cticas/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/01.-Creaci%C3%B3n%20de%20la%20plantilla%20para%20las%20m%C3%A1quinas%20clientes%20escenario%20de%20pr%C3%A1cticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Creación de la plantilla para las máquinas clientes escenario de prácticas
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/02.-Creaci%C3%B3n%20del%20escenario/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/02.-Creaci%C3%B3n%20del%20escenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Creación del escenario
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../99.-Anexos/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../99.-Anexos/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
     99.-Anexos
   </span>
-</a>
-<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
             99.-Anexos
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../99.-Anexos/01.-Recorrido%20hist%C3%B3rico%20de%20la%20gesti%C3%B3n%20de%20redes%20en%20Linux/">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/01.-Recorrido%20hist%C3%B3rico%20de%20la%20gesti%C3%B3n%20de%20redes%20en%20Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     01.-Recorrido histórico de la gestión de redes en Linux
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../99.-Anexos/02.-C%C3%B3mo%20instalar%20NetworkManager/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/02.-C%C3%B3mo%20instalar%20NetworkManager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     02.-Cómo instalar NetworkManager
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../99.-Anexos/03.-C%C3%B3mo%20cambiar%20el%20nombre%20del%20host%20en%20linux/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/03.-C%C3%B3mo%20cambiar%20el%20nombre%20del%20host%20en%20linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     03.-Cómo cambiar el nombre del host en linux
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../99.-Anexos/04.-Por%20qu%C3%A9%20tengo%20un%20fichero50-cloud-init%20en%20la%20configuraci%C3%B3n%20de%20netplan/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/04.-Por%20qu%C3%A9%20tengo%20un%20fichero50-cloud-init%20en%20la%20configuraci%C3%B3n%20de%20netplan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     04.-Por qué tengo un fichero50-cloud-init en la configuración de netplan
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../99.-Anexos/05.-Esperas%20en%20el%20arranque%20de%20linux%20por%20la%20red/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/05.-Esperas%20en%20el%20arranque%20de%20linux%20por%20la%20red/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     05.-Esperas en el arranque de linux por la red
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../99.-Anexos/06.-FAQ%20Clonaci%C3%B3n%20de%20M%C3%A1quinas%20Virtuales%20en%20KVM-QEMU/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/06.-FAQ%20Clonaci%C3%B3n%20de%20M%C3%A1quinas%20Virtuales%20en%20KVM-QEMU/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     06.-FAQ Clonación de Máquinas Virtuales en KVM-QEMU
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../99.-Anexos/07.-Manual%20B%C3%A1sico%20de%20NAT%20e%20IPTABLES/">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/07.-Manual%20B%C3%A1sico%20de%20NAT%20e%20IPTABLES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     07.-Manual Básico de NAT e IPTABLES
   </span>
-</a>
-</li>
-</ul>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/08.-El%20comando%20sudo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08.-El comando sudo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/09.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09.-Conversor de OVA a QCOW2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../99.-Anexos/10.-Portabilizar%20M%C3%A1quinas%20Virtuales%20con%20KVM%20usando%20un%20Disco%20USB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.-Portabilizar Máquinas Virtuales con KVM usando un Disco USB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-imagenes-de-disco-con-backing-store">
-<span class="md-ellipsis">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-imagenes-de-disco-con-backing-store" class="md-nav__link">
+    <span class="md-ellipsis">
       Creación de imágenes de disco con backing store
     </span>
-</a>
-<nav aria-label="Creación de imágenes de disco con backing store" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#informacion-sobre-imagenes-de-con-disco-con-backing-store">
-<span class="md-ellipsis">
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de imágenes de disco con backing store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacion-sobre-imagenes-de-con-disco-con-backing-store" class="md-nav__link">
+    <span class="md-ellipsis">
       Información sobre imágenes de con disco con backing store
     </span>
-</a>
+  </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-install">
-<span class="md-ellipsis">
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-install" class="md-nav__link">
+    <span class="md-ellipsis">
       Creación de la nueva máquina a partir de la imagen con backing store con virt-install
     </span>
-</a>
+  </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-manager">
-<span class="md-ellipsis">
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-manager" class="md-nav__link">
+    <span class="md-ellipsis">
       Creación de la nueva máquina a partir de la imagen con backing store con virt-manager
     </span>
-</a>
+  </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-clone">
-<span class="md-ellipsis">
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-clone" class="md-nav__link">
+    <span class="md-ellipsis">
       Creación de la nueva máquina a partir de la imagen con backing store con virt-clone
     </span>
-</a>
+  </a>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>04.-Clonación enlazada con plantillas</h1>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>04.-Clonación enlazada con plantillas</h1>
+
 <p>En este tipo de clonación la imagen de la máquina clonada utiliza la imagen de la plantilla como imagen base (<strong>backing store</strong>) en modo de sólo lectura, en la imagen de la nueva máquina sólo se guardan los cambios del sistema de archivo. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base. </p>
 <p>El mecanismo es un poco más complejo, tenemos que realziar dos pasos:</p>
 <ol>
 <li>Creación del nuevo volumen a a partir de la imagen base de la plantilla (<strong>backing store</strong>).</li>
 <li>Creación de la nueva máquina usando <code>virt-install</code>, <code>virt-manager</code> o <code>virt-clone</code>.</li>
 </ol>
-<h2 id="creacion-de-imagenes-de-disco-con-backing-store">Creación de imágenes de disco con backing store<a class="headerlink" href="#creacion-de-imagenes-de-disco-con-backing-store" title="Permanent link">¶</a></h2>
+<h2 id="creacion-de-imagenes-de-disco-con-backing-store">Creación de imágenes de disco con backing store<a class="headerlink" href="#creacion-de-imagenes-de-disco-con-backing-store" title="Permanent link">&para;</a></h2>
 <p>Para no complicar la creación de volúmenes con backing store vamos a indicar el tamaño del nuevo volumen igual al de la imagen base. Como la imagen base ya tiene guardado un sistema de archivos con un tamaño determinado, el hecho de que creemos una nueva imagen con más tamaño no conlleva el redimensionado del sistema de archivo. Este cambio de tamaño se podría realizar, pero con operaciones un poco más complejas.</p>
 <p>Para asegurarnos de crear un volumen del mismo tamaño que la imagen base vamos comprobar su tamaño:</p>
 <pre><code class="language-bash">
@@ -1505,7 +4433,7 @@ Capacidad:      10,000 GiB
 ...
 </code></pre>
 <p>También lo podemos ver con <code>virt-manager</code>:</p>
-<p><img alt="plantilla" src="../img/plantilla5.png"/></p>
+<p><img alt="plantilla" src="../img/plantilla5.png" /></p>
 <p>Para crear la nueva imagen basada en la imagen base de la plantilla, podemos crear el volumen con <code>virsh</code>:</p>
 <pre><code class="language-bash">virsh -c qemu:///system vol-create-as default clone2.qcow2 10G --format qcow2 --backing-vol prueba1.qcow2 --backing-vol-format qcow2
 </code></pre>
@@ -1515,8 +4443,8 @@ sudo qemu-img create -f qcow2 -b prueba1.qcow2 -F qcow2 clone2.qcow2 10G
 virsh -c qemu:///system pool-refresh default
 </code></pre>
 <p>Otra opción es usando <code>virt-manager</code>, creando un nuevo volumen e indicando durante la dirección el volumen base:</p>
-<p><img alt="plantilla" src="../img/plantilla6.png"/></p>
-<h3 id="informacion-sobre-imagenes-de-con-disco-con-backing-store">Información sobre imágenes de con disco con backing store<a class="headerlink" href="#informacion-sobre-imagenes-de-con-disco-con-backing-store" title="Permanent link">¶</a></h3>
+<p><img alt="plantilla" src="../img/plantilla6.png" /></p>
+<h3 id="informacion-sobre-imagenes-de-con-disco-con-backing-store">Información sobre imágenes de con disco con backing store<a class="headerlink" href="#informacion-sobre-imagenes-de-con-disco-con-backing-store" title="Permanent link">&para;</a></h3>
 <p>Para comprobar que un volumen está creado con una imagen base podemos usar <code>virsh</code>:</p>
 <pre><code>virsh -c qemu:///system vol-dumpxml clone2.qcow2 default
 ...
@@ -1533,7 +4461,7 @@ backing file: prueba1.qcow2
 backing file format: qcow2
 ...
 </code></pre>
-<h2 id="creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-install">Creación de la nueva máquina a partir de la imagen con backing store con virt-install<a class="headerlink" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-install" title="Permanent link">¶</a></h2>
+<h2 id="creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-install">Creación de la nueva máquina a partir de la imagen con backing store con virt-install<a class="headerlink" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-install" title="Permanent link">&para;</a></h2>
 <p>En este caso podemos usar la herramienta <code>virt-install</code> pero sin indicar el medio de instalación.</p>
 <pre><code>virt-install --connect qemu:///system \
              --virt-type kvm \
@@ -1545,52 +4473,83 @@ backing file format: qcow2
              --import
 </code></pre>
 <p>Usamos la opción <code>--import</code> para que no te pida que indique el medio de instalación, simplemente va a usar el volumen indicado como disco de la máquina virtual.</p>
-<h2 id="creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-manager">Creación de la nueva máquina a partir de la imagen con backing store con virt-manager<a class="headerlink" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-manager" title="Permanent link">¶</a></h2>
+<h2 id="creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-manager">Creación de la nueva máquina a partir de la imagen con backing store con virt-manager<a class="headerlink" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-manager" title="Permanent link">&para;</a></h2>
 <p>Si utilizamos <code>virt-manager</code>, para crear la nueva máquina, durante el asistente de creación de la máquina, elegimos la opción <strong>Manual install</strong>, ya que no vamos a usar una imagen ISO:</p>
-<p><img alt="volumen" src="../img/volumen9.png"/></p>
+<p><img alt="volumen" src="../img/volumen9.png" /></p>
 <p>Y posteriormente, escogemos el volumen que tenemos creado:</p>
-<p><img alt="volumen" src="../img/volumen4.png"/></p>
+<p><img alt="volumen" src="../img/volumen4.png" /></p>
 <p>Otra forma, sería escogiendo la opción <strong>Importar imagen de disco existente</strong> en la creación de la máquina:</p>
-<p><img alt="plantilla" src="../img/plantilla7.png"/></p>
+<p><img alt="plantilla" src="../img/plantilla7.png" /></p>
 <p>Y eligiendo el volumen en siguiente paso:</p>
-<p><img alt="plantilla" src="../img/plantilla8.png"/></p>
-<h2 id="creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-clone">Creación de la nueva máquina a partir de la imagen con backing store con virt-clone<a class="headerlink" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-clone" title="Permanent link">¶</a></h2>
+<p><img alt="plantilla" src="../img/plantilla8.png" /></p>
+<h2 id="creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-clone">Creación de la nueva máquina a partir de la imagen con backing store con virt-clone<a class="headerlink" href="#creacion-de-la-nueva-maquina-a-partir-de-la-imagen-con-backing-store-con-virt-clone" title="Permanent link">&para;</a></h2>
 <p>Una vez que tenemos creado el volumen basada en el imagen base de la plantilla, podemos crear un nuevo clon con <code>virt-clone</code>, para ello ejecutamos:</p>
 <pre><code>virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone2 --file /var/lib/libvirt/images/clone2.qcow2 --preserve-data
 </code></pre>
 <p>Indicamos como fichero el volumen que hemos creado, pero con la opción <code>--preserve-data</code> no se copia el volumen original al nuevo, simplemente se usa. Se puede comprobar que la clonación no tarda nada de tiempo, no se está copiando un volumen en otro.</p>
-</article>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-</div>
-<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
   Volver al principio
 </button>
-</main>
-<footer class="md-footer">
-<div class="md-footer-meta md-typeset">
-<div class="md-footer-meta__inner md-grid">
-<div class="md-copyright">
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
     </a>
+  
 </div>
-</div>
-</div>
+      
+    </div>
+  </div>
 </footer>
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
-<script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
-<script src="../../../javascripts/mathjax.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
 </html>
