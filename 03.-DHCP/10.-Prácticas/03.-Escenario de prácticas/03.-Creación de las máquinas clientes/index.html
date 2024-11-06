@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/">
+        <link rel="prev" href="../02.-Creaci%C3%B3n%20del%20escenario/">
       
       
-        <link rel="next" href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/">
+        <link rel="next" href="../../../../99.-Anexos/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>05.-Conexión remota a libvirt - SRI</title>
+        <title>03.-Creación de las máquinas clientes - SRI</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#crear-una-nueva-maquina-virtual-llamada-cliente1-a-partir-de-la-plantilla-plantilla-cliente-que-tenga-un-volumen-de-5g" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../.." title="SRI" class="md-header__button md-logo" aria-label="SRI" data-md-component="logo">
+    <a href="../../../.." title="SRI" class="md-header__button md-logo" aria-label="SRI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              05.-Conexión remota a libvirt
+              03.-Creación de las máquinas clientes
             
           </span>
         </div>
@@ -196,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -211,13 +216,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../01.-KVM/" class="md-tabs__link">
           
   
     
@@ -237,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../02.-SSH/" class="md-tabs__link">
+        <a href="../../../../02.-SSH/" class="md-tabs__link">
           
   
     
@@ -253,11 +256,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../03.-DHCP/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
           
   
     
@@ -277,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../99.-Anexos/" class="md-tabs__link">
+        <a href="../../../../99.-Anexos/" class="md-tabs__link">
           
   
     
@@ -312,7 +317,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SRI" class="md-nav__button md-logo" aria-label="SRI" data-md-component="logo">
+    <a href="../../../.." title="SRI" class="md-nav__button md-logo" aria-label="SRI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -330,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -347,8 +352,6 @@
       
   
   
-    
-  
   
   
     
@@ -381,22 +384,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../../01.-KVM/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -407,13 +407,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             01.-KVM
@@ -479,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -542,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -563,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,10 +589,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -612,11 +610,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -630,7 +628,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             02.-Instalación
@@ -644,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -665,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.-Instalacion/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/02.-Instalacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -686,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -707,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,17 +723,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +735,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -815,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -978,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -999,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1020,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1062,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1145,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1166,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1187,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1208,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1229,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1250,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1331,7 +1321,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/" class="md-nav__link ">
+            <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1364,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1385,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/02.-Plantillas%20de%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/02.-Plantillas%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1406,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1427,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/04.-Clonaci%C3%B3n%20enlazada%20con%20plantillas/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/04.-Clonaci%C3%B3n%20enlazada%20con%20plantillas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1448,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1529,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07.-Redes/01.-Introduccion/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/01.-Introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1550,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1571,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07.-Redes/03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1592,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1613,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1634,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1715,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1736,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1757,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1778,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1799,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1820,7 +1810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
+      <a href="../../../../01.-KVM/09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,7 +1904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
+      <a href="../../../../01.-KVM/09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1968,7 +1958,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../10.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../../01.-KVM/10.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2001,7 +1991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
+      <a href="../../../../01.-KVM/10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2022,7 +2012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
+      <a href="../../../../01.-KVM/10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2095,7 +2085,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2224,7 +2214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/01.-Precedentes.%20%60telnet%60%2C%20%60rlogin%60%20y%20%60rsh%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/01.-Precedentes.%20%60telnet%60%2C%20%60rlogin%60%20y%20%60rsh%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2245,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/02.-Cifrado%20Completo/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/02.-Cifrado%20Completo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2266,7 +2256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/03.-Historia%20de%20%60ssh%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/03.-Historia%20de%20%60ssh%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2287,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/04.-OpenSSH/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/04.-OpenSSH/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2343,7 +2333,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2376,7 +2366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/01.-Criptograf%C3%ADa%20de%20clave%20sim%C3%A9trica/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/01.-Criptograf%C3%ADa%20de%20clave%20sim%C3%A9trica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2397,7 +2387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/02.-Clave%20asim%C3%A9trica%20o%20de%20clave%20p%C3%BAblica/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/02.-Clave%20asim%C3%A9trica%20o%20de%20clave%20p%C3%BAblica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2418,7 +2408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/03.-Funciones%20Hash/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/03.-Funciones%20Hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2476,7 +2466,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2509,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/01.-Contrase%C3%B1a/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/01.-Contrase%C3%B1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2530,7 +2520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/02.-Clave%20P%C3%BAblica/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/02.-Clave%20P%C3%BAblica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2551,7 +2541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/03.-Kerberos/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/03.-Kerberos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2572,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/04.-GSSAPI/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/04.-GSSAPI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2626,7 +2616,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2659,7 +2649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/01.-Fase%201%20%28Negociaci%C3%B3n%29/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/01.-Fase%201%20%28Negociaci%C3%B3n%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2680,7 +2670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/02.-Fase%202%20%28Autenticaci%C3%B3n%29/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/02.-Fase%202%20%28Autenticaci%C3%B3n%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2717,7 +2707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/02.-Instalaci%C3%B3n%20del%20entorno%20de%20pruebas/" class="md-nav__link">
+      <a href="../../../../02.-SSH/02.-Instalaci%C3%B3n%20del%20entorno%20de%20pruebas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2790,7 +2780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/01.-Autenticaci%C3%B3n%20con%20usuario%20y%20contrase%C3%B1a/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/01.-Autenticaci%C3%B3n%20con%20usuario%20y%20contrase%C3%B1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2811,7 +2801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/02.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/02.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2832,7 +2822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/03.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada%20y%20frase%20de%20paso/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/03.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada%20y%20frase%20de%20paso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2853,7 +2843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/04.-%60ssh-agent%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/04.-%60ssh-agent%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2874,7 +2864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/05.-Gesti%C3%B3n%20de%20ficheros.%20%60authorized_keys%60%20y%20%60known_hosts%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/05.-Gesti%C3%B3n%20de%20ficheros.%20%60authorized_keys%60%20y%20%60known_hosts%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2895,7 +2885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/06.-Forwarding/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/06.-Forwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2968,7 +2958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/01.-Configuraci%C3%B3n%20del%20cliente%20ssh/" class="md-nav__link">
+      <a href="../../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/01.-Configuraci%C3%B3n%20del%20cliente%20ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2989,7 +2979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/02.-Configuraci%C3%B3n%20del%20servidor%20ssh/" class="md-nav__link">
+      <a href="../../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/02.-Configuraci%C3%B3n%20del%20servidor%20ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3062,7 +3052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/01.-Uso%20de%20%60scp%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/01.-Uso%20de%20%60scp%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3083,7 +3073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/02.-Uso%20de%20%60sftp%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/02.-Uso%20de%20%60sftp%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3139,7 +3129,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/06.-T%C3%BAneles%20SSH/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3172,7 +3162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/01.-Local%20forwarding/" class="md-nav__link">
+      <a href="../../../../02.-SSH/06.-T%C3%BAneles%20SSH/01.-Local%20forwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3193,7 +3183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/02.-Remote%20forwarding/" class="md-nav__link">
+      <a href="../../../../02.-SSH/06.-T%C3%BAneles%20SSH/02.-Remote%20forwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3214,7 +3204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/03.-Forwarding%20din%C3%A1mico/" class="md-nav__link">
+      <a href="../../../../02.-SSH/06.-T%C3%BAneles%20SSH/03.-Forwarding%20din%C3%A1mico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3287,7 +3277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/07.-Pr%C3%A1cticas/01.-Descripci%C3%B3n%20del%20laboratorio/" class="md-nav__link">
+      <a href="../../../../02.-SSH/07.-Pr%C3%A1cticas/01.-Descripci%C3%B3n%20del%20laboratorio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3308,7 +3298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/07.-Pr%C3%A1cticas/02.-Ejercicios/" class="md-nav__link">
+      <a href="../../../../02.-SSH/07.-Pr%C3%A1cticas/02.-Ejercicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3337,7 +3327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/Archive.tar" class="md-nav__link">
+      <a href="../../../../02.-SSH/Archive.tar" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3362,6 +3352,8 @@
       
   
   
+    
+  
   
   
     
@@ -3394,19 +3386,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03.-DHCP/" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3417,13 +3412,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             03.-DHCP
@@ -3439,7 +3434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/01.-Introducci%C3%B3n%20a%20DHCP/" class="md-nav__link">
+      <a href="../../../01.-Introducci%C3%B3n%20a%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3460,7 +3455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/02.-Funcionamiento%20del%20Protocolo%20DHCP/" class="md-nav__link">
+      <a href="../../../02.-Funcionamiento%20del%20Protocolo%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3529,7 +3524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/01.-Discover%20%28Descubrimiento%29/" class="md-nav__link">
+      <a href="../../../03.Fases%20del%20Proceso%20DHCP/01.-Discover%20%28Descubrimiento%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3550,7 +3545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/02.-Offer%20%28Oferta%29/" class="md-nav__link">
+      <a href="../../../03.Fases%20del%20Proceso%20DHCP/02.-Offer%20%28Oferta%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3571,7 +3566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/03.-Request%20%28Solicitud%29/" class="md-nav__link">
+      <a href="../../../03.Fases%20del%20Proceso%20DHCP/03.-Request%20%28Solicitud%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3592,7 +3587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/04.-Acknowledge%20%28Confirmaci%C3%B3n%29/" class="md-nav__link">
+      <a href="../../../03.Fases%20del%20Proceso%20DHCP/04.-Acknowledge%20%28Confirmaci%C3%B3n%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3621,7 +3616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/04.-Componentes%20del%20Servidor%20DHCP/" class="md-nav__link">
+      <a href="../../../04.-Componentes%20del%20Servidor%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3642,7 +3637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/05.-Configuraci%C3%B3n%20de%20un%20Servidor%20DHCP/" class="md-nav__link">
+      <a href="../../../05.-Configuraci%C3%B3n%20de%20un%20Servidor%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3663,7 +3658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/06.-Ventajas%20de%20DHCP/" class="md-nav__link">
+      <a href="../../../06.-Ventajas%20de%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3684,7 +3679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/07.-Escenarios%20de%20uso/" class="md-nav__link">
+      <a href="../../../07.-Escenarios%20de%20uso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3705,7 +3700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/08.-Glosario%20de%20t%C3%A9rminos/" class="md-nav__link">
+      <a href="../../../08.-Glosario%20de%20t%C3%A9rminos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3726,7 +3721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/09.-Conclusi%C3%B3n/" class="md-nav__link">
+      <a href="../../../09.-Conclusi%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3744,8 +3739,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -3761,11 +3758,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" checked>
         
           
           <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
@@ -3779,7 +3776,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
             10.-Prácticas
@@ -3793,7 +3790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/01.-El%20servidor%20ISC%20DHCP/" class="md-nav__link">
+      <a href="../../01.-El%20servidor%20ISC%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3814,7 +3811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/02.-El%20servidor%20Kea%20DHCP/" class="md-nav__link">
+      <a href="../../02.-El%20servidor%20Kea%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3832,6 +3829,8 @@
                 
   
   
+    
+  
   
   
     
@@ -3853,16 +3852,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3879,7 +3878,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_11_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_11_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_11_3">
             <span class="md-nav__icon md-icon"></span>
             03.-Escenario de prácticas
@@ -3895,7 +3894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/01.-Creaci%C3%B3n%20de%20la%20plantilla%20para%20las%20m%C3%A1quinas%20clientes%20escenario%20de%20pr%C3%A1cticas/" class="md-nav__link">
+      <a href="../01.-Creaci%C3%B3n%20de%20la%20plantilla%20para%20las%20m%C3%A1quinas%20clientes%20escenario%20de%20pr%C3%A1cticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3916,7 +3915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/02.-Creaci%C3%B3n%20del%20escenario/" class="md-nav__link">
+      <a href="../02.-Creaci%C3%B3n%20del%20escenario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3934,10 +3933,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/03.-Creaci%C3%B3n%20de%20las%20m%C3%A1quinas%20clientes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    03.-Creación de las máquinas clientes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3946,6 +3963,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crear-una-nueva-maquina-virtual-llamada-cliente1-a-partir-de-la-plantilla-plantilla-cliente-que-tenga-un-volumen-de-5g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear una nueva máquina virtual llamada cliente1 a partir de la plantilla plantilla-cliente que tenga un volumen de 5G.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceder-a-cliente1-realizar-una-configuracion-estatica-de-la-red-y-comprobar-si-tiene-acceso-al-exterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceder a cliente1, realizar una configuración estática de la red y comprobar si tiene acceso al exterior.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4026,7 +4079,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../99.-Anexos/" class="md-nav__link ">
+            <a href="../../../../99.-Anexos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4059,7 +4112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/00.-Mi%20clave%20p%C3%BAblica/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/00.-Mi%20clave%20p%C3%BAblica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4080,7 +4133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/01.-Recorrido%20hist%C3%B3rico%20de%20la%20gesti%C3%B3n%20de%20redes%20en%20Linux/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/01.-Recorrido%20hist%C3%B3rico%20de%20la%20gesti%C3%B3n%20de%20redes%20en%20Linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4101,7 +4154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/02.-C%C3%B3mo%20instalar%20NetworkManager/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/02.-C%C3%B3mo%20instalar%20NetworkManager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4122,7 +4175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/03.-C%C3%B3mo%20cambiar%20el%20nombre%20del%20host%20en%20linux/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/03.-C%C3%B3mo%20cambiar%20el%20nombre%20del%20host%20en%20linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4143,7 +4196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/04.-Por%20qu%C3%A9%20tengo%20un%20fichero50-cloud-init%20en%20la%20configuraci%C3%B3n%20de%20netplan/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/04.-Por%20qu%C3%A9%20tengo%20un%20fichero50-cloud-init%20en%20la%20configuraci%C3%B3n%20de%20netplan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4164,7 +4217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/05.-Esperas%20en%20el%20arranque%20de%20linux%20por%20la%20red/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/05.-Esperas%20en%20el%20arranque%20de%20linux%20por%20la%20red/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4185,7 +4238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/06.-FAQ%20Clonaci%C3%B3n%20de%20M%C3%A1quinas%20Virtuales%20en%20KVM-QEMU/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/06.-FAQ%20Clonaci%C3%B3n%20de%20M%C3%A1quinas%20Virtuales%20en%20KVM-QEMU/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4206,7 +4259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/07.-Manual%20B%C3%A1sico%20de%20NAT%20e%20IPTABLES/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/07.-Manual%20B%C3%A1sico%20de%20NAT%20e%20IPTABLES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4227,7 +4280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/08.-El%20comando%20sudo/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/08.-El%20comando%20sudo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4248,7 +4301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/09.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/09.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4269,7 +4322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/10.-Portabilizar%20M%C3%A1quinas%20Virtuales%20con%20KVM%20usando%20un%20Disco%20USB/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/10.-Portabilizar%20M%C3%A1quinas%20Virtuales%20con%20KVM%20usando%20un%20Disco%20USB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4290,7 +4343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/11.-El%20puente%20virbr0/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/11.-El%20puente%20virbr0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4329,6 +4382,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crear-una-nueva-maquina-virtual-llamada-cliente1-a-partir-de-la-plantilla-plantilla-cliente-que-tenga-un-volumen-de-5g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear una nueva máquina virtual llamada cliente1 a partir de la plantilla plantilla-cliente que tenga un volumen de 5G.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceder-a-cliente1-realizar-una-configuracion-estatica-de-la-red-y-comprobar-si-tiene-acceso-al-exterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceder a cliente1, realizar una configuración estática de la red y comprobar si tiene acceso al exterior.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4342,13 +4421,18 @@
                   
 
 
-  <h1>05.-Conexión remota a libvirt</h1>
+  <h1>03.-Creación de las máquinas clientes</h1>
 
-<p>Podemos conectar al hypervisor libvirt que se está ejecutando en un servidor desde otra máquina remota. Es decir, desde una máquina cliente podemos usar, por ejemplo, <code>virsh</code> para conectarnos a un hypervisor libvirt remoto. Para ello, la sintaxis es la siguiente:</p>
-<pre><code>usuario@cliente:~$ virsh -c qemu+ssh://usuario_remoto@ip_servidor_remoto/system comando
-</code></pre>
-<p>Es decir, se va a producir una conexión ssh entre la máquina cliente y el servidor donde se ejecuta libvirt. Por lo tanto hay que configurar las máquinas para que el usuario <code>usuario</code> de la máquina <code>cliente</code> pueda acceder por SSH al servidor remoto con el usuario <code>usuario_remoto</code>, sin que se se le pida la contraseña.</p>
-<p>Para ello tendremos que copiar la clave pública SSH del usuario <code>cliente</code> al fichero <code>~/.ssh/authorized_keys</code> del usuario <code>usuario_remoto</code> en el servidor que queremos acceder.</p>
+<h4 id="crear-una-nueva-maquina-virtual-llamada-cliente1-a-partir-de-la-plantilla-plantilla-cliente-que-tenga-un-volumen-de-5g">Crear una nueva máquina virtual llamada <code>cliente1</code> a partir de la plantilla <code>plantilla-cliente</code> que tenga un volumen de 5G.<a class="headerlink" href="#crear-una-nueva-maquina-virtual-llamada-cliente1-a-partir-de-la-plantilla-plantilla-cliente-que-tenga-un-volumen-de-5g" title="Permanent link">&para;</a></h4>
+<p>A tener en cuenta:   </p>
+<ul>
+<li>Hay que redimensionar el sistema de ficheros para que ocupe el espacio completo del disco.</li>
+<li>La máquina se conecta a la red <code>red_intra</code>.</li>
+<li>La máquina tiene una configuración estática de red.</li>
+<li>La máquina debe tener el <em>hostname</em> <code>cliente1-&lt;tunombre&gt;</code>.</li>
+<li>En el usuario <code>debian</code> copia tu clave pública y la <a href="../../../../99.-Anexos/00.-Mi%20clave%20p%C3%BAblica/">mía</a> para que podamos acceder sin introducir la contraseña por ssh</li>
+</ul>
+<h4 id="acceder-a-cliente1-realizar-una-configuracion-estatica-de-la-red-y-comprobar-si-tiene-acceso-al-exterior">Acceder a <code>cliente1</code>, realizar una configuración estática de la red y comprobar si tiene acceso al exterior.<a class="headerlink" href="#acceder-a-cliente1-realizar-una-configuracion-estatica-de-la-red-y-comprobar-si-tiene-acceso-al-exterior" title="Permanent link">&para;</a></h4>
 
 
 
@@ -4401,12 +4485,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
