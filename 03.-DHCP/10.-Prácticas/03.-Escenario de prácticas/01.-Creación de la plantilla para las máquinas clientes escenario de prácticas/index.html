@@ -4085,6 +4085,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -4124,6 +4128,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../99.-Anexos/00.-Mi%20clave%20p%C3%BAblica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00.-Mi clave pública
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -4336,6 +4361,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../99.-Anexos/11.-El%20puente%20virbr0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.-El puente virbr0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4497,9 +4543,10 @@
 </code></pre>
 <h4 id="reduccion-de-tamano-con-virt-sparsify">Reducción de tamaño con <code>virt-sparsify</code><a class="headerlink" href="#reduccion-de-tamano-con-virt-sparsify" title="Permanent link">&para;</a></h4>
 <p>Usa <code>virt-sparsify</code> (<a href="../../../../01.-KVM/05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/">Compresión de imágenes con <code>virt-sparsify</code></a>) para reducir el espacio en disco eliminado sectores vacíos:</p>
-<pre><code class="language-bash">virt-sparsify --compress /var/lib/libvirt/images/plantilla-cliente.qcow2 /var/lib/libvirt/images/plantilla-cliente-sparse.qcow2
+<pre><code class="language-bash">sudo virt-sparsify --compress /var/lib/libvirt/images/plantilla-cliente.qcow2 /var/lib/libvirt/images/plantilla-cliente-sparse.qcow2
 </code></pre>
-<p>Para verificar el nuevo tamaño del archivo reducido:</p>
+<p>El proceso tomará cierto tiempo... paciencia.
+Para verificar el nuevo tamaño del archivo reducido:</p>
 <pre><code class="language-bash">du -sh /var/lib/libvirt/images/plantilla-cliente-sparse.qcow2
 </code></pre>
 

@@ -4304,6 +4304,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -4343,6 +4347,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../99.-Anexos/00.-Mi%20clave%20p%C3%BAblica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00.-Mi clave pública
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -4546,6 +4571,27 @@
   
   <span class="md-ellipsis">
     10.-Portabilizar Máquinas Virtuales con KVM usando un Disco USB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../99.-Anexos/11.-El%20puente%20virbr0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.-El puente virbr0
   </span>
   
 
@@ -4903,14 +4949,16 @@ sudo nmcli connection up br-intra
 </code></pre>
 <hr />
 <h2 id="2-crea-con-virt-install-la-maquina-router-con-debian-12">2.-Crea con <code>virt-install</code> la máquina <strong>router</strong> con Debian 12:<a class="headerlink" href="#2-crea-con-virt-install-la-maquina-router-con-debian-12" title="Permanent link">&para;</a></h2>
-<pre><code>- Está conectada a la red pública (al bridge `br0`) y la **red_intra**.
-- Esta máquina utiliza un disco en formato **raw** de 10 Gb.
-- El hostname de esta máquina debe ser `router-tunombre`.
-- Se debe poder acceder a ella por ssh con el usuario `user` sin que te pida contraseña.
-- El usuario `user` debe poder ejecutar el comando `sudo` sin que pida contraseña.
-- Debes configurar la segunda interfaz de red con direccionamiento estático para que tenga la dirección `192.168.200.1`.
-- Esta máquina se debe iniciar cada vez que arrancamos el host.
-</code></pre>
+<ul>
+<li>Debe estar conectada a la red pública (al bridge <code>br0</code>) y la <strong>red_intra</strong>.</li>
+<li>Esta máquina utiliza un disco en formato <strong>raw</strong> de 10 Gb.</li>
+<li>El hostname de esta máquina debe ser <code>router-tunombre</code>.</li>
+<li>Se debe poder acceder a ella por ssh con el usuario <code>user</code> sin que te pida contraseña.</li>
+<li>El usuario <code>user</code> debe poder ejecutar el comando <code>sudo</code> sin que pida contraseña.</li>
+<li>Debes configurar la segunda interfaz de red con direccionamiento estático para que tenga la dirección <code>192.168.200.1</code>.</li>
+<li>Esta máquina se debe iniciar cada vez que arrancamos el host.</li>
+</ul>
+<p>Ver el anexo: <a href="../../../../99.-Anexos/11.-El%20puente%20virbr0/">El puente virbr0</a></p>
 <h3 id="solucion_1">Solución<a class="headerlink" href="#solucion_1" title="Permanent link">&para;</a></h3>
 <h4 id="usa-virt-install-para-crear-esta-maquina-con-debian-12-conectada-a-br0-red-publica-y-br-intra-red-interna">Usa <code>virt-install</code> para crear esta máquina con Debian 12 conectada a <code>br0</code> (red pública) y <code>br-intra</code> (red interna):<a class="headerlink" href="#usa-virt-install-para-crear-esta-maquina-con-debian-12-conectada-a-br0-red-publica-y-br-intra-red-interna" title="Permanent link">&para;</a></h4>
 <pre><code class="language-bash">virt-install \
@@ -4930,6 +4978,7 @@ sudo nmcli connection up br-intra
 <li>Una vez creada, sigue estos pasos de configuración dentro de la máquina:</li>
 </ul>
 <h4 id="configura-el-usuario-y-ssh">Configura el usuario y SSH:<a class="headerlink" href="#configura-el-usuario-y-ssh" title="Permanent link">&para;</a></h4>
+<p>Consulta el apartado de <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/02.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada/">autenticación con claves pública-privada</a>.</p>
 <h4 id="anade-el-usuario-user">Añade el usuario <code>user</code>:<a class="headerlink" href="#anade-el-usuario-user" title="Permanent link">&para;</a></h4>
 <pre><code class="language-bash">sudo adduser user
 </code></pre>

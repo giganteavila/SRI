@@ -3976,6 +3976,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -4018,6 +4022,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00.-Mi%20clave%20p%C3%BAblica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00.-Mi clave pública
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -4292,8 +4317,26 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Características Clave de visudo">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-usar-visudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo usar visudo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo usar visudo">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abrir-el-archivo-etcsudoers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir el Archivo /etc/sudoers:
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#editar-el-archivo" class="md-nav__link">
@@ -4440,6 +4483,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11.-El%20puente%20virbr0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.-El puente virbr0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4548,8 +4612,26 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Características Clave de visudo">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-usar-visudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo usar visudo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo usar visudo">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abrir-el-archivo-etcsudoers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir el Archivo /etc/sudoers:
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#editar-el-archivo" class="md-nav__link">
@@ -4672,18 +4754,18 @@
 <ul>
 <li><strong>Debian/Ubuntu</strong>:</li>
 </ul>
-<p><code>bash
-  su -c "apt install sudo"</code></p>
+<pre><code class="language-bash">  su -c &quot;apt install sudo&quot;
+</code></pre>
 <ul>
 <li><strong>CentOS/RHEL</strong>:</li>
 </ul>
-<p><code>bash
-  su -c "yum install sudo"</code></p>
+<pre><code class="language-bash">  su -c &quot;yum install sudo&quot;
+</code></pre>
 <ul>
 <li><strong>Arch Linux</strong>:</li>
 </ul>
-<p><code>bash
-  su -c "pacman -S sudo"</code></p>
+<pre><code class="language-bash">  su -c &quot;pacman -S sudo&quot;
+</code></pre>
 <p>Una vez instalado, puedes añadir un usuario al grupo <code>sudo</code> (si es necesario) para otorgarle permisos de <code>sudo</code>.</p>
 <pre><code class="language-bash">usermod -aG sudo &lt;nombre_usuario&gt;
 </code></pre>
@@ -4708,67 +4790,59 @@
 <hr />
 <h2 id="opciones-utiles">Opciones Útiles<a class="headerlink" href="#opciones-utiles" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong><code>-u</code></strong>: Especifica el usuario como el cual ejecutar el comando.</li>
+<li><strong><code>-u</code></strong>: Especifica el usuario con el cual ejecutar el comando.</li>
 </ol>
-<p><code>bash
-   sudo -u &lt;usuario&gt; &lt;comando&gt;</code></p>
+<pre><code class="language-bash">   sudo -u &lt;usuario&gt; &lt;comando&gt;
+</code></pre>
 <p>Ejemplo:</p>
-<p><code>bash
-   sudo -u postgres psql</code></p>
+<pre><code class="language-bash">   sudo -u postgres psql
+</code></pre>
 <p>Este comando ejecuta <code>psql</code> como el usuario <code>postgres</code>.</p>
 <ol>
 <li><strong><code>-k</code></strong>: Invalida el tiempo de autenticación. Útil si deseas que <code>sudo</code> solicite la contraseña nuevamente.</li>
 </ol>
-<p><code>bash
-   sudo -k</code></p>
+<pre><code class="language-bash">   sudo -k
+</code></pre>
 <ol>
 <li><strong><code>-l</code></strong>: Lista los permisos de <code>sudo</code> del usuario actual.</li>
 </ol>
-<p><code>bash
-   sudo -l</code></p>
+<pre><code class="language-bash">   sudo -l
+</code></pre>
 <ol>
 <li><strong><code>-b</code></strong>: Ejecuta el comando en segundo plano.</li>
 </ol>
-<p><code>bash
-   sudo -b &lt;comando&gt;</code></p>
+<pre><code class="language-bash">   sudo -b &lt;comando&gt;
+</code></pre>
 <ol>
 <li><strong><code>--</code></strong>: Indica el final de las opciones de <code>sudo</code> para evitar conflictos con el comando que se ejecutará.</li>
 </ol>
-<p><code>bash
-   sudo -- ls --color=auto</code></p>
+<pre><code class="language-bash">   sudo -- ls --color=auto
+</code></pre>
 <h2 id="visudo">Visudo<a class="headerlink" href="#visudo" title="Permanent link">&para;</a></h2>
 <p><code>visudo</code> es una herramienta en sistemas Unix/Linux diseñada específicamente para editar el archivo de configuración de <code>sudo</code>, que define los permisos de los usuarios para ejecutar comandos con privilegios elevados. La principal ventaja de <code>visudo</code> es que previene errores de sintaxis y bloquea el archivo mientras está siendo editado, lo que es fundamental para mantener la integridad del sistema y evitar problemas de acceso.</p>
 <h3 id="caracteristicas-clave-de-visudo">Características Clave de <code>visudo</code><a class="headerlink" href="#caracteristicas-clave-de-visudo" title="Permanent link">&para;</a></h3>
 <ol>
-<li>
-<p><strong>Verificación de Sintaxis</strong>:</p>
-<ul>
+<li><strong>Verificación de Sintaxis</strong>:<ul>
 <li><code>visudo</code> comprueba automáticamente la sintaxis del archivo <code>/etc/sudoers</code> (o cualquier archivo que se edite con <code>visudo</code>) antes de guardar los cambios.</li>
 <li>Si se detecta un error de sintaxis, <code>visudo</code> muestra un mensaje de error y no permite guardar el archivo hasta que el error se corrija. Esto evita problemas graves, como quedar bloqueado sin acceso a <code>sudo</code>.</li>
-<li>
-<p><strong>Bloqueo del Archivo</strong>:</p>
+</ul>
 </li>
-<li>
-<p>Cuando <code>visudo</code> está en uso, bloquea el archivo <code>/etc/sudoers</code> para que no pueda ser editado por otro proceso o usuario simultáneamente. Esto asegura que no se generen conflictos de edición.</p>
+<li><strong>Bloqueo del Archivo</strong>:<ul>
+<li>Cuando <code>visudo</code> está en uso, bloquea el archivo <code>/etc/sudoers</code> para que no pueda ser editado por otro proceso o usuario simultáneamente. Esto asegura que no se generen conflictos de edición.</li>
+</ul>
 </li>
-<li>
-<p><strong>Edición Segura</strong>:</p>
-</li>
-<li>
-<p><code>visudo</code> permite especificar un archivo alternativo para editar, lo cual es útil para agregar archivos en el directorio <code>/etc/sudoers.d</code> o para editar archivos de prueba. Por ejemplo:</p>
-</li>
+<li><strong>Edición Segura</strong>:<ul>
+<li><code>visudo</code> permite especificar un archivo alternativo para editar, lo cual es útil para agregar archivos en el directorio <code>/etc/sudoers.d</code> o para editar archivos de prueba. Por ejemplo:</li>
 </ul>
 </li>
 </ol>
-<p>```bash
-    $ sudo visudo -f /etc/sudoers.d/usuario_especifico</p>
-<pre><code>### Cómo usar `visudo`
-
-#### Abrir el Archivo `/etc/sudoers`:
-
-    - Ejecuta `visudo` como superusuario:
-```bash
-    $ sudo visudo
+<pre><code class="language-bash">    $ sudo visudo -f /etc/sudoers.d/usuario_especifico
+</code></pre>
+<h3 id="como-usar-visudo">Cómo usar <code>visudo</code><a class="headerlink" href="#como-usar-visudo" title="Permanent link">&para;</a></h3>
+<h4 id="abrir-el-archivo-etcsudoers">Abrir el Archivo <code>/etc/sudoers</code>:<a class="headerlink" href="#abrir-el-archivo-etcsudoers" title="Permanent link">&para;</a></h4>
+<pre><code>- Ejecuta `visudo` como superusuario:
+</code></pre>
+<pre><code class="language-bash">    $ sudo visudo
 </code></pre>
 <ul>
 <li>Esto abrirá el archivo <code>/etc/sudoers</code> en el editor de texto predeterminado (normalmente <code>vi</code> o <code>nano</code> en algunas distribuciones).</li>
@@ -4803,18 +4877,18 @@
 <ol>
 <li><strong>Actualizar y Mejorar el Sistema</strong></li>
 </ol>
-<p><code>bash
-   sudo apt update &amp;&amp; sudo apt upgrade</code></p>
+<pre><code class="language-bash">   sudo apt update &amp;&amp; sudo apt upgrade
+</code></pre>
 <ol>
 <li><strong>Editar un Archivo de Sistema</strong></li>
 </ol>
-<p><code>bash
-   sudo nano /etc/hosts</code></p>
+<pre><code class="language-bash">   sudo nano /etc/hosts
+</code></pre>
 <ol>
 <li><strong>Reiniciar el Sistema</strong></li>
 </ol>
-<p><code>bash
-   sudo reboot</code></p>
+<pre><code class="language-bash">   sudo reboot
+</code></pre>
 <hr />
 <h3 id="seguridad-y-buenas-practicas">Seguridad y Buenas Prácticas<a class="headerlink" href="#seguridad-y-buenas-practicas" title="Permanent link">&para;</a></h3>
 <ul>
