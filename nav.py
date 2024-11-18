@@ -45,7 +45,7 @@ def generate_nav(parent_dir, nav_name, ignore=[]):
 if __name__ == "__main__":
     docs_path = "./docs"
     nav_name = "./nav.yml"
-    ignore = ["javascripts","intermezzo","img",".obsidian","melt93"]
+    ignore = ["javascripts","intermezzo","img",".obsidian","melt93","Cajón"]
     generate_nav(docs_path, nav_name, ignore)
 
     mkdocs_file_path = "./mkdocs.yml"

@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "sri"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+nltk = "^3.9.1"
+mkdocs-material = "^9.5.42"
+pymdown-extensions = "^10.11.2"
+mkdocs-roamlinks-plugin = "^0.3.2"
+mkdocs = "^1.6.1"
+mkdocs-mermaid2-plugin = "^1.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

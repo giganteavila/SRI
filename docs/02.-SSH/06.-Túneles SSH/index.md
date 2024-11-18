@@ -1,0 +1,1 @@
+Esta técnica, también conocida como TCP forwarding o port forwarding, permite utilizar cualquier aplicación de forma segura a través de una conexión ssh (de ahí la utilización del término túnel).

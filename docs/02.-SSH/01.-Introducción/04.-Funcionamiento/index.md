@@ -1,0 +1,1 @@
+A continuación se describen las principales fases del protocolo SSH, que permiten establecer una conexión segura y autenticada entre el cliente y el servidor, garantizando la confidencialidad e integridad de los datos intercambiados.

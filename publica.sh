@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Ejecuta la instrucción python
-python nav.py
+
+poetry run python nav.py
 
 # Verifica si se proporcionó un parámetro
 if [ $# -eq 1 ]; then
@@ -14,7 +15,7 @@ fi
 # Verifica la respuesta dada
 if [ "$respuesta" = "w" ]; then
   # Si la respuesta es "w", ejecuta mkdocs gh-deploy
-  mkdocs gh-deploy
+  poetry run mkdocs gh-deploy --ignore-version
   # Abre Firefox con la dirección web correspondiente
   export MOZ_X11_EGL=1
   export MOZ_ENABLE_WAYLAND=1
@@ -29,7 +30,7 @@ elif [ "$respuesta" = "l" ]; then
     lsof -t -i :8000 | xargs kill -9 >/dev/null 2>&1
   fi
   # Levanta el servidor local
-  mkdocs serve >/dev/null 2>&1 &
+  poetry run mkdocs serve >/dev/null 2>&1 &
   # Espera 1 segundo para asegurarse de que el servidor esté en marcha
   sleep 1
   # Abre Firefox con la dirección local correspondiente

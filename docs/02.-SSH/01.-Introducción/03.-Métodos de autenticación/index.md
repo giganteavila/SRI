@@ -1,0 +1,1 @@
+La autenticación en el entorno de conexiones **SSH** (Secure Shell) es un proceso crítico para asegurar el acceso remoto a servidores y dispositivos, utilizando métodos robustos que garantizan la confidencialidad e integridad de la comunicación. Existen varios tipos de autenticación en conexiones SSH, cada uno con sus características y niveles de seguridad.

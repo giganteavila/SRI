@@ -1,0 +1,1 @@
+Vamos as seguir trabajando con el escenario que hemos construido en  la práctica anterior. En esta práctica vamos instalar y configurar servicios en las máquinas creadas, en concreto un servidor dhcp y un  servidor web.

@@ -15,35 +15,183 @@ site_name: SRI
 #        - Release Notes: release-notes.md
 nav:
   - ./index.md
-  - 01.-DHCP:
-    - ./01.-DHCP/index.md
-    - 01.-History: ./01.-DHCP/01.-History.md
-    - 02.-Overview:
-      - ./01.-DHCP/02.-Overview/index.md
-      - 01.-How DHCP Works: ./01.-DHCP/02.-Overview/01.-How DHCP Works.md
-      - 02.-IP Address Allocation Methods: ./01.-DHCP/02.-Overview/02.-IP Address Allocation Methods.md
-      - 03.-Additional Notes: ./01.-DHCP/02.-Overview/03.-Additional Notes.md
-    - 03.-Operation Process:
-      - ./01.-DHCP/03.-Operation Process/index.md
-      - 01.-Discovery: ./01.-DHCP/03.-Operation Process/01.-Discovery.md
-      - 02.-Offer: ./01.-DHCP/03.-Operation Process/02.-Offer.md
-      - 03.-Request: ./01.-DHCP/03.-Operation Process/03.-Request.md
-      - 04.-Acknowledgement: ./01.-DHCP/03.-Operation Process/04.-Acknowledgement.md
-      - 05.-Additional Steps: ./01.-DHCP/03.-Operation Process/05.-Additional Steps.md
-    - 04.-Client configuration parameters: ./01.-DHCP/04.-Client configuration parameters.md
-    - 05.-DHCP Options:
-      - ./01.-DHCP/05.-DHCP Options/index.md
-      - 01.-Main Categories of DHCP Options: ./01.-DHCP/05.-DHCP Options/01.-Main Categories of DHCP Options.md
-      - 02.-Important DHCP Extensions: ./01.-DHCP/05.-DHCP Options/02.-Important DHCP Extensions.md
-      - 03.-DHCP Message Types: ./01.-DHCP/05.-DHCP Options/03.-DHCP Message Types.md
-      - 04.-Client Vendor Identification: ./01.-DHCP/05.-DHCP Options/04.-Client Vendor Identification.md
-      - 05.-Other Relevant Extensions: ./01.-DHCP/05.-DHCP Options/05.-Other Relevant Extensions.md
-    - 06.-Relaying:
-      - 01.-DHCP Relay Process: ./01.-DHCP/06.-Relaying/01.-DHCP Relay Process.md
-      - 02.-Special Considerations: ./01.-DHCP/06.-Relaying/02.-Special Considerations.md
-      - 04.-Benefits: ./01.-DHCP/06.-Relaying/04.-Benefits.md
-      - 08.-Client states: ./01.-DHCP/06.-Relaying/08.-Client states.md
-      - Index: ./01.-DHCP/06.-Relaying/Index.md
+  - 01.-KVM:
+    - ./01.-KVM/index.md
+    - 01.-Introducción:
+      - 01.-Qué es la virtualización: ./01.-KVM/01.-Introducción/01.-Qué es la virtualización.md
+      - 02.-Tipos: ./01.-KVM/01.-Introducción/02.-Tipos.md
+      - 03.-qemu-kvm: ./01.-KVM/01.-Introducción/03.-qemu-kvm.md
+      - 04.-libvirt: ./01.-KVM/01.-Introducción/04.-libvirt.md
+      - 05.-LXC: ./01.-KVM/01.-Introducción/05.-LXC.md
+    - 02.-Instalación:
+      - 01.-Escenario de instalación: ./01.-KVM/02.-Instalación/01.-Escenario de instalación.md
+      - 02.-Instalacion: ./01.-KVM/02.-Instalación/02.-Instalacion.md
+      - 03.-Conexión local no privilegiada a libvirt: ./01.-KVM/02.-Instalación/03.-Conexión local no privilegiada a libvirt.md
+      - 04.-Conexión local privilegiada a libvirt: ./01.-KVM/02.-Instalación/04.-Conexión local privilegiada a libvirt.md
+      - 05.-Conexión remota a libvirt: ./01.-KVM/02.-Instalación/05.-Conexión remota a libvirt.md
+    - 03.-Creación de MV desde el CLI:
+      - 01.-Creación de MV con virt-install: ./01.-KVM/03.-Creación de MV desde el CLI/01.-Creación de MV con virt-install.md
+      - 02.-Características de la MV: ./01.-KVM/03.-Creación de MV desde el CLI/02.-Características de la MV.md
+      - 03.-Gestión de MV con virsh: ./01.-KVM/03.-Creación de MV desde el CLI/03.-Gestión de MV con virsh.md
+      - 04.-Definición XML de una MV: ./01.-KVM/03.-Creación de MV desde el CLI/04.-Definición XML de una MV.md
+      - 05.-Modificación de una MV: ./01.-KVM/03.-Creación de MV desde el CLI/05.-Modificación de una MV.md
+    - 04.-Creación de MV con virt-manager:
+      - 01.-Primeros pasos con virt-manager: ./01.-KVM/04.-Creación de MV con virt-manager/01.-Primeros pasos con virt-manager.md
+      - 02.-Creación de MV linux: ./01.-KVM/04.-Creación de MV con virt-manager/02.-Creación de MV linux.md
+      - 03.-Gestión de MV: ./01.-KVM/04.-Creación de MV con virt-manager/03.-Gestión de MV.md
+      - 04.-Detalles de las MV: ./01.-KVM/04.-Creación de MV con virt-manager/04.-Detalles de las MV.md
+      - 05.-Creación de MV Wndows: ./01.-KVM/04.-Creación de MV con virt-manager/05.-Creación de MV Wndows.md
+    - 05.-Almacenamiento:
+      - 01.-Introducción al almacenamiento: ./01.-KVM/05.-Almacenamiento/01.-Introducción al almacenamiento.md
+      - 02.-Introducción al almacenamiento en QEMU⁄KVM + libvirt: ./01.-KVM/05.-Almacenamiento/02.-Introducción al almacenamiento en QEMU⁄KVM + libvirt.md
+      - 03.-Gestión de Pools de Almacenamiento: ./01.-KVM/05.-Almacenamiento/03.-Gestión de Pools de Almacenamiento.md
+      - 04.-Gestión de volúmenes de almacenamiento con libvirt: ./01.-KVM/05.-Almacenamiento/04.-Gestión de volúmenes de almacenamiento con libvirt.md
+      - 05.-Gestión de volúmenes de almacenamiento con herramientas específicas: ./01.-KVM/05.-Almacenamiento/05.-Gestión de volúmenes de almacenamiento con herramientas específicas.md
+      - 06.-Trabajar con volúmenes en las máquinas virtuales: ./01.-KVM/05.-Almacenamiento/06.-Trabajar con volúmenes en las máquinas virtuales.md
+      - 07.-Compresión de imágenes: ./01.-KVM/05.-Almacenamiento/07.-Compresión de imágenes.md
+    - 06.-Clonación y Snapshots:
+      - ./01.-KVM/06.-Clonación y Snapshots/index.md
+      - 01.-Clonación de máquinas virtuales: ./01.-KVM/06.-Clonación y Snapshots/01.-Clonación de máquinas virtuales.md
+      - 02.-Plantillas de MV: ./01.-KVM/06.-Clonación y Snapshots/02.-Plantillas de MV.md
+      - 03.-Clonación completa con plantillas: ./01.-KVM/06.-Clonación y Snapshots/03.-Clonación completa con plantillas.md
+      - 04.-Clonación enlazada con plantillas: ./01.-KVM/06.-Clonación y Snapshots/04.-Clonación enlazada con plantillas.md
+      - 05.-Snapshots de MV: ./01.-KVM/06.-Clonación y Snapshots/05.-Snapshots de MV.md
+    - 07.-Redes:
+      - 01.-Introduccion: ./01.-KVM/07.-Redes/01.-Introduccion.md
+      - 02.-Definicón de RV (Privadas): ./01.-KVM/07.-Redes/02.-Definicón de RV (Privadas).md
+      - 03.-Gestión de RV: ./01.-KVM/07.-Redes/03.-Gestión de RV.md
+      - 04.-Creación de un Puerte Externo con Linux Bridge: ./01.-KVM/07.-Redes/04.-Creación de un Puerte Externo con Linux Bridge.md
+      - 05.-Gestión de Redes Puentes (Públicas): ./01.-KVM/07.-Redes/05.-Gestión de Redes Puentes (Públicas).md
+      - 06.-Configuración de red en MV: ./01.-KVM/07.-Redes/06.-Configuración de red en MV.md
+    - 08.-LXC:
+      - 01.-Introduccion a LXC: ./01.-KVM/08.-LXC/01.-Introduccion a LXC.md
+      - 02.-Creación y gestión de contenedores: ./01.-KVM/08.-LXC/02.-Creación y gestión de contenedores.md
+      - 03.-Configuración de contenedores LXC: ./01.-KVM/08.-LXC/03.-Configuración de contenedores LXC.md
+      - 04.-Redes en LXC: ./01.-KVM/08.-LXC/04.-Redes en LXC.md
+      - 05.-Almacenamiento en LXC: ./01.-KVM/08.-LXC/05.-Almacenamiento en LXC.md
+      - 06.-Introducción a LXD: ./01.-KVM/08.-LXC/06.-Introducción a LXD.md
+    - 09.-Anexos:
+      - 01.-Uso de los puertos USB en KVM: ./01.-KVM/09.-Anexos/01.-Uso de los puertos USB en KVM.md
+      - 02.-Copiar y Pegar: ./01.-KVM/09.-Anexos/02.-Copiar y Pegar.md
+    - 10.-Prácticas:
+      - ./01.-KVM/10.-Prácticas/index.md
+      - 01.-Instrucciones para la captura: ./01.-KVM/10.-Prácticas/01.-Instrucciones para la captura.md
+      - 02.-Solucionario: ./01.-KVM/10.-Prácticas/02.-Solucionario.md
+  - 02.-SSH:
+    - ./02.-SSH/index.md
+    - 01.-Introducción:
+      - 01.-Características Principales:
+        - 01.-Precedentes. `telnet`, `rlogin` y `rsh`: ./02.-SSH/01.-Introducción/01.-Características Principales/01.-Precedentes. `telnet`, `rlogin` y `rsh`.md
+        - 02.-Cifrado Completo: ./02.-SSH/01.-Introducción/01.-Características Principales/02.-Cifrado Completo.md
+        - 03.-Historia de `ssh`: ./02.-SSH/01.-Introducción/01.-Características Principales/03.-Historia de `ssh`.md
+        - 04.-OpenSSH: ./02.-SSH/01.-Introducción/01.-Características Principales/04.-OpenSSH.md
+      - 02.-Criptografía:
+        - ./02.-SSH/01.-Introducción/02.-Criptografía/index.md
+        - 01.-Criptografía de clave simétrica: ./02.-SSH/01.-Introducción/02.-Criptografía/01.-Criptografía de clave simétrica.md
+        - 02.-Clave asimétrica o de clave pública: ./02.-SSH/01.-Introducción/02.-Criptografía/02.-Clave asimétrica o de clave pública.md
+        - 03.-Funciones Hash: ./02.-SSH/01.-Introducción/02.-Criptografía/03.-Funciones Hash.md
+      - 03.-Métodos de autenticación:
+        - ./02.-SSH/01.-Introducción/03.-Métodos de autenticación/index.md
+        - 01.-Contraseña: ./02.-SSH/01.-Introducción/03.-Métodos de autenticación/01.-Contraseña.md
+        - 02.-Clave Pública: ./02.-SSH/01.-Introducción/03.-Métodos de autenticación/02.-Clave Pública.md
+        - 03.-Kerberos: ./02.-SSH/01.-Introducción/03.-Métodos de autenticación/03.-Kerberos.md
+        - 04.-GSSAPI: ./02.-SSH/01.-Introducción/03.-Métodos de autenticación/04.-GSSAPI.md
+      - 04.-Funcionamiento:
+        - ./02.-SSH/01.-Introducción/04.-Funcionamiento/index.md
+        - 01.-Fase 1 (Negociación): ./02.-SSH/01.-Introducción/04.-Funcionamiento/01.-Fase 1 (Negociación).md
+        - 02.-Fase 2 (Autenticación): ./02.-SSH/01.-Introducción/04.-Funcionamiento/02.-Fase 2 (Autenticación).md
+    - 02.-Instalación del entorno de pruebas: ./02.-SSH/02.-Instalación del entorno de pruebas.md
+    - 03.-Uso de ssh:
+      - 01.-Autenticación con usuario y contraseña: ./02.-SSH/03.-Uso de ssh/01.-Autenticación con usuario y contraseña.md
+      - 02.-Autenticación con claves pública-privada: ./02.-SSH/03.-Uso de ssh/02.-Autenticación con claves pública-privada.md
+      - 03.-Autenticación con claves pública-privada y frase de paso: ./02.-SSH/03.-Uso de ssh/03.-Autenticación con claves pública-privada y frase de paso.md
+      - 04.-`ssh-agent`: ./02.-SSH/03.-Uso de ssh/04.-`ssh-agent`.md
+      - 05.-Gestión de ficheros. `authorized_keys` y `known_hosts`: ./02.-SSH/03.-Uso de ssh/05.-Gestión de ficheros. `authorized_keys` y `known_hosts`.md
+      - 06.-Forwarding: ./02.-SSH/03.-Uso de ssh/06.-Forwarding.md
+    - 04.-Configuración de ssh:
+      - 01.-Configuración del cliente ssh: ./02.-SSH/04.-Configuración de ssh/01.-Configuración del cliente ssh.md
+      - 02.-Configuración del servidor ssh: ./02.-SSH/04.-Configuración de ssh/02.-Configuración del servidor ssh.md
+    - 05.-Transferencia de ficheros a través de ssh:
+      - 01.-Uso de `scp`: ./02.-SSH/05.-Transferencia de ficheros a través de ssh/01.-Uso de `scp`.md
+      - 02.-Uso de `sftp`: ./02.-SSH/05.-Transferencia de ficheros a través de ssh/02.-Uso de `sftp`.md
+    - 06.-Túneles SSH:
+      - ./02.-SSH/06.-Túneles SSH/index.md
+      - 01.-Local forwarding: ./02.-SSH/06.-Túneles SSH/01.-Local forwarding.md
+      - 02.-Remote forwarding: ./02.-SSH/06.-Túneles SSH/02.-Remote forwarding.md
+      - 03.-Forwarding dinámico: ./02.-SSH/06.-Túneles SSH/03.-Forwarding dinámico.md
+    - 07.-Prácticas:
+      - 01.-Descripción del laboratorio: ./02.-SSH/07.-Prácticas/01.-Descripción del laboratorio.md
+      - 02.-Ejercicios: ./02.-SSH/07.-Prácticas/02.-Ejercicios.md
+    - Archive: ./02.-SSH/Archive.tar
+  - 03.-DHCP:
+    - ./03.-DHCP/index.md
+    - 01.-Introducción a DHCP: ./03.-DHCP/01.-Introducción a DHCP.md
+    - 02.-Funcionamiento del Protocolo DHCP: ./03.-DHCP/02.-Funcionamiento del Protocolo DHCP.md
+    - 03.Fases del Proceso DHCP:
+      - 01.-Discover (Descubrimiento): ./03.-DHCP/03.Fases del Proceso DHCP/01.-Discover (Descubrimiento).md
+      - 02.-Offer (Oferta): ./03.-DHCP/03.Fases del Proceso DHCP/02.-Offer (Oferta).md
+      - 03.-Request (Solicitud): ./03.-DHCP/03.Fases del Proceso DHCP/03.-Request (Solicitud).md
+      - 04.-Acknowledge (Confirmación): ./03.-DHCP/03.Fases del Proceso DHCP/04.-Acknowledge (Confirmación).md
+    - 04.-Componentes del Servidor DHCP: ./03.-DHCP/04.-Componentes del Servidor DHCP.md
+    - 05.-Configuración de un Servidor DHCP: ./03.-DHCP/05.-Configuración de un Servidor DHCP.md
+    - 06.-Ventajas de DHCP: ./03.-DHCP/06.-Ventajas de DHCP.md
+    - 07.-Escenarios de uso: ./03.-DHCP/07.-Escenarios de uso.md
+    - 08.-Glosario de términos: ./03.-DHCP/08.-Glosario de términos.md
+    - 09.-Conclusión: ./03.-DHCP/09.-Conclusión.md
+    - 10.-Prácticas:
+      - 01.-El servidor ISC DHCP: ./03.-DHCP/10.-Prácticas/01.-El servidor ISC DHCP.md
+      - 02.-El servidor Kea DHCP: ./03.-DHCP/10.-Prácticas/02.-El servidor Kea DHCP.md
+      - 03.-Escenario de prácticas:
+        - ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/index.md
+        - 01.-Creación de la plantilla para las máquinas clientes escenario de prácticas: ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/01.-Creación de la plantilla para las máquinas clientes escenario de prácticas.md
+        - 02.-Creación del escenario: ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/02.-Creación del escenario.md
+        - 03.-Creación de las máquinas clientes: ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/03.-Creación de las máquinas clientes.md
+      - 04.-Instalación de servidor DHCP:
+        - ./03.-DHCP/10.-Prácticas/04.-Instalación de servidor DHCP/index.md
+        - 01.-Instalación servidorDHCP: ./03.-DHCP/10.-Prácticas/04.-Instalación de servidor DHCP/01.-Instalación servidorDHCP.md
+        - 02.-Instalación del servidor Web: ./03.-DHCP/10.-Prácticas/04.-Instalación de servidor DHCP/02.-Instalación del servidor Web.md
+        - 03.-Script: ./03.-DHCP/10.-Prácticas/04.-Instalación de servidor DHCP/03.-Script.md
+        - 04.-Configuración de un nuevo ámbito: ./03.-DHCP/10.-Prácticas/04.-Instalación de servidor DHCP/04.-Configuración de un nuevo ámbito.md
+  - 04.-DNS:
+    - ./04.-DNS/index.md
+    - 01.-Historia:
+      - ./04.-DNS/01.-Historia/index.md
+      - 01.-Historia del archivo HOSTS y su uso en redes: ./04.-DNS/01.-Historia/01.-Historia del archivo HOSTS y su uso en redes.md
+      - 02.-Limitaciones del archivo HOSTS y transición al DNS: ./04.-DNS/01.-Historia/02.-Limitaciones del archivo HOSTS y transición al DNS.md
+    - 02.-Definición y objetivos:
+      - ./04.-DNS/02.-Definición y objetivos/index.md
+      - 01.-Características principales: ./04.-DNS/02.-Definición y objetivos/01.-Características principales.md
+      - 02.-Ejemplo práctico de un FQDN: ./04.-DNS/02.-Definición y objetivos/02.-Ejemplo práctico de un FQDN.md
+      - 03.-Ventajas: ./04.-DNS/02.-Definición y objetivos/03.-Ventajas.md
+      - 04.-Objetivo: ./04.-DNS/02.-Definición y objetivos/04.-Objetivo.md
+    - 03.-Estructura:
+      - ./04.-DNS/03.-Estructura/index.md
+      - 01.-FQDN: ./04.-DNS/03.-Estructura/01.-FQDN.md
+      - 02.-Jerarquía de dominios: ./04.-DNS/03.-Estructura/02.-Jerarquía de dominios.md
+      - 03.-Dominio y Zona: ./04.-DNS/03.-Estructura/03.-Dominio y Zona.md
+      - 04.-Dominio Directo e Inverso: ./04.-DNS/03.-Estructura/04.-Dominio Directo e Inverso.md
+      - 05.-Root Nameservers: ./04.-DNS/03.-Estructura/05.-Root Nameservers.md
+      - 06.-Forwarders (Reenviadores): ./04.-DNS/03.-Estructura/06.-Forwarders (Reenviadores).md
+    - 04.-Administración:
+      - ./04.-DNS/04.-Administración/index.md
+      - 01.-Zona de Autoridad y Zona: ./04.-DNS/04.-Administración/01.-Zona de Autoridad y Zona.md
+    - 10.-Prácticas:
+      - 01.-Consultas DNS: ./04.-DNS/10.-Prácticas/01.-Consultas DNS.md
+    - 99.-Enlaces de interés: ./04.-DNS/99.-Enlaces de interés.md
+  - 99.-Anexos:
+    - ./99.-Anexos/index.md
+    - 00.-Mi clave pública: ./99.-Anexos/00.-Mi clave pública.md
+    - 01.-Recorrido histórico de la gestión de redes en Linux: ./99.-Anexos/01.-Recorrido histórico de la gestión de redes en Linux.md
+    - 02.-Cómo instalar NetworkManager: ./99.-Anexos/02.-Cómo instalar NetworkManager.md
+    - 03.-Cómo cambiar el nombre del host en linux: ./99.-Anexos/03.-Cómo cambiar el nombre del host en linux.md
+    - 04.-Por qué tengo un fichero50-cloud-init en la configuración de netplan: ./99.-Anexos/04.-Por qué tengo un fichero50-cloud-init en la configuración de netplan.md
+    - 05.-Esperas en el arranque de linux por la red: ./99.-Anexos/05.-Esperas en el arranque de linux por la red.md
+    - 06.-FAQ Clonación de Máquinas Virtuales en KVM-QEMU: ./99.-Anexos/06.-FAQ Clonación de Máquinas Virtuales en KVM-QEMU.md
+    - 07.-Manual Básico de NAT e IPTABLES: ./99.-Anexos/07.-Manual Básico de NAT e IPTABLES.md
+    - 08.-El comando sudo: ./99.-Anexos/08.-El comando sudo.md
+    - 09.-Conversor de OVA a QCOW2: ./99.-Anexos/09.-Conversor de OVA a QCOW2.md
+    - 10.-Portabilizar Máquinas Virtuales con KVM usando un Disco USB: ./99.-Anexos/10.-Portabilizar Máquinas Virtuales con KVM usando un Disco USB.md
+    - 11.-El puente virbr0: ./99.-Anexos/11.-El puente virbr0.md
 
 theme:
     features:
@@ -54,7 +202,7 @@ theme:
 
     language : es
 
-    name: 'material'
+    name: material
     palette:
 
     # Light mode
@@ -104,13 +252,13 @@ markdown_extensions:
 plugins:
   - search
   - roamlinks
-  - mermaid2
+  - mermaid2:
+      javascript: https://unpkg.com/mermaid/dist/mermaid.min.js
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://unpkg.com/mermaid/dist/mermaid.min.js 
 
 extra:
   static:
