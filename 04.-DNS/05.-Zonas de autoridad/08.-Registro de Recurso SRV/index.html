@@ -12,7 +12,7 @@
         <link rel="prev" href="../07.-Registro%20de%20recursos%20CNAME/">
       
       
-        <link rel="next" href="../../06.-Ejemplo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/">
+        <link rel="next" href="../../06.-Ejemplo/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -70,6 +70,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#estructura-del-registro-srv" class="md-skip">
+          Saltar a contenido
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -4180,6 +4185,8 @@
       
         
       
+        
+      
     
     
       
@@ -5096,6 +5103,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    08.-Registro de Recurso SRV
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5105,6 +5123,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-registro-srv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura del Registro SRV
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura del Registro SRV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-los-campos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción de los Campos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-registro-srv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Registro SRV
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo de Registro SRV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-del-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación del Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Importantes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5172,7 +5264,95 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01.-Ejemplo de Fichero de Configuración DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7_3" id="__nav_5_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejemplo Pequeño
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ejemplo Pequeño
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5193,7 +5373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5214,7 +5394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5236,6 +5416,35 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07.-Comandos%20relacionados%20con%20el%20servicio%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07.-Comandos relacionados con el servicio DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
               
                 
   
@@ -5244,6 +5453,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -5257,10 +5476,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
         
           
-          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5271,12 +5490,33 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
             10.-Prácticas
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01.-Archivos de Zona DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -5290,6 +5530,90 @@
   
   <span class="md-ellipsis">
     01.-Consultas DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10.-Pr%C3%A1cticas/02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02.-Archivos de Zona DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10.-Pr%C3%A1cticas/03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03.-Uso de comandos DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10.-Pr%C3%A1cticas/04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04.-DNS con Ubuntu Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -5690,6 +6014,71 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-registro-srv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura del Registro SRV
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura del Registro SRV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-los-campos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción de los Campos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-registro-srv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Registro SRV
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo de Registro SRV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-del-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación del Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Importantes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5705,7 +6094,88 @@
 
   <h1>08.-Registro de Recurso SRV</h1>
 
-
+<p>El registro SRV especifica los servidores disponibles para un servicio o protocolo determinados, como www o ftp.</p>
+<h2 id="estructura-del-registro-srv">Estructura del Registro SRV<a class="headerlink" href="#estructura-del-registro-srv" title="Permanent link">&para;</a></h2>
+<pre><code>servicio.protocolo.FQDN_dominio IN SRV prioridad peso puerto FQDN_servidor
+</code></pre>
+<h3 id="descripcion-de-los-campos">Descripción de los Campos<a class="headerlink" href="#descripcion-de-los-campos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>servicio</strong></td>
+<td>Nombre del servicio (por ejemplo, http, ftp, telnet, etc.).</td>
+</tr>
+<tr>
+<td><strong>protocolo</strong></td>
+<td>Protocolo usado por el servicio (tcp, udp).</td>
+</tr>
+<tr>
+<td><strong>FQDN_dominio</strong></td>
+<td>Dominio en el que se define el registro.</td>
+</tr>
+<tr>
+<td><strong>prioridad</strong></td>
+<td>Valor numérico similar al usado en registros MX, donde un valor menor indica mayor prioridad.</td>
+</tr>
+<tr>
+<td><strong>peso</strong></td>
+<td>Valor que permite un balanceo de carga, distribuyendo el trabajo equitativamente entre servidores.</td>
+</tr>
+<tr>
+<td><strong>puerto</strong></td>
+<td>Puerto de la máquina donde se ofrece el servicio.</td>
+</tr>
+<tr>
+<td><strong>FQDN_servidor</strong></td>
+<td>Nombre de dominio completo del servidor que ofrece el servicio.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ejemplo-de-registro-srv">Ejemplo de Registro SRV<a class="headerlink" href="#ejemplo-de-registro-srv" title="Permanent link">&para;</a></h2>
+<pre><code>http.tcp.mired.lan. IN SRV 0 0 80 www.mired.lan.
+</code></pre>
+<h3 id="explicacion-del-ejemplo">Explicación del Ejemplo<a class="headerlink" href="#explicacion-del-ejemplo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Servicio: http</li>
+<li>Protocolo: tcp</li>
+<li>Dominio: mired.lan.</li>
+<li>Prioridad: 0 (máxima prioridad).</li>
+<li>Peso: 0 (sin balanceo adicional).</li>
+<li>Puerto: 80 (puerto para el servicio HTTP).</li>
+<li>Servidor: www.mired.lan.</li>
+</ul>
+<p>Este registro indica que el servicio HTTP en el dominio mired.lan. está disponible en el servidor www.mired.lan. a través del puerto 80.</p>
+<h2 id="notas-importantes">Notas Importantes<a class="headerlink" href="#notas-importantes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Prioridad</strong></li>
+<li>
+<p>Similar al registro MX, los valores más bajos indican mayor prioridad.
+    Se utilizará el servidor con menor prioridad, salvo que esté inaccesible.</p>
+</li>
+<li>
+<p><strong>Peso</strong></p>
+</li>
+<li>
+<p>Permite el balanceo de carga entre servidores con la misma prioridad.
+    Un valor mayor indica mayor probabilidad de que un servidor sea seleccionado.</p>
+</li>
+<li>
+<p><strong>Puerto</strong></p>
+</li>
+<li>
+<p>Especifica el puerto donde el servicio está disponible (como 80 para HTTP o 443 para HTTPS).</p>
+</li>
+<li>
+<p><strong>Compatibilidad</strong></p>
+</li>
+<li>Este registro es útil para protocolos y servicios que necesitan localizar dinámicamente servidores en un dominio.</li>
+</ul>
 
 
 
