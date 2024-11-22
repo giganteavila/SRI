@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/">
+        <link rel="prev" href="../../02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/">
       
       
-        <link rel="next" href="../03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/">
+        <link rel="next" href="../02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>02.-Archivo ejemplo de zona directa `iesromerovargas.com.zone` - SRI</title>
+        <title>01.-Archivo ejemplo de configuración principal `named.conf` - SRI</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02.-Archivo ejemplo de zona directa `iesromerovargas.com.zone`
+              01.-Archivo ejemplo de configuración principal `named.conf`
             
           </span>
         </div>
@@ -5145,7 +5145,7 @@
             
   
   <span class="md-ellipsis">
-    06.-Ejemplo
+    06.-Ejemplos
   </span>
   
 
@@ -5155,7 +5155,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
-            06.-Ejemplo
+            06.-Ejemplos
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5253,27 +5253,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    01.-Archivo ejemplo de configuración principal `named.conf`
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -5288,12 +5267,33 @@
         
   
   <span class="md-ellipsis">
-    02.-Archivo ejemplo de zona directa `iesromerovargas.com.zone`
+    01.-Archivo ejemplo de configuración principal `named.conf`
   </span>
   
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02.-Archivo ejemplo de zona directa `iesromerovargas.com.zone`
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -5916,29 +5916,36 @@
                   
 
 
-  <h1>02.-Archivo ejemplo de zona directa `iesromerovargas.com.zone`</h1>
+  <h1>01.-Archivo ejemplo de configuración principal `named.conf`</h1>
 
 <ul>
-<li><strong>Ubicación predeterminada:</strong> <code>/var/named/iesromerovargas.com.zone</code> (CentOS/RHEL) o <code>/etc/bind/db.iesromerovargas.com</code> (Debian/Ubuntu).</li>
-<li>Este archivo almacena la información de resolución directa (nombre de dominio → dirección IP).</li>
+<li><strong>Ubicación predeterminada:</strong> <code>/etc/named.conf</code> o <code>/etc/bind/named.conf</code> (dependiendo de la distribución).</li>
+<li>Este archivo es el principal para la configuración del servidor BIND y contiene la definición de las zonas, opciones generales y configuraciones avanzadas.</li>
+<li>Si estás usando configuraciones personalizadas, puedes especificar en el archivo <code>named.conf</code> una ruta distinta para los archivos de zona mediante la directiva <code>file</code>.</li>
 </ul>
-<pre><code>$TTL 86400           ; Tiempo de vida de los registros (1 día).
-@   IN  SOA ns1.iesromerovargas.com. admin.iesromerovargas.com. (
-        2024111901  ; Número de serie (formato AAAAMMDDXX).
-        3600        ; Refrescar (1 hora).
-        1800        ; Reintentar (30 minutos).
-        1209600     ; Expirar (2 semanas).
-        86400       ; TTL negativo (1 día).
-)
-    IN  NS      ns1.iesromerovargas.com. ; Servidor DNS primario.
-    IN  NS      ns2.iesromerovargas.com. ; Servidor DNS secundario.
+<pre><code>options {
+    directory &quot;/var/named&quot;; # Ruta donde se almacenan los archivos de zona.
+    allow-query { any; };   # Permitir consultas desde cualquier lugar.
+    recursion no;           # No permitir consultas recursivas (solo autoritativo).
+};
 
-ns1 IN  A       192.168.0.1              ; Dirección IP del servidor primario.
-ns2 IN  A       192.168.0.2              ; Dirección IP del servidor secundario.
+zone &quot;iesromerovargas.com&quot; {
+    type master;            # Este servidor tiene autoridad sobre la zona.
+    file &quot;iesromerovargas.com.zone&quot;; # Archivo de zona.
+};
 
-www IN  A       192.168.0.10             ; Dirección IP del servidor web.
-mail IN  A      192.168.0.20             ; Dirección IP del servidor de correo.
-@   IN  MX 10   mail.iesromerovargas.com. ; Prioridad 10 para el servidor de correo.
+zone &quot;0.168.192.in-addr.arpa&quot; {
+    type master;            # Autoridad para las consultas inversas.
+    file &quot;iesromerovargas.com.rev&quot;; # Archivo de zona inversa.
+};
+</code></pre>
+<ul>
+<li>Para configuracones personalizadas</li>
+</ul>
+<pre><code class="language-plaintext">zone &quot;iesromerovargas.com&quot; {
+    type master;
+    file &quot;/custom/path/iesromerovargas.com.zone&quot;;
+};
 </code></pre>
 
 

@@ -5148,7 +5148,7 @@
             
   
   <span class="md-ellipsis">
-    06.-Ejemplo
+    06.-Ejemplos
   </span>
   
 
@@ -5158,7 +5158,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
-            06.-Ejemplo
+            06.-Ejemplos
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5169,7 +5169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5190,7 +5190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5257,7 +5257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5278,7 +5278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5299,7 +5299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6155,7 +6155,6 @@
 </ul>
 </li>
 </ol>
-<hr />
 <h2 id="ejercicio">Ejercicio<a class="headerlink" href="#ejercicio" title="Permanent link">&para;</a></h2>
 <h3 id="primera-parte-sin-origin-ni-huecos-en-blanco">Primera Parte: Sin <code>$ORIGIN</code>, <code>@</code> ni Huecos en Blanco<a class="headerlink" href="#primera-parte-sin-origin-ni-huecos-en-blanco" title="Permanent link">&para;</a></h3>
 <ol>
@@ -6182,27 +6181,21 @@
 </li>
 <li>Repite el archivo de zona inversa optimizando con <code>$ORIGIN</code> y huecos en blanco para evitar repeticiones innecesarias.</li>
 </ol>
-<hr />
 <h3 id="resultado-esperado">Resultado Esperado<a class="headerlink" href="#resultado-esperado" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Archivos de Zona Directa</li>
-</ul>
-<p>:</p>
+<li>
+<p>Archivos de Zona Directa:</p>
 <ul>
 <li>Sin <code>$ORIGIN</code>, registros completamente explícitos.</li>
-<li>
-<p>Con <code>$ORIGIN</code>, registros simplificados.</p>
-</li>
-<li>
-<p>Archivos de Zona Inversa</p>
-</li>
+<li>Con <code>$ORIGIN</code>, registros simplificados.</li>
 </ul>
-<p>:</p>
-<ul>
+</li>
+<li>
+<p>Archivos de Zona Inversa:</p>
+</li>
 <li>Sin <code>$ORIGIN</code>, registros explícitos para cada dirección IP.</li>
 <li>Con <code>$ORIGIN</code>, simplificación en los registros PTR.</li>
 </ul>
-<hr />
 <p>Entrega los archivos de zona en un formato limpio y validado. Si necesitas herramientas para verificar, utiliza:</p>
 <pre><code class="language-bash">named-checkconf
 named-checkzone

@@ -5148,7 +5148,7 @@
             
   
   <span class="md-ellipsis">
-    06.-Ejemplo
+    06.-Ejemplos
   </span>
   
 
@@ -5158,7 +5158,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
-            06.-Ejemplo
+            06.-Ejemplos
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5169,7 +5169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5190,7 +5190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5257,7 +5257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5278,7 +5278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5299,7 +5299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6052,23 +6052,23 @@
 <hr />
 <h2 id="especificaciones-de-la-red">Especificaciones de la Red<a class="headerlink" href="#especificaciones-de-la-red" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Estructura de la red</strong>:</li>
+<li><strong>Estructura de la red</strong>:<ul>
 <li><strong>Cuatro máquinas virtuales</strong>: M1, M2, M3 y M4 (todas con Ubuntu Server).</li>
 <li><strong>Conexión de red</strong>:<ul>
 <li>M1: Dos tarjetas de red, una conectada a <strong>NAT</strong> para acceso a internet y otra al segmento de red virtual.</li>
 <li>M2, M3 y M4: Una tarjeta de red conectada al segmento de red virtual.</li>
 </ul>
 </li>
-<li>
-<p><strong>Direcciones IP</strong>:</p>
-<ul>
+<li><strong>Direcciones IP</strong>:<ul>
 <li>Automática para la conexión NAT de M1.</li>
 <li>Direcciones fijas para todas las demás conexiones.</li>
 </ul>
 </li>
+</ul>
+</li>
 <li>
 <p><strong>Sistema DNS</strong>:</p>
-</li>
+<ul>
 <li><strong>Dominio</strong>: <code>2asir.edu</code></li>
 <li><strong>Nombres canónicos</strong>:<ul>
 <li>M1: <code>ns1.2asir.edu</code></li>
@@ -6087,62 +6087,73 @@
 <li><code>ns2</code>: Servidor DNS esclavo, que sincronizará con <code>ns1</code>.</li>
 </ul>
 </li>
-<li>Todas las máquinas usarán como servidores de nombres a <code>ns1</code> y <code>ns2</code>.</li>
+</ul>
+</li>
+<li>
+<p>Todas las máquinas usarán como servidores de nombres a <code>ns1</code> y <code>ns2</code>.</p>
+</li>
 <li>Las consultas a nombres no resueltos deben redirigirse a un servidor DNS de internet (configurable).</li>
 <li>Las consultas al sistema DNS montado deben ser posibles <strong>solo desde la red local</strong>.</li>
 </ol>
 <hr />
 <h2 id="resumen-de-pasos">Resumen de Pasos<a class="headerlink" href="#resumen-de-pasos" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Configuración de Red</strong>:</li>
-<li>Asigna direcciones IP estáticas para las conexiones virtuales.</li>
 <li>
-<p>Establece los nombres (<code>/etc/hostname</code>) y actualiza <code>/etc/hosts</code>.</p>
-</li>
-<li>
-<p><strong>Instalación de <code>bind9</code></strong>:</p>
-</li>
-<li>Instala <code>bind9</code> en <code>ns1</code> y <code>ns2</code>.</li>
-<li>
-<p>En M2, usa conexión NAT temporal para descargar e instalar <code>bind9</code>.</p>
-</li>
-<li>
-<p><strong>Configuración del Servidor Primario (<code>ns1</code>)</strong>:
-   a. Edita <code>/etc/bind/named.conf.local</code> para definir las zonas directa e inversa. Incluye restricciones de consulta con <code>allow-query</code>.
-   b. Edita <code>/etc/bind/named.conf.options</code> para configurar redireccionamiento de consultas no resueltas (<code>forwarders</code>).
-   c. Valida la configuración con <code>named-checkconf</code>.
-   d. Crea archivos de base de datos para:</p>
+<p><strong>Configuración de Red</strong>:</p>
 <ul>
-<li><strong>Zona directa</strong>: Define registros SOA, NS, A y CNAME.</li>
-<li><strong>Zona inversa</strong>: Define registros SOA, NS y PTR.
-    e. Valida los archivos con <code>named-checkzone</code>.
-    f. Reinicia el servicio con <code>/etc/init.d/bind9 restart</code>.</li>
+<li>Asigna direcciones IP estáticas para las conexiones virtuales.</li>
+<li>Establece los nombres (<code>/etc/hostname</code>) y actualiza <code>/etc/hosts</code>.</li>
 </ul>
 </li>
 <li>
-<p><strong>Configuración del Servidor Secundario (<code>ns2</code>)</strong>:
-   a. Edita <code>/etc/bind/named.conf.local</code> para definir las zonas como <code>slave</code> e incluye la IP del maestro (<code>masters</code>).
-   b. No es necesario crear archivos de zona; se sincronizan automáticamente.</p>
+<p><strong>Instalación de <code>bind9</code></strong>:</p>
+<ul>
+<li>Instala <code>bind9</code> en <code>ns1</code> y <code>ns2</code>.</li>
+<li>En M2, usa conexión NAT temporal para descargar e instalar <code>bind9</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Configuración del Servidor Primario (<code>ns1</code>)</strong>:</p>
+<ol>
+<li>Edita <code>/etc/bind/named.conf.local</code> para definir las zonas directa e inversa. Incluye restricciones de consulta con <code>allow-query</code>.</li>
+<li>b. Edita <code>/etc/bind/named.conf.options</code> para configurar redireccionamiento de consultas no resueltas (<code>forwarders</code>).</li>
+<li>c. Valida la configuración con <code>named-checkconf</code>.</li>
+<li>d. Crea archivos de base de datos para:<ul>
+<li><strong>Zona directa</strong>: Define registros SOA, NS, A y CNAME.</li>
+<li><strong>Zona inversa</strong>: Define registros SOA, NS y PTR.</li>
+</ul>
+</li>
+<li>Valida los archivos con <code>named-checkzone</code>.</li>
+<li>Reinicia el servicio con <code>/etc/init.d/bind9 restart</code>.</li>
+</ol>
+</li>
+<li>
+<p><strong>Configuración del Servidor Secundario (<code>ns2</code>)</strong>:</p>
+<ol>
+<li>Edita <code>/etc/bind/named.conf.local</code> para definir las zonas como <code>slave</code> e incluye la IP del maestro (<code>masters</code>).</li>
+<li>No es necesario crear archivos de zona; se sincronizan automáticamente.</li>
+</ol>
 </li>
 <li>
 <p><strong>Configuración de Clientes</strong>:</p>
-</li>
-<li>
-<p>Edita <code>/etc/resolv.conf</code> en cada máquina para configurar los servidores DNS.</p>
+<ul>
+<li>Edita <code>/etc/resolv.conf</code> en cada máquina para configurar los servidores DNS.</li>
+</ul>
 </li>
 <li>
 <p><strong>Pruebas del Sistema</strong>:</p>
-</li>
+<ul>
 <li>Realiza consultas con <code>nslookup</code>, <code>dig</code>, y <code>ping</code> desde los clientes.</li>
-<li>
-<p>Simula fallos deteniendo <code>ns1</code> y verifica que <code>ns2</code> responde correctamente.</p>
+<li>Simula fallos deteniendo <code>ns1</code> y verifica que <code>ns2</code> responde correctamente.</li>
+</ul>
 </li>
 <li>
 <p><strong>Añadir Nueva Máquina (<code>pc03.2asir.edu</code>)</strong>:</p>
-</li>
+<ul>
 <li>Indica qué archivos, líneas y máquinas deben modificarse para incluir esta nueva máquina.</li>
+</ul>
+</li>
 </ol>
-<hr />
 <h2 id="ejemplos-de-comandos">Ejemplos de Comandos<a class="headerlink" href="#ejemplos-de-comandos" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Validación de Configuración</strong>:</li>
@@ -6162,7 +6173,6 @@
    nslookup www.2asir.edu
    nslookup pc03.2asir.edu
    dig pc02.2asir.edu</code></p>
-<hr />
 <h2 id="capturas-requeridas">Capturas Requeridas<a class="headerlink" href="#capturas-requeridas" title="Permanent link">&para;</a></h2>
 <p>Incluye las siguientes capturas como evidencia de configuración y pruebas:</p>
 <ol>
