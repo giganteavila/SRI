@@ -12,7 +12,7 @@
         <link rel="prev" href="../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/">
       
       
-        <link rel="next" href="../10.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/">
+        <link rel="next" href="../08.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -5485,7 +5485,7 @@
             
   
   <span class="md-ellipsis">
-    10.-Prácticas
+    08.-Prácticas
   </span>
   
 
@@ -5495,7 +5495,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
-            10.-Prácticas
+            08.-Prácticas
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5506,7 +5506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../08.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5527,7 +5527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.-Pr%C3%A1cticas/01.-Consultas%20DNS/" class="md-nav__link">
+      <a href="../08.-Pr%C3%A1cticas/01.-Consultas%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5548,7 +5548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.-Pr%C3%A1cticas/02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../08.-Pr%C3%A1cticas/02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5569,7 +5569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.-Pr%C3%A1cticas/03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
+      <a href="../08.-Pr%C3%A1cticas/03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5590,7 +5590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.-Pr%C3%A1cticas/04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
+      <a href="../08.-Pr%C3%A1cticas/04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6083,52 +6083,66 @@
 
 <h3 id="comandos-basicos-de-consulta-dns">Comandos Básicos de Consulta DNS<a class="headerlink" href="#comandos-basicos-de-consulta-dns" title="Permanent link">&para;</a></h3>
 <ol>
-<li><code>nslookup</code>: Consulta registros DNS de un dominio o dirección IP.</li>
+<li><code>nslookup</code>: Consulta registros DNS de un dominio o dirección IP.<ul>
 <li>Ejemplo: <code>nslookup www.example.com</code></li>
-<li><code>dig</code>: Realiza consultas DNS detalladas y permite especificar registros (A, MX, etc.).</li>
+</ul>
+</li>
+<li><code>dig</code>: Realiza consultas DNS detalladas y permite especificar registros (A, MX, etc.).<ul>
 <li>Ejemplo: <code>dig example.com MX</code></li>
-<li><code>host</code>: Resuelve nombres de dominio a direcciones IP y viceversa.</li>
+</ul>
+</li>
+<li><code>host</code>: Resuelve nombres de dominio a direcciones IP y viceversa.<ul>
 <li>Ejemplo: <code>host www.example.com</code></li>
+</ul>
+</li>
 </ol>
-<hr />
 <h3 id="comandos-para-resolucion-de-red">Comandos para Resolución de Red<a class="headerlink" href="#comandos-para-resolucion-de-red" title="Permanent link">&para;</a></h3>
 <ol>
-<li><code>ping</code>: Comprueba la conectividad de red con un dominio o dirección IP.</li>
+<li><code>ping</code>: Comprueba la conectividad de red con un dominio o dirección IP.<ul>
 <li>Ejemplo: <code>ping www.example.com</code></li>
-<li><code>traceroute</code>(Linux) / <code>tracert</code>(Windows): Muestra la ruta que toman los paquetes hacia un dominio.</li>
+</ul>
+</li>
+<li><code>traceroute</code>(Linux) / <code>tracert</code>(Windows): Muestra la ruta que toman los paquetes hacia un dominio.<ul>
 <li>Ejemplo: <code>traceroute www.example.com</code></li>
+</ul>
+</li>
 </ol>
-<hr />
 <h3 id="comandos-para-configuracion-de-red">Comandos para Configuración de Red<a class="headerlink" href="#comandos-para-configuracion-de-red" title="Permanent link">&para;</a></h3>
 <ol>
-<li><code>ipconfig</code>(Windows): Configura y muestra detalles de red, como caché DNS.</li>
+<li><code>ipconfig</code>(Windows): Configura y muestra detalles de red, como caché DNS.<ul>
 <li>Ejemplo: <code>ipconfig /displaydns</code></li>
-<li><code>ifconfig</code> (Linux/Unix): Configura interfaces de red (reemplazado por <code>ip</code> en distribuciones modernas).</li>
+</ul>
+</li>
+<li><code>ifconfig</code> (Linux/Unix): Configura interfaces de red (reemplazado por <code>ip</code> en distribuciones modernas).<ul>
 <li>Ejemplo: <code>ifconfig eth0</code></li>
-<li><code>ip</code> (Linux): Herramienta moderna para gestionar interfaces y rutas de red.</li>
+</ul>
+</li>
+<li><code>ip</code> (Linux): Herramienta moderna para gestionar interfaces y rutas de red.<ul>
 <li>Ejemplo: <code>ip addr show</code></li>
+</ul>
+</li>
 </ol>
-<hr />
 <h3 id="comandos-para-captura-y-analisis">Comandos para Captura y Análisis<a class="headerlink" href="#comandos-para-captura-y-analisis" title="Permanent link">&para;</a></h3>
 <ol>
-<li><code>tcpdump</code> (Linux/Unix): Captura paquetes de red, útil para monitorear tráfico DNS (puerto 53).</li>
+<li><code>tcpdump</code> (Linux/Unix): Captura paquetes de red, útil para monitorear tráfico DNS (puerto 53).<ul>
 <li>Ejemplo: <code>tcpdump -i eth0 port 53</code></li>
+</ul>
+</li>
 <li><strong><code>wireshark</code></strong>: Interfaz gráfica para capturar y analizar tráfico de red, incluyendo consultas DNS.</li>
 </ol>
-<hr />
 <h3 id="comandos-para-monitoreo-y-estadisticas">Comandos para Monitoreo y Estadísticas<a class="headerlink" href="#comandos-para-monitoreo-y-estadisticas" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p><strong><code>netstat</code></strong>: Muestra conexiones de red activas y estadísticas.</p>
-</li>
-<li>
-<p>Ejemplo: <code>netstat -a</code></p>
+<ul>
+<li>Ejemplo: <code>netstat -a</code></li>
+</ul>
 </li>
 <li>
 <p><strong><code>ss</code></strong>: Reemplazo moderno de <code>netstat</code>, muestra conexiones de red actuales.</p>
-</li>
-<li>
-<p>Ejemplo: <code>ss -tuln</code></p>
+<ol>
+<li>= Ejemplo: <code>ss -tuln</code></li>
+</ol>
 </li>
 </ol>
 <hr />
@@ -6136,31 +6150,30 @@
 <ol>
 <li>
 <p><strong><code>named-checkconf</code></strong>: Verifica la configuración de un servidor BIND.</p>
+<ul>
+<li>Ejemplo: <code>named-checkconf</code></li>
+</ul>
 </li>
 <li>
-<p>Ejemplo: <code>named-checkconf</code></p>
-</li>
-<li>
-<p><strong><code>named-checkzone</code></strong>: Verifica la configuración de archivos de zona en BIND.</p>
-</li>
-<li>
-<p>Ejemplo: <code>named-checkzone example.com /etc/bind/db.example.com</code></p>
+<p><strong><code>named-checkzone</code></strong>: Verifica la configuración de archivos de zona en BIND. </p>
+<ul>
+<li>Ejemplo: <code>named-checkzone example.com /etc/bind/db.example.com</code></li>
+</ul>
 </li>
 </ol>
-<hr />
 <h3 id="comandos-adicionales">Comandos Adicionales<a class="headerlink" href="#comandos-adicionales" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p><strong><code>systemd-resolve</code></strong> (Linux con systemd): Realiza consultas DNS y muestra configuraciones actuales.</p>
-</li>
-<li>
-<p>Ejemplo: <code>systemd-resolve www.example.com</code></p>
+<ul>
+<li>Ejemplo: <code>systemd-resolve www.example.com</code></li>
+</ul>
 </li>
 <li>
 <p><strong><code>resolvectl</code></strong>: Interactúa con el resolvedor de systemd.</p>
-</li>
-<li>
-<p>Ejemplo: <code>resolvectl query www.example.com</code></p>
+<ul>
+<li>Ejemplo: <code>resolvectl query www.example.com</code></li>
+</ul>
 </li>
 </ol>
 

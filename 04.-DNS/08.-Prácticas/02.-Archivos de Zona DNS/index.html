@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../01.-Archivos%20de%20Zona%20DNS/">
+        <link rel="prev" href="../01.-Consultas%20DNS/">
       
       
-        <link rel="next" href="../02.-Archivos%20de%20Zona%20DNS/">
+        <link rel="next" href="../03.-Uso%20de%20comandos%20DNS/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>01.-Consultas DNS - SRI</title>
+        <title>02.-Archivos de Zona DNS - SRI</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dig" class="md-skip">
+        <a href="#instrucciones" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01.-Consultas DNS
+              02.-Archivos de Zona DNS
             
           </span>
         </div>
@@ -5388,7 +5388,7 @@
             
   
   <span class="md-ellipsis">
-    10.-Prácticas
+    08.-Prácticas
   </span>
   
 
@@ -5398,7 +5398,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
-            10.-Prácticas
+            08.-Prácticas
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5427,6 +5427,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../01.-Consultas%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01.-Consultas DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -5441,7 +5462,7 @@
           
   
   <span class="md-ellipsis">
-    01.-Consultas DNS
+    02.-Archivos de Zona DNS
   </span>
   
 
@@ -5452,7 +5473,7 @@
         
   
   <span class="md-ellipsis">
-    01.-Consultas DNS
+    02.-Archivos de Zona DNS
   </span>
   
 
@@ -5472,20 +5493,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dig" class="md-nav__link">
+  <a href="#instrucciones" class="md-nav__link">
     <span class="md-ellipsis">
-      dig
+      Instrucciones
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nslookup" class="md-nav__link">
+  <a href="#especificaciones-de-la-red" class="md-nav__link">
     <span class="md-ellipsis">
-      nslookup
+      Especificaciones de la Red
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Especificaciones de la Red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listado-de-nombres-e-ips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listado de Nombres e IPs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-parte-sin-origin-ni-huecos-en-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primera Parte: Sin $ORIGIN, @ ni Huecos en Blanco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-parte-usando-origin-ttl-y-huecos-en-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segunda Parte: Usando $ORIGIN, $TTL, @ y Huecos en Blanco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado Esperado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5493,27 +5571,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    02.-Archivos de Zona DNS
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -5959,20 +6016,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dig" class="md-nav__link">
+  <a href="#instrucciones" class="md-nav__link">
     <span class="md-ellipsis">
-      dig
+      Instrucciones
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nslookup" class="md-nav__link">
+  <a href="#especificaciones-de-la-red" class="md-nav__link">
     <span class="md-ellipsis">
-      nslookup
+      Especificaciones de la Red
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Especificaciones de la Red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listado-de-nombres-e-ips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listado de Nombres e IPs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-parte-sin-origin-ni-huecos-en-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primera Parte: Sin $ORIGIN, @ ni Huecos en Blanco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-parte-usando-origin-ttl-y-huecos-en-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segunda Parte: Usando $ORIGIN, $TTL, @ y Huecos en Blanco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado Esperado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5991,55 +6105,109 @@
                   
 
 
-  <h1>01.-Consultas DNS</h1>
+  <h1>02.-Archivos de Zona DNS</h1>
 
-<h2 id="dig"><code>dig</code><a class="headerlink" href="#dig" title="Permanent link">&para;</a></h2>
-<p>dig es una herramienta que permite hacer consultas a un servidor DNS desde la línea de comandos, es el sustituto de los programas <code>nslookup</code> y <code>host</code>. La sintaxis es:</p>
-<pre><code class="language-bash">dig [-t tipo de registro] [@servidor DNS] Consulta DNS
-</code></pre>
-<p>El tipo de registro por defecto es ADDRESS y el servidor DNS por defecto es el definido en <code>/etc/resolv.conf</code>.</p>
-<p>Nota: si no funciona el comando dig, instalar el paquete <code>dnsutils</code> que lo incluye.</p>
-<h2 id="nslookup"><code>nslookup</code><a class="headerlink" href="#nslookup" title="Permanent link">&para;</a></h2>
-<p><a href="https://axarnet.es/blog/que-es-nslookup">Como realizar consultas DNS con el nslookup de Windows</a></p>
-<p>Utilizando el comando dig/nslookup realiza las siguientes consultas al servidor DNS:</p>
+<h2 id="instrucciones">Instrucciones<a class="headerlink" href="#instrucciones" title="Permanent link">&para;</a></h2>
+<p>Crea los <strong>archivos de zona directa e inversa</strong> para la siguiente red.</p>
 <ol>
-<li>Preguntas a registros del tipo A: Obtén la dirección ip de los siguientes dominios:</li>
+<li><strong>Primera parte</strong>: No uses <code>$ORIGIN</code>, <code>@</code> ni huecos en blanco. Usa registros <strong>CNAME</strong> siempre que sea posible.</li>
+<li><strong>Segunda parte</strong>: Repite el ejercicio utilizando <code>$ORIGIN</code>, <code>$TTL</code>, <code>@</code> y huecos en blanco para simplificar los archivos.</li>
 </ol>
-<pre><code class="language-bash">www.iesromerovargas.com
-www.us.es
-es.wikipedia.org
-www.ubuntu.com
-</code></pre>
+<hr />
+<h2 id="especificaciones-de-la-red">Especificaciones de la Red<a class="headerlink" href="#especificaciones-de-la-red" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Dominio</strong>: <code>prueba.local</code></p>
+</li>
+<li>
+<p><strong>Ubicación del archivo de zona</strong>: En el ordenador <code>server.prueba.local</code></p>
+</li>
+<li>
+<p>Servidores DNS</p>
+</li>
+</ul>
+<p>:</p>
+<ul>
+<li>
+<p><strong>Primario</strong>: <code>ns1.prueba.local</code></p>
+</li>
+<li>
+<dl>
+<dt>Secundario</dt>
+<dd></dd>
+</dl>
+<p><code>ns2.prueba.local</code></p>
+<ul>
+<li><strong>Actualización</strong>: Cada día.</li>
+<li><strong>Reintento</strong>: Si fracasa, reintenta cada hora.</li>
+<li><strong>Caducidad</strong>: La información tiene validez durante tres días.</li>
+</ul>
+</li>
+<li>
+<p><strong>Registros en caché</strong>: Validez de 12 horas.</p>
+</li>
+<li>
+<p><strong>Servidor de correo</strong>: <code>mail.prueba.local</code></p>
+</li>
+</ul>
+<h3 id="listado-de-nombres-e-ips">Listado de Nombres e IPs<a class="headerlink" href="#listado-de-nombres-e-ips" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Preguntas a registros tipo NS: Obtén la dirección y los servidor DNS que corresponden a los siguientes dominios:</li>
+<li><strong>IP: 192.168.1.1</strong></li>
+<li><code>server.prueba.local</code></li>
+<li><code>dns1.prueba.local</code></li>
+<li><code>mail.prueba.local</code></li>
+<li><code>www.prueba.local</code></li>
+<li><code>ftp.prueba.local</code></li>
+<li><strong>IP: 192.168.1.2</strong></li>
+<li><code>aux.prueba.local</code></li>
+<li><code>dns2.prueba.local</code></li>
+<li><code>www2.prueba.local</code></li>
+<li><strong>IP: 192.168.1.10x</strong> (x de 1 a 7)</li>
+<li><code>pc0x.prueba.local</code> (donde <code>x</code> es el número del equipo, de 1 a 7).</li>
 </ol>
-<pre><code>dominio raíz
-com
-org
-es
-us.es
-wikipedia.org
-ubuntu.com
-</code></pre>
+<hr />
+<h2 id="ejercicio">Ejercicio<a class="headerlink" href="#ejercicio" title="Permanent link">&para;</a></h2>
+<h3 id="primera-parte-sin-origin-ni-huecos-en-blanco">Primera Parte: Sin <code>$ORIGIN</code>, <code>@</code> ni Huecos en Blanco<a class="headerlink" href="#primera-parte-sin-origin-ni-huecos-en-blanco" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Preguntas a registros MX: Obtén el nombre y la dirección del ordenador al que se mandan los correos que se envían a los siguientes dominios:</li>
+<li><strong>Zona Directa</strong>:</li>
+<li>Define los registros A para los nombres e IPs proporcionados.</li>
+<li>Utiliza registros CNAME siempre que sea posible para alias.</li>
+<li><strong>Zona Inversa</strong>:</li>
+<li>Crea los registros PTR para cada IP, resolviendo a sus respectivos nombres.</li>
 </ol>
-<pre><code>iesromerovargas.com
-us.es
-wikipedia.org
-ubuntu.com
-</code></pre>
+<hr />
+<h3 id="segunda-parte-usando-origin-ttl-y-huecos-en-blanco">Segunda Parte: Usando <code>$ORIGIN</code>, <code>$TTL</code>, <code>@</code> y Huecos en Blanco<a class="headerlink" href="#segunda-parte-usando-origin-ttl-y-huecos-en-blanco" title="Permanent link">&para;</a></h3>
 <ol>
-<li>¿Qué tipo de registro es el que resuelve las siguientes direcciones:</li>
+<li><strong>Zona Directa</strong>:</li>
+<li>Simplifica la configuración utilizando <code>$ORIGIN</code> para el dominio base, <code>$TTL</code> para el tiempo de validez, y <code>@</code> para representar el dominio raíz.</li>
+<li><strong>Zona Inversa</strong>:</li>
+<li>Repite el archivo de zona inversa optimizando con <code>$ORIGIN</code> y huecos en blanco para evitar repeticiones innecesarias.</li>
 </ol>
-<pre><code>www.josedomingo.org
-informatica.gonzalonazareno.org
+<hr />
+<h3 id="resultado-esperado">Resultado Esperado<a class="headerlink" href="#resultado-esperado" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Archivos de Zona Directa</li>
+</ul>
+<p>:</p>
+<ul>
+<li>Sin <code>$ORIGIN</code>, registros completamente explícitos.</li>
+<li>
+<p>Con <code>$ORIGIN</code>, registros simplificados.</p>
+</li>
+<li>
+<p>Archivos de Zona Inversa</p>
+</li>
+</ul>
+<p>:</p>
+<ul>
+<li>Sin <code>$ORIGIN</code>, registros explícitos para cada dirección IP.</li>
+<li>Con <code>$ORIGIN</code>, simplificación en los registros PTR.</li>
+</ul>
+<hr />
+<p>Entrega los archivos de zona en un formato limpio y validado. Si necesitas herramientas para verificar, utiliza:</p>
+<pre><code class="language-bash">named-checkconf
+named-checkzone
 </code></pre>
-<p>Indica el nombre canónico de las máquinas a las que corresponden.</p>
-<ol>
-<li>Comprueba la dirección ip y el servidor DNS asociado a <code>dit.gonzalonazareno.org</code>, desde dentro de la intranet del ciclo formativo y desde fuera. ¿Cuáles son las diferencias? ¿A qué crees que es debido?</li>
-<li>Pregunta sobre resolución inversa: En clase, ¿a qué nombre corresponde la dirección ip <code>172.30.1.1</code>?</li>
-</ol>
 
 
 

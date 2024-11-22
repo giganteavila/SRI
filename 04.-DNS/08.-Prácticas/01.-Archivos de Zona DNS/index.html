@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../02.-Archivos%20de%20Zona%20DNS/">
+        <link rel="prev" href="../../07.-Comandos%20relacionados%20con%20el%20servicio%20DNS/">
       
       
-        <link rel="next" href="../04.-DNS%20con%20Ubuntu%20Server/">
+        <link rel="next" href="../01.-Consultas%20DNS/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>03.-Uso de comandos DNS - SRI</title>
+        <title>01.-Archivos de Zona DNS - SRI</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#actividades" class="md-skip">
+        <a href="#archivo-de-zona-directa" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03.-Uso de comandos DNS
+              01.-Archivos de Zona DNS
             
           </span>
         </div>
@@ -5388,7 +5388,7 @@
             
   
   <span class="md-ellipsis">
-    10.-Prácticas
+    08.-Prácticas
   </span>
   
 
@@ -5398,7 +5398,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
-            10.-Prácticas
+            08.-Prácticas
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5406,10 +5406,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    01.-Archivos de Zona DNS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -5418,6 +5436,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-de-zona-directa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo de Zona Directa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-de-zona-inversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo de Zona Inversa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivo de Zona Inversa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instrucciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5469,28 +5538,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    03.-Uso de comandos DNS
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5499,48 +5550,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#actividades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actividades
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Actividades">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#entrega" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrega
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5965,19 +5974,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#actividades" class="md-nav__link">
+  <a href="#archivo-de-zona-directa" class="md-nav__link">
     <span class="md-ellipsis">
-      Actividades
+      Archivo de Zona Directa
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Actividades">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-de-zona-inversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo de Zona Inversa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivo de Zona Inversa">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#entrega" class="md-nav__link">
+  <a href="#instrucciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Entrega
+      Instrucciones:
     </span>
   </a>
   
@@ -6003,68 +6021,69 @@
                   
 
 
-  <h1>03.-Uso de comandos DNS</h1>
+  <h1>01.-Archivos de Zona DNS</h1>
 
-<p>Para realizar estos ejercicios puedes usar los comandos <strong><code>dig</code></strong>, <strong><code>nslookup</code></strong> o <strong><code>host</code></strong>, ya que tienen funcionalidades similares.</p>
-<ul>
-<li>Instrucciones</li>
-</ul>
-<p>:</p>
-<ol>
-<li>Muestra el comando ejecutado para cada ejercicio.</li>
-<li>Acompaña cada comando con una <strong>verificación</strong> del resultado obtenido. Puedes incluir una imagen del terminal o el texto del resultado.</li>
-</ol>
+<p>Comenta cada línea de los siguientes archivos de zona.</p>
 <hr />
-<h2 id="actividades"><strong>Actividades</strong><a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<h2 id="archivo-de-zona-directa"><strong>Archivo de Zona Directa</strong><a class="headerlink" href="#archivo-de-zona-directa" title="Permanent link">&para;</a></h2>
+<pre><code>; Start of Authority (SOA) record
+foo.com. IN SOA dns.foo.com. dnsowner.foo.com. ( ; 
+    19960105 ; 
+    10800 ; 
+    3600 ; 
+    604800 ; 
+    86400 ) ; 
+
+; Name Server (NS) records.
+foo.com.    IN  NS  dns.foo.com. ;
+    IN  NS  dns2.foo.com. ;
+
+; Mail Exchange (MX) records.
+foo.com.    IN  MX  20  mail.foo.com. ;
+    IN  MX  40  mail2.foo.com. ;
+
+; Address (A) records.
+localhost.foo.com.  IN  A   127.0.0.1 ;
+router.foo.com. IN  A   192.168.210.1 ;
+dns.foo.com.    IN  A   192.168.210.2 ;
+mail2.foo.com.  IN  A   192.168.210.3 ;
+dns2.foo.com.   IN  A   192.168.210.3 ;
+mail.foo.com.   IN  A   192.168.210.4 ;
+pc1.foo.com.    IN  A   192.168.210.5 ;
+pc2.foo.com.    IN  A   192.168.210.6 ;
+
+; Aliases in Canonical Name (CNAME) records.
+ftp.foo.com.    IN  CNAME    mail2.foo.com. ;
+www.foo.com.    IN  CNAME   mail2.foo.com. ;
+sysman.foo.com.     IN  CNAME   pc2.foo.com. ;
+
+</code></pre>
+<h2 id="archivo-de-zona-inversa"><strong>Archivo de Zona Inversa</strong><a class="headerlink" href="#archivo-de-zona-inversa" title="Permanent link">&para;</a></h2>
+<pre><code>$ORIGIN 1.0.10.in-addr.arpa
+$TTL 86400
+@ IN SOA dns1.example.com. hostmaster.example.com. (
+    2001062501 ;    
+    21600 ; 
+    3600 ; 
+    604800 ; 
+    86400 ) ; 
+
+    IN  NS  dns1.example.com. ;
+    IN  NS  dns2.example.com. ;
+
+20  IN  PTR alice.example.com. ;
+21  IN  PTR betty.example.com. ;
+22  IN  PTR charlie.example.com. ;
+23  IN  PTR doug.example.com. ;
+24  IN  PTR ernest.example.com. ;
+25  IN  PTR fanny.example.com.  ;
+
+</code></pre>
+<h3 id="instrucciones"><strong>Instrucciones:</strong><a class="headerlink" href="#instrucciones" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Realiza un tutorial completo de cada uno de los comandos que has utilizado</strong>.</li>
-<li>Describe cómo funcionan <code>dig</code>, <code>nslookup</code> y <code>host</code>.</li>
-<li>Incluye ejemplos prácticos y parámetros importantes.</li>
-<li><strong>Determina la dirección IP de la máquina <code>www.mec.es</code></strong>.</li>
-<li><strong>Averigua qué máquina tiene asignada la dirección IP <code>193.110.128.200</code></strong>.</li>
-<li><strong>Con relación al dominio <code>abc.es</code></strong>:</li>
-<li>Averigua el nombre y la dirección IP de los servidores DNS.</li>
-<li>Identifica cuál es el servidor <strong>primario</strong> y cuáles son <strong>secundarios</strong>.</li>
-<li><strong>Obtén el registro SOA del dominio <code>abc.es</code></strong>:</li>
-<li>Haz la consulta al DNS local de la máquina.</li>
-<li>Haz la consulta directamente al servidor <strong>primario</strong> del dominio <code>abc.es</code>.</li>
-<li>Comprueba y analiza las diferencias: ¿cuál es información autorizada y cuál no?</li>
-<li><strong>Si tuvieras un problema con el DNS de <code>abc.es</code></strong>:</li>
-<li>¿A qué dirección de correo electrónico deberías escribir al administrador?</li>
-<li><strong>Determina el nombre y la dirección IP del servidor de correo mencionado en el punto anterior</strong>.</li>
-<li><strong>Consulta el tiempo de almacenamiento en caché (TTL) para la dirección IP de <code>www.vanguardia.es</code></strong>:</li>
-<li>Pregunta varias veces a tu DNS local y observa los cambios en el TTL.</li>
-<li><strong>Repite la consulta anterior a un servidor DNS con la dirección IP <code>163.117.139.253</code></strong>:</li>
-<li>Verifica en el paquete de respuesta que este servidor no acepta consultas en modo recursivo.</li>
-<li><strong>Averigua cuántas máquinas están realizando balanceo de carga para el servidor web <code>www.elmundo.es</code></strong>:<ul>
-<li>¿Obtienes siempre las mismas máquinas? ¿En el mismo orden?</li>
-</ul>
-</li>
-<li><strong>Consulta iterativamente para obtener la dirección IP de <code>www.timesonline.co.uk</code></strong>:<ul>
-<li>Describe los pasos que seguiste.</li>
-</ul>
-</li>
-<li><strong>Realiza lo mismo que en el ejercicio anterior usando la opción <code>+trace</code> de <code>dig</code></strong>:<ul>
-<li>Compara los resultados obtenidos.</li>
-</ul>
-</li>
-<li><strong>Obtén información sobre los servidores de correo del dominio <code>it.uc3m.es</code></strong>:<ul>
-<li>Determina el nombre y la dirección IP de las máquinas.</li>
-</ul>
-</li>
-<li><strong>Obtén todos los registros de recurso de la zona <code>lab.it.uc3m.es</code></strong>.</li>
-<li><strong>Obtén la dirección IP de <code>lavadora.gonzalonazareno.org</code></strong>.</li>
-<li><strong>Averigua a qué equipo está redirigido <code>informatica.gonzalonazareno.org</code></strong>.</li>
-<li><strong>Determina los nombres de los servidores DNS del dominio <code>gonzalonazareno.org</code></strong>.</li>
-<li><strong>Averigua a qué equipo se envían los correos <code>@gonzalonazareno.org</code></strong>.</li>
-<li><strong>Consulta a qué nombre está apuntando la dirección IP <code>80.59.1.152</code></strong>.</li>
+<li><strong>Analiza cada línea del archivo</strong> y comenta qué representa o para qué sirve.</li>
+<li>Usa los conocimientos sobre DNS, registros SOA, NS, MX, A, y PTR para explicar el propósito de cada registro.</li>
 </ol>
-<hr />
-<h3 id="entrega"><strong>Entrega</strong><a class="headerlink" href="#entrega" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Responde a cada punto con el comando utilizado y los resultados obtenidos.</li>
-<li>Incluye capturas de pantalla o el texto de los resultados para justificar tus respuestas.</li>
-</ul>
 
 
 

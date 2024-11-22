@@ -5393,7 +5393,7 @@
             
   
   <span class="md-ellipsis">
-    10.-Prácticas
+    08.-Prácticas
   </span>
   
 
@@ -5403,7 +5403,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
-            10.-Prácticas
+            08.-Prácticas
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5414,7 +5414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../04.-DNS/10.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../../../../04.-DNS/08.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5435,7 +5435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../04.-DNS/10.-Pr%C3%A1cticas/01.-Consultas%20DNS/" class="md-nav__link">
+      <a href="../../../../04.-DNS/08.-Pr%C3%A1cticas/01.-Consultas%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5456,7 +5456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../04.-DNS/10.-Pr%C3%A1cticas/02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../../../../04.-DNS/08.-Pr%C3%A1cticas/02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5477,7 +5477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../04.-DNS/10.-Pr%C3%A1cticas/03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
+      <a href="../../../../04.-DNS/08.-Pr%C3%A1cticas/03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5498,7 +5498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../04.-DNS/10.-Pr%C3%A1cticas/04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
+      <a href="../../../../04.-DNS/08.-Pr%C3%A1cticas/04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5924,12 +5924,14 @@
 <li>Conecta la máquina <strong>router</strong> a esta red, y configura la nueva interfaz con la dirección <code>172.16.0.1\16</code>.</li>
 <li>Conecta el contenedor <strong>servidorDHCP</strong> a esta red, y configura la nueva interfaz con la dirección <code>172.16.0.2\16</code>.</li>
 <li>Configura la máquina <strong>router</strong> para que haga SNAT y permita que que las máquinas conectadas a esta red tengan acceso al exterior.</li>
-<li>Configura el nuevo ámbito en el servidor dhcp con las siguientes características.    </li>
+<li>Configura el nuevo ámbito en el servidor dhcp con las siguientes características.<ul>
 <li>Rango de direcciones: <code>172.16.0.3</code> - <code>172.16.255.254</code>.</li>
 <li>Máscara de red: <code>255.255.0.0</code></li>
 <li>Duración de la concesión: 1 hora</li>
 <li>Puerta de enlace: <code>172.16.0.1</code></li>
 <li>Servidor DNS: <code>172.22.0.1</code></li>
+</ul>
+</li>
 <li>Para comprobar que funciona el nuevo ámbito, utiliza el script para crear una máquina llamada <strong>otro_cliente</strong> con un volumen de 6G y conectada a la <strong>red_intra2</strong>.</li>
 </ol>
 
