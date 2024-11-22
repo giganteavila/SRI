@@ -4904,11 +4904,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5246,11 +5246,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5292,7 +5292,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5302,7 +5302,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5313,7 +5313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5334,7 +5334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5355,7 +5355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5414,8 +5414,6 @@
   
     
     
-      
-        
       
         
       
@@ -5554,27 +5552,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -6024,37 +6001,37 @@
 <ul>
 <li>Está formado por las etiquetas que indican la trayectoria en el árbol DNS desde un nodo hasta la raíz.</li>
 <li>Las etiquetas están separadas por puntos (<code>.</code>).</li>
+</ul>
+</li>
 <li>
 <p><strong>Terminación en un punto</strong>:</p>
-</li>
-<li>
-<p>Formalmente, un FQDN termina con un punto (<code>.</code>) que representa la raíz del árbol DNS.</p>
-</li>
+<ul>
+<li>Formalmente, un FQDN termina con un punto (<code>.</code>) que representa la raíz del árbol DNS.</li>
 <li>Este punto final generalmente se omite en el uso cotidiano, excepto en configuraciones específicas.</li>
+</ul>
+</li>
 <li>
 <p><strong>Longitud máxima</strong>:</p>
-</li>
-<li>
-<p>Un FQDN puede tener hasta <strong>255 caracteres</strong>, incluidos los puntos separadores.</p>
+<ul>
+<li>Un FQDN puede tener hasta <strong>255 caracteres</strong>, incluidos los puntos separadores.</li>
+</ul>
 </li>
 <li>
 <p><strong>Juego de caracteres permitido</strong>:</p>
-</li>
-<li>
-<p>Originalmente, las etiquetas del FQDN permitían:</p>
 <ul>
+<li>Originalmente, las etiquetas del FQDN permitían:<ul>
 <li>Letras (<code>A-Z</code>, sin distinción entre mayúsculas y minúsculas).</li>
 <li>Dígitos (<code>0-9</code>).</li>
 <li>El guion (<code>-</code>), que no puede estar al principio ni al final de una etiqueta.</li>
 </ul>
 </li>
-<li>Desde 2004, se añadieron caracteres internacionales como <code>ä, ö, ü, é, à, è</code>, gracias a los <strong>nombres de dominio internacionalizados (IDN)</strong>.</li>
+<li>Desde 2004, se añadieron caracteres internacionales como <code>ä, ö, ü, é, à, è</code> o la <code>ñ</code> gracias a los <strong>nombres de dominio internacionalizados (IDN)</strong>.</li>
+</ul>
+</li>
 <li>
 <p><strong>Orden de lectura</strong>:</p>
-</li>
-<li>
-<p>Los nombres de dominio se escriben <strong>de derecha a izquierda</strong>, comenzando con el dominio de nivel superior (TLD) y terminando en la raíz.</p>
-</li>
+<ul>
+<li>Los nombres de dominio se escriben <strong>de derecha a izquierda</strong>, comenzando con el dominio de nivel superior (TLD) y terminando en la raíz.</li>
 <li>Ejemplo: <code>www.example.com.</code>:<ul>
 <li><code>.</code> (raíz del árbol).</li>
 <li><code>com</code> (TLD o dominio de nivel superior).</li>
@@ -6062,12 +6039,12 @@
 <li><code>www</code> (subdominio).</li>
 </ul>
 </li>
-<li>
-<p><strong>Normas de sintaxis</strong>:</p>
+</ul>
 </li>
 <li>
-<p>La sintaxis está regulada por varios documentos RFC (Request for Comments):</p>
+<p><strong>Normas de sintaxis</strong>:</p>
 <ul>
+<li>La sintaxis está regulada por varios documentos RFC (Request for Comments):<ul>
 <li><strong>RFC 1035</strong>: Especificaciones del DNS.</li>
 <li><strong>RFC 1123</strong>: Requisitos para sistemas basados en Internet.</li>
 <li><strong>RFC 2181</strong>: Clarificaciones sobre el DNS.</li>

@@ -4931,11 +4931,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5273,11 +5273,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5319,7 +5319,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5329,7 +5329,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5340,7 +5340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5361,7 +5361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5382,7 +5382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5441,8 +5441,6 @@
   
     
     
-      
-        
       
         
       
@@ -5581,27 +5579,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -6072,7 +6049,7 @@
 
 <p>La estructura del Sistema de Nombres de Dominio (DNS) es jerárquica, organizada en niveles desde la raíz hasta los subdominios más específicos.</p>
 <hr />
-<h4 id="1-dominio-root-raiz"><strong>1. Dominio Root (Raíz)</strong><a class="headerlink" href="#1-dominio-root-raiz" title="Permanent link">&para;</a></h4>
+<h2 id="1-dominio-root-raiz"><strong>1. Dominio Root (Raíz)</strong><a class="headerlink" href="#1-dominio-root-raiz" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Descripción</strong>:<ul>
 <li>Es el nivel más alto en la jerarquía del DNS.</li>
@@ -6084,14 +6061,22 @@
 </ul>
 </li>
 </ul>
-<p><a href="https://asir.readthedocs.io/es/latest/_images/espacioDNStld.png"><br />
-</a>
-- <strong>Servidores</strong>:
-    - Lo sirven <strong>Root Nameservers</strong>, que contienen referencias a los servidores de los dominios de primer nivel.
-- <strong>Función</strong>:
-    - Proporciona la base para la resolución de nombres en toda la red.</p>
-<hr />
-<h4 id="2-dominios-de-primer-nivel-tlds-top-level-domains"><strong>2. Dominios de Primer Nivel (TLDs - Top-Level Domains)</strong><a class="headerlink" href="#2-dominios-de-primer-nivel-tlds-top-level-domains" title="Permanent link">&para;</a></h4>
+<p><img alt=" " src="https://asir.readthedocs.io/es/latest/_images/espacioDNStld.png" /></p>
+<ul>
+<li>
+<p><strong>Servidores</strong>:</p>
+<ul>
+<li>Lo sirven <strong>Root Nameservers</strong>, que contienen referencias a los servidores de los dominios de primer nivel.</li>
+</ul>
+</li>
+<li>
+<p><strong>Función</strong>:</p>
+<ul>
+<li>Proporciona la base para la resolución de nombres en toda la red.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-dominios-de-primer-nivel-tlds-top-level-domains"><strong>2. Dominios de Primer Nivel (TLDs - Top-Level Domains)</strong><a class="headerlink" href="#2-dominios-de-primer-nivel-tlds-top-level-domains" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Tipos</strong>:<ul>
 <li><strong>Genéricos tradicionales (gTLDs)</strong>:<ul>
@@ -6116,8 +6101,7 @@
 </ul>
 </li>
 </ul>
-<hr />
-<h4 id="3-dominios-de-segundo-nivel"><strong>3. Dominios de Segundo Nivel</strong><a class="headerlink" href="#3-dominios-de-segundo-nivel" title="Permanent link">&para;</a></h4>
+<h2 id="3-dominios-de-segundo-nivel"><strong>3. Dominios de Segundo Nivel</strong><a class="headerlink" href="#3-dominios-de-segundo-nivel" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Descripción</strong>:<ul>
 <li>Son los nombres que se registran bajo un TLD, generalmente administrados por organizaciones o particulares.</li>
@@ -6128,8 +6112,7 @@
 </ul>
 </li>
 </ul>
-<hr />
-<h4 id="4-dominios-de-tercer-nivel"><strong>4. Dominios de Tercer Nivel</strong><a class="headerlink" href="#4-dominios-de-tercer-nivel" title="Permanent link">&para;</a></h4>
+<h2 id="4-dominios-de-tercer-nivel"><strong>4. Dominios de Tercer Nivel</strong><a class="headerlink" href="#4-dominios-de-tercer-nivel" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Descripción</strong>:<ul>
 <li>Se utilizan para subdividir un dominio de segundo nivel en secciones o servicios.</li>
@@ -6141,8 +6124,7 @@
 </ul>
 </li>
 </ul>
-<hr />
-<h4 id="5-dominios-de-cuarto-nivel-y-subniveles-adicionales"><strong>5. Dominios de Cuarto Nivel y Subniveles Adicionales</strong><a class="headerlink" href="#5-dominios-de-cuarto-nivel-y-subniveles-adicionales" title="Permanent link">&para;</a></h4>
+<h2 id="5-dominios-de-cuarto-nivel-y-subniveles-adicionales"><strong>5. Dominios de Cuarto Nivel y Subniveles Adicionales</strong><a class="headerlink" href="#5-dominios-de-cuarto-nivel-y-subniveles-adicionales" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Descripción</strong>:<ul>
 <li>Son subdivisiones adicionales para una mayor organización dentro de un dominio.</li>

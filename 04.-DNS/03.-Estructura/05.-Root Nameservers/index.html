@@ -4922,11 +4922,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5264,11 +5264,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5310,7 +5310,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5320,7 +5320,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5331,7 +5331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5352,7 +5352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5373,7 +5373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5432,8 +5432,6 @@
   
     
     
-      
-        
       
         
       
@@ -5572,27 +5570,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -6052,20 +6029,19 @@
 
   <h1>05.-Root Nameservers</h1>
 
-<p>Los <strong>root nameservers</strong> son los servidores fundamentales en la jerarquía del Sistema de Nombres de Dominio (DNS). Su función principal es proporcionar información sobre los servidores responsables de los dominios de primer nivel (TLDs) como <code>.com</code>, <code>.org</code>, <code>.es</code>, entre otros.</p>
-<hr />
+<p>Los <strong>root nameservers</strong> son los servidores fundamentales en la jerarquía del Sistema de Nombres de Dominio (DNS). Su función principal es proporcionar información sobre los servidores responsables de los dominios de primer nivel (TLDs Top-Level Domains) como <code>.com</code>, <code>.org</code>, <code>.es</code>, entre otros.</p>
 <h4 id="cantidad-y-distribucion"><strong>Cantidad y distribución</strong><a class="headerlink" href="#cantidad-y-distribucion" title="Permanent link">&para;</a></h4>
-<ol>
+<ul>
 <li>
 <p><strong>13 Root Nameservers definidos</strong>:</p>
 <ul>
 <li>Aunque se mencionan 13 root nameservers, esto se refiere a <strong>13 identificadores lógicos</strong> (<code>A</code> a <code>M</code>), no a la cantidad de máquinas físicas.</li>
-<li>
-<p><strong>Réplicas globales</strong>:</p>
+</ul>
 </li>
 <li>
-<p>Hay múltiples copias de cada uno de estos 13 root nameservers distribuidas geográficamente para garantizar:</p>
+<p><strong>Réplicas globales</strong>:</p>
 <ul>
+<li>Hay múltiples copias de cada uno de estos 13 root nameservers distribuidas geográficamente para garantizar:<ul>
 <li><strong>Alta disponibilidad</strong>: Redundancia en caso de fallos.</li>
 <li><strong>Rendimiento mejorado</strong>: Respuestas más rápidas al reducir la latencia.</li>
 </ul>
@@ -6073,8 +6049,7 @@
 <li>Actualmente, existen alrededor de <strong>255 instancias</strong> de root nameservers en todo el mundo, utilizando tecnologías como <strong>Anycast</strong> para distribuir las consultas entre servidores cercanos.</li>
 </ul>
 </li>
-</ol>
-<hr />
+</ul>
 <h4 id="actualizacion-del-dominio-raiz"><strong>Actualización del dominio raíz</strong><a class="headerlink" href="#actualizacion-del-dominio-raiz" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Los mapas del dominio raíz (<code>root zone file</code>) contienen la información sobre los TLDs y se actualizan regularmente.</li>
@@ -6088,7 +6063,6 @@
 </ul>
 </li>
 </ul>
-<hr />
 <h4 id="importancia-de-los-root-nameservers"><strong>Importancia de los Root Nameservers</strong><a class="headerlink" href="#importancia-de-los-root-nameservers" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
@@ -6096,22 +6070,21 @@
 <ul>
 <li>Actúan como el primer punto de referencia para resolver nombres en Internet.</li>
 <li>Por ejemplo, si un cliente consulta <code>www.example.com</code>, el root nameserver le indicará cuál es el servidor TLD (<code>.com</code>) responsable.</li>
-<li>
-<p><strong>Resiliencia global</strong>:</p>
+</ul>
 </li>
 <li>
-<p>La distribución de instancias asegura que el sistema DNS pueda seguir funcionando incluso en caso de ataques o desastres regionales.</p>
+<p><strong>Resiliencia global</strong>:</p>
+<ul>
+<li>La distribución de instancias asegura que el sistema DNS pueda seguir funcionando incluso en caso de ataques o desastres regionales.</li>
+</ul>
 </li>
 <li>
 <p><strong>Eficiencia y velocidad</strong>:</p>
-</li>
-<li>
-<p>Con el uso de Anycast, las consultas se redirigen automáticamente al servidor más cercano, optimizando el tiempo de respuesta.</p>
-</li>
+<ul>
+<li>Con el uso de Anycast, las consultas se redirigen automáticamente al servidor más cercano, optimizando el tiempo de respuesta.</li>
 </ul>
 </li>
 </ol>
-<hr />
 <h3 id="ejemplo-de-root-nameservers"><strong>Ejemplo de Root Nameservers</strong><a class="headerlink" href="#ejemplo-de-root-nameservers" title="Permanent link">&para;</a></h3>
 <p>Los 13 root nameservers tienen nombres identificativos como:</p>
 <ul>

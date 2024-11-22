@@ -4848,11 +4848,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5279,11 +5279,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5325,7 +5325,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5335,7 +5335,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5346,7 +5346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5367,7 +5367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5388,7 +5388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5447,8 +5447,6 @@
   
     
     
-      
-        
       
         
       
@@ -5587,27 +5585,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -6083,14 +6060,12 @@
   <h1>06.-Registro de Recurso PTR</h1>
 
 <p>El registro PTR (puntero) se utiliza para la resolución inversa en el sistema DNS, asignando una <strong>dirección IP</strong> a un <strong>nombre de dominio completo (FQDN)</strong>. Es el opuesto al registro <strong>A</strong>.</p>
-<hr />
 <h2 id="caracteristicas-del-registro-ptr">Características del Registro PTR<a class="headerlink" href="#caracteristicas-del-registro-ptr" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Este tipo de registro <strong>solo se usa en el archivo de zona de resolución inversa</strong>.</li>
 <li>El sistema DNS utiliza un dominio especial llamado <strong><code>in-addr.arpa</code></strong> para definir la resolución inversa.</li>
 <li>Los subdominios de <strong><code>in-addr.arpa</code></strong> tienen nombres numéricos que corresponden a los valores decimales de las direcciones IP, pero en <strong>orden inverso</strong>.</li>
 </ul>
-<hr />
 <h2 id="ejemplo-de-resolucion-inversa">Ejemplo de Resolución Inversa<a class="headerlink" href="#ejemplo-de-resolucion-inversa" title="Permanent link">&para;</a></h2>
 <h3 id="direccion-ip-1921681021">Dirección IP: <code>192.168.10.21</code><a class="headerlink" href="#direccion-ip-1921681021" title="Permanent link">&para;</a></h3>
 <ul>
@@ -6101,7 +6076,6 @@
 <ul>
 <li>Este dominio asignará la dirección IP al FQDN correspondiente.</li>
 </ul>
-<hr />
 <h2 id="estructura-del-registro-ptr">Estructura del Registro PTR<a class="headerlink" href="#estructura-del-registro-ptr" title="Permanent link">&para;</a></h2>
 <pre><code>FQDN_in-addr.arpa. IN PTR FQDN_máquina
 </code></pre>
@@ -6119,18 +6093,18 @@
 <ul>
 <li>El registro PTR debe incluirse en el archivo de zona inversa correspondiente al rango de direcciones IP.</li>
 <li>Por ejemplo, si el rango es <code>192.168.10.x</code>, el archivo de zona inversa podría llamarse <code>10.168.192.in-addr.arpa.zone</code>.</li>
-<li>
-<p><strong>Requerimiento por Máquina:</strong></p>
+</ul>
 </li>
 <li>
-<p>Cada equipo en el dominio necesita un <strong>registro PTR</strong> en el archivo de zona inversa.</p>
+<p><strong>Requerimiento por Máquina:</strong></p>
+<ul>
+<li>Cada equipo en el dominio necesita un <strong>registro PTR</strong> en el archivo de zona inversa.</li>
+</ul>
 </li>
 <li>
 <p><strong>Coherencia:</strong></p>
-</li>
-<li>
-<p>Es fundamental que los registros PTR sean consistentes con los registros <strong>A</strong> en la zona directa.</p>
-</li>
+<ul>
+<li>Es fundamental que los registros PTR sean consistentes con los registros <strong>A</strong> en la zona directa.</li>
 </ul>
 </li>
 </ol>

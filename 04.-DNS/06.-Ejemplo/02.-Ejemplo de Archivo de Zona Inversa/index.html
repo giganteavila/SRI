@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../04.-DNS%20con%20Ubuntu%20Server/">
+        <link rel="prev" href="../01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/">
       
       
-        <link rel="next" href="../../99.-Enlaces%20de%20inter%C3%A9s/">
+        <link rel="next" href="../03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Actividad_DNS_Ubuntu_Server - SRI</title>
+        <title>02.-Ejemplo de Archivo de Zona Inversa - SRI</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objetivo" class="md-skip">
+        <a href="#caracteristicas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Actividad_DNS_Ubuntu_Server
+              02.-Ejemplo de Archivo de Zona Inversa
             
           </span>
         </div>
@@ -4848,11 +4848,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5120,8 +5120,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -5137,11 +5139,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" checked>
         
           
           <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
@@ -5155,7 +5157,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             06.-Ejemplo
@@ -5169,7 +5171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
+      <a href="../01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5187,18 +5189,90 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    02.-Ejemplo de Archivo de Zona Inversa
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-archivo-de-zona-inversa-etcbinddb10168192" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Archivo de Zona Inversa (/etc/bind/db.10.168.192)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicacion-del-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación del Archivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validacion-del-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validación del Archivo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5236,7 +5310,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5246,7 +5320,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5257,7 +5331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5278,7 +5352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5299,7 +5373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5354,14 +5428,10 @@
                 
   
   
-    
   
   
-  
     
     
-      
-        
       
         
       
@@ -5379,11 +5449,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
         
           
           <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
@@ -5397,7 +5467,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
             10.-Prácticas
@@ -5411,7 +5481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../../10.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5432,7 +5502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Consultas%20DNS/" class="md-nav__link">
+      <a href="../../10.-Pr%C3%A1cticas/01.-Consultas%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5453,7 +5523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../../10.-Pr%C3%A1cticas/02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5474,7 +5544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
+      <a href="../../10.-Pr%C3%A1cticas/03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5495,7 +5565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
+      <a href="../../10.-Pr%C3%A1cticas/04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5504,108 +5574,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objetivo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#especificaciones-de-la-red" class="md-nav__link">
-    <span class="md-ellipsis">
-      Especificaciones de la Red
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-de-pasos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resumen de Pasos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplos-de-comandos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplos de Comandos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#capturas-requeridas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Capturas Requeridas
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6009,45 +5977,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#caracteristicas" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivo
+      Características
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#especificaciones-de-la-red" class="md-nav__link">
+  <a href="#ejemplo-de-archivo-de-zona-inversa-etcbinddb10168192" class="md-nav__link">
     <span class="md-ellipsis">
-      Especificaciones de la Red
+      Ejemplo de Archivo de Zona Inversa (/etc/bind/db.10.168.192)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resumen-de-pasos" class="md-nav__link">
+  <a href="#explicacion-del-archivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Resumen de Pasos
+      Explicación del Archivo
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplos-de-comandos" class="md-nav__link">
+  <a href="#validacion-del-archivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplos de Comandos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#capturas-requeridas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Capturas Requeridas
+      Validación del Archivo
     </span>
   </a>
   
@@ -6068,137 +6027,91 @@
                   
 
 
-  <h1>Actividad_DNS_Ubuntu_Server</h1>
+  <h1>02.-Ejemplo de Archivo de Zona Inversa</h1>
 
-<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
-<p>Configurar una red con servidores y clientes <strong>DNS</strong> utilizando <strong>Ubuntu Server</strong> en máquinas virtuales. Se debe construir una red DNS funcional basada en las siguientes especificaciones.</p>
-<hr />
-<h2 id="especificaciones-de-la-red">Especificaciones de la Red<a class="headerlink" href="#especificaciones-de-la-red" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Estructura de la red</strong>:</li>
-<li><strong>Cuatro máquinas virtuales</strong>: M1, M2, M3 y M4 (todas con Ubuntu Server).</li>
-<li><strong>Conexión de red</strong>:<ul>
-<li>M1: Dos tarjetas de red, una conectada a <strong>NAT</strong> para acceso a internet y otra al segmento de red virtual.</li>
-<li>M2, M3 y M4: Una tarjeta de red conectada al segmento de red virtual.</li>
-</ul>
-</li>
-<li>
-<p><strong>Direcciones IP</strong>:</p>
+<p>Los clientes DNS pueden realizar <strong>preguntas inversas</strong>, es decir, obtener el <strong>nombre de dominio asociado</strong> a una dirección IP dada.</p>
+<h2 id="caracteristicas">Características<a class="headerlink" href="#caracteristicas" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Automática para la conexión NAT de M1.</li>
-<li>Direcciones fijas para todas las demás conexiones.</li>
+<li>Para manejar estas consultas, se utiliza un <strong>dominio especial</strong> llamado <strong><code>in-addr.arpa</code></strong>.</li>
+<li>Cuando un cliente desea conocer el nombre de dominio asociado a la dirección IP <code>w.x.y.z</code>, realiza una consulta inversa a <strong><code>z.y.x.w.in-addr.arpa</code></strong>.</li>
+<li>La <strong>inversión de los bytes</strong> es necesaria porque:<ul>
+<li>Los nombres de dominio son más genéricos hacia la derecha.</li>
+<li>Las direcciones IP son más genéricas hacia la izquierda.</li>
 </ul>
 </li>
-<li>
-<p><strong>Sistema DNS</strong>:</p>
-</li>
-<li><strong>Dominio</strong>: <code>2asir.edu</code></li>
-<li><strong>Nombres canónicos</strong>:<ul>
-<li>M1: <code>ns1.2asir.edu</code></li>
-<li>M2: <code>ns2.2asir.edu</code></li>
-<li>M3: <code>pc01.2asir.edu</code></li>
-<li>M4: <code>pc02.2asir.edu</code></li>
 </ul>
-</li>
-<li><strong>Alias</strong>:<ul>
-<li><code>ns1</code> también será <code>www</code> y <code>servidor</code>.</li>
-<li><code>ns2</code> también será <code>pcprof</code>.</li>
-</ul>
-</li>
-<li><strong>Servidores DNS</strong>:<ul>
-<li><code>ns1</code>: Servidor DNS maestro.</li>
-<li><code>ns2</code>: Servidor DNS esclavo, que sincronizará con <code>ns1</code>.</li>
-</ul>
-</li>
-<li>Todas las máquinas usarán como servidores de nombres a <code>ns1</code> y <code>ns2</code>.</li>
-<li>Las consultas a nombres no resueltos deben redirigirse a un servidor DNS de internet (configurable).</li>
-<li>Las consultas al sistema DNS montado deben ser posibles <strong>solo desde la red local</strong>.</li>
-</ol>
-<hr />
-<h2 id="resumen-de-pasos">Resumen de Pasos<a class="headerlink" href="#resumen-de-pasos" title="Permanent link">&para;</a></h2>
+<h2 id="ejemplo-de-archivo-de-zona-inversa-etcbinddb10168192">Ejemplo de Archivo de Zona Inversa (<code>/etc/bind/db.10.168.192</code>)<a class="headerlink" href="#ejemplo-de-archivo-de-zona-inversa-etcbinddb10168192" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">$ORIGIN 10.168.192.in-addr.arpa.
+$TTL 86400           ; TTL por defecto: 1 día
+
+@ IN SOA servidor.mired.lan. correo_admin.mired.lan. (
+    2009112801       ; Número de serie
+    3H               ; Actualización: 3 horas
+    15M              ; Reintentos: 15 minutos
+    1W               ; Caducidad: 1 semana
+    1D               ; TTL por defecto
+)
+
+; Servidores de nombres
+@   IN NS dns.mired.lan.
+@   IN NS dns2.mired.lan.
+
+; Registros PTR
+1    IN PTR servidor.mired.lan.
+1    IN PTR router.mired.lan.
+1    IN PTR www.mired.lan.
+11   IN PTR dns.mired.lan.
+12   IN PTR dns2.mired.lan.
+20   IN PTR mail.mired.lan.
+101  IN PTR pc01.mired.lan.
+102  IN PTR pc02.mired.lan.
+103  IN PTR pc03.mired.lan.
+</code></pre>
+<h2 id="explicacion-del-archivo">Explicación del Archivo<a class="headerlink" href="#explicacion-del-archivo" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Configuración de Red</strong>:</li>
-<li>Asigna direcciones IP estáticas para las conexiones virtuales.</li>
 <li>
-<p>Establece los nombres (<code>/etc/hostname</code>) y actualiza <code>/etc/hosts</code>.</p>
-</li>
-<li>
-<p><strong>Instalación de <code>bind9</code></strong>:</p>
-</li>
-<li>Instala <code>bind9</code> en <code>ns1</code> y <code>ns2</code>.</li>
-<li>
-<p>En M2, usa conexión NAT temporal para descargar e instalar <code>bind9</code>.</p>
-</li>
-<li>
-<p><strong>Configuración del Servidor Primario (<code>ns1</code>)</strong>:
-   a. Edita <code>/etc/bind/named.conf.local</code> para definir las zonas directa e inversa. Incluye restricciones de consulta con <code>allow-query</code>.
-   b. Edita <code>/etc/bind/named.conf.options</code> para configurar redireccionamiento de consultas no resueltas (<code>forwarders</code>).
-   c. Valida la configuración con <code>named-checkconf</code>.
-   d. Crea archivos de base de datos para:</p>
+<p><strong>$ORIGIN</strong>:</p>
 <ul>
-<li><strong>Zona directa</strong>: Define registros SOA, NS, A y CNAME.</li>
-<li><strong>Zona inversa</strong>: Define registros SOA, NS y PTR.
-   e. Valida los archivos con <code>named-checkzone</code>.
-   f. Reinicia el servicio con <code>/etc/init.d/bind9 restart</code>.</li>
+<li>Define la base del dominio inverso: <code>10.168.192.in-addr.arpa.</code></li>
+<li>Los registros que no terminan en punto (<code>.</code>) se completan automáticamente con este dominio.</li>
 </ul>
 </li>
 <li>
-<p><strong>Configuración del Servidor Secundario (<code>ns2</code>)</strong>:
-   a. Edita <code>/etc/bind/named.conf.local</code> para definir las zonas como <code>slave</code> e incluye la IP del maestro (<code>masters</code>).
-   b. No es necesario crear archivos de zona; se sincronizan automáticamente.</p>
+<p><strong>SOA (Start of Authority)</strong>:</p>
+<ul>
+<li>Define el servidor principal de la zona y los parámetros básicos de configuración.</li>
+</ul>
 </li>
 <li>
-<p><strong>Configuración de Clientes</strong>:</p>
+<p><strong>Servidores de nombres (NS)</strong>:</p>
+<ul>
+<li><code>dns.mired.lan.</code> y <code>dns2.mired.lan.</code> son los servidores DNS autoritativos para la zona.</li>
+</ul>
 </li>
 <li>
-<p>Edita <code>/etc/resolv.conf</code> en cada máquina para configurar los servidores DNS.</p>
+<p><strong>Registros PTR</strong>:</p>
+<ul>
+<li>Relacionan direcciones IP con nombres de dominio completos (FQDN).</li>
+<li>Ejemplo:<ul>
+<li>La IP <code>192.168.10.1</code> (<code>1.10.168.192.in-addr.arpa.</code>) apunta a <code>servidor.mired.lan.</code>.</li>
+<li>La IP <code>192.168.10.101</code> (<code>101.10.168.192.in-addr.arpa.</code>) apunta a <code>pc01.mired.lan.</code>.</li>
+</ul>
 </li>
-<li>
-<p><strong>Pruebas del Sistema</strong>:</p>
+</ul>
 </li>
-<li>Realiza consultas con <code>nslookup</code>, <code>dig</code>, y <code>ping</code> desde los clientes.</li>
-<li>
-<p>Simula fallos deteniendo <code>ns1</code> y verifica que <code>ns2</code> responde correctamente.</p>
-</li>
-<li>
-<p><strong>Añadir Nueva Máquina (<code>pc03.2asir.edu</code>)</strong>:</p>
-</li>
-<li>Indica qué archivos, líneas y máquinas deben modificarse para incluir esta nueva máquina.</li>
 </ol>
-<hr />
-<h2 id="ejemplos-de-comandos">Ejemplos de Comandos<a class="headerlink" href="#ejemplos-de-comandos" title="Permanent link">&para;</a></h2>
+<h2 id="validacion-del-archivo">Validación del Archivo<a class="headerlink" href="#validacion-del-archivo" title="Permanent link">&para;</a></h2>
+<p>Verifica el archivo de zona con las herramientas de <strong>BIND</strong>:</p>
 <ol>
 <li>
-<p><strong>Validación de Configuración</strong>:
-   <code>bash
-   named-checkconf
-   named-checkzone 2asir.edu /etc/bind/db.2asir.edu</code></p>
+<p><strong>Verificar el archivo de configuración general</strong>:</p>
+<p><code>named-checkconf</code></p>
 </li>
 <li>
-<p><strong>Reiniciar el Servicio</strong>:
-   <code>bash
-   sudo /etc/init.d/bind9 restart</code></p>
-</li>
-<li>
-<p><strong>Consulta desde Clientes</strong>:
-   <code>bash
-   nslookup www.2asir.edu
-   nslookup pc03.2asir.edu
-   dig pc02.2asir.edu</code></p>
+<p><strong>Verificar el archivo de zona inversa</strong>:</p>
+<p><code>named-checkzone 10.168.192.in-addr.arpa /etc/bind/db.10.168.192</code></p>
 </li>
 </ol>
-<hr />
-<h2 id="capturas-requeridas">Capturas Requeridas<a class="headerlink" href="#capturas-requeridas" title="Permanent link">&para;</a></h2>
-<p>Incluye las siguientes capturas como evidencia de configuración y pruebas:
-1. Instalación de <code>bind9</code> exitosa.
-2. Configuración de <code>/etc/bind/named.conf.local</code> y <code>/etc/bind/named.conf.options</code>.
-3. Archivos de base de datos para zonas directa e inversa.
-4. Comandos de validación (<code>named-checkconf</code>, <code>named-checkzone</code>).
-5. Reinicio del servicio DNS.
-6. Consultas exitosas desde clientes (<code>nslookup</code>, <code>ping</code>).
-7. Pruebas de sincronización y respuesta del servidor secundario tras detener <code>ns1</code>.</p>
-<hr />
-<p>Si necesitas ejemplos adicionales o ayuda para realizar los pasos, ¡avísame! 😊</p>
 
 
 

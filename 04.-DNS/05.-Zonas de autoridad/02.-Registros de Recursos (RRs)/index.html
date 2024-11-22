@@ -4848,11 +4848,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5237,11 +5237,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5283,7 +5283,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5293,7 +5293,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5304,7 +5304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5325,7 +5325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5346,7 +5346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5405,8 +5405,6 @@
   
     
     
-      
-        
       
         
       
@@ -5545,27 +5543,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -6011,31 +5988,11 @@
 <tbody>
 <tr>
 <td><strong>Nombre</strong></td>
-<td>El nombre del registro que se está definiendo. Puede ser de tres formas:</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>FQDN</strong> de máquina o dominio sobre el que trata el registro.</td>
-</tr>
-<tr>
-<td></td>
-<td>- Símbolo <strong>@</strong>, que hace referencia al nombre de la zona configurada en el servidor (<code>/etc/named.conf.local</code>).</td>
-</tr>
-<tr>
-<td></td>
-<td>- En blanco, que toma el valor del registro anterior definido con un propietario (FQDN o @).</td>
+<td>El nombre del registro que se está definiendo. Puede ser de tres formas:<br>- <strong>FQDN</strong> de máquina o dominio sobre el que trata el registro.<br>- Símbolo <strong>@</strong>, que hace referencia al nombre de la zona configurada en el servidor (<code>/etc/named.conf.local</code>).<br>- En blanco, que toma el valor del registro anterior definido con un propietario (FQDN o @).</td>
 </tr>
 <tr>
 <td><strong>TTL (Time To Live)</strong></td>
-<td>Tiempo en segundos que el registro permanece en la caché del cliente. Puede expresarse en:</td>
-</tr>
-<tr>
-<td></td>
-<td>- Días (<code>d</code>), horas (<code>h</code>), minutos (<code>m</code>) y segundos (<code>s</code>). Ejemplo: <strong>4h30m</strong>.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>0:</strong> Indica que el registro no debe almacenarse en caché.</td>
+<td>Tiempo en segundos que el registro permanece en la caché del cliente. Puede expresarse en:<br>- Días (<code>d</code>), horas (<code>h</code>), minutos (<code>m</code>) y segundos (<code>s</code>). Ejemplo: <strong>4h30m</strong>.<br>- <strong>0:</strong> Indica que el registro no debe almacenarse en caché.</td>
 </tr>
 <tr>
 <td><strong>Clase</strong></td>
@@ -6043,55 +6000,11 @@
 </tr>
 <tr>
 <td><strong>Tipo</strong></td>
-<td>Identifica el tipo de registro, según el recurso:</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>SOA:</strong> Inicio de autoridad. Identifica el servidor autoritario de la zona y sus parámetros de configuración.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>NS:</strong> Servidor de nombres. Identifica los servidores de nombres autorizados para la zona.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>A:</strong> Dirección. Asocia un FQDN a una dirección IP.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>PTR:</strong> Puntero. Asocia una dirección IP a un FQDN (usado en zonas de resolución inversa).</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>MX:</strong> Identifica los servidores encargados de la entrega de correo en el dominio.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>CNAME:</strong> Alias. Permite asignar un alias a un recurso ya definido con un FQDN.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>Otros:</strong> Registros adicionales como <code>TXT</code> (texto), <code>SRV</code> (servicios específicos), etc.</td>
+<td>Identifica el tipo de registro, según el recurso:<br>- <strong>SOA:</strong> Inicio de autoridad. Identifica el servidor autoritario de la zona y sus parámetros de configuración.<br>- <strong>NS:</strong> Servidor de nombres. Identifica los servidores de nombres autorizados para la zona.<br>- <strong>A:</strong> Dirección. Asocia un FQDN a una dirección IP.<br>- <strong>PTR:</strong> Puntero. Asocia una dirección IP a un FQDN (usado en zonas de resolución inversa).<br>- <strong>MX:</strong> Identifica los servidores encargados de la entrega de correo en el dominio.<br>- <strong>CNAME:</strong> Alias. Permite asignar un alias a un recurso ya definido con un FQDN.<br>- <strong>Otros:</strong> Registros adicionales como <code>TXT</code> (texto), <code>SRV</code> (servicios específicos), etc.</td>
 </tr>
 <tr>
 <td><strong>Valor</strong></td>
-<td>Información asociada al registro, depende del tipo:</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>A:</strong> Dirección IP del FQDN.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>MX:</strong> Nombre del servidor de correo y su prioridad.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>CNAME:</strong> FQDN del recurso al que se apunta.</td>
-</tr>
-<tr>
-<td></td>
-<td>- <strong>PTR:</strong> FQDN correspondiente a la dirección IP.</td>
+<td>Información asociada al registro, depende del tipo:<br>- <strong>A:</strong> Dirección IP del FQDN.<br>- <strong>MX:</strong> Nombre del servidor de correo y su prioridad.<br>- <strong>CNAME:</strong> FQDN del recurso al que se apunta.<br>- <strong>PTR:</strong> FQDN correspondiente a la dirección IP.</td>
 </tr>
 </tbody>
 </table>

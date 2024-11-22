@@ -4946,11 +4946,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5288,11 +5288,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5334,7 +5334,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5344,7 +5344,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5355,7 +5355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5376,7 +5376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5397,7 +5397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5456,8 +5456,6 @@
   
     
     
-      
-        
       
         
       
@@ -5596,27 +5594,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -6101,30 +6078,29 @@
   <h1>03.-Dominio y Zona</h1>
 
 <p>El concepto de dominio y zona es fundamental en la estructura jerárquica del DNS, ya que permite delegar responsabilidades y organizar eficientemente la administración de nombres dentro de una red.</p>
-<hr />
-<h4 id="dominio"><strong>Dominio</strong><a class="headerlink" href="#dominio" title="Permanent link">&para;</a></h4>
+<h2 id="dominio"><strong>Dominio</strong><a class="headerlink" href="#dominio" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><strong>Definición</strong>:</p>
 <ul>
 <li>Es una parte de la jerarquía del DNS que agrupa nombres bajo un mismo identificador (como <code>ejemplo.com</code>).</li>
+</ul>
+</li>
 <li>
 <p><strong>Administración</strong>:</p>
-</li>
-<li>
-<p>La autoridad responsable de un dominio puede subdividirlo en <strong>subdominios</strong> para organizar mejor sus recursos.</p>
-</li>
+<ul>
+<li>La autoridad responsable de un dominio puede subdividirlo en <strong>subdominios</strong> para organizar mejor sus recursos.</li>
 <li>La administración de los subdominios puede:<ul>
 <li>Permanecer bajo la misma autoridad del dominio principal.</li>
 <li>Ser delegada a otra organización o entidad.</li>
 </ul>
 </li>
-<li>
-<p><strong>Ejemplo</strong>:</p>
+</ul>
 </li>
 <li>
-<p>Una universidad con el dominio <code>universidad.edu</code> puede crear subdominios para cada departamento:</p>
+<p><strong>Ejemplo</strong>:</p>
 <ul>
+<li>Una universidad con el dominio <code>universidad.edu</code> puede crear subdominios para cada departamento:<ul>
 <li><code>cs.universidad.edu</code> (Ciencias de la Computación).</li>
 <li><code>bio.universidad.edu</code> (Biología).</li>
 <li><code>law.universidad.edu</code> (Derecho).</li>
@@ -6134,27 +6110,26 @@
 </ul>
 </li>
 </ul>
-<hr />
-<h4 id="zona"><strong>Zona</strong><a class="headerlink" href="#zona" title="Permanent link">&para;</a></h4>
+<h2 id="zona"><strong>Zona</strong><a class="headerlink" href="#zona" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><strong>Definición</strong>:</p>
 <ul>
 <li>Una <strong>zona</strong> es un <strong>subárbol del DNS</strong> que está bajo la administración de una organización diferente al dominio padre.</li>
 <li>En términos prácticos, una zona incluye los nombres de dominio y subdominios delegados que una autoridad específica gestiona directamente.</li>
+</ul>
+</li>
 <li>
 <p><strong>Delegación de zonas</strong>:</p>
-</li>
-<li>
-<p>La organización que administra el dominio principal puede delegar una parte de su dominio (subárbol) a otra autoridad.</p>
-</li>
+<ul>
+<li>La organización que administra el dominio principal puede delegar una parte de su dominio (subárbol) a otra autoridad.</li>
 <li>Esto se realiza configurando registros <strong>NS (Name Server)</strong> en el dominio principal para redirigir las consultas de los subdominios al servidor DNS del nuevo administrador.</li>
+</ul>
+</li>
 <li>
 <p><strong>Ejemplo</strong>:</p>
-</li>
-<li>
-<p>La universidad con <code>universidad.edu</code> puede delegar:</p>
 <ul>
+<li>La universidad con <code>universidad.edu</code> puede delegar:<ul>
 <li><code>cs.universidad.edu</code> a los administradores del departamento de Ciencias de la Computación.</li>
 <li><code>bio.universidad.edu</code> a los administradores del departamento de Biología.</li>
 </ul>
@@ -6163,8 +6138,7 @@
 </ul>
 </li>
 </ul>
-<hr />
-<h3 id="diferencias-entre-dominio-y-zona"><strong>Diferencias entre Dominio y Zona</strong><a class="headerlink" href="#diferencias-entre-dominio-y-zona" title="Permanent link">&para;</a></h3>
+<h2 id="diferencias-entre-dominio-y-zona"><strong>Diferencias entre Dominio y Zona</strong><a class="headerlink" href="#diferencias-entre-dominio-y-zona" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -6187,8 +6161,7 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="ejemplo-practico"><strong>Ejemplo Práctico</strong><a class="headerlink" href="#ejemplo-practico" title="Permanent link">&para;</a></h3>
+<h2 id="ejemplo-practico"><strong>Ejemplo Práctico</strong><a class="headerlink" href="#ejemplo-practico" title="Permanent link">&para;</a></h2>
 <h4 id="estructura-del-dominio-universidadedu">Estructura del dominio <code>universidad.edu</code>:<a class="headerlink" href="#estructura-del-dominio-universidadedu" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Dominio</strong>: <code>universidad.edu</code><ul>

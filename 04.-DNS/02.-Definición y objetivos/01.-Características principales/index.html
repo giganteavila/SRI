@@ -4853,11 +4853,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5195,11 +5195,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5241,7 +5241,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5251,7 +5251,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5262,7 +5262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5283,7 +5283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5304,7 +5304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5363,8 +5363,6 @@
   
     
     
-      
-        
       
         
       
@@ -5503,27 +5501,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -5949,39 +5926,39 @@
 <p><strong>Modelo cliente/servidor</strong>:</p>
 <ul>
 <li>El DNS opera bajo un esquema cliente/servidor, donde los clientes realizan consultas y los servidores responden con la información almacenada.</li>
-<li>
-<p><strong>Agrupación en dominios</strong>:</p>
+</ul>
 </li>
 <li>
-<p>Los nombres de las máquinas están organizados en dominios, que a su vez están estructurados jerárquicamente.</p>
+<p><strong>Agrupación en dominios</strong>:</p>
+<ul>
+<li>Los nombres de las máquinas están organizados en dominios, que a su vez están estructurados jerárquicamente.</li>
+</ul>
 </li>
 <li>
 <p><strong>Estructura jerárquica</strong>:</p>
-</li>
-<li>
-<p>La base de datos tiene forma de <strong>árbol invertido</strong>, donde:</p>
 <ul>
+<li>La base de datos tiene forma de <strong>árbol invertido</strong>, donde:<ul>
 <li>La <strong>raíz</strong> se encuentra en la parte superior y se representa como <code>"."</code>.</li>
 <li>Cada nodo del árbol representa un dominio o subdominio.</li>
 </ul>
 </li>
-<li>
-<p><strong>Nombre completo (FQDN)</strong>:</p>
+</ul>
 </li>
 <li>
-<p>El nombre de dominio completo de una máquina, conocido como <strong>FQDN (Fully Qualified Domain Name)</strong>, incluye:</p>
+<p><strong>Nombre completo (FQDN)</strong>:</p>
 <ul>
+<li>El nombre de dominio completo de una máquina, conocido como <strong>FQDN (Fully Qualified Domain Name)</strong>, incluye:<ul>
 <li>El nombre de la máquina.</li>
 <li>La concatenación jerárquica de dominios desde la hoja hasta la raíz (por ejemplo, <code>hielo.gsyc.urjc.es.</code>).</li>
 <li>Por convención, un FQDN termina con un punto (<code>.</code>), aunque este se puede omitir en la mayoría de los casos, excepto en mapas DNS.</li>
 </ul>
 </li>
+</ul>
+</li>
 <li>
 <p><strong>Dominios y subdominios</strong>:</p>
-</li>
-<li>
-<p>Cada nodo del árbol puede representar un dominio.</p>
-</li>
+<ul>
+<li>Cada nodo del árbol puede representar un dominio.</li>
 <li>Los dominios pueden dividirse en <strong>subdominios</strong> según sea necesario, facilitando la organización y delegación administrativa.</li>
 </ul>
 </li>

@@ -4848,11 +4848,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5279,11 +5279,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5325,7 +5325,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5335,7 +5335,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5346,7 +5346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5367,7 +5367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5388,7 +5388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5447,8 +5447,6 @@
   
     
     
-      
-        
       
         
       
@@ -5587,27 +5585,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -6083,14 +6060,12 @@
   <h1>05.-Registro de recurso A</h1>
 
 <p>El registro <strong>A</strong> (Address Record) establece una correspondencia entre un <strong>FQDN</strong> y una <strong>dirección IP</strong>. Es el registro más utilizado y numeroso en el sistema DNS.</p>
-<hr />
 <h2 id="caracteristicas">Características<a class="headerlink" href="#caracteristicas" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Cada registro <strong>A</strong> identifica un <strong>nombre de máquina</strong>, permitiendo al cliente DNS obtener su <strong>dirección IP</strong>.</li>
 <li>Si un host tiene más de una interfaz de red, debe tener un <strong>registro A</strong> por cada una de ellas.</li>
 <li>Todo nombre de host que sea resuelto por DNS debe estar especificado mediante un registro de dirección.</li>
 </ul>
-<hr />
 <h2 id="estructura-del-registro-a">Estructura del Registro A<a class="headerlink" href="#estructura-del-registro-a" title="Permanent link">&para;</a></h2>
 <pre><code>FQDN_máquina IN A dir_IP
 
@@ -6102,8 +6077,8 @@ ftp.miempresa.com.    IN A 10.0.0.1
 </code></pre>
 <h4 id="explicacion">Explicación:<a class="headerlink" href="#explicacion" title="Permanent link">&para;</a></h4>
 <ul>
-<li>pc01.mired.lan. tiene asignada la dirección IP 192.168.10.21.</li>
-<li>Tanto www.miempresa.com. como ftp.miempresa.com. están asociados a la dirección IP 10.0.0.1.</li>
+<li><code>pc01.mired.lan.</code> tiene asignada la dirección IP <code>192.168.10.21</code>.</li>
+<li>Tanto <code>www.miempresa.com.</code> como <code>ftp.miempresa.com.</code> están asociados a la dirección IP <code>10.0.0.1</code>.</li>
 </ul>
 <h3 id="notas-importantes">Notas Importantes<a class="headerlink" href="#notas-importantes" title="Permanent link">&para;</a></h3>
 <ul>

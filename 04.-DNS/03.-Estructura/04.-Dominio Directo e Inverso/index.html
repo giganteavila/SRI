@@ -4937,11 +4937,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/5.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5.-Resoluciones de Nombre
+    05.-Resoluciones de Nombre
   </span>
   
 
@@ -5279,11 +5279,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/02.-Ejemplo_de_Archivo_de_Zona_Inversa/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Ejemplo_de_Archivo_de_Zona_Inversa
+    02.-Ejemplo de Archivo de Zona Inversa
   </span>
   
 
@@ -5325,7 +5325,7 @@
             
   
   <span class="md-ellipsis">
-    Ejemplo Pequeño
+    03.-Pequeño ejemplo completo
   </span>
   
 
@@ -5335,7 +5335,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7_3">
             <span class="md-nav__icon md-icon"></span>
-            Ejemplo Pequeño
+            03.-Pequeño ejemplo completo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5346,7 +5346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5367,7 +5367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5388,7 +5388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplo/Ejemplo%20Peque%C3%B1o/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../06.-Ejemplo/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5447,8 +5447,6 @@
   
     
     
-      
-        
       
         
       
@@ -5587,27 +5585,6 @@
   
   <span class="md-ellipsis">
     04.-DNS con Ubuntu Server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10.-Pr%C3%A1cticas/Actividad_DNS_Ubuntu_Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actividad_DNS_Ubuntu_Server
   </span>
   
 
@@ -6084,7 +6061,6 @@
 
 <h3 id="dominio-directo-e-inverso-en-el-dns"><strong>Dominio Directo e Inverso en el DNS</strong><a class="headerlink" href="#dominio-directo-e-inverso-en-el-dns" title="Permanent link">&para;</a></h3>
 <p>El Sistema de Nombres de Dominio (DNS) no solo permite traducir nombres de dominio en direcciones IP (dominio directo), sino que también soporta la traducción inversa, donde una dirección IP se resuelve a un nombre de dominio (dominio inverso).</p>
-<hr />
 <h4 id="dominio-directo"><strong>Dominio Directo</strong><a class="headerlink" href="#dominio-directo" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Función</strong>:<ul>
@@ -6095,9 +6071,10 @@
 <li><strong>Ejemplo</strong>:<ul>
 <li>Nombre de dominio: <code>www.example.com</code></li>
 <li>Dirección IP: <code>192.168.1.1</code></li>
-<li>Registro DNS:
-    <code>plaintext
-    www.example.com. IN A 192.168.1.1</code></li>
+<li>
+<p>Registro DNS:</p>
+<p><code>www.example.com. IN A 192.168.1.1</code></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -6108,44 +6085,45 @@
 <ul>
 <li>Resuelve una dirección IP a su nombre de dominio asociado.</li>
 <li>Es útil para propósitos de autenticación, auditorías y depuración de problemas en la red.</li>
+</ul>
+</li>
 <li>
 <p><strong>Dominio especial</strong>:</p>
-</li>
-<li>
-<p>El dominio inverso utiliza un espacio de nombres dedicado: <strong>in-addr.arpa</strong>.</p>
-</li>
+<ul>
+<li>El dominio inverso utiliza un espacio de nombres dedicado: <strong>in-addr.arpa</strong>.</li>
 <li>Cada dirección IP se representa como una porción de este dominio jerárquico.</li>
+</ul>
+</li>
 <li>
 <p><strong>Estructura</strong>:</p>
-</li>
-<li>
-<p>Para mantener la jerarquía del DNS, las direcciones IP se escriben <strong>al revés</strong>.</p>
-</li>
+<ul>
+<li>Para mantener la jerarquía del DNS, las direcciones IP se escriben <strong>al revés</strong>.</li>
 <li>Ejemplo:<ul>
 <li>La dirección de red <code>138.117.0.0</code> se convierte en el dominio inverso <code>117.138.in-addr.arpa</code>.</li>
 </ul>
 </li>
+</ul>
+</li>
 <li>
 <p><strong>Razón para invertir la dirección IP</strong>:</p>
-</li>
-<li>
-<p>En los nombres de dominio, las porciones más a la izquierda son las más específicas.</p>
-</li>
+<ul>
+<li>En los nombres de dominio, las porciones más a la izquierda son las más específicas.</li>
 <li>En las direcciones IP, las porciones más a la izquierda representan entidades más generales.</li>
 <li>Al invertir la dirección IP, se preserva la estructura jerárquica del DNS.</li>
+</ul>
+</li>
 <li>
 <p><strong>Ejemplo completo</strong>:</p>
-</li>
-<li>
-<p>Dirección IP: <code>192.168.1.10</code></p>
-</li>
+<ul>
+<li>Dirección IP: <code>192.168.1.10</code></li>
 <li>Dominio inverso: <code>10.1.168.192.in-addr.arpa</code></li>
-<li>Registro DNS:</li>
+<li>
+<p>Registro DNS:</p>
+<p><code>10.1.168.192.in-addr.arpa. IN PTR www.example.com.</code></p>
+</li>
 </ul>
 </li>
 </ul>
-<pre><code class="language-plaintext">10.1.168.192.in-addr.arpa. IN PTR www.example.com.
-</code></pre>
 <h3 id="comparacion-entre-dominio-directo-e-inverso"><strong>Comparación entre Dominio Directo e Inverso</strong><a class="headerlink" href="#comparacion-entre-dominio-directo-e-inverso" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6164,8 +6142,8 @@
 <td>Utiliza registros <strong>PTR</strong> (Pointer Record).</td>
 </tr>
 <tr>
-<td>Ejemplo: <code>www.example.com → 192.168.1.1</code>.</td>
-<td>Ejemplo: <code>192.168.1.1 → www.example.com</code>.</td>
+<td>Ejemplo:<br> <code>www.example.com → 192.168.1.1</code>.</td>
+<td>Ejemplo: <br><code>192.168.1.1 → www.example.com</code>.</td>
 </tr>
 <tr>
 <td>Es el uso más frecuente del DNS.</td>
