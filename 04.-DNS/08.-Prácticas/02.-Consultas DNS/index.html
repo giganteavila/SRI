@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../03.-Uso%20de%20comandos%20DNS/">
+        <link rel="prev" href="../01.-Archivos%20de%20Zona%20DNS/">
       
       
-        <link rel="next" href="../../99.-Enlaces%20de%20inter%C3%A9s/">
+        <link rel="next" href="../03.-Archivos%20de%20Zona%20DNS/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>04.-DNS con Ubuntu Server - SRI</title>
+        <title>02.-Consultas DNS - SRI</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objetivo" class="md-skip">
+        <a href="#dig" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              04.-DNS con Ubuntu Server
+              02.-Consultas DNS
             
           </span>
         </div>
@@ -5427,69 +5427,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../01.-Consultas%20DNS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    01.-Consultas DNS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    02.-Archivos de Zona DNS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    03.-Uso de comandos DNS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -5504,7 +5441,7 @@
           
   
   <span class="md-ellipsis">
-    04.-DNS con Ubuntu Server
+    02.-Consultas DNS
   </span>
   
 
@@ -5515,7 +5452,7 @@
         
   
   <span class="md-ellipsis">
-    04.-DNS con Ubuntu Server
+    02.-Consultas DNS
   </span>
   
 
@@ -5535,45 +5472,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#dig" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivo
+      dig
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#especificaciones-de-la-red" class="md-nav__link">
+  <a href="#nslookup" class="md-nav__link">
     <span class="md-ellipsis">
-      Especificaciones de la Red
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-de-pasos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resumen de Pasos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplos-de-comandos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplos de Comandos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#capturas-requeridas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Capturas Requeridas
+      nslookup
     </span>
   </a>
   
@@ -5583,6 +5493,69 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03.-Archivos de Zona DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04.-Uso de comandos DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05.-DNS con Ubuntu Server
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -5986,45 +5959,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#dig" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivo
+      dig
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#especificaciones-de-la-red" class="md-nav__link">
+  <a href="#nslookup" class="md-nav__link">
     <span class="md-ellipsis">
-      Especificaciones de la Red
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-de-pasos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resumen de Pasos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplos-de-comandos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplos de Comandos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#capturas-requeridas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Capturas Requeridas
+      nslookup
     </span>
   </a>
   
@@ -6045,135 +5991,55 @@
                   
 
 
-  <h1>04.-DNS con Ubuntu Server</h1>
+  <h1>02.-Consultas DNS</h1>
 
-<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
-<p>Configurar una red con servidores y clientes <strong>DNS</strong> utilizando <strong>Ubuntu Server</strong> en máquinas virtuales. Se debe construir una red DNS funcional basada en las siguientes especificaciones.</p>
-<hr />
-<h2 id="especificaciones-de-la-red">Especificaciones de la Red<a class="headerlink" href="#especificaciones-de-la-red" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Estructura de la red</strong>:</li>
-<li><strong>Cuatro máquinas virtuales</strong>: M1, M2, M3 y M4 (todas con Ubuntu Server).</li>
-<li><strong>Conexión de red</strong>:<ul>
-<li>M1: Dos tarjetas de red, una conectada a <strong>NAT</strong> para acceso a internet y otra al segmento de red virtual.</li>
-<li>M2, M3 y M4: Una tarjeta de red conectada al segmento de red virtual.</li>
-</ul>
-</li>
-<li>
-<p><strong>Direcciones IP</strong>:</p>
+<h2 id="dig"><code>dig</code><a class="headerlink" href="#dig" title="Permanent link">&para;</a></h2>
+<p>dig es una herramienta que permite hacer consultas a un servidor DNS desde la línea de comandos, es el sustituto de los programas <code>nslookup</code> y <code>host</code>. La sintaxis es:</p>
+<pre><code class="language-bash">dig [-t tipo de registro] [@servidor DNS] Consulta DNS
+</code></pre>
+<p>El tipo de registro por defecto es ADDRESS y el servidor DNS por defecto es el definido en <code>/etc/resolv.conf</code>.</p>
+<p>Nota: si no funciona el comando dig, instalar el paquete <code>dnsutils</code> que lo incluye.</p>
+<h2 id="nslookup"><code>nslookup</code><a class="headerlink" href="#nslookup" title="Permanent link">&para;</a></h2>
+<p><a href="https://axarnet.es/blog/que-es-nslookup">Como realizar consultas DNS con el nslookup de Windows</a></p>
+<p>Utilizando el comando dig/nslookup realiza las siguientes consultas al servidor DNS:</p>
 <ul>
-<li>Automática para la conexión NAT de M1.</li>
-<li>Direcciones fijas para todas las demás conexiones.</li>
+<li>Preguntas a registros del tipo A: Obtén la dirección ip de los siguientes dominios:</li>
 </ul>
-</li>
-<li>
-<p><strong>Sistema DNS</strong>:</p>
-</li>
-<li><strong>Dominio</strong>: <code>2asir.edu</code></li>
-<li><strong>Nombres canónicos</strong>:<ul>
-<li>M1: <code>ns1.2asir.edu</code></li>
-<li>M2: <code>ns2.2asir.edu</code></li>
-<li>M3: <code>pc01.2asir.edu</code></li>
-<li>M4: <code>pc02.2asir.edu</code></li>
-</ul>
-</li>
-<li><strong>Alias</strong>:<ul>
-<li><code>ns1</code> también será <code>www</code> y <code>servidor</code>.</li>
-<li><code>ns2</code> también será <code>pcprof</code>.</li>
-</ul>
-</li>
-<li><strong>Servidores DNS</strong>:<ul>
-<li><code>ns1</code>: Servidor DNS maestro.</li>
-<li><code>ns2</code>: Servidor DNS esclavo, que sincronizará con <code>ns1</code>.</li>
-</ul>
-</li>
-<li>Todas las máquinas usarán como servidores de nombres a <code>ns1</code> y <code>ns2</code>.</li>
-<li>Las consultas a nombres no resueltos deben redirigirse a un servidor DNS de internet (configurable).</li>
-<li>Las consultas al sistema DNS montado deben ser posibles <strong>solo desde la red local</strong>.</li>
-</ol>
-<hr />
-<h2 id="resumen-de-pasos">Resumen de Pasos<a class="headerlink" href="#resumen-de-pasos" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Configuración de Red</strong>:</li>
-<li>Asigna direcciones IP estáticas para las conexiones virtuales.</li>
-<li>
-<p>Establece los nombres (<code>/etc/hostname</code>) y actualiza <code>/etc/hosts</code>.</p>
-</li>
-<li>
-<p><strong>Instalación de <code>bind9</code></strong>:</p>
-</li>
-<li>Instala <code>bind9</code> en <code>ns1</code> y <code>ns2</code>.</li>
-<li>
-<p>En M2, usa conexión NAT temporal para descargar e instalar <code>bind9</code>.</p>
-</li>
-<li>
-<p><strong>Configuración del Servidor Primario (<code>ns1</code>)</strong>:
-   a. Edita <code>/etc/bind/named.conf.local</code> para definir las zonas directa e inversa. Incluye restricciones de consulta con <code>allow-query</code>.
-   b. Edita <code>/etc/bind/named.conf.options</code> para configurar redireccionamiento de consultas no resueltas (<code>forwarders</code>).
-   c. Valida la configuración con <code>named-checkconf</code>.
-   d. Crea archivos de base de datos para:</p>
+<pre><code class="language-bash">    www.iesromerovargas.com
+    www.us.es
+    es.wikipedia.org
+    www.ubuntu.com
+</code></pre>
 <ul>
-<li><strong>Zona directa</strong>: Define registros SOA, NS, A y CNAME.</li>
-<li><strong>Zona inversa</strong>: Define registros SOA, NS y PTR.
-    e. Valida los archivos con <code>named-checkzone</code>.
-    f. Reinicia el servicio con <code>/etc/init.d/bind9 restart</code>.</li>
+<li>Preguntas a registros tipo NS: Obtén la dirección y los servidor DNS que corresponden a los siguientes dominios:</li>
 </ul>
-</li>
-<li>
-<p><strong>Configuración del Servidor Secundario (<code>ns2</code>)</strong>:
-   a. Edita <code>/etc/bind/named.conf.local</code> para definir las zonas como <code>slave</code> e incluye la IP del maestro (<code>masters</code>).
-   b. No es necesario crear archivos de zona; se sincronizan automáticamente.</p>
-</li>
-<li>
-<p><strong>Configuración de Clientes</strong>:</p>
-</li>
-<li>
-<p>Edita <code>/etc/resolv.conf</code> en cada máquina para configurar los servidores DNS.</p>
-</li>
-<li>
-<p><strong>Pruebas del Sistema</strong>:</p>
-</li>
-<li>Realiza consultas con <code>nslookup</code>, <code>dig</code>, y <code>ping</code> desde los clientes.</li>
-<li>
-<p>Simula fallos deteniendo <code>ns1</code> y verifica que <code>ns2</code> responde correctamente.</p>
-</li>
-<li>
-<p><strong>Añadir Nueva Máquina (<code>pc03.2asir.edu</code>)</strong>:</p>
-</li>
-<li>Indica qué archivos, líneas y máquinas deben modificarse para incluir esta nueva máquina.</li>
-</ol>
-<hr />
-<h2 id="ejemplos-de-comandos">Ejemplos de Comandos<a class="headerlink" href="#ejemplos-de-comandos" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Validación de Configuración</strong>:</li>
-</ol>
-<p><code>bash
-   named-checkconf
-   named-checkzone 2asir.edu /etc/bind/db.2asir.edu</code></p>
-<ol>
-<li><strong>Reiniciar el Servicio</strong>:</li>
-</ol>
-<p><code>bash
-   sudo /etc/init.d/bind9 restart</code></p>
-<ol>
-<li><strong>Consulta desde Clientes</strong>:</li>
-</ol>
-<p><code>bash
-   nslookup www.2asir.edu
-   nslookup pc03.2asir.edu
-   dig pc02.2asir.edu</code></p>
-<hr />
-<h2 id="capturas-requeridas">Capturas Requeridas<a class="headerlink" href="#capturas-requeridas" title="Permanent link">&para;</a></h2>
-<p>Incluye las siguientes capturas como evidencia de configuración y pruebas:</p>
-<ol>
-<li>Instalación de <code>bind9</code> exitosa.</li>
-<li>Configuración de <code>/etc/bind/named.conf.local</code> y <code>/etc/bind/named.conf.options</code>.</li>
-<li>Archivos de base de datos para zonas directa e inversa.</li>
-<li>Comandos de validación (<code>named-checkconf</code>, <code>named-checkzone</code>).</li>
-<li>Reinicio del servicio DNS.</li>
-<li>Consultas exitosas desde clientes (<code>nslookup</code>, <code>ping</code>).</li>
-<li>Pruebas de sincronización y respuesta del servidor secundario tras detener <code>ns1</code>.</li>
-</ol>
+<pre><code>dominio raíz
+com
+org
+es
+us.es
+wikipedia.org
+ubuntu.com
+</code></pre>
+<ul>
+<li>Preguntas a registros MX: Obtén el nombre y la dirección del ordenador al que se mandan los correos que se envían a los siguientes dominios:</li>
+</ul>
+<pre><code>iesromerovargas.com
+us.es
+wikipedia.org
+ubuntu.com
+</code></pre>
+<ul>
+<li>¿Qué tipo de registro es el que resuelve las siguientes direcciones:</li>
+</ul>
+<pre><code>www.josedomingo.org
+informatica.gonzalonazareno.org
+</code></pre>
+<p>Indica el nombre canónico de las máquinas a las que corresponden.</p>
+<ul>
+<li>Comprueba la dirección ip y el servidor DNS asociado a <code>dit.gonzalonazareno.org</code>, desde dentro de la intranet del ciclo formativo y desde fuera. ¿Cuáles son las diferencias? ¿A qué crees que es debido?</li>
+<li>Pregunta sobre resolución inversa: En clase, ¿a qué nombre corresponde la dirección ip <code>172.30.1.1</code>?</li>
+</ul>
 
 
 

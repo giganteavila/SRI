@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../01.-Consultas%20DNS/">
+        <link rel="prev" href="../02.-Consultas%20DNS/">
       
       
-        <link rel="next" href="../03.-Uso%20de%20comandos%20DNS/">
+        <link rel="next" href="../04.-Uso%20de%20comandos%20DNS/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>02.-Archivos de Zona DNS - SRI</title>
+        <title>03.-Archivos de Zona DNS - SRI</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02.-Archivos de Zona DNS
+              03.-Archivos de Zona DNS
             
           </span>
         </div>
@@ -5430,11 +5430,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Consultas%20DNS/" class="md-nav__link">
+      <a href="../02.-Consultas%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    01.-Consultas DNS
+    02.-Consultas DNS
   </span>
   
 
@@ -5462,7 +5462,7 @@
           
   
   <span class="md-ellipsis">
-    02.-Archivos de Zona DNS
+    03.-Archivos de Zona DNS
   </span>
   
 
@@ -5473,7 +5473,7 @@
         
   
   <span class="md-ellipsis">
-    02.-Archivos de Zona DNS
+    03.-Archivos de Zona DNS
   </span>
   
 
@@ -5583,11 +5583,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
+      <a href="../04.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    03.-Uso de comandos DNS
+    04.-Uso de comandos DNS
   </span>
   
 
@@ -5604,11 +5604,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
+      <a href="../05.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    04.-DNS con Ubuntu Server
+    05.-DNS con Ubuntu Server
   </span>
   
 
@@ -6105,7 +6105,7 @@
                   
 
 
-  <h1>02.-Archivos de Zona DNS</h1>
+  <h1>03.-Archivos de Zona DNS</h1>
 
 <h2 id="instrucciones">Instrucciones<a class="headerlink" href="#instrucciones" title="Permanent link">&para;</a></h2>
 <p>Crea los <strong>archivos de zona directa e inversa</strong> para la siguiente red.</p>
@@ -6113,7 +6113,6 @@
 <li><strong>Primera parte</strong>: No uses <code>$ORIGIN</code>, <code>@</code> ni huecos en blanco. Usa registros <strong>CNAME</strong> siempre que sea posible.</li>
 <li><strong>Segunda parte</strong>: Repite el ejercicio utilizando <code>$ORIGIN</code>, <code>$TTL</code>, <code>@</code> y huecos en blanco para simplificar los archivos.</li>
 </ol>
-<hr />
 <h2 id="especificaciones-de-la-red">Especificaciones de la Red<a class="headerlink" href="#especificaciones-de-la-red" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -6123,64 +6122,64 @@
 <p><strong>Ubicación del archivo de zona</strong>: En el ordenador <code>server.prueba.local</code></p>
 </li>
 <li>
-<p>Servidores DNS</p>
-</li>
-</ul>
-<p>:</p>
+<p>Servidores DNS:</p>
 <ul>
-<li>
-<p><strong>Primario</strong>: <code>ns1.prueba.local</code></p>
-</li>
-<li>
-<dl>
-<dt>Secundario</dt>
-<dd></dd>
-</dl>
-<p><code>ns2.prueba.local</code></p>
-<ul>
+<li><strong>Primario</strong>: <code>ns1.prueba.local</code></li>
+<li><strong>Secundario</strong>: <code>ns2.prueba.local</code></li>
 <li><strong>Actualización</strong>: Cada día.</li>
 <li><strong>Reintento</strong>: Si fracasa, reintenta cada hora.</li>
 <li><strong>Caducidad</strong>: La información tiene validez durante tres días.</li>
+<li><strong>Registros en caché</strong>: Validez de 12 horas.</li>
+<li><strong>Servidor de correo</strong>: <code>mail.prueba.local</code></li>
 </ul>
-</li>
-<li>
-<p><strong>Registros en caché</strong>: Validez de 12 horas.</p>
-</li>
-<li>
-<p><strong>Servidor de correo</strong>: <code>mail.prueba.local</code></p>
 </li>
 </ul>
 <h3 id="listado-de-nombres-e-ips">Listado de Nombres e IPs<a class="headerlink" href="#listado-de-nombres-e-ips" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>IP: 192.168.1.1</strong></li>
+<li><strong>IP: 192.168.1.1</strong><ul>
 <li><code>server.prueba.local</code></li>
 <li><code>dns1.prueba.local</code></li>
 <li><code>mail.prueba.local</code></li>
 <li><code>www.prueba.local</code></li>
 <li><code>ftp.prueba.local</code></li>
-<li><strong>IP: 192.168.1.2</strong></li>
+</ul>
+</li>
+<li><strong>IP: 192.168.1.2</strong><ul>
 <li><code>aux.prueba.local</code></li>
 <li><code>dns2.prueba.local</code></li>
 <li><code>www2.prueba.local</code></li>
-<li><strong>IP: 192.168.1.10x</strong> (x de 1 a 7)</li>
+</ul>
+</li>
+<li><strong>IP: 192.168.1.10x</strong> (x de 1 a 7)<ul>
 <li><code>pc0x.prueba.local</code> (donde <code>x</code> es el número del equipo, de 1 a 7).</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h2 id="ejercicio">Ejercicio<a class="headerlink" href="#ejercicio" title="Permanent link">&para;</a></h2>
 <h3 id="primera-parte-sin-origin-ni-huecos-en-blanco">Primera Parte: Sin <code>$ORIGIN</code>, <code>@</code> ni Huecos en Blanco<a class="headerlink" href="#primera-parte-sin-origin-ni-huecos-en-blanco" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Zona Directa</strong>:</li>
+<li><strong>Zona Directa</strong>:<ul>
 <li>Define los registros A para los nombres e IPs proporcionados.</li>
 <li>Utiliza registros CNAME siempre que sea posible para alias.</li>
-<li><strong>Zona Inversa</strong>:</li>
+</ul>
+</li>
+<li><strong>Zona Inversa</strong>:<ul>
 <li>Crea los registros PTR para cada IP, resolviendo a sus respectivos nombres.</li>
+</ul>
+</li>
 </ol>
-<hr />
 <h3 id="segunda-parte-usando-origin-ttl-y-huecos-en-blanco">Segunda Parte: Usando <code>$ORIGIN</code>, <code>$TTL</code>, <code>@</code> y Huecos en Blanco<a class="headerlink" href="#segunda-parte-usando-origin-ttl-y-huecos-en-blanco" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Zona Directa</strong>:</li>
+<li><strong>Zona Directa</strong>:<ul>
 <li>Simplifica la configuración utilizando <code>$ORIGIN</code> para el dominio base, <code>$TTL</code> para el tiempo de validez, y <code>@</code> para representar el dominio raíz.</li>
+<li>
+<ol>
 <li><strong>Zona Inversa</strong>:</li>
+</ol>
+</li>
+</ul>
+</li>
 <li>Repite el archivo de zona inversa optimizando con <code>$ORIGIN</code> y huecos en blanco para evitar repeticiones innecesarias.</li>
 </ol>
 <hr />

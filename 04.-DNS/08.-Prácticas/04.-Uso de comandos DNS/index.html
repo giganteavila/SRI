@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../01.-Archivos%20de%20Zona%20DNS/">
+        <link rel="prev" href="../03.-Archivos%20de%20Zona%20DNS/">
       
       
-        <link rel="next" href="../02.-Archivos%20de%20Zona%20DNS/">
+        <link rel="next" href="../05.-DNS%20con%20Ubuntu%20Server/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>01.-Consultas DNS - SRI</title>
+        <title>04.-Uso de comandos DNS - SRI</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dig" class="md-skip">
+        <a href="#actividades" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01.-Consultas DNS
+              04.-Uso de comandos DNS
             
           </span>
         </div>
@@ -5427,6 +5427,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../02.-Consultas%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02.-Consultas DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03.-Archivos de Zona DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -5441,7 +5483,7 @@
           
   
   <span class="md-ellipsis">
-    01.-Consultas DNS
+    04.-Uso de comandos DNS
   </span>
   
 
@@ -5452,7 +5494,7 @@
         
   
   <span class="md-ellipsis">
-    01.-Consultas DNS
+    04.-Uso de comandos DNS
   </span>
   
 
@@ -5472,20 +5514,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dig" class="md-nav__link">
+  <a href="#actividades" class="md-nav__link">
     <span class="md-ellipsis">
-      dig
+      Actividades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#nslookup" class="md-nav__link">
-    <span class="md-ellipsis">
-      nslookup
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5505,53 +5553,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../05.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Archivos de Zona DNS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    03.-Uso de comandos DNS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    04.-DNS con Ubuntu Server
+    05.-DNS con Ubuntu Server
   </span>
   
 
@@ -5959,20 +5965,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dig" class="md-nav__link">
+  <a href="#actividades" class="md-nav__link">
     <span class="md-ellipsis">
-      dig
+      Actividades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#nslookup" class="md-nav__link">
-    <span class="md-ellipsis">
-      nslookup
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5991,55 +6003,68 @@
                   
 
 
-  <h1>01.-Consultas DNS</h1>
+  <h1>04.-Uso de comandos DNS</h1>
 
-<h2 id="dig"><code>dig</code><a class="headerlink" href="#dig" title="Permanent link">&para;</a></h2>
-<p>dig es una herramienta que permite hacer consultas a un servidor DNS desde la línea de comandos, es el sustituto de los programas <code>nslookup</code> y <code>host</code>. La sintaxis es:</p>
-<pre><code class="language-bash">dig [-t tipo de registro] [@servidor DNS] Consulta DNS
-</code></pre>
-<p>El tipo de registro por defecto es ADDRESS y el servidor DNS por defecto es el definido en <code>/etc/resolv.conf</code>.</p>
-<p>Nota: si no funciona el comando dig, instalar el paquete <code>dnsutils</code> que lo incluye.</p>
-<h2 id="nslookup"><code>nslookup</code><a class="headerlink" href="#nslookup" title="Permanent link">&para;</a></h2>
-<p><a href="https://axarnet.es/blog/que-es-nslookup">Como realizar consultas DNS con el nslookup de Windows</a></p>
-<p>Utilizando el comando dig/nslookup realiza las siguientes consultas al servidor DNS:</p>
+<p>Para realizar estos ejercicios puedes usar los comandos <strong><code>dig</code></strong>, <strong><code>nslookup</code></strong> o <strong><code>host</code></strong>, ya que tienen funcionalidades similares.</p>
+<ul>
+<li>Instrucciones</li>
+</ul>
+<p>:</p>
 <ol>
-<li>Preguntas a registros del tipo A: Obtén la dirección ip de los siguientes dominios:</li>
+<li>Muestra el comando ejecutado para cada ejercicio.</li>
+<li>Acompaña cada comando con una <strong>verificación</strong> del resultado obtenido. Puedes incluir una imagen del terminal o el texto del resultado.</li>
 </ol>
-<pre><code class="language-bash">www.iesromerovargas.com
-www.us.es
-es.wikipedia.org
-www.ubuntu.com
-</code></pre>
+<hr />
+<h2 id="actividades"><strong>Actividades</strong><a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Preguntas a registros tipo NS: Obtén la dirección y los servidor DNS que corresponden a los siguientes dominios:</li>
+<li><strong>Realiza un tutorial completo de cada uno de los comandos que has utilizado</strong>.</li>
+<li>Describe cómo funcionan <code>dig</code>, <code>nslookup</code> y <code>host</code>.</li>
+<li>Incluye ejemplos prácticos y parámetros importantes.</li>
+<li><strong>Determina la dirección IP de la máquina <code>www.mec.es</code></strong>.</li>
+<li><strong>Averigua qué máquina tiene asignada la dirección IP <code>193.110.128.200</code></strong>.</li>
+<li><strong>Con relación al dominio <code>abc.es</code></strong>:</li>
+<li>Averigua el nombre y la dirección IP de los servidores DNS.</li>
+<li>Identifica cuál es el servidor <strong>primario</strong> y cuáles son <strong>secundarios</strong>.</li>
+<li><strong>Obtén el registro SOA del dominio <code>abc.es</code></strong>:</li>
+<li>Haz la consulta al DNS local de la máquina.</li>
+<li>Haz la consulta directamente al servidor <strong>primario</strong> del dominio <code>abc.es</code>.</li>
+<li>Comprueba y analiza las diferencias: ¿cuál es información autorizada y cuál no?</li>
+<li><strong>Si tuvieras un problema con el DNS de <code>abc.es</code></strong>:</li>
+<li>¿A qué dirección de correo electrónico deberías escribir al administrador?</li>
+<li><strong>Determina el nombre y la dirección IP del servidor de correo mencionado en el punto anterior</strong>.</li>
+<li><strong>Consulta el tiempo de almacenamiento en caché (TTL) para la dirección IP de <code>www.vanguardia.es</code></strong>:</li>
+<li>Pregunta varias veces a tu DNS local y observa los cambios en el TTL.</li>
+<li><strong>Repite la consulta anterior a un servidor DNS con la dirección IP <code>163.117.139.253</code></strong>:</li>
+<li>Verifica en el paquete de respuesta que este servidor no acepta consultas en modo recursivo.</li>
+<li><strong>Averigua cuántas máquinas están realizando balanceo de carga para el servidor web <code>www.elmundo.es</code></strong>:<ul>
+<li>¿Obtienes siempre las mismas máquinas? ¿En el mismo orden?</li>
+</ul>
+</li>
+<li><strong>Consulta iterativamente para obtener la dirección IP de <code>www.timesonline.co.uk</code></strong>:<ul>
+<li>Describe los pasos que seguiste.</li>
+</ul>
+</li>
+<li><strong>Realiza lo mismo que en el ejercicio anterior usando la opción <code>+trace</code> de <code>dig</code></strong>:<ul>
+<li>Compara los resultados obtenidos.</li>
+</ul>
+</li>
+<li><strong>Obtén información sobre los servidores de correo del dominio <code>it.uc3m.es</code></strong>:<ul>
+<li>Determina el nombre y la dirección IP de las máquinas.</li>
+</ul>
+</li>
+<li><strong>Obtén todos los registros de recurso de la zona <code>lab.it.uc3m.es</code></strong>.</li>
+<li><strong>Obtén la dirección IP de <code>lavadora.gonzalonazareno.org</code></strong>.</li>
+<li><strong>Averigua a qué equipo está redirigido <code>informatica.gonzalonazareno.org</code></strong>.</li>
+<li><strong>Determina los nombres de los servidores DNS del dominio <code>gonzalonazareno.org</code></strong>.</li>
+<li><strong>Averigua a qué equipo se envían los correos <code>@gonzalonazareno.org</code></strong>.</li>
+<li><strong>Consulta a qué nombre está apuntando la dirección IP <code>80.59.1.152</code></strong>.</li>
 </ol>
-<pre><code>dominio raíz
-com
-org
-es
-us.es
-wikipedia.org
-ubuntu.com
-</code></pre>
-<ol>
-<li>Preguntas a registros MX: Obtén el nombre y la dirección del ordenador al que se mandan los correos que se envían a los siguientes dominios:</li>
-</ol>
-<pre><code>iesromerovargas.com
-us.es
-wikipedia.org
-ubuntu.com
-</code></pre>
-<ol>
-<li>¿Qué tipo de registro es el que resuelve las siguientes direcciones:</li>
-</ol>
-<pre><code>www.josedomingo.org
-informatica.gonzalonazareno.org
-</code></pre>
-<p>Indica el nombre canónico de las máquinas a las que corresponden.</p>
-<ol>
-<li>Comprueba la dirección ip y el servidor DNS asociado a <code>dit.gonzalonazareno.org</code>, desde dentro de la intranet del ciclo formativo y desde fuera. ¿Cuáles son las diferencias? ¿A qué crees que es debido?</li>
-<li>Pregunta sobre resolución inversa: En clase, ¿a qué nombre corresponde la dirección ip <code>172.30.1.1</code>?</li>
-</ol>
+<hr />
+<h3 id="entrega"><strong>Entrega</strong><a class="headerlink" href="#entrega" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Responde a cada punto con el comando utilizado y los resultados obtenidos.</li>
+<li>Incluye capturas de pantalla o el texto de los resultados para justificar tus respuestas.</li>
+</ul>
 
 
 
