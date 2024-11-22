@@ -6116,9 +6116,9 @@
 <p><strong>Configuración del Servidor Primario (<code>ns1</code>)</strong>:</p>
 <ol>
 <li>Edita <code>/etc/bind/named.conf.local</code> para definir las zonas directa e inversa. Incluye restricciones de consulta con <code>allow-query</code>.</li>
-<li>b. Edita <code>/etc/bind/named.conf.options</code> para configurar redireccionamiento de consultas no resueltas (<code>forwarders</code>).</li>
-<li>c. Valida la configuración con <code>named-checkconf</code>.</li>
-<li>d. Crea archivos de base de datos para:<ul>
+<li>Edita <code>/etc/bind/named.conf.options</code> para configurar redireccionamiento de consultas no resueltas (<code>forwarders</code>).</li>
+<li>Valida la configuración con <code>named-checkconf</code>.</li>
+<li>Crea archivos de base de datos para:<ul>
 <li><strong>Zona directa</strong>: Define registros SOA, NS, A y CNAME.</li>
 <li><strong>Zona inversa</strong>: Define registros SOA, NS y PTR.</li>
 </ul>
