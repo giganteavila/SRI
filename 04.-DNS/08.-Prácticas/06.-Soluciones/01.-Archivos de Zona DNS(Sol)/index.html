@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../02.-Consultas%20DNS%20%28Sol%29/">
+        <link rel="prev" href="../../05.-DNS%20con%20Ubuntu%20Server/">
       
       
-        <link rel="next" href="../../../99.-Enlaces%20de%20inter%C3%A9s/">
+        <link rel="next" href="../02.-Consultas%20DNS%20%28Sol%29/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>02.-Consultas DNS - SRI</title>
+        <title>01.-Archivos de Zona DNS(Sol) - SRI</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dig" class="md-skip">
+        <a href="#analisis-de-archivos-de-zona-dns" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02.-Consultas DNS
+              01.-Archivos de Zona DNS(Sol)
             
           </span>
         </div>
@@ -5524,8 +5524,6 @@
       
         
       
-        
-      
     
     
       
@@ -5561,18 +5559,85 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    01.-Archivos de Zona DNS(Sol)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    01.-Archivos de Zona DNS
+    01.-Archivos de Zona DNS(Sol)
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-de-zona-directa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo de Zona Directa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-de-zona-inversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo de Zona Inversa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5594,81 +5659,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    02.-Consultas DNS
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    02.-Consultas DNS
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dig" class="md-nav__link">
-    <span class="md-ellipsis">
-      dig
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nslookup" class="md-nav__link">
-    <span class="md-ellipsis">
-      nslookup
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6072,6 +6062,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6080,18 +6072,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dig" class="md-nav__link">
+  <a href="#archivo-de-zona-directa" class="md-nav__link">
     <span class="md-ellipsis">
-      dig
+      Archivo de Zona Directa
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nslookup" class="md-nav__link">
+  <a href="#archivo-de-zona-inversa" class="md-nav__link">
     <span class="md-ellipsis">
-      nslookup
+      Archivo de Zona Inversa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
     </span>
   </a>
   
@@ -6112,54 +6113,177 @@
                   
 
 
-  <h1>02.-Consultas DNS</h1>
-
-<h2 id="dig"><code>dig</code><a class="headerlink" href="#dig" title="Permanent link">&para;</a></h2>
-<p>dig es una herramienta que permite hacer consultas a un servidor DNS desde la línea de comandos, es el sustituto de los programas <code>nslookup</code> y <code>host</code>. La sintaxis es:</p>
-<pre><code class="language-bash">dig [-t tipo de registro] [@servidor DNS] Consulta DNS
+<h1 id="analisis-de-archivos-de-zona-dns">Análisis de Archivos de Zona DNS<a class="headerlink" href="#analisis-de-archivos-de-zona-dns" title="Permanent link">&para;</a></h1>
+<h2 id="archivo-de-zona-directa"><strong>Archivo de Zona Directa</strong><a class="headerlink" href="#archivo-de-zona-directa" title="Permanent link">&para;</a></h2>
+<pre><code class="language-plaintext">; Start of Authority (SOA) record
+foo.com. IN SOA dns.foo.com. dnsowner.foo.com. ( ; 
 </code></pre>
-<p>El tipo de registro por defecto es ADDRESS y el servidor DNS por defecto es el definido en <code>/etc/resolv.conf</code>.</p>
-<p>Nota: si no funciona el comando dig, instalar el paquete <code>dnsutils</code> que lo incluye.</p>
-<h2 id="nslookup"><code>nslookup</code><a class="headerlink" href="#nslookup" title="Permanent link">&para;</a></h2>
-<p><a href="https://axarnet.es/blog/que-es-nslookup">Como realizar consultas DNS con el nslookup de Windows</a></p>
-<p>Utilizando el comando dig/nslookup realiza las siguientes consultas al servidor DNS:</p>
 <ul>
-<li>Preguntas a registros del tipo A: Obtén la dirección ip de los siguientes dominios:</li>
+<li><code>foo.com.</code>: El dominio raíz para el archivo de zona.</li>
+<li><code>IN SOA</code>: Especifica el registro SOA, que indica el servidor autoritativo principal para este dominio.</li>
+<li><code>dns.foo.com.</code>: Nombre del servidor DNS principal del dominio.</li>
+<li><code>dnsowner.foo.com.</code>: Dirección de correo del administrador del dominio, reemplazando el primer punto por <code>@</code> (<code>dnsowner@foo.com</code>).</li>
 </ul>
-<pre><code class="language-bash">    www.iesromerovargas.com
-    www.us.es
-    es.wikipedia.org
-    www.ubuntu.com
+<pre><code class="language-plaintext"> 19960105 ; 
 </code></pre>
 <ul>
-<li>Preguntas a registros tipo NS: Obtén la dirección y los servidor DNS que corresponden a los siguientes dominios:</li>
+<li><code>19960105</code>: Número de serie del archivo de zona. Usado para identificar la versión del archivo; incrementa con cada actualización.</li>
 </ul>
-<pre><code>dominio raíz
-com
-org
-es
-us.es
-wikipedia.org
-ubuntu.com
+<pre><code class="language-plaintext"> 10800 ; 
 </code></pre>
 <ul>
-<li>Preguntas a registros MX: Obtén el nombre y la dirección del ordenador al que se mandan los correos que se envían a los siguientes dominios:</li>
+<li><code>10800</code>: Tiempo de actualización (refresh) en segundos. Indica cada cuánto tiempo los servidores secundarios deben consultar por cambios.</li>
 </ul>
-<pre><code>iesromerovargas.com
-us.es
-wikipedia.org
-ubuntu.com
+<pre><code class="language-plaintext"> 3600 ; 
 </code></pre>
 <ul>
-<li>¿Qué tipo de registro es el que resuelve las siguientes direcciones:</li>
+<li><code>3600</code>: Tiempo de reintento (retry) en segundos. Especifica cuánto esperar antes de intentar nuevamente si la actualización falla.</li>
 </ul>
-<pre><code>www.josedomingo.org
-informatica.gonzalonazareno.org
+<pre><code class="language-plaintext"> 604800 ; 
 </code></pre>
-<p>Indica el nombre canónico de las máquinas a las que corresponden.</p>
 <ul>
-<li>Comprueba la dirección ip y el servidor DNS asociado a <code>dit.gonzalonazareno.org</code>, desde dentro de la intranet del ciclo formativo y desde fuera. ¿Cuáles son las diferencias? ¿A qué crees que es debido?</li>
-<li>Pregunta sobre resolución inversa: En clase, ¿a qué nombre corresponde la dirección ip <code>172.30.1.1</code>?</li>
+<li><code>604800</code>: Tiempo de expiración (expire) en segundos. Define cuánto tiempo los servidores secundarios deben considerar válidos los datos si no pueden actualizar.</li>
+</ul>
+<pre><code class="language-plaintext"> 86400 ) ; 
+</code></pre>
+<ul>
+<li><code>86400</code>: Tiempo de vida (TTL) predeterminado en segundos para los registros en esta zona.</li>
+</ul>
+<pre><code class="language-plaintext">; Name Server (NS) records.
+foo.com.    IN  NS  dns.foo.com. ;
+</code></pre>
+<ul>
+<li><code>foo.com. IN NS dns.foo.com.</code>: Registro NS que especifica que <code>dns.foo.com.</code> es un servidor de nombres para <code>foo.com.</code>.</li>
+</ul>
+<pre><code class="language-plaintext"> IN NS  dns2.foo.com. ;
+</code></pre>
+<ul>
+<li><code>dns2.foo.com.</code>: Segundo servidor de nombres para proporcionar redundancia.</li>
+</ul>
+<pre><code class="language-plaintext">; Mail Exchange (MX) records.
+foo.com.    IN  MX  20  mail.foo.com. ;
+</code></pre>
+<ul>
+<li><code>IN MX 20 mail.foo.com.</code>: Define un servidor de correo con prioridad 20 (menor prioridad = mayor preferencia).</li>
+</ul>
+<pre><code class="language-plaintext"> IN MX  40  mail2.foo.com. ;
+</code></pre>
+<ul>
+<li><code>IN MX 40 mail2.foo.com.</code>: Segundo servidor de correo con prioridad más baja.</li>
+</ul>
+<pre><code class="language-plaintext">; Address (A) records.
+localhost.foo.com.  IN  A   127.0.0.1 ;
+</code></pre>
+<ul>
+<li><code>localhost.foo.com.</code>: Dirección local del sistema para pruebas.</li>
+</ul>
+<pre><code class="language-plaintext">router.foo.com. IN  A   192.168.210.1 ;
+</code></pre>
+<ul>
+<li><code>router.foo.com.</code>: Dirección IP asignada al router.</li>
+</ul>
+<pre><code class="language-plaintext">dns.foo.com.    IN  A   192.168.210.2 ;
+</code></pre>
+<ul>
+<li><code>dns.foo.com.</code>: Dirección IP del servidor DNS principal.</li>
+</ul>
+<pre><code class="language-plaintext">mail2.foo.com.  IN  A   192.168.210.3 ;
+dns2.foo.com.   IN  A   192.168.210.3 ;
+</code></pre>
+<ul>
+<li><code>mail2.foo.com.</code> y <code>dns2.foo.com.</code> comparten la misma dirección IP (un solo servidor con ambas funciones).</li>
+</ul>
+<pre><code class="language-plaintext">mail.foo.com.   IN  A   192.168.210.4 ;
+</code></pre>
+<ul>
+<li><code>mail.foo.com.</code>: Dirección IP del servidor de correo con prioridad alta.</li>
+</ul>
+<pre><code class="language-plaintext">pc1.foo.com.    IN  A   192.168.210.5 ;
+pc2.foo.com.    IN  A   192.168.210.6 ;
+</code></pre>
+<ul>
+<li><code>pc1.foo.com.</code> y <code>pc2.foo.com.</code>: Direcciones IP asignadas a computadoras específicas en la red.</li>
+</ul>
+<pre><code class="language-plaintext">; Aliases in Canonical Name (CNAME) records.
+ftp.foo.com.    IN  CNAME    mail2.foo.com. ;
+</code></pre>
+<ul>
+<li><code>ftp.foo.com.</code>: Alias para <code>mail2.foo.com.</code>. Todas las consultas dirigidas a <code>ftp.foo.com.</code> se redirigen a <code>mail2.foo.com.</code>.</li>
+</ul>
+<pre><code class="language-plaintext">www.foo.com.    IN  CNAME   mail2.foo.com. ;
+sysman.foo.com.     IN  CNAME   pc2.foo.com. ;
+</code></pre>
+<ul>
+<li><code>www.foo.com.</code>: Alias para <code>mail2.foo.com.</code>.</li>
+<li><code>sysman.foo.com.</code>: Alias para <code>pc2.foo.com.</code>.</li>
+</ul>
+<hr />
+<h2 id="archivo-de-zona-inversa"><strong>Archivo de Zona Inversa</strong><a class="headerlink" href="#archivo-de-zona-inversa" title="Permanent link">&para;</a></h2>
+<pre><code class="language-plaintext">$ORIGIN 1.0.10.in-addr.arpa
+</code></pre>
+<ul>
+<li><code>$ORIGIN 1.0.10.in-addr.arpa</code>: Configura el dominio para la resolución inversa de direcciones IP en este bloque (<code>10.0.1.x</code>).</li>
+</ul>
+<pre><code class="language-plaintext">$TTL 86400
+</code></pre>
+<ul>
+<li><code>$TTL 86400</code>: Tiempo de vida predeterminado para los registros (1 día).</li>
+</ul>
+<pre><code class="language-plaintext">@ IN SOA dns1.example.com. hostmaster.example.com. (
+ 2001062501 ;   
+</code></pre>
+<ul>
+<li><code>@ IN SOA</code>: Registro SOA para la zona inversa.</li>
+<li><code>dns1.example.com.</code>: Servidor DNS principal.</li>
+<li><code>hostmaster.example.com.</code>: Dirección de correo del administrador.</li>
+<li><code>2001062501</code>: Número de serie del archivo de zona.</li>
+</ul>
+<pre><code class="language-plaintext"> 21600 ;    
+</code></pre>
+<ul>
+<li><code>21600</code>: Intervalo de actualización (6 horas).</li>
+</ul>
+<pre><code class="language-plaintext"> 3600 ; 
+</code></pre>
+<ul>
+<li><code>3600</code>: Intervalo de reintento (1 hora).</li>
+</ul>
+<pre><code class="language-plaintext"> 604800 ; 
+</code></pre>
+<ul>
+<li><code>604800</code>: Tiempo de expiración (1 semana).</li>
+</ul>
+<pre><code class="language-plaintext"> 86400 ) ; 
+</code></pre>
+<ul>
+<li><code>86400</code>: TTL predeterminado (1 día).</li>
+</ul>
+<pre><code class="language-plaintext"> IN NS  dns1.example.com. ;
+ IN NS  dns2.example.com. ;
+</code></pre>
+<ul>
+<li>Servidores de nombres autoritativos para esta zona inversa.</li>
+</ul>
+<pre><code class="language-plaintext">20  IN  PTR alice.example.com. ;
+</code></pre>
+<ul>
+<li><code>20 IN PTR alice.example.com.</code>: Dirección IP <code>10.0.1.20</code> se resuelve a <code>alice.example.com.</code>.</li>
+</ul>
+<pre><code class="language-plaintext">21  IN  PTR betty.example.com. ;
+22  IN  PTR charlie.example.com. ;
+23  IN  PTR doug.example.com. ;
+24  IN  PTR ernest.example.com. ;
+25  IN  PTR fanny.example.com.  ;
+</code></pre>
+<ul>
+<li>Mapas inversos para las direcciones IP <code>10.0.1.21</code> a <code>10.0.1.25</code>.</li>
+</ul>
+<hr />
+<h2 id="conclusion"><strong>Conclusión</strong><a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>El <strong>archivo de zona directa</strong> define cómo resolver nombres de dominio en direcciones IP (DNS directo).</li>
+<li>El <strong>archivo de zona inversa</strong> resuelve direcciones IP a nombres de dominio (DNS inverso). </li>
+<li>Ambos archivos son esenciales para una configuración DNS completa.</li>
 </ul>
 
 

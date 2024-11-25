@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../01.-Archivos%20de%20Zona%20DNS/">
+        <link rel="prev" href="../01.-Archivos%20de%20Zona%20DNS%28Sol%29/">
       
       
-        <link rel="next" href="../02.-Consultas%20DNS/">
+        <link rel="next" href="../../../99.-Enlaces%20de%20inter%C3%A9s/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -5524,8 +5524,6 @@
       
         
       
-        
-      
     
     
       
@@ -5564,11 +5562,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../01.-Archivos%20de%20Zona%20DNS%28Sol%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    01.-Archivos de Zona DNS
+    01.-Archivos de Zona DNS(Sol)
   </span>
   
 
@@ -5662,49 +5660,10 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#5-comprobacion-de-ip-y-servidor-dns-ditgonzalonazarenoorg" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Comprobación de IP y servidor DNS (dit.gonzalonazareno.org):
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-resolucion-inversa-ptr" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Resolución inversa (PTR):
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02.-Consultas%20DNS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    02.-Consultas DNS
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -6151,24 +6110,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#5-comprobacion-de-ip-y-servidor-dns-ditgonzalonazarenoorg" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Comprobación de IP y servidor DNS (dit.gonzalonazareno.org):
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-resolucion-inversa-ptr" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Resolución inversa (PTR):
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6251,19 +6192,19 @@
 <tr>
 <td>es</td>
 <td>dig NS es</td>
-<td>ns1.nic.es<br>ns2.nic.es<br>ns3.nic.es<br>ns4.nic.es<br>ns5.nic.es<br>ns6.nic.es<br>ns7.nic.es<br>ns8.nic.es<br></td>
-<td>194.69.254.1<br>194.69.254.2<br>194.69.254.3<br>194.69.254.4<br>194.69.254.5<br>194.69.254.6<br>194.69.254.7<br>194.69.254.8<br></td>
+<td>ns1.nic.es<br>ns2.nic.es<br>ns3.nic.es<br>ns4.nic.es<br>ns5.nic.es<br>ns6.nic.es<br>ns7.nic.es<br>ns8.nic.es</td>
+<td>194.69.254.1<br>194.69.254.2<br>194.69.254.3<br>194.69.254.4<br>194.69.254.5<br>194.69.254.6<br>194.69.254.7<br>194.69.254.8</td>
 </tr>
 <tr>
 <td>us.es</td>
 <td>dig NS us.es</td>
-<td>dns2.cica.es<br>chico.rediris.es<br>sun.rediris.es<br>jade.us.es<br>onix.us.es<br>dns1.cica.es<br></td>
+<td>dns2.cica.es<br>chico.rediris.es<br>sun.rediris.es<br>jade.us.es<br>onix.us.es<br>dns1.cica.es</td>
 <td>150.214.5.84<br>162.219.54.2<br>199.184.182.1<br>150.214.5.84<br>150.214.186.69<br>150.214.5.83</td>
 </tr>
 <tr>
 <td>wikipedia.org</td>
 <td>dig NS wikipedia.org</td>
-<td>ns0.wikimedia.org<br>ns1.wikimedia.org<br>ns2.wikimedia.org<br></td>
+<td>ns0.wikimedia.org<br>ns1.wikimedia.org<br>ns2.wikimedia.org</td>
 <td>208.80.154.238<br>208.80.153.231<br>198.35.27.27</td>
 </tr>
 <tr>
@@ -6309,6 +6250,7 @@
 </table>
 <hr />
 <h3 id="4-resolucion-de-registros-canonicos-cname"><strong>4. Resolución de registros canónicos (CNAME):</strong><a class="headerlink" href="#4-resolucion-de-registros-canonicos-cname" title="Permanent link">&para;</a></h3>
+<p>En los casos mencionados, los dominios <strong>www.josedomingo.org</strong> e <strong>informatica.gonzalonazareno.org</strong> son registros <strong>CNAME</strong> (Canonical Name) es decir, están configurados como alias de otro dominio. Esto significa que, en lugar de apuntar directamente a una dirección IP (como lo haría un registro <strong>A</strong>), redirigen hacia otro dominio que tiene su propio registro A o configuración.</p>
 <table>
 <thead>
 <tr>
@@ -6320,58 +6262,16 @@
 <tbody>
 <tr>
 <td><a href="http://www.josedomingo.org">www.josedomingo.org</a></td>
-<td>dig CNAME <a href="http://www.josedomingo.org">www.josedomingo.org</a></td>
-<td></td>
+<td>dig CNAME www.josedomingo.org</td>
+<td>endor.josedomingo.org.</td>
 </tr>
 <tr>
 <td>informatica.gonzalonazareno.org</td>
 <td>dig CNAME informatica.gonzalonazareno.org</td>
-<td></td>
+<td>satelite.gonzalonazareno.org.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="5-comprobacion-de-ip-y-servidor-dns-ditgonzalonazarenoorg"><strong>5. Comprobación de IP y servidor DNS (dit.gonzalonazareno.org):</strong><a class="headerlink" href="#5-comprobacion-de-ip-y-servidor-dns-ditgonzalonazarenoorg" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Contexto</th>
-<th>Comando</th>
-<th>Resultado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dentro de la intranet</td>
-<td>dig A dit.gonzalonazareno.org</td>
-<td></td>
-</tr>
-<tr>
-<td>Fuera de la intranet</td>
-<td>dig A dit.gonzalonazareno.org</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="6-resolucion-inversa-ptr"><strong>6. Resolución inversa (PTR):</strong><a class="headerlink" href="#6-resolucion-inversa-ptr" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Dirección IP</th>
-<th>Comando</th>
-<th>Resultado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>172.30.1.1</td>
-<td>dig -x 172.30.1.1</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
 
 
 
