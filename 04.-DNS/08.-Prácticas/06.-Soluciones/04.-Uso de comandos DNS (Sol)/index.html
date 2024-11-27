@@ -5981,13 +5981,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#14-consultas-adicionales" class="md-nav__link">
+  <a href="#14-consulta-registro-de-zona-labituc3mes" class="md-nav__link">
     <span class="md-ellipsis">
-      14. Consultas adicionales
+      14. Consulta registro de zona lab.it.uc3m.es
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="14. Consultas adicionales">
+    <nav class="md-nav" aria-label="14. Consulta registro de zona lab.it.uc3m.es">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6763,13 +6763,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#14-consultas-adicionales" class="md-nav__link">
+  <a href="#14-consulta-registro-de-zona-labituc3mes" class="md-nav__link">
     <span class="md-ellipsis">
-      14. Consultas adicionales
+      14. Consulta registro de zona lab.it.uc3m.es
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="14. Consultas adicionales">
+    <nav class="md-nav" aria-label="14. Consulta registro de zona lab.it.uc3m.es">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7175,29 +7175,128 @@ Con dig +trace: Vimos todo el recorrido de la consulta, incluidos los servidores
 <p>La opción +trace de dig es útil cuando deseas ver cómo se resuelve un dominio paso a paso, mientras que un comando dig más simple solo te devuelve la información directamente sin mostrarte el proceso de resolución completo. Ambos métodos proporcionan el mismo resultado final (las direcciones IP de alsop-n.uk), pero +trace es más detallado y útil para depurar problemas o entender cómo se realiza la resolución de nombres en Internet.</p>
 <h2 id="13-informacion-de-servidores-de-correo-de-ituc3mes">13. Información de servidores de correo de <code>it.uc3m.es</code><a class="headerlink" href="#13-informacion-de-servidores-de-correo-de-ituc3mes" title="Permanent link">&para;</a></h2>
 <p><strong>Comando:</strong></p>
-<pre><code class="language-bash">dig it.uc3m.es MX
+<pre><code class="language-bash">dig it.uc3m.es MX +short | cut -d' ' -f2 | while read server; do dig +short $server | while read ip; do echo &quot;$server $ip&quot;; done; done
 </code></pre>
 <p><strong>Resultados:</strong>  </p>
-<pre><code>[it.uc3m.es.             21600   IN      MX      20 alt2.aspmx.l.google.com.
-it.uc3m.es.             21600   IN      MX      30 aspmx2.googlemail.com.
-it.uc3m.es.             21600   IN      MX      20 alt1.aspmx.l.google.com.
-it.uc3m.es.             21600   IN      MX      10 aspmx.l.google.com.
-it.uc3m.es.             21600   IN      MX      30 aspmx3.googlemail.com.`
+<pre><code>aspmx2.googlemail.com. 142.250.153.26
+aspmx3.googlemail.com. 142.251.9.27
+aspmx.l.google.com. 74.125.71.27
+alt1.aspmx.l.google.com. 142.250.153.27
+alt2.aspmx.l.google.com. 142.251.9.27
 </code></pre>
-<hr />
-<h2 id="14-consultas-adicionales">14. Consultas adicionales<a class="headerlink" href="#14-consultas-adicionales" title="Permanent link">&para;</a></h2>
+<h2 id="14-consulta-registro-de-zona-labituc3mes">14. Consulta registro de zona <code>lab.it.uc3m.es</code><a class="headerlink" href="#14-consulta-registro-de-zona-labituc3mes" title="Permanent link">&para;</a></h2>
+<p>Para obtener todos los registros de la zona <code>lab.it.uc3m.es</code>, puedes usar el siguiente comando con <code>dig</code> y la opción <code>AXFR</code> (que realiza una transferencia de zona DNS):</p>
+<pre><code class="language-bash">dig lab.it.uc3m.es AXFR @&lt;servidor_dns&gt;
+
+</code></pre>
+<p>Para obtener todos los registros de la zona lab.it.uc3m.es, puedes usar el siguiente comando con dig y la opción AXFR (que realiza una transferencia de zona DNS):</p>
+<pre><code>dig lab.it.uc3m.es AXFR @&lt;servidor_dns&gt;
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>lab.it.uc3m.es</code> es el dominio de la zona que quieres consultar.</li>
+<li><code>AXFR</code> es el tipo de consulta que solicita una transferencia de zona completa.
+= <code>@&lt;servidor_dns&gt;</code> es el servidor DNS que realizará la consulta. Este debe ser un servidor autorizado para la transferencia de zona de <code>lab.it.uc3m.es</code>. Se puede intentar usar un servidor DNS público como <code>8.8.8.8</code> (Google DNS), pero es probable que no permita transferencias de zona.</li>
+</ul>
+<pre><code>dig lab.it.uc3m.es AXFR @8.8.8.8
+</code></pre>
+<p>Si no se tiene acceso a los administradores del DNS para pedirles acceso a los registros de zona cabe obtenerlos mediante consultas individuales para obtener los diferentes registros.</p>
+<pre><code>dig lab.it.uc3m.es A
+dig lab.it.uc3m.es MX
+dig lab.it.uc3m.es NS
+</code></pre>
+<p><strong>Resultado:</strong></p>
+<pre><code>$ dig lab.it.uc3m.es A             
+
+; &lt;&lt;&gt;&gt; DiG 9.20.2-1-Debian &lt;&lt;&gt;&gt; lab.it.uc3m.es A
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 41146
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 4, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;lab.it.uc3m.es.                        IN      A
+
+;; ANSWER SECTION:
+lab.it.uc3m.es.         60      IN      A       163.117.144.200
+lab.it.uc3m.es.         60      IN      A       163.117.144.129
+
+;; AUTHORITY SECTION:
+es.                     13980   IN      NS      c.nic.es.
+es.                     13980   IN      NS      a.nic.es.
+es.                     13980   IN      NS      g.nic.es.
+es.                     13980   IN      NS      h.nic.es.
+
+;; Query time: 19 msec
+;; SERVER: 172.30.1.1#53(172.30.1.1) (UDP)
+;; WHEN: Wed Nov 27 18:43:05 CET 2024
+;; MSG SIZE  rcvd: 132
+</code></pre>
+<pre><code>$ dig lab.it.uc3m.es MX
+
+; &lt;&lt;&gt;&gt; DiG 9.20.2-1-Debian &lt;&lt;&gt;&gt; lab.it.uc3m.es MX
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 2209
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;lab.it.uc3m.es.                        IN      MX
+
+;; ANSWER SECTION:
+lab.it.uc3m.es.         60      IN      MX      5 smtp.uc3m.es.
+
+;; AUTHORITY SECTION:
+es.                     13973   IN      NS      a.nic.es.
+es.                     13973   IN      NS      g.nic.es.
+es.                     13973   IN      NS      h.nic.es.
+es.                     13973   IN      NS      c.nic.es.
+
+;; Query time: 19 msec
+;; SERVER: 172.30.1.1#53(172.30.1.1) (UDP)
+;; WHEN: Wed Nov 27 18:43:12 CET 2024
+;; MSG SIZE  rcvd: 121
+</code></pre>
+<pre><code>$ dig lab.it.uc3m.es NS
+
+; &lt;&lt;&gt;&gt; DiG 9.20.2-1-Debian &lt;&lt;&gt;&gt; lab.it.uc3m.es NS
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 60641
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 4, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;lab.it.uc3m.es.                        IN      NS
+
+;; ANSWER SECTION:
+lab.it.uc3m.es.         60      IN      NS      it000.lab.it.uc3m.es.
+lab.it.uc3m.es.         60      IN      NS      vortex.uc3m.es.
+lab.it.uc3m.es.         60      IN      NS      tamtam.it.uc3m.es.
+lab.it.uc3m.es.         60      IN      NS      lm000.lab.it.uc3m.es.
+
+;; AUTHORITY SECTION:
+lab.it.uc3m.es.         60      IN      NS      vortex.uc3m.es.
+lab.it.uc3m.es.         60      IN      NS      tamtam.it.uc3m.es.
+lab.it.uc3m.es.         60      IN      NS      lm000.lab.it.uc3m.es.
+lab.it.uc3m.es.         60      IN      NS      it000.lab.it.uc3m.es.
+
+;; Query time: 19 msec
+;; SERVER: 172.30.1.1#53(172.30.1.1) (UDP)
+;; WHEN: Wed Nov 27 18:43:17 CET 2024
+;; MSG SIZE  rcvd: 170
+</code></pre>
 <h4 id="15-lavadoragonzalonazarenoorg">15. <code>lavadora.gonzalonazareno.org</code><a class="headerlink" href="#15-lavadoragonzalonazarenoorg" title="Permanent link">&para;</a></h4>
 <p><strong>Comando:</strong></p>
 <pre><code class="language-bash">dig lavadora.gonzalonazareno.org
 </code></pre>
-<p><strong>Resultado:</strong><br />
-<code>[Resultado del comando]</code></p>
+<p><strong>Resultado:</strong> </p>
+<p>La dirección IP de <code>lavadora.gonzalonazareno.org</code> se encuentra a través de su alias <code>satelite.gonzalonazareno.org</code>, y es: <code>5.39.73.79</code></p>
 <h4 id="16-redireccion-de-informaticagonzalonazarenoorg">16. Redirección de informatica.gonzalonazareno.org<a class="headerlink" href="#16-redireccion-de-informaticagonzalonazarenoorg" title="Permanent link">&para;</a></h4>
 <p><strong>Comando:</strong></p>
 <pre><code class="language-bash">dig informatica.gonzalonazareno.org CNAME
 </code></pre>
-<p><strong>Resultado:</strong><br />
-<code>[Resultado del comando]</code></p>
+<p><strong>Resultado:</strong> </p>
+<p>El dominio <code>informatica.gonzalonazareno.org</code> está redirigido a <code>satelite.gonzalonazareno.org</code>, cuya dirección IP es <code>5.39.73.79</code></p>
 <h4 id="17-servidores-dns-de-gonzalonazarenoorg">17. Servidores DNS de gonzalonazareno.org<a class="headerlink" href="#17-servidores-dns-de-gonzalonazarenoorg" title="Permanent link">&para;</a></h4>
 <p><strong>Comando:</strong></p>
 <pre><code class="language-bash">dig gonzalonazareno.org NS
@@ -7206,16 +7305,17 @@ it.uc3m.es.             21600   IN      MX      30 aspmx3.googlemail.com.`
 <code>[Resultado del comando]</code></p>
 <h4 id="18-servidores-de-correo-de-gonzalonazarenoorg">18. Servidores de correo de gonzalonazareno.org<a class="headerlink" href="#18-servidores-de-correo-de-gonzalonazarenoorg" title="Permanent link">&para;</a></h4>
 <p><strong>Comando:</strong></p>
-<pre><code class="language-bash">dig gonzalonazareno.org MX
+<pre><code class="language-bash">dig gonzalonazareno.org MX +short
 </code></pre>
-<p><strong>Resultado:</strong><br />
-<code>[Resultado del comando]</code></p>
+<p><strong>Resultado:</strong> </p>
+<pre><code>5 satelite.gonzalonazareno.org.
+</code></pre>
 <h4 id="19-direccion-ip-80591152">19. Dirección IP 80.59.1.152<a class="headerlink" href="#19-direccion-ip-80591152" title="Permanent link">&para;</a></h4>
 <p><strong>Comando:</strong></p>
 <pre><code class="language-bash">dig -x 80.59.1.152
 </code></pre>
 <p><strong>Resultado:</strong><br />
-<code>[Resultado del comando]</code></p>
+<code>152.red-80-59-1.staticip.rima-tde.net.</code></p>
 
 
 
