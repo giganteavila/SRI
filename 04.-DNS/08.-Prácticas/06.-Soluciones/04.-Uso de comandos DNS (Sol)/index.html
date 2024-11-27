@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../03.-Archivo%20de%20Zona%20DNS%20%28Sol%29/">
       
       
-        <link rel="next" href="../02.-Registros%20de%20Recursos%20%28RRs%29/">
+        <link rel="next" href="../../../99.-Enlaces%20de%20inter%C3%A9s/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>01.-Introducción - SRI</title>
+        <title>04.-Uso de comandos DNS (Sol) - SRI</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tipos-de-registros-dns" class="md-skip">
+        <a href="#uso-de-comandos-dns" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../.." title="SRI" class="md-header__button md-logo" aria-label="SRI" data-md-component="logo">
+    <a href="../../../.." title="SRI" class="md-header__button md-logo" aria-label="SRI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01.-Introducción
+              04.-Uso de comandos DNS (Sol)
             
           </span>
         </div>
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -220,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../01.-KVM/" class="md-tabs__link">
+        <a href="../../../../01.-KVM/" class="md-tabs__link">
           
   
     
@@ -240,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../02.-SSH/" class="md-tabs__link">
+        <a href="../../../../02.-SSH/" class="md-tabs__link">
           
   
     
@@ -260,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../03.-DHCP/" class="md-tabs__link">
+        <a href="../../../../03.-DHCP/" class="md-tabs__link">
           
   
     
@@ -282,7 +282,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../" class="md-tabs__link">
           
   
     
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../99.-Anexos/" class="md-tabs__link">
+        <a href="../../../../99.-Anexos/" class="md-tabs__link">
           
   
     
@@ -337,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SRI" class="md-nav__button md-logo" aria-label="SRI" data-md-component="logo">
+    <a href="../../../.." title="SRI" class="md-nav__button md-logo" aria-label="SRI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -355,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,7 +416,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01.-KVM/" class="md-nav__link ">
+            <a href="../../../../01.-KVM/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -499,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/01.-Qu%C3%A9%20es%20la%20virtualizaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/02.-Tipos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/03.-qemu-kvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/04.-libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/01.-Introducci%C3%B3n/05.-LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -662,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/01.-Escenario%20de%20instalaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/02.-Instalaci%C3%B3n/02.-Instalacion/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/02.-Instalacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/03.-Conexi%C3%B3n%20local%20no%20privilegiada%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/04.-Conexi%C3%B3n%20local%20privilegiada%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/02.-Instalaci%C3%B3n/05.-Conexi%C3%B3n%20remota%20a%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -825,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/01.-Creaci%C3%B3n%20de%20MV%20con%20virt-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -846,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/02.-Caracter%C3%ADsticas%20de%20la%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/03.-Gesti%C3%B3n%20de%20MV%20con%20virsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/04.-Definici%C3%B3n%20XML%20de%20una%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/03.-Creaci%C3%B3n%20de%20MV%20desde%20el%20CLI/05.-Modificaci%C3%B3n%20de%20una%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/01.-Primeros%20pasos%20con%20virt-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/02.-Creaci%C3%B3n%20de%20MV%20linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/03.-Gesti%C3%B3n%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/04.-Detalles%20de%20las%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1072,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
+      <a href="../../../../01.-KVM/04.-Creaci%C3%B3n%20de%20MV%20con%20virt-manager/05.-Creaci%C3%B3n%20de%20MV%20Wndows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1155,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/01.-Introducci%C3%B3n%20al%20almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1176,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/02.-Introducci%C3%B3n%20al%20almacenamiento%20en%20QEMU%E2%81%84KVM%20%2B%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/03.-Gesti%C3%B3n%20de%20Pools%20de%20Almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1218,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/04.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20libvirt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1239,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/05.-Gesti%C3%B3n%20de%20vol%C3%BAmenes%20de%20almacenamiento%20con%20herramientas%20espec%C3%ADficas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/06.-Trabajar%20con%20vol%C3%BAmenes%20en%20las%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
+      <a href="../../../../01.-KVM/05.-Almacenamiento/07.-Compresi%C3%B3n%20de%20im%C3%A1genes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1341,7 +1341,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/" class="md-nav__link ">
+            <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1374,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/01.-Clonaci%C3%B3n%20de%20m%C3%A1quinas%20virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/02.-Plantillas%20de%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/02.-Plantillas%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1416,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/03.-Clonaci%C3%B3n%20completa%20con%20plantillas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1437,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/04.-Clonaci%C3%B3n%20enlazada%20con%20plantillas/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/04.-Clonaci%C3%B3n%20enlazada%20con%20plantillas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1458,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/06.-Clonaci%C3%B3n%20y%20Snapshots/05.-Snapshots%20de%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1539,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/07.-Redes/01.-Introduccion/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/01.-Introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1560,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/02.-Definic%C3%B3n%20de%20RV%20%28Privadas%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1581,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/07.-Redes/03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/03.-Gesti%C3%B3n%20de%20RV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1602,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/04.-Creaci%C3%B3n%20de%20un%20Puerte%20Externo%20con%20Linux%20Bridge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1623,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/05.-Gesti%C3%B3n%20de%20Redes%20Puentes%20%28P%C3%BAblicas%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1644,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
+      <a href="../../../../01.-KVM/07.-Redes/06.-Configuraci%C3%B3n%20de%20red%20en%20MV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1725,7 +1725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/01.-Introduccion%20a%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1746,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/02.-Creaci%C3%B3n%20y%20gesti%C3%B3n%20de%20contenedores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1767,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/03.-Configuraci%C3%B3n%20de%20contenedores%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1788,7 +1788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/04.-Redes%20en%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1809,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/05.-Almacenamiento%20en%20LXC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1830,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
+      <a href="../../../../01.-KVM/08.-LXC/06.-Introducci%C3%B3n%20a%20LXD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1903,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
+      <a href="../../../../01.-KVM/09.-Anexos/01.-Uso%20de%20los%20puertos%20USB%20en%20KVM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1924,7 +1924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
+      <a href="../../../../01.-KVM/09.-Anexos/02.-Copiar%20y%20Pegar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1978,7 +1978,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01.-KVM/10.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../../01.-KVM/10.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2011,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
+      <a href="../../../../01.-KVM/10.-Pr%C3%A1cticas/01.-Instrucciones%20para%20la%20captura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2032,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01.-KVM/10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
+      <a href="../../../../01.-KVM/10.-Pr%C3%A1cticas/02.-Solucionario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2105,7 +2105,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2234,7 +2234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/01.-Precedentes.%20%60telnet%60%2C%20%60rlogin%60%20y%20%60rsh%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/01.-Precedentes.%20%60telnet%60%2C%20%60rlogin%60%20y%20%60rsh%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2255,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/02.-Cifrado%20Completo/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/02.-Cifrado%20Completo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2276,7 +2276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/03.-Historia%20de%20%60ssh%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/03.-Historia%20de%20%60ssh%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2297,7 +2297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/04.-OpenSSH/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/01.-Caracter%C3%ADsticas%20Principales/04.-OpenSSH/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2353,7 +2353,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2386,7 +2386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/01.-Criptograf%C3%ADa%20de%20clave%20sim%C3%A9trica/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/01.-Criptograf%C3%ADa%20de%20clave%20sim%C3%A9trica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2407,7 +2407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/02.-Clave%20asim%C3%A9trica%20o%20de%20clave%20p%C3%BAblica/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/02.-Clave%20asim%C3%A9trica%20o%20de%20clave%20p%C3%BAblica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2428,7 +2428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/03.-Funciones%20Hash/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/02.-Criptograf%C3%ADa/03.-Funciones%20Hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2486,7 +2486,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2519,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/01.-Contrase%C3%B1a/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/01.-Contrase%C3%B1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2540,7 +2540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/02.-Clave%20P%C3%BAblica/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/02.-Clave%20P%C3%BAblica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2561,7 +2561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/03.-Kerberos/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/03.-Kerberos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2582,7 +2582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/04.-GSSAPI/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/03.-M%C3%A9todos%20de%20autenticaci%C3%B3n/04.-GSSAPI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2636,7 +2636,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2669,7 +2669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/01.-Fase%201%20%28Negociaci%C3%B3n%29/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/01.-Fase%201%20%28Negociaci%C3%B3n%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2690,7 +2690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/02.-Fase%202%20%28Autenticaci%C3%B3n%29/" class="md-nav__link">
+      <a href="../../../../02.-SSH/01.-Introducci%C3%B3n/04.-Funcionamiento/02.-Fase%202%20%28Autenticaci%C3%B3n%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/02.-Instalaci%C3%B3n%20del%20entorno%20de%20pruebas/" class="md-nav__link">
+      <a href="../../../../02.-SSH/02.-Instalaci%C3%B3n%20del%20entorno%20de%20pruebas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2800,7 +2800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/01.-Autenticaci%C3%B3n%20con%20usuario%20y%20contrase%C3%B1a/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/01.-Autenticaci%C3%B3n%20con%20usuario%20y%20contrase%C3%B1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2821,7 +2821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/02.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/02.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2842,7 +2842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/03.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada%20y%20frase%20de%20paso/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/03.-Autenticaci%C3%B3n%20con%20claves%20p%C3%BAblica-privada%20y%20frase%20de%20paso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2863,7 +2863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/04.-%60ssh-agent%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/04.-%60ssh-agent%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2884,7 +2884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/05.-Gesti%C3%B3n%20de%20ficheros.%20%60authorized_keys%60%20y%20%60known_hosts%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/05.-Gesti%C3%B3n%20de%20ficheros.%20%60authorized_keys%60%20y%20%60known_hosts%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2905,7 +2905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/03.-Uso%20de%20ssh/06.-Forwarding/" class="md-nav__link">
+      <a href="../../../../02.-SSH/03.-Uso%20de%20ssh/06.-Forwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2978,7 +2978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/01.-Configuraci%C3%B3n%20del%20cliente%20ssh/" class="md-nav__link">
+      <a href="../../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/01.-Configuraci%C3%B3n%20del%20cliente%20ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2999,7 +2999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/02.-Configuraci%C3%B3n%20del%20servidor%20ssh/" class="md-nav__link">
+      <a href="../../../../02.-SSH/04.-Configuraci%C3%B3n%20de%20ssh/02.-Configuraci%C3%B3n%20del%20servidor%20ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3072,7 +3072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/01.-Uso%20de%20%60scp%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/01.-Uso%20de%20%60scp%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3093,7 +3093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/02.-Uso%20de%20%60sftp%60/" class="md-nav__link">
+      <a href="../../../../02.-SSH/05.-Transferencia%20de%20ficheros%20a%20trav%C3%A9s%20de%20ssh/02.-Uso%20de%20%60sftp%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3149,7 +3149,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/06.-T%C3%BAneles%20SSH/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3182,7 +3182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/01.-Local%20forwarding/" class="md-nav__link">
+      <a href="../../../../02.-SSH/06.-T%C3%BAneles%20SSH/01.-Local%20forwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3203,7 +3203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/02.-Remote%20forwarding/" class="md-nav__link">
+      <a href="../../../../02.-SSH/06.-T%C3%BAneles%20SSH/02.-Remote%20forwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3224,7 +3224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/06.-T%C3%BAneles%20SSH/03.-Forwarding%20din%C3%A1mico/" class="md-nav__link">
+      <a href="../../../../02.-SSH/06.-T%C3%BAneles%20SSH/03.-Forwarding%20din%C3%A1mico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3278,7 +3278,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02.-SSH/07.-Pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../../02.-SSH/07.-Pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3311,7 +3311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/07.-Pr%C3%A1cticas/01.-Descripci%C3%B3n%20del%20laboratorio/" class="md-nav__link">
+      <a href="../../../../02.-SSH/07.-Pr%C3%A1cticas/01.-Descripci%C3%B3n%20del%20laboratorio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3332,7 +3332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/07.-Pr%C3%A1cticas/02.-Ejercicios/" class="md-nav__link">
+      <a href="../../../../02.-SSH/07.-Pr%C3%A1cticas/02.-Ejercicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3361,7 +3361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02.-SSH/Archive.tar" class="md-nav__link">
+      <a href="../../../../02.-SSH/Archive.tar" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3430,7 +3430,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03.-DHCP/" class="md-nav__link ">
+            <a href="../../../../03.-DHCP/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3463,7 +3463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/01.-Introducci%C3%B3n%20a%20DHCP/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/01.-Introducci%C3%B3n%20a%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3484,7 +3484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/02.-Funcionamiento%20del%20Protocolo%20DHCP/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/02.-Funcionamiento%20del%20Protocolo%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3553,7 +3553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/01.-Discover%20%28Descubrimiento%29/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/01.-Discover%20%28Descubrimiento%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3574,7 +3574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/02.-Offer%20%28Oferta%29/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/02.-Offer%20%28Oferta%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3595,7 +3595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/03.-Request%20%28Solicitud%29/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/03.-Request%20%28Solicitud%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3616,7 +3616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/04.-Acknowledge%20%28Confirmaci%C3%B3n%29/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/03.Fases%20del%20Proceso%20DHCP/04.-Acknowledge%20%28Confirmaci%C3%B3n%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3645,7 +3645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/04.-Componentes%20del%20Servidor%20DHCP/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/04.-Componentes%20del%20Servidor%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3666,7 +3666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/05.-Configuraci%C3%B3n%20de%20un%20Servidor%20DHCP/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/05.-Configuraci%C3%B3n%20de%20un%20Servidor%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3687,7 +3687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/06.-Ventajas%20de%20DHCP/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/06.-Ventajas%20de%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3708,7 +3708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/07.-Escenarios%20de%20uso/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/07.-Escenarios%20de%20uso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3729,7 +3729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/08.-Glosario%20de%20t%C3%A9rminos/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/08.-Glosario%20de%20t%C3%A9rminos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3750,7 +3750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/09.-Conclusi%C3%B3n/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/09.-Conclusi%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3819,7 +3819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/01.-El%20servidor%20ISC%20DHCP/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/01.-El%20servidor%20ISC%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3840,7 +3840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/02.-El%20servidor%20Kea%20DHCP/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/02.-El%20servidor%20Kea%20DHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3888,7 +3888,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/" class="md-nav__link ">
+            <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3921,7 +3921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/01.-Creaci%C3%B3n%20de%20la%20plantilla%20para%20las%20m%C3%A1quinas%20clientes/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/01.-Creaci%C3%B3n%20de%20la%20plantilla%20para%20las%20m%C3%A1quinas%20clientes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3942,7 +3942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/02.-Creaci%C3%B3n%20del%20escenario/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/02.-Creaci%C3%B3n%20del%20escenario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3963,7 +3963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/03.-Creaci%C3%B3n%20de%20las%20m%C3%A1quinas%20clientes/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/03.-Escenario%20de%20pr%C3%A1cticas/03.-Creaci%C3%B3n%20de%20las%20m%C3%A1quinas%20clientes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4021,7 +4021,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/" class="md-nav__link ">
+            <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4054,7 +4054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/01.-Instalaci%C3%B3n%20servidorDHCP/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/01.-Instalaci%C3%B3n%20servidorDHCP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4075,7 +4075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/02.-Instalaci%C3%B3n%20del%20servidor%20Web/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/02.-Instalaci%C3%B3n%20del%20servidor%20Web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4096,7 +4096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/03.-Script/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/03.-Script/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4117,7 +4117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/04.-Configuraci%C3%B3n%20de%20un%20nuevo%20%C3%A1mbito/" class="md-nav__link">
+      <a href="../../../../03.-DHCP/10.-Pr%C3%A1cticas/04.-Instalaci%C3%B3n%20de%20servidor%20DHCP/04.-Configuraci%C3%B3n%20de%20un%20nuevo%20%C3%A1mbito/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4205,7 +4205,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4263,7 +4263,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01.-Historia/" class="md-nav__link ">
+            <a href="../../../01.-Historia/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4296,7 +4296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Historia/01.-Historia%20del%20archivo%20HOSTS%20y%20su%20uso%20en%20redes/" class="md-nav__link">
+      <a href="../../../01.-Historia/01.-Historia%20del%20archivo%20HOSTS%20y%20su%20uso%20en%20redes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4317,7 +4317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01.-Historia/02.-Limitaciones%20del%20archivo%20HOSTS%20y%20transici%C3%B3n%20al%20DNS/" class="md-nav__link">
+      <a href="../../../01.-Historia/02.-Limitaciones%20del%20archivo%20HOSTS%20y%20transici%C3%B3n%20al%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4375,7 +4375,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../02.-Definici%C3%B3n%20y%20objetivos/" class="md-nav__link ">
+            <a href="../../../02.-Definici%C3%B3n%20y%20objetivos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4408,7 +4408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Definici%C3%B3n%20y%20objetivos/01.-Caracter%C3%ADsticas%20principales/" class="md-nav__link">
+      <a href="../../../02.-Definici%C3%B3n%20y%20objetivos/01.-Caracter%C3%ADsticas%20principales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4429,7 +4429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Definici%C3%B3n%20y%20objetivos/02.-Ejemplo%20pr%C3%A1ctico%20de%20un%20FQDN/" class="md-nav__link">
+      <a href="../../../02.-Definici%C3%B3n%20y%20objetivos/02.-Ejemplo%20pr%C3%A1ctico%20de%20un%20FQDN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4450,7 +4450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Definici%C3%B3n%20y%20objetivos/03.-Ventajas/" class="md-nav__link">
+      <a href="../../../02.-Definici%C3%B3n%20y%20objetivos/03.-Ventajas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4471,7 +4471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02.-Definici%C3%B3n%20y%20objetivos/04.-Objetivo/" class="md-nav__link">
+      <a href="../../../02.-Definici%C3%B3n%20y%20objetivos/04.-Objetivo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4533,7 +4533,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03.-Estructura/" class="md-nav__link ">
+            <a href="../../../03.-Estructura/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4566,7 +4566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Estructura/01.-FQDN/" class="md-nav__link">
+      <a href="../../../03.-Estructura/01.-FQDN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4587,7 +4587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Estructura/02.-Jerarqu%C3%ADa%20de%20dominios/" class="md-nav__link">
+      <a href="../../../03.-Estructura/02.-Jerarqu%C3%ADa%20de%20dominios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4608,7 +4608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Estructura/03.-Dominio%20y%20Zona/" class="md-nav__link">
+      <a href="../../../03.-Estructura/03.-Dominio%20y%20Zona/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4629,7 +4629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Estructura/04.-Dominio%20Directo%20e%20Inverso/" class="md-nav__link">
+      <a href="../../../03.-Estructura/04.-Dominio%20Directo%20e%20Inverso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4650,7 +4650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Estructura/05.-Root%20Nameservers/" class="md-nav__link">
+      <a href="../../../03.-Estructura/05.-Root%20Nameservers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4671,7 +4671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Estructura/06.-Forwarders%20%28Reenviadores%29/" class="md-nav__link">
+      <a href="../../../03.-Estructura/06.-Forwarders%20%28Reenviadores%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4731,7 +4731,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04.-Administraci%C3%B3n/" class="md-nav__link ">
+            <a href="../../../04.-Administraci%C3%B3n/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4764,7 +4764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/01.-Zona%20de%20Autoridad%20y%20Zona/" class="md-nav__link">
+      <a href="../../../04.-Administraci%C3%B3n/01.-Zona%20de%20Autoridad%20y%20Zona/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4785,7 +4785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/02.-Componentes%20del%20servicio%20DNS/" class="md-nav__link">
+      <a href="../../../04.-Administraci%C3%B3n/02.-Componentes%20del%20servicio%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4806,7 +4806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/03.-Servidores%20de%20nombres/" class="md-nav__link">
+      <a href="../../../04.-Administraci%C3%B3n/03.-Servidores%20de%20nombres/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4827,7 +4827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/04.-Clientes%20%28resolvers%29/" class="md-nav__link">
+      <a href="../../../04.-Administraci%C3%B3n/04.-Clientes%20%28resolvers%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4848,7 +4848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
+      <a href="../../../04.-Administraci%C3%B3n/05.-Resoluciones%20de%20Nombre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4874,8 +4874,6 @@
                 
   
   
-    
-  
   
   
     
@@ -4907,16 +4905,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../05.-Zonas%20de%20autoridad/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4933,7 +4931,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_6">
             <span class="md-nav__icon md-icon"></span>
             05.-Zonas de autoridad
@@ -4946,28 +4944,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    01.-Introducción
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../05.-Zonas%20de%20autoridad/01.-Introducci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4976,78 +4956,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-registros-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de Registros DNS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delegacion-de-autoridad-en-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delegación de Autoridad en DNS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-implica-esta-delegacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Qué implica esta delegación?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zonas-en-un-servidor-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Zonas en un Servidor DNS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-zonas-de-busqueda-directa" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Zonas de Búsqueda Directa
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-zonas-de-resolucion-inversa" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Zonas de Resolución Inversa
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5060,7 +4968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.-Registros%20de%20Recursos%20%28RRs%29/" class="md-nav__link">
+      <a href="../../../05.-Zonas%20de%20autoridad/02.-Registros%20de%20Recursos%20%28RRs%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5081,7 +4989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.-Registro%20de%20recurso%20SOA/" class="md-nav__link">
+      <a href="../../../05.-Zonas%20de%20autoridad/03.-Registro%20de%20recurso%20SOA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5102,7 +5010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.-Registro%20de%20recurso%20NS/" class="md-nav__link">
+      <a href="../../../05.-Zonas%20de%20autoridad/04.-Registro%20de%20recurso%20NS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5123,7 +5031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05.-Registro%20de%20recurso%20A/" class="md-nav__link">
+      <a href="../../../05.-Zonas%20de%20autoridad/05.-Registro%20de%20recurso%20A/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5144,7 +5052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06.-Registro%20de%20Recurso%20PTR/" class="md-nav__link">
+      <a href="../../../05.-Zonas%20de%20autoridad/06.-Registro%20de%20Recurso%20PTR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5165,7 +5073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07.-Registro%20de%20recursos%20CNAME/" class="md-nav__link">
+      <a href="../../../05.-Zonas%20de%20autoridad/07.-Registro%20de%20recursos%20CNAME/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5186,7 +5094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08.-Registro%20de%20Recurso%20SRV/" class="md-nav__link">
+      <a href="../../../05.-Zonas%20de%20autoridad/08.-Registro%20de%20Recurso%20SRV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5261,7 +5169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplos/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
+      <a href="../../../06.-Ejemplos/01.-Ejemplo%20de%20Fichero%20de%20Configuraci%C3%B3n%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5282,7 +5190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplos/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
+      <a href="../../../06.-Ejemplos/02.-Ejemplo%20de%20Archivo%20de%20Zona%20Inversa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5349,7 +5257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
+      <a href="../../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/01.-Archivo%20ejemplo%20de%20configuraci%C3%B3n%20principal%20%60named.conf%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5370,7 +5278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
+      <a href="../../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/02.-Archivo%20ejemplo%20de%20zona%20directa%20%60iesromerovargas.com.zone%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5391,7 +5299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
+      <a href="../../../06.-Ejemplos/03.-Peque%C3%B1o%20ejemplo%20completo/03.-Archivo%20ejemplo%20de%20zona%20inversa%20%20%60iesromerovargas.com.rev%60/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5428,7 +5336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07.-Comandos%20relacionados%20con%20el%20servicio%20DNS/" class="md-nav__link">
+      <a href="../../../07.-Comandos%20relacionados%20con%20el%20servicio%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5446,8 +5354,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -5469,11 +5379,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" checked>
         
           
           <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
@@ -5487,7 +5397,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
             08.-Prácticas
@@ -5501,7 +5411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../../01.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5522,7 +5432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/02.-Consultas%20DNS/" class="md-nav__link">
+      <a href="../../02.-Consultas%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5543,7 +5453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/03.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
+      <a href="../../03.-Archivos%20de%20Zona%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5564,7 +5474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/04.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
+      <a href="../../04.-Uso%20de%20comandos%20DNS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5585,7 +5495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/05.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
+      <a href="../../05.-DNS%20con%20Ubuntu%20Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5603,8 +5513,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -5622,11 +5534,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_6" checked>
         
           
           <label class="md-nav__link" for="__nav_5_9_6" id="__nav_5_9_6_label" tabindex="0">
@@ -5640,7 +5552,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_9_6">
             <span class="md-nav__icon md-icon"></span>
             06.-Soluciones
@@ -5654,7 +5566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/06.-Soluciones/01.-Archivos%20de%20Zona%20DNS%28Sol%29/" class="md-nav__link">
+      <a href="../01.-Archivos%20de%20Zona%20DNS%28Sol%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5675,7 +5587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/06.-Soluciones/02.-Consultas%20DNS%20%28Sol%29/" class="md-nav__link">
+      <a href="../02.-Consultas%20DNS%20%28Sol%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5696,7 +5608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/06.-Soluciones/03.-Archivo%20de%20Zona%20DNS%20%28Sol%29/" class="md-nav__link">
+      <a href="../03.-Archivo%20de%20Zona%20DNS%20%28Sol%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5714,10 +5626,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../08.-Pr%C3%A1cticas/06.-Soluciones/04.-Uso%20de%20comandos%20DNS%20%28Sol%29/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    04.-Uso de comandos DNS (Sol)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -5726,6 +5658,392 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-tutorial-de-comandos-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.- Tutorial de Comandos DNS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.- Tutorial de Comandos DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      dig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nslookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      nslookup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host" class="md-nav__link">
+    <span class="md-ellipsis">
+      host
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-determina-la-direccion-ip-de-la-maquina-wwwmeces" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.- Determina la dirección IP de la máquina www.mec.es
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-averigua-que-maquina-tiene-asignada-la-direccion-ip-193110128200" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.- Averigua qué máquina tiene asignada la dirección IP 193.110.128.200
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-consultas-relacionadas-con-el-dominio-abces" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.- Consultas relacionadas con el dominio abc.es
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.- Consultas relacionadas con el dominio abc.es">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-servidores-dns-del-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Servidores DNS del dominio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-servidor-primario-y-secundarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Servidor primario y secundarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="b. Servidor primario y secundarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identificar-servidores-secundarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificar servidores secundarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-registro-soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.- Registro SOA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.- Registro SOA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-de-las-diferencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación de las diferencias:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-correo-del-administrador-del-dominio-abces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.-Correo del Administrador del dominio abc.es
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-servidor-de-correo-de-abces" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.- Servidor de correo de abc.es
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ttl-de-wwwvanguardiaes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. TTL de www.vanguardia.es
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-verifica-consultas-no-recursivas-en-un-servidor-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Verifica consultas no recursivas en un servidor específico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-balanceo-de-carga-para-wwwelmundoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Balanceo de carga para www.elmundo.es
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-resolucion-iterativa-para-wwwtimesonlinecouk" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Resolución iterativa para www.timesonline.co.uk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-consulta-con-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.- Consulta con +trace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.- Consulta con +trace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-alsop-nuk-con-dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolución de alsop-n.uk con dig:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-wwwtimesonlinecouk-con-dig-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolución de www.timesonline.co.uk con dig +trace:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolución de www.timesonline.co.uk con dig +trace:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-consultas-a-los-servidores-raiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Consultas a los servidores raíz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-resolucion-de-la-zona-uk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Resolución de la zona .uk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-resolucion-del-dominio-timesonlinecouk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Resolución del dominio timesonline.co.uk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-resolucion-de-wwwtimesonlinecouk-como-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Resolución de www.timesonline.co.uk como CNAME
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso de resolución:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de información:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado final:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-informacion-de-servidores-de-correo-de-ituc3mes" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Información de servidores de correo de it.uc3m.es
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-consultas-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Consultas adicionales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Consultas adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15-lavadoragonzalonazarenoorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. lavadora.gonzalonazareno.org
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-redireccion-de-informaticagonzalonazarenoorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Redirección de informatica.gonzalonazareno.org
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-servidores-dns-de-gonzalonazarenoorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Servidores DNS de gonzalonazareno.org
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-servidores-de-correo-de-gonzalonazarenoorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Servidores de correo de gonzalonazareno.org
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-direccion-ip-80591152" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Dirección IP 80.59.1.152
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5754,7 +6072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../99.-Enlaces%20de%20inter%C3%A9s/" class="md-nav__link">
+      <a href="../../../99.-Enlaces%20de%20inter%C3%A9s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5827,7 +6145,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../99.-Anexos/" class="md-nav__link ">
+            <a href="../../../../99.-Anexos/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5860,7 +6178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/00.-Mi%20clave%20p%C3%BAblica/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/00.-Mi%20clave%20p%C3%BAblica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5881,7 +6199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/01.-Recorrido%20hist%C3%B3rico%20de%20la%20gesti%C3%B3n%20de%20redes%20en%20Linux/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/01.-Recorrido%20hist%C3%B3rico%20de%20la%20gesti%C3%B3n%20de%20redes%20en%20Linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5902,7 +6220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/02.-C%C3%B3mo%20instalar%20NetworkManager/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/02.-C%C3%B3mo%20instalar%20NetworkManager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5923,7 +6241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/03.-C%C3%B3mo%20cambiar%20el%20nombre%20del%20host%20en%20linux/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/03.-C%C3%B3mo%20cambiar%20el%20nombre%20del%20host%20en%20linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5944,7 +6262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/04.-Por%20qu%C3%A9%20tengo%20un%20fichero50-cloud-init%20en%20la%20configuraci%C3%B3n%20de%20netplan/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/04.-Por%20qu%C3%A9%20tengo%20un%20fichero50-cloud-init%20en%20la%20configuraci%C3%B3n%20de%20netplan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5965,7 +6283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/05.-Esperas%20en%20el%20arranque%20de%20linux%20por%20la%20red/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/05.-Esperas%20en%20el%20arranque%20de%20linux%20por%20la%20red/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5986,7 +6304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/06.-FAQ%20Clonaci%C3%B3n%20de%20M%C3%A1quinas%20Virtuales%20en%20KVM-QEMU/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/06.-FAQ%20Clonaci%C3%B3n%20de%20M%C3%A1quinas%20Virtuales%20en%20KVM-QEMU/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6007,7 +6325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/07.-Manual%20B%C3%A1sico%20de%20NAT%20e%20IPTABLES/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/07.-Manual%20B%C3%A1sico%20de%20NAT%20e%20IPTABLES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6028,7 +6346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/08.-El%20comando%20sudo/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/08.-El%20comando%20sudo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6049,7 +6367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/09.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/09.-Conversor%20de%20OVA%20a%20QCOW2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6070,7 +6388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/10.-Portabilizar%20M%C3%A1quinas%20Virtuales%20con%20KVM%20usando%20un%20Disco%20USB/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/10.-Portabilizar%20M%C3%A1quinas%20Virtuales%20con%20KVM%20usando%20un%20Disco%20USB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6091,7 +6409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../99.-Anexos/11.-El%20puente%20virbr0/" class="md-nav__link">
+      <a href="../../../../99.-Anexos/11.-El%20puente%20virbr0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6129,6 +6447,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6137,56 +6457,368 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tipos-de-registros-dns" class="md-nav__link">
+  <a href="#1-tutorial-de-comandos-dns" class="md-nav__link">
     <span class="md-ellipsis">
-      Tipos de Registros DNS
+      1.- Tutorial de Comandos DNS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.- Tutorial de Comandos DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      dig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nslookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      nslookup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host" class="md-nav__link">
+    <span class="md-ellipsis">
+      host
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-determina-la-direccion-ip-de-la-maquina-wwwmeces" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.- Determina la dirección IP de la máquina www.mec.es
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#delegacion-de-autoridad-en-dns" class="md-nav__link">
+  <a href="#3-averigua-que-maquina-tiene-asignada-la-direccion-ip-193110128200" class="md-nav__link">
     <span class="md-ellipsis">
-      Delegación de Autoridad en DNS
+      3.- Averigua qué máquina tiene asignada la dirección IP 193.110.128.200
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#que-implica-esta-delegacion" class="md-nav__link">
+  <a href="#4-consultas-relacionadas-con-el-dominio-abces" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿Qué implica esta delegación?
+      4.- Consultas relacionadas con el dominio abc.es
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.- Consultas relacionadas con el dominio abc.es">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-servidores-dns-del-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Servidores DNS del dominio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-servidor-primario-y-secundarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Servidor primario y secundarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="b. Servidor primario y secundarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identificar-servidores-secundarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificar servidores secundarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-registro-soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.- Registro SOA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.- Registro SOA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-de-las-diferencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación de las diferencias:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-correo-del-administrador-del-dominio-abces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.-Correo del Administrador del dominio abc.es
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#zonas-en-un-servidor-dns" class="md-nav__link">
+  <a href="#7-servidor-de-correo-de-abces" class="md-nav__link">
     <span class="md-ellipsis">
-      Zonas en un Servidor DNS
+      7.- Servidor de correo de abc.es
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-zonas-de-busqueda-directa" class="md-nav__link">
+  <a href="#8-ttl-de-wwwvanguardiaes" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Zonas de Búsqueda Directa
+      8. TTL de www.vanguardia.es
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-zonas-de-resolucion-inversa" class="md-nav__link">
+  <a href="#9-verifica-consultas-no-recursivas-en-un-servidor-especifico" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Zonas de Resolución Inversa
+      9. Verifica consultas no recursivas en un servidor específico
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-balanceo-de-carga-para-wwwelmundoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Balanceo de carga para www.elmundo.es
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-resolucion-iterativa-para-wwwtimesonlinecouk" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Resolución iterativa para www.timesonline.co.uk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-consulta-con-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.- Consulta con +trace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.- Consulta con +trace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-alsop-nuk-con-dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolución de alsop-n.uk con dig:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-wwwtimesonlinecouk-con-dig-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolución de www.timesonline.co.uk con dig +trace:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolución de www.timesonline.co.uk con dig +trace:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-consultas-a-los-servidores-raiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Consultas a los servidores raíz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-resolucion-de-la-zona-uk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Resolución de la zona .uk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-resolucion-del-dominio-timesonlinecouk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Resolución del dominio timesonline.co.uk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-resolucion-de-wwwtimesonlinecouk-como-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Resolución de www.timesonline.co.uk como CNAME
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso de resolución:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de información:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado final:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-informacion-de-servidores-de-correo-de-ituc3mes" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Información de servidores de correo de it.uc3m.es
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-consultas-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Consultas adicionales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Consultas adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15-lavadoragonzalonazarenoorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. lavadora.gonzalonazareno.org
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-redireccion-de-informaticagonzalonazarenoorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Redirección de informatica.gonzalonazareno.org
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-servidores-dns-de-gonzalonazarenoorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Servidores DNS de gonzalonazareno.org
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-servidores-de-correo-de-gonzalonazarenoorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Servidores de correo de gonzalonazareno.org
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-direccion-ip-80591152" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Dirección IP 80.59.1.152
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6205,111 +6837,385 @@
                   
 
 
-  <h1>01.-Introducción</h1>
-
+<h1 id="uso-de-comandos-dns">Uso de Comandos DNS<a class="headerlink" href="#uso-de-comandos-dns" title="Permanent link">&para;</a></h1>
+<h2 id="1-tutorial-de-comandos-dns">1.- Tutorial de Comandos DNS<a class="headerlink" href="#1-tutorial-de-comandos-dns" title="Permanent link">&para;</a></h2>
+<h3 id="dig"><code>dig</code><a class="headerlink" href="#dig" title="Permanent link">&para;</a></h3>
+<p><code>dig</code> (Domain Information Groper) es una herramienta para consultar servidores DNS. Es muy versátil y ampliamente utilizada para pruebas DNS.</p>
+<p><strong>Comando Básico:</strong></p>
+<pre><code class="language-bash">dig dominio
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code class="language-bash">dig www.mec.es
+</code></pre>
+<p>Este comando realiza una consulta al servidor DNS predeterminado para resolver el dominio proporcionado.</p>
+<p><strong>Parámetros importantes:</strong>
+- <code>+short</code>: Muestra una salida reducida.
+- <code>+trace</code>: Realiza una consulta iterativa, comenzando desde los servidores raíz.
+- <code>+nocmd</code>: Oculta la cabecera del comando.</p>
+<hr />
+<h3 id="nslookup"><code>nslookup</code><a class="headerlink" href="#nslookup" title="Permanent link">&para;</a></h3>
+<p><code>nslookup</code> es una herramienta más simple para consultas DNS. Aunque está menos recomendada, sigue siendo útil.</p>
+<p><strong>Comando Básico:</strong></p>
+<pre><code class="language-bash">nslookup dominio
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code class="language-bash">nslookup www.mec.es
+</code></pre>
+<p><strong>Parámetros importantes:</strong></p>
 <ul>
-<li>La información de cada <strong>Zona de Autoridad</strong> se almacena localmente en un fichero de texto en el <strong>Servidor DNS</strong>.</li>
-<li>Después de crear una zona, es necesario agregarle <strong>registros de recursos (RR)</strong> adicionales.</li>
-<li>En realidad, la zona es un archivo que contiene <strong>registros de recursos (RR)</strong> de la base de datos del espacio de nombres de dominio.</li>
+<li>Cambiar servidor DNS:
+  <code>bash
+  nslookup
+  server [IP del servidor DNS]</code></li>
 </ul>
-<h3 id="tipos-de-registros-dns">Tipos de Registros DNS<a class="headerlink" href="#tipos-de-registros-dns" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="host"><code>host</code><a class="headerlink" href="#host" title="Permanent link">&para;</a></h3>
+<p><code>host</code> es una herramienta compacta para resolver nombres DNS.</p>
+<p><strong>Comando Básico:</strong></p>
+<pre><code class="language-bash">host dominio
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code class="language-bash">host www.mec.es
+</code></pre>
+<p><strong>Parámetros importantes:</strong></p>
+<ul>
+<li><code>-t</code>: Especifica el tipo de registro (A, MX, NS, etc.).</li>
+</ul>
+<hr />
+<h2 id="2-determina-la-direccion-ip-de-la-maquina-wwwmeces">2.- Determina la dirección IP de la máquina www.mec.es<a class="headerlink" href="#2-determina-la-direccion-ip-de-la-maquina-wwwmeces" title="Permanent link">&para;</a></h2>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig +short www.mec.es
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>212.128.114.29</code></p>
+<hr />
+<h2 id="3-averigua-que-maquina-tiene-asignada-la-direccion-ip-193110128200">3.- Averigua qué máquina tiene asignada la dirección IP 193.110.128.200<a class="headerlink" href="#3-averigua-que-maquina-tiene-asignada-la-direccion-ip-193110128200" title="Permanent link">&para;</a></h2>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig -x 193.110.128.200 +short
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>raw.elmundo.es</code></p>
+<hr />
+<h2 id="4-consultas-relacionadas-con-el-dominio-abces">4.- Consultas relacionadas con el dominio abc.es<a class="headerlink" href="#4-consultas-relacionadas-con-el-dominio-abces" title="Permanent link">&para;</a></h2>
+<h3 id="a-servidores-dns-del-dominio">a. Servidores DNS del dominio<a class="headerlink" href="#a-servidores-dns-del-dominio" title="Permanent link">&para;</a></h3>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">for server in $(dig abc.es NS +short); do echo &quot;$server: $(dig +short $server)&quot;; done
+</code></pre>
+<p><strong>Resultado:</strong>  </p>
+<pre><code>a24-66.akam.net.: 2.16.130.66 
+a1-229.akam.net.: 193.108.91.229 
+a4-67.akam.net.: 72.246.46.67 
+a18-65.akam.net.: 95.101.36.65 
+a5-64.akam.net.: 95.100.168.64 
+a11-64.akam.net.: 84.53.139.64
+</code></pre>
+<h3 id="b-servidor-primario-y-secundarios">b. Servidor primario y secundarios<a class="headerlink" href="#b-servidor-primario-y-secundarios" title="Permanent link">&para;</a></h3>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig abc.es SOA +short
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>a1-229.akam.net. dnsadmin.abc.es. 2019023111 86400 7200 2592000 300</code></p>
+<h4 id="identificar-servidores-secundarios">Identificar servidores secundarios<a class="headerlink" href="#identificar-servidores-secundarios" title="Permanent link">&para;</a></h4>
+<p>Todos los servidores listados en la consulta <strong>NS</strong> (Name Server) son considerados servidores de nombres autorizados para el dominio. Sin embargo, en el registro SOA, solo el servidor primario aparece de manera explícita. Los demás servidores (en este caso <code>a24-66.akam.net</code>, <code>a4-67.akam.net</code>, etc.) actúan como secundarios.</p>
+<h2 id="5-registro-soa">5.- Registro SOA<a class="headerlink" href="#5-registro-soa" title="Permanent link">&para;</a></h2>
+<p><strong>Consulta al DNS local:</strong></p>
+<pre><code class="language-bash">dig abc.es SOA
+</code></pre>
+<p>Resultado:</p>
+<p><code>abc.es.         41    IN    SOA   a1-229.akam.net. dnsadmin.abc.es. 2019023111 86400 7200 2592000 300</code></p>
+<p>Para confirmar que esta información es autorizada, hay que hacer una consulta directamente al servidor primario <code>a1-229.akam.net</code>:</p>
+<p><strong>Consulta al servidor primario:</strong></p>
+<pre><code class="language-bash">dig @a1-229.akam.net. abc.es SOA
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>abc.es.         300   IN    SOA   a1-229.akam.net. dnsadmin.abc.es. 2019023111 86400 7200 2592000 300</code></p>
+<h3 id="comparacion-de-las-diferencias"><strong>Comparación de las diferencias:</strong><a class="headerlink" href="#comparacion-de-las-diferencias" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th><strong>Tipo</strong></th>
-<th><strong>Propósito</strong></th>
+<th><strong>Campo</strong></th>
+<th><strong>DNS Local</strong></th>
+<th><strong>Servidor Primario</strong></th>
+<th><strong>Diferencia</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>SOA</strong></td>
-<td>Define información básica de la zona, como el servidor primario y el correo del administrador.</td>
+<td><strong>Servidor de consulta</strong></td>
+<td>DNS local (<code>192.168.1.254</code>)</td>
+<td>Primario (<code>a1-229.akam.net</code>)</td>
+<td>El primario es autoritativo, el local puede ser una copia en caché.</td>
 </tr>
 <tr>
-<td><strong>A</strong></td>
-<td>Asocia un nombre de dominio a una dirección IPv4.</td>
+<td><strong>Serial</strong></td>
+<td><code>2019023111</code></td>
+<td><code>2019023111</code></td>
+<td>Coinciden: el local tiene datos actualizados.</td>
 </tr>
 <tr>
-<td><strong>AAAA</strong></td>
-<td>Asocia un nombre de dominio a una dirección IPv6.</td>
+<td><strong>TTL</strong></td>
+<td><code>41</code></td>
+<td><code>300</code></td>
+<td>El TTL más bajo en el local indica una copia en caché.</td>
 </tr>
 <tr>
-<td><strong>CNAME</strong></td>
-<td>Crea un alias para otro dominio.</td>
-</tr>
-<tr>
-<td><strong>MX</strong></td>
-<td>Define los servidores de correo para el dominio y sus prioridades.</td>
-</tr>
-<tr>
-<td><strong>NS</strong></td>
-<td>Especifica los servidores DNS autoritativos para la zona.</td>
-</tr>
-<tr>
-<td><strong>PTR</strong></td>
-<td>Realiza la resolución inversa (de dirección IP a nombre de dominio).</td>
-</tr>
-<tr>
-<td><strong>TXT</strong></td>
-<td>Almacena texto arbitrario, utilizado para configuraciones como SPF o verificaciones.</td>
-</tr>
-<tr>
-<td><strong>SRV</strong></td>
-<td>Define servicios específicos y su ubicación dentro del dominio.</td>
-</tr>
-<tr>
-<td><strong>CAA</strong></td>
-<td>Restringe qué autoridades de certificación pueden emitir certificados para el dominio.</td>
+<td><strong>Autorización</strong></td>
+<td><strong>No autorizado</strong> (copia en caché)</td>
+<td><strong>Autorizado</strong> (directo del primario)</td>
+<td>El primario es la fuente confiable.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="delegacion-de-autoridad-en-dns">Delegación de Autoridad en DNS<a class="headerlink" href="#delegacion-de-autoridad-en-dns" title="Permanent link">&para;</a></h2>
-<p>La autoridad de una zona puede delegar la autoridad de una parte de su dominio en otro servidor DNS.</p>
+<hr />
+<h2 id="6-correo-del-administrador-del-dominio-abces">6.-Correo del Administrador del dominio abc.es<a class="headerlink" href="#6-correo-del-administrador-del-dominio-abces" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">dig abc.es SOA
+</code></pre>
+<p><strong>Resultado:</strong></p>
+<p><code>abc.es.         41    IN    SOA   a1-229.akam.net. dnsadmin.abc.es. 2019023111 86400 7200 2592000 300</code></p>
+<p><strong>Correo:</strong> <code>dnsadmin@abc.es</code></p>
+<hr />
+<h2 id="7-servidor-de-correo-de-abces">7.- Servidor de correo de abc.es<a class="headerlink" href="#7-servidor-de-correo-de-abces" title="Permanent link">&para;</a></h2>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">for server in $(dig MX abc.es +short | cut -d' ' -f2); do echo -n &quot;${server%.} &quot;; dig A ${server%.} +short | tr '\n' ' '; echo; done
+</code></pre>
+<p><strong>Resultado:</strong> </p>
+<pre><code>alt4.aspmx.l.google.com 74.125.200.27  
+alt3.aspmx.l.google.com 142.250.150.27
+alt1.aspmx.l.google.com 142.250.153.26  
+alt2.aspmx.l.google.com 142.251.9.26  
+aspmx.l.google.com 142.250.110.27 
+</code></pre>
+<hr />
+<h2 id="8-ttl-de-wwwvanguardiaes">8. TTL de www.vanguardia.es<a class="headerlink" href="#8-ttl-de-wwwvanguardiaes" title="Permanent link">&para;</a></h2>
+<p><strong>Consulta repetida:</strong></p>
+<pre><code class="language-bash">dig www.vanguardia.es | grep &quot;^www.vanguardia.es&quot;
+</code></pre>
+<p><strong>Resultados:</strong></p>
+<pre><code>www.vanguardia.es.    86310  IN    CNAME  www.lavanguardia.es. 
+www.vanguardia.es.    86302  IN    CNAME  www.lavanguardia.es. 
+www.vanguardia.es.    86298  IN    CNAME  www.lavanguardia.es.
+</code></pre>
+<p>El TTL disminuye en cada consulta hasta llegar a 0, momento en el cual el servidor DNS recarga el registro.</p>
+<hr />
+<h2 id="9-verifica-consultas-no-recursivas-en-un-servidor-especifico">9. Verifica consultas no recursivas en un servidor específico<a class="headerlink" href="#9-verifica-consultas-no-recursivas-en-un-servidor-especifico" title="Permanent link">&para;</a></h2>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig @163.117.139.253 www.vanguardia.es +recurse
+</code></pre>
+<p><strong>Resultado:</strong></p>
+<pre><code>;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: REFUSED, id: 22228 
+;; flags: qr rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1 
+;; WARNING: recursion requested but not available 
+;; WARNING: Message has 11 extra bytes at end
+</code></pre>
+<hr />
+<h2 id="10-balanceo-de-carga-para-wwwelmundoes">10. Balanceo de carga para www.elmundo.es<a class="headerlink" href="#10-balanceo-de-carga-para-wwwelmundoes" title="Permanent link">&para;</a></h2>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig +short www.elmundo.es
+</code></pre>
+<p><strong>Resultados:</strong>  </p>
+<pre><code>unidadeditorial.map.fastly.net.
+199.232.193.50
+199.232.197.50
+</code></pre>
+<p>Al realizar consultas DNS para www.elmundo.es, se obtienen dos direcciones IP diferentes:</p>
+<pre><code>199.232.193.50
+199.232.197.50
+</code></pre>
+<p>Ambas IPs pertenecen a un servicio de CDN (Content Delivery Network) de Fastly. Este tipo de infraestructura distribuye la carga de tráfico entre varios servidores para mejorar la disponibilidad y el rendimiento. Las direcciones IP  corresponden a servidores que forman parte de este sistema de balanceo de carga.</p>
+<p>Respuesta a las preguntas:</p>
 <ul>
-<li><strong>Ejemplo:</strong><ul>
-<li>La autoridad de la zona <code>kandemor.com</code> es el servidor <strong>DNS1</strong>.</li>
-<li><strong>DNS1</strong> delega la autoridad del subdominio <code>domi.kandemor.com</code> al servidor <strong>DNS2</strong>.</li>
-<li>A partir de este momento, para consultar los registros del dominio <code>domi.kandemor.com</code>, será necesario consultar a <strong>DNS2</strong>.</li>
-</ul>
+<li>
+<p><strong>¿Cuántas máquinas están realizando balanceo de carga para el servidor web www.elmundo.es?</strong> En los resultados de tus consultas, ves dos direcciones IP diferentes (199.232.193.50 y 199.232.197.50). Esto indica que al menos dos máquinas están participando en el balanceo de carga para www.elmundo.es.</p>
+</li>
+<li>
+<p><strong>¿Obtienes siempre las mismas máquinas? ¿En el mismo orden?</strong> Llas IPs se mantienen constantes (199.232.193.50 y 199.232.197.50), pero el orden de las IPs puede variar. Esto es típico de un sistema de balanceo de carga que distribuye las consultas entre servidores en función de varios factores, como la carga o la latencia. El orden de las IPs puede cambiar entre consultas, pero las máquinas que responden son las mismas.</p>
 </li>
 </ul>
-<h2 id="que-implica-esta-delegacion">¿Qué implica esta delegación?<a class="headerlink" href="#que-implica-esta-delegacion" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Nueva autoridad:</strong><ul>
-<li><strong>DNS2</strong> se convierte en la autoridad del dominio delegado <code>domi.kandemor.com</code>.</li>
-</ul>
-</li>
-<li><strong>Capacidad de creación:</strong><ul>
-<li><strong>DNS2</strong> puede crear subdominios bajo <code>domi.kandemor.com</code> y delegarlos según considere necesario.</li>
-</ul>
-</li>
-<li><strong>Competencia limitada:</strong><ul>
-<li><strong>DNS1</strong> ya no tiene autoridad sobre el dominio delegado.</li>
-<li>Su única función es mantener un <strong>puntero</strong> que indica quién es la autoridad para <code>domi.kandemor.com</code> (en este caso, <strong>DNS2</strong>).</li>
-</ul>
-</li>
-</ol>
-<h2 id="zonas-en-un-servidor-dns">Zonas en un Servidor DNS<a class="headerlink" href="#zonas-en-un-servidor-dns" title="Permanent link">&para;</a></h2>
-<p>En cualquier servidor DNS que contenga información de dominios, se definen al menos dos tipos de zonas que el servidor puede atender:</p>
-<h2 id="1-zonas-de-busqueda-directa">1. <strong>Zonas de Búsqueda Directa</strong><a class="headerlink" href="#1-zonas-de-busqueda-directa" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="11-resolucion-iterativa-para-wwwtimesonlinecouk">11. Resolución iterativa para <code>www.timesonline.co.uk</code><a class="headerlink" href="#11-resolucion-iterativa-para-wwwtimesonlinecouk" title="Permanent link">&para;</a></h2>
+<p><strong>Comandos:</strong></p>
+<p>Iterativa:</p>
+<pre><code class="language-bash">dig www.timesonline.co.uk
+</code></pre>
+<p><strong>Resultados:</strong><br />
+<code>www.timesonline.co.uk. 300 IN CNAME alsop-n.uk.</code></p>
+<pre><code class="language-bash">dig alsop-n.uk
+</code></pre>
+<p><strong>Resultados</strong></p>
+<pre><code>lsop-n.uk.             60      IN      A       52.208.17.106
+alsop-n.uk.             60      IN      A       34.240.28.43
+alsop-n.uk.             60      IN      A       54.76.240.177
+</code></pre>
+<p><strong>Explicación del proceso</strong>
+- CNAME:
+<code>www.timesonline.co.uk. 300 IN CNAME alsop-n.uk.</code></p>
+<p>Esto significa que <code>www.timesonline.co.uk</code> es un alias para <code>alsop-n.uk</code>. El valor 300 indica que el registro tiene un TTL (Time to Live) de 300 segundos.</p>
 <ul>
-<li>Estas zonas devuelven <strong>direcciones IP</strong> cuando se realizan búsquedas utilizando nombres FQDN (<strong>Fully Qualified Domain Name</strong>).</li>
-<li><strong>Ejemplo:</strong><ul>
-<li>Búsqueda: <code>www.example.com</code></li>
-<li>Respuesta: <code>192.168.1.10</code></li>
+<li>Direcciones IP asociadas a alsop-n.uk:
+        alsop-n.uk. tiene varias direcciones IP asociadas:
+            52.208.17.106
+            54.76.240.177
+            34.240.28.43</li>
 </ul>
-</li>
-</ul>
-<h2 id="2-zonas-de-resolucion-inversa">2. <strong>Zonas de Resolución Inversa</strong><a class="headerlink" href="#2-zonas-de-resolucion-inversa" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Estas zonas devuelven <strong>nombres FQDN</strong> (<strong>Fully Qualified Domain Name</strong>) cuando se realizan búsquedas utilizando direcciones IP.</li>
-<li><strong>Ejemplo:</strong><ul>
-<li>Búsqueda: <code>192.168.1.10</code></li>
-<li>Respuesta: <code>www.example.com</code></li>
-</ul>
-</li>
-</ul>
-<p>Ambas zonas son esenciales para garantizar que un servidor DNS pueda resolver nombres y direcciones en ambas direcciones (directa e inversa).</p>
+<p>Cada una de estas direcciones IP corresponde a una máquina que puede estar gestionando las solicitudes para <code>www.timesonline.co.uk</code> (a través de su alias <code>alsop-n.uk</code>).</p>
+<hr />
+<h2 id="12-consulta-con-trace">12.- Consulta con <code>+trace</code><a class="headerlink" href="#12-consulta-con-trace" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">dig +trace www.timesonline.co.uk
+
+; &lt;&lt;&gt;&gt; DiG 9.20.2-1-Debian &lt;&lt;&gt;&gt; +trace www.timesonline.co.uk
+;; global options: +cmd
+.                       86028   IN      NS      d.root-servers.net.
+.                       86028   IN      NS      e.root-servers.net.
+.                       86028   IN      NS      g.root-servers.net.
+.                       86028   IN      NS      h.root-servers.net.
+.                       86028   IN      NS      l.root-servers.net.
+.                       86028   IN      NS      f.root-servers.net.
+.                       86028   IN      NS      i.root-servers.net.
+.                       86028   IN      NS      j.root-servers.net.
+.                       86028   IN      NS      m.root-servers.net.
+.                       86028   IN      NS      c.root-servers.net.
+.                       86028   IN      NS      a.root-servers.net.
+.                       86028   IN      NS      b.root-servers.net.
+.                       86028   IN      NS      k.root-servers.net.
+.                       86028   IN      NS      e.root-servers.net.
+.                       86028   IN      NS      g.root-servers.net.
+.                       86028   IN      NS      h.root-servers.net.
+.                       86028   IN      NS      l.root-servers.net.
+.                       86028   IN      NS      f.root-servers.net.
+.                       86028   IN      NS      i.root-servers.net.
+.                       86028   IN      NS      j.root-servers.net.
+.                       86028   IN      NS      m.root-servers.net.
+.                       86028   IN      NS      c.root-servers.net.
+.                       86028   IN      NS      a.root-servers.net.
+.                       86028   IN      NS      b.root-servers.net.
+.                       86028   IN      NS      k.root-servers.net.
+.                       86028   IN      NS      d.root-servers.net.
+;; Received 813 bytes from 172.31.1.1#53(172.31.1.1) in 0 ms
+
+uk.                     172800  IN      NS      nsa.nic.uk.
+uk.                     172800  IN      NS      nsb.nic.uk.
+uk.                     172800  IN      NS      nsc.nic.uk.
+uk.                     172800  IN      NS      nsd.nic.uk.
+uk.                     172800  IN      NS      dns1.nic.uk.
+uk.                     172800  IN      NS      dns2.nic.uk.
+uk.                     172800  IN      NS      dns3.nic.uk.
+uk.                     172800  IN      NS      dns4.nic.uk.
+uk.                     86400   IN      DS      43876 8 2 A107ED2AC1BD14D924173BC7E827A1153582072394F9272BA37E2353 BC659603
+uk.                     86400   IN      RRSIG   DS 8 1 86400 20241209050000 20241126040000 61050 . JkLX5uy4iwctE9hSwLw/dCc/TS8Uc6Q27tUiCwNrACY/4f4U3gt9rEz9 iXfNcuYfU9v+dJTLNISjPt7Mun8j6h5ZcJov2U0N5EjlUbboe4tU//Rk GyUEyfji3MNLI+2wMIihVi1WZru0xygtjIvhsayk+fU5LQryY1R0ZRrP OoRAjZp26TXblcGVCu8LLaVsTTf5grsPGB0k4G+T6B0NLv6TGXVbEguP Whs48DIste648mgyzpybVSpRqpF6cIwJn5IMwtL4bB5yCfoT7Yz5QezR QgjsK3zh4nO6b5OLbooBFDv//dUC5SKH538sp6ElIhl6JDMDf9nFkqUW aFjGDQ==
+;; Received 889 bytes from 192.203.230.10#53(e.root-servers.net) in 11 ms
+
+;; UDP setup with 2401:fd80:400::1#53(2401:fd80:400::1) for www.timesonline.co.uk failed: network unreachable.
+;; no servers could be reached
+;; UDP setup with 2401:fd80:400::1#53(2401:fd80:400::1) for www.timesonline.co.uk failed: network unreachable.
+;; no servers could be reached
+;; UDP setup with 2401:fd80:400::1#53(2401:fd80:400::1) for www.timesonline.co.uk failed: network unreachable.
+timesonline.co.uk.      172800  IN      NS      ns-1344.awsdns-40.org.
+timesonline.co.uk.      172800  IN      NS      ns-1678.awsdns-17.co.uk.
+timesonline.co.uk.      172800  IN      NS      ns-448.awsdns-56.com.
+timesonline.co.uk.      172800  IN      NS      ns-949.awsdns-54.net.
+G9F1KIIHM8M9VHJK7LRVETBQCEOGJIQP.co.uk. 10800 IN NSEC3 1 1 0 - G9F25DVNV5F7H68TFHQLO4863NJHEARI NS SOA RRSIG DNSKEY NSEC3PARAM TYPE65534
+G9F1KIIHM8M9VHJK7LRVETBQCEOGJIQP.co.uk. 10800 IN RRSIG NSEC3 8 3 10800 20241227183405 20241122175640 33621 co.uk. LwV2q6CzjPsmMAd5WGd3SKr6DY2jnzWwdjMr623jiVBKLGMbe16xBcCY MO+0+fO6kJ2q1djXwIwH6bMXXUmrYMXnsezm2nOMs0wy5Lhf2xwCATdh LWzmvrYrSPKDfATEN4YEqbTHVQL+m9KZvFrtkrY95RE4yhsY67GhEmMa 7R8=
+Q17IDSIOJFAJ6IH1GJCQUJ5M6UFK1EOD.co.uk. 10800 IN NSEC3 1 1 0 - Q17NRVQHA6NCUIQ38O66LU1RIP3L65PP NS DS RRSIG
+Q17IDSIOJFAJ6IH1GJCQUJ5M6UFK1EOD.co.uk. 10800 IN RRSIG NSEC3 8 3 10800 20241225235828 20241120231829 33621 co.uk. gavu/4D+Rt8RCTg+KCBvZs5jl8+Kv3lOonfvMgDFw4Md4nccB9fSOZ53 zbAocvMcAfnPf56uAiZPmW/DRHZssykfRjnyHgbFHX6cyHw+WiZEDU51 6iv6fv1TTxJTLmhQvqQMF/zc5YyW+AKUkGgaiwCL55UOlUf9mENoMyaw lFw=
+;; Received 736 bytes from 156.154.101.3#53(nsb.nic.uk) in 35 ms
+
+;; UDP setup with 2600:9000:5305:4000::1#53(2600:9000:5305:4000::1) for www.timesonline.co.uk failed: network unreachable.
+www.timesonline.co.uk.  300     IN      CNAME   alsop-n.uk.
+timesonline.co.uk.      300     IN      NS      ns-1344.awsdns-40.org.
+timesonline.co.uk.      300     IN      NS      ns-1678.awsdns-17.co.uk.
+timesonline.co.uk.      300     IN      NS      ns-448.awsdns-56.com.
+timesonline.co.uk.      300     IN      NS      ns-949.awsdns-54.net.
+;; Received 207 bytes from 205.251.197.64#53(ns-1344.awsdns-40.org) in 39 ms
+</code></pre>
+<p>La opción +trace de dig realiza una consulta recursiva desde el servidor raíz hasta llegar a la respuesta final, mostrando todos los pasos intermedios involucrados en la resolución del dominio. Vamos a comparar los resultados que has obtenido con los pasos previos para alsop-n.uk y www.timesonline.co.uk.</p>
+<h3 id="resolucion-de-alsop-nuk-con-dig"><strong>Resolución de alsop-n.uk con dig:</strong><a class="headerlink" href="#resolucion-de-alsop-nuk-con-dig" title="Permanent link">&para;</a></h3>
+<p>El comando <code>dig A alsop-n.uk</code> te muestra directamente las direcciones IP asociadas con el dominio <code>alsop-n.uk</code>:</p>
+<pre><code>alsop-n.uk.             60      IN      A       52.208.17.106
+alsop-n.uk.             60      IN      A       34.240.28.43
+alsop-n.uk.             60      IN      A       54.76.240.177
+</code></pre>
+<p>Esta respuesta es clara y directa, proporcionando las direcciones IP sin ningún detalle adicional sobre cómo se llegó a esta resolución.</p>
+<h3 id="resolucion-de-wwwtimesonlinecouk-con-dig-trace"><strong>Resolución de <code>www.timesonline.co.uk</code> con <code>dig +trace</code>:</strong><a class="headerlink" href="#resolucion-de-wwwtimesonlinecouk-con-dig-trace" title="Permanent link">&para;</a></h3>
+<p>El comando dig +trace www.timesonline.co.uk sigue todos los pasos necesarios para resolver el dominio, mostrando las consultas a los servidores raíz y a los servidores DNS autoritativos. El flujo es el siguiente:</p>
+<h4 id="paso-1-consultas-a-los-servidores-raiz">Paso 1: Consultas a los servidores raíz<a class="headerlink" href="#paso-1-consultas-a-los-servidores-raiz" title="Permanent link">&para;</a></h4>
+<p>La consulta comienza en los servidores raíz, los cuales te indican cuál es el servidor responsable de la zona del dominio .uk:</p>
+<pre><code>.                       86028   IN      NS      d.root-servers.net.
+.                       86028   IN      NS      e.root-servers.net.
+...
+
+</code></pre>
+<h4 id="paso-2-resolucion-de-la-zona-uk">Paso 2: Resolución de la zona .uk<a class="headerlink" href="#paso-2-resolucion-de-la-zona-uk" title="Permanent link">&para;</a></h4>
+<p>Luego, el servidor raíz devuelve los servidores DNS autoritativos para el dominio .uk. En este caso, los servidores de nombres para .uk son:</p>
+<pre><code>uk.                     172800  IN      NS      nsa.nic.uk.
+uk.                     172800  IN      NS      nsb.nic.uk.
+...
+</code></pre>
+<h4 id="paso-3-resolucion-del-dominio-timesonlinecouk">Paso 3: Resolución del dominio timesonline.co.uk<a class="headerlink" href="#paso-3-resolucion-del-dominio-timesonlinecouk" title="Permanent link">&para;</a></h4>
+<p>La siguiente consulta es a los servidores responsables del dominio timesonline.co.uk. Se obtiene información sobre los servidores de nombres para timesonline.co.uk:</p>
+<pre><code>timesonline.co.uk.      172800  IN      NS      ns-1344.awsdns-40.org.
+timesonline.co.uk.      172800  IN      NS      ns-1678.awsdns-17.co.uk.
+...
+
+</code></pre>
+<h4 id="paso-4-resolucion-de-wwwtimesonlinecouk-como-cname">Paso 4: Resolución de www.timesonline.co.uk como CNAME<a class="headerlink" href="#paso-4-resolucion-de-wwwtimesonlinecouk-como-cname" title="Permanent link">&para;</a></h4>
+<p>Finalmente, el servidor DNS de timesonline.co.uk responde con un registro CNAME para www.timesonline.co.uk:</p>
+<pre><code>www.timesonline.co.uk.  300     IN      CNAME   alsop-n.uk.
+</code></pre>
+<p>Esto confirma que www.timesonline.co.uk es un alias de alsop-n.uk, lo que coincide con lo que vimos en la consulta anterior.
+Comparación de los resultados:</p>
+<h3 id="proceso-de-resolucion">Proceso de resolución:<a class="headerlink" href="#proceso-de-resolucion" title="Permanent link">&para;</a></h3>
+<p>Con dig simple: Directamente obtuviste las IPs de alsop-n.uk.
+Con dig +trace: El proceso es más largo, pasando por consultas a los servidores raíz, los servidores de zona .uk y finalmente obteniendo el registro CNAME para www.timesonline.co.uk, lo que te lleva a alsop-n.uk.</p>
+<h3 id="tipo-de-informacion">Tipo de información:<a class="headerlink" href="#tipo-de-informacion" title="Permanent link">&para;</a></h3>
+<p>Con dig simple: Solo obtuviste las direcciones IP asociadas con alsop-n.uk.
+Con dig +trace: Vimos todo el recorrido de la consulta, incluidos los servidores DNS autoritativos y la resolución del alias CNAME.</p>
+<h3 id="resultado-final">Resultado final:<a class="headerlink" href="#resultado-final" title="Permanent link">&para;</a></h3>
+<p>Ambas consultas te conducen a las mismas direcciones IP de alsop-n.uk, pero el uso de +trace muestra cómo la consulta va pasando por los distintos niveles del sistema de nombres de dominio (DNS).</p>
+<h3 id="conclusion">Conclusión:<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>La opción +trace de dig es útil cuando deseas ver cómo se resuelve un dominio paso a paso, mientras que un comando dig más simple solo te devuelve la información directamente sin mostrarte el proceso de resolución completo. Ambos métodos proporcionan el mismo resultado final (las direcciones IP de alsop-n.uk), pero +trace es más detallado y útil para depurar problemas o entender cómo se realiza la resolución de nombres en Internet.</p>
+<h2 id="13-informacion-de-servidores-de-correo-de-ituc3mes">13. Información de servidores de correo de <code>it.uc3m.es</code><a class="headerlink" href="#13-informacion-de-servidores-de-correo-de-ituc3mes" title="Permanent link">&para;</a></h2>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig it.uc3m.es MX
+</code></pre>
+<p><strong>Resultados:</strong>  </p>
+<pre><code>[it.uc3m.es.             21600   IN      MX      20 alt2.aspmx.l.google.com.
+it.uc3m.es.             21600   IN      MX      30 aspmx2.googlemail.com.
+it.uc3m.es.             21600   IN      MX      20 alt1.aspmx.l.google.com.
+it.uc3m.es.             21600   IN      MX      10 aspmx.l.google.com.
+it.uc3m.es.             21600   IN      MX      30 aspmx3.googlemail.com.`
+</code></pre>
+<hr />
+<h2 id="14-consultas-adicionales">14. Consultas adicionales<a class="headerlink" href="#14-consultas-adicionales" title="Permanent link">&para;</a></h2>
+<h4 id="15-lavadoragonzalonazarenoorg">15. <code>lavadora.gonzalonazareno.org</code><a class="headerlink" href="#15-lavadoragonzalonazarenoorg" title="Permanent link">&para;</a></h4>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig lavadora.gonzalonazareno.org
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>[Resultado del comando]</code></p>
+<h4 id="16-redireccion-de-informaticagonzalonazarenoorg">16. Redirección de informatica.gonzalonazareno.org<a class="headerlink" href="#16-redireccion-de-informaticagonzalonazarenoorg" title="Permanent link">&para;</a></h4>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig informatica.gonzalonazareno.org CNAME
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>[Resultado del comando]</code></p>
+<h4 id="17-servidores-dns-de-gonzalonazarenoorg">17. Servidores DNS de gonzalonazareno.org<a class="headerlink" href="#17-servidores-dns-de-gonzalonazarenoorg" title="Permanent link">&para;</a></h4>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig gonzalonazareno.org NS
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>[Resultado del comando]</code></p>
+<h4 id="18-servidores-de-correo-de-gonzalonazarenoorg">18. Servidores de correo de gonzalonazareno.org<a class="headerlink" href="#18-servidores-de-correo-de-gonzalonazarenoorg" title="Permanent link">&para;</a></h4>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig gonzalonazareno.org MX
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>[Resultado del comando]</code></p>
+<h4 id="19-direccion-ip-80591152">19. Dirección IP 80.59.1.152<a class="headerlink" href="#19-direccion-ip-80591152" title="Permanent link">&para;</a></h4>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-bash">dig -x 80.59.1.152
+</code></pre>
+<p><strong>Resultado:</strong><br />
+<code>[Resultado del comando]</code></p>
 
 
 
@@ -6362,12 +7268,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "navigation.top.sticky", "navigation.tabs", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
