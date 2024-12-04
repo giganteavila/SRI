@@ -2117,8 +2117,27 @@
     end
 </div>
 <ol>
-<li><strong>Estructura de la red</strong>:<ul>
-<li><strong>Cuatro máquinas virtuales</strong>: M1, M2, M3 y M4 (todas con Ubuntu Server).</li>
+<li>
+<p><strong>Estructura de la red</strong>:</p>
+<ul>
+<li><strong>Cuatro máquinas virtuales</strong>: M1, M2, M3 y M4 (todas con Ubuntu Server).
+<code>bash
+sudo virt-install \
+   --name M&lt;x&gt; \
+   --ram 1024 \
+   --vcpus 1 \
+   --disk path=/var/lib/libvirt/images/M&lt;x&gt;.qcow2,size=5 \
+   --cdrom http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/legacy-images/netboot/ubuntu-installer/amd64/boot.img \
+   --os-variant ubuntu20.04 \
+   --network bridge=virbr0,model=virtio \
+   --graphics spice \
+   --console pty,target_type=serial \
+   --location http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/</code><blockquote>
+<p>Ojo:  <code>--name M&lt;x&gt;</code>: Define el nombre de la máquina virtual. Cambia <x> por el nombre que desees.</x></p>
+<p>Quizá arranque la máquina en una consola sin login. Cambia con <ctrl+shift><n> a una consola con login.</n></ctrl+shift></p>
+<p>Crear una y clonar el resto con las modificaciones pertinentes según los requisitos.</p>
+</blockquote>
+</li>
 <li><strong>Conexión de red</strong>:<ul>
 <li>M1: Dos tarjetas de red, una conectada a <strong>NAT</strong> para acceso a internet y otra al segmento de red virtual.</li>
 <li>M2, M3 y M4: Una tarjeta de red conectada al segmento de red virtual.</li>
@@ -2129,11 +2148,7 @@
 <li>Direcciones fijas para todas las demás conexiones.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>
-<p><strong>Sistema DNS</strong>:</p>
-<ul>
+<li><strong>Sistema DNS</strong>:</li>
 <li><strong>Dominio</strong>: <code>2asir.edu</code></li>
 <li><strong>Nombres canónicos</strong>:<ul>
 <li>M1: <code>ns1.2asir.edu</code></li>
