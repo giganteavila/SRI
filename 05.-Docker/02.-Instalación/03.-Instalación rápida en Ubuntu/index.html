@@ -12,7 +12,7 @@
         <link rel="prev" href="../02.-Instalaci%C3%B3n%20r%C3%A1pida%20en%20Fedora/">
       
       
-        <link rel="next" href="../04.-Instalaci%C3%B3n%20r%C3%A1pida%20en%20Ubuntu/">
+        <link rel="next" href="../../03.-Conceptos%20Clave/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -5806,52 +5806,16 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../01.-Introducci%C3%B3n/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../01.-Introducci%C3%B3n/" class="md-nav__link ">
-              
   
   <span class="md-ellipsis">
     01.-Introducción
   </span>
   
 
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_2">
-            <span class="md-nav__icon md-icon"></span>
-            01.-Introducción
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
+      </a>
     </li>
   
 
@@ -5870,12 +5834,6 @@
       
         
           
-        
-      
-        
-      
-        
-      
         
       
         
@@ -6057,69 +6015,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04.-Instalaci%C3%B3n%20r%C3%A1pida%20en%20Ubuntu/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    04.-Instalación rápida en Ubuntu
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05.-Instalaci%C3%B3n%20r%C3%A1pida%20en%20Ubuntu/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    05.-Instalación rápida en Ubuntu
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06.-Instalaci%C3%B3n%20r%C3%A1pida%20en%20Ubuntu/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    06.-Instalación rápida en Ubuntu
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -6204,6 +6099,8 @@
     
       
         
+          
+        
       
         
       
@@ -6220,16 +6117,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_6_4_2" id="__nav_6_4_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../03.-Conceptos%20Clave/01.-Im%C3%A1genes/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     01.-Imágenes
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_2" id="__nav_6_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_4_2">
@@ -6239,25 +6144,6 @@
           <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../03.-Conceptos%20Clave/01.-Im%C3%A1genes/01.-Im%C3%A1genes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    01.-Imágenes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -6266,11 +6152,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.-Conceptos%20Clave/01.-Im%C3%A1genes/02.-Docker%20Hub/" class="md-nav__link">
+      <a href="../../03.-Conceptos%20Clave/01.-Im%C3%A1genes/01.-Docker%20Hub/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    02.-Docker Hub
+    01.-Docker Hub
   </span>
   
 
@@ -8123,47 +8009,68 @@
 <ul>
 <li>Para configurar el repositorio con <code>apt</code> , se necesita instalar lo siguiente paquetes:</li>
 </ul>
-<p><code>bash
-  $ sudo apt-get update
-  $ sudo apt-get install ca-certificates 
-               install curl 
-               install gnupg</code></p>
-<ul>
-<li>Añadir la clave GPG oficial de Docker:</li>
-</ul>
-<p><code>bash
+<p>```
+  $ sudo apt update
+  $ sudo apt upgrade
+  $ sudo apt install ca-certificates curl gnupg</p>
+<pre><code>
+
+
+- Añadir la clave GPG oficial de Docker:
+
+  ```bash
   $ sudo install -m 0755 -d /etc/apt/keyrings
   $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-  $ sudo chmod a+r /etc/apt/keyrings/docker.gpg</code></p>
-<ul>
-<li>Configurar el repositorio con el siguiente comando:</li>
-</ul>
-<p><code>bash
+  $ sudo chmod a+r /etc/apt/keyrings/docker.gpg
+  ```
+
+
+
+- Configurar el repositorio con el siguiente comando:
+
+  ```bash
   $ echo \
-    "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-    "$(. /etc/os-release &amp;&amp; echo "$VERSION_CODENAME")" stable" | \
-    sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code></p>
-<p>​       <strong>2.-</strong> Instalación del Docker Engine.</p>
-<ul>
-<li>Actualizar el paquete <code>apt</code> :</li>
-</ul>
-<p><code>bash
-  $ sudo apt-get update</code></p>
-<ul>
-<li>Instalar Docker Engine y Docker Compose:</li>
-</ul>
-<p><code>bash
-  $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></p>
-<ul>
-<li>Verificar que la instalación es completada, con una imagen de hello-world:</li>
-</ul>
-<p><code>bash
-  $ sudo docker run hello-world</code></p>
-<p><strong>2).</strong> Descargar el paquete de DEB correspondiente.</p>
-<p>Lo puede descargar automáticamente en el siguiente enlace:</p>
-<p>https://desktop.docker.com/linux/main/amd64/docker-desktop-4.18.0-amd64.deb?utm_source=docker&amp;utm_medium=webreferral&amp;utm_campaign=docs-driven-download-linux-amd64</p>
-<p><strong>3).</strong> Instalar el paquete con <code>apt</code> como indica a continuación (con la versión 4.18.0):</p>
-<pre><code class="language-bash">$ sudo apt-get update
+    &quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    &quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \
+    sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+  ```
+
+
+
+​       **2.-** Instalación del Docker Engine.
+
+- Actualizar el paquete `apt` :
+
+  ``` bash
+  $ sudo apt-get update 
+  ```
+
+- Instalar Docker Engine y Docker Compose:
+
+  ```bash
+  $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  ```
+
+
+
+- Verificar que la instalación es completada, con una imagen de hello-world:
+
+  ```bash
+  $ sudo docker run hello-world
+  ```
+
+
+
+**2).** Descargar el paquete de DEB correspondiente.
+
+Lo puede descargar automáticamente en el siguiente enlace:
+
+https://desktop.docker.com/linux/main/amd64/docker-desktop-4.18.0-amd64.deb?utm_source=docker&amp;utm_medium=webreferral&amp;utm_campaign=docs-driven-download-linux-amd64
+
+**3).** Instalar el paquete con `apt` como indica a continuación (con la versión 4.18.0):
+
+```bash
+$ sudo apt-get update
 $ sudo apt-get install ./docker-desktop-4.18.0-amd64.deb
 </code></pre>
 <h4 id="version-que-utiliza-mi-ubuntu">Versión que utiliza (mi) Ubuntu:<a class="headerlink" href="#version-que-utiliza-mi-ubuntu" title="Permanent link">&para;</a></h4>
