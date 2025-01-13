@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#version-que-utiliza-mi-ubuntu" class="md-skip">
+        <a href="#configurar-el-repositorio-del-paquete-de-docker" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -5974,28 +5974,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-que-utiliza-mi-ubuntu" class="md-nav__link">
+  <a href="#configurar-el-repositorio-del-paquete-de-docker" class="md-nav__link">
     <span class="md-ellipsis">
-      Versión que utiliza (mi) Ubuntu:
+      Configurar el repositorio del paquete de Docker
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-docker-en-arch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalación de Docker en Arch.
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Instalación de Docker en Arch.">
+    <nav class="md-nav" aria-label="Configurar el repositorio del paquete de Docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#version" class="md-nav__link">
+  <a href="#configuracion-del-paquete" class="md-nav__link">
     <span class="md-ellipsis">
-      Versión:
+      Configuración del paquete
     </span>
   </a>
   
@@ -6003,6 +5994,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-del-docker-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación del Docker Engine.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-que-utiliza-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión que utiliza Ubuntu:
+    </span>
+  </a>
   
 </li>
       
@@ -7954,28 +7963,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-que-utiliza-mi-ubuntu" class="md-nav__link">
+  <a href="#configurar-el-repositorio-del-paquete-de-docker" class="md-nav__link">
     <span class="md-ellipsis">
-      Versión que utiliza (mi) Ubuntu:
+      Configurar el repositorio del paquete de Docker
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-docker-en-arch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalación de Docker en Arch.
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Instalación de Docker en Arch.">
+    <nav class="md-nav" aria-label="Configurar el repositorio del paquete de Docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#version" class="md-nav__link">
+  <a href="#configuracion-del-paquete" class="md-nav__link">
     <span class="md-ellipsis">
-      Versión:
+      Configuración del paquete
     </span>
   </a>
   
@@ -7983,6 +7983,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-del-docker-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación del Docker Engine.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-que-utiliza-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión que utiliza Ubuntu:
+    </span>
+  </a>
   
 </li>
       
@@ -8004,76 +8022,42 @@
   <h1>03.-Instalación rápida en Ubuntu</h1>
 
 <p>Para instalar Docker Desktop, se sigue los siguientes pasos:</p>
-<p><strong>1).</strong> Configurar el repositorio del paquete de Docker.</p>
-<p>​       <strong>1.-</strong> Configuración del paquete.</p>
-<ul>
-<li>Para configurar el repositorio con <code>apt</code> , se necesita instalar lo siguiente paquetes:</li>
-</ul>
-<p>```
-  $ sudo apt update
+<h2 id="configurar-el-repositorio-del-paquete-de-docker">Configurar el repositorio del paquete de Docker<a class="headerlink" href="#configurar-el-repositorio-del-paquete-de-docker" title="Permanent link">&para;</a></h2>
+<h3 id="configuracion-del-paquete">Configuración del paquete<a class="headerlink" href="#configuracion-del-paquete" title="Permanent link">&para;</a></h3>
+<p>Para configurar el repositorio con <code>apt</code> , se necesita instalar lo siguiente paquetes:</p>
+<pre><code class="language-bash">  $ sudo apt update
   $ sudo apt upgrade
-  $ sudo apt install ca-certificates curl gnupg</p>
-<pre><code>
-
-
-- Añadir la clave GPG oficial de Docker:
-
-  ```bash
-  $ sudo install -m 0755 -d /etc/apt/keyrings
+  $ sudo apt install ca-certificates curl gnupg
+</code></pre>
+<p>Añadir la clave GPG oficial de Docker:</p>
+<pre><code class="language-bash">  $ sudo install -m 0755 -d /etc/apt/keyrings
   $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
   $ sudo chmod a+r /etc/apt/keyrings/docker.gpg
-  ```
-
-
-
-- Configurar el repositorio con el siguiente comando:
-
-  ```bash
-  $ echo \
+</code></pre>
+<p>Configurar el repositorio con el siguiente comando:</p>
+<pre><code class="language-bash">$ echo \
     &quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-    &quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \
-    sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-  ```
-
-
-
-​       **2.-** Instalación del Docker Engine.
-
-- Actualizar el paquete `apt` :
-
-  ``` bash
-  $ sudo apt-get update 
-  ```
-
-- Instalar Docker Engine y Docker Compose:
-
-  ```bash
-  $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-  ```
-
-
-
-- Verificar que la instalación es completada, con una imagen de hello-world:
-
-  ```bash
-  $ sudo docker run hello-world
-  ```
-
-
-
-**2).** Descargar el paquete de DEB correspondiente.
-
-Lo puede descargar automáticamente en el siguiente enlace:
-
-https://desktop.docker.com/linux/main/amd64/docker-desktop-4.18.0-amd64.deb?utm_source=docker&amp;utm_medium=webreferral&amp;utm_campaign=docs-driven-download-linux-amd64
-
-**3).** Instalar el paquete con `apt` como indica a continuación (con la versión 4.18.0):
-
-```bash
-$ sudo apt-get update
+&quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \
+sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre>
+<h2 id="instalacion-del-docker-engine">Instalación del Docker Engine.<a class="headerlink" href="#instalacion-del-docker-engine" title="Permanent link">&para;</a></h2>
+<p>Actualizar el paquete <code>apt</code> :</p>
+<pre><code class="language-bash">$ sudo apt-get update 
+</code></pre>
+<p>Instalar Docker Engine y Docker Compose:</p>
+<pre><code class="language-bash">$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</code></pre>
+<p>Verificar que la instalación es completada, con una imagen de hello-world:</p>
+<pre><code class="language-bash">$ sudo docker run hello-world
+</code></pre>
+<p><strong>2).</strong> Descargar el paquete de DEB correspondiente.</p>
+<p>Se puede descargar automáticamente en el siguiente enlace:</p>
+<p>https://desktop.docker.com/linux/main/amd64/docker-desktop-4.18.0-amd64.deb?utm_source=docker&amp;utm_medium=webreferral&amp;utm_campaign=docs-driven-download-linux-amd64</p>
+<p><strong>3).</strong> Instalar el paquete con <code>apt</code> como indica a continuación (con la versión 4.18.0):</p>
+<pre><code class="language-bash">$ sudo apt-get update
 $ sudo apt-get install ./docker-desktop-4.18.0-amd64.deb
 </code></pre>
-<h4 id="version-que-utiliza-mi-ubuntu">Versión que utiliza (mi) Ubuntu:<a class="headerlink" href="#version-que-utiliza-mi-ubuntu" title="Permanent link">&para;</a></h4>
+<h2 id="version-que-utiliza-ubuntu">Versión que utiliza Ubuntu:<a class="headerlink" href="#version-que-utiliza-ubuntu" title="Permanent link">&para;</a></h2>
 <pre><code class="language-bash">$ docker compose version
 Docker Compose version v2.17.2
 
@@ -8110,55 +8094,6 @@ Server: Docker Desktop 4.18.0 (104112)
   Version:          0.19.0
   GitCommit:        de40ad0
 </code></pre>
-<h3 id="instalacion-de-docker-en-arch">Instalación de Docker en Arch.<a class="headerlink" href="#instalacion-de-docker-en-arch" title="Permanent link">&para;</a></h3>
-<p>Para instalar Docker en Arch sigue los siguientes pasos:</p>
-<p><strong>1).</strong> Instalar el paquete de Docker Desktop manualmente porque Docker no tiene un repositorio de paquetes Arch.</p>
-<p><strong>2).</strong> Instalar Docker client binary en Linux.</p>
-<ul>
-<li>
-<p>Descargar el archivo binario estático en https://download.docker.com/linux/static/stable/, elige la correspondiente y descarga el archivo <code>.tgz</code>.</p>
-</li>
-<li>
-<p>Extraer el archivo usando el comando <code>tar</code>:</p>
-</li>
-</ul>
-<p><code>bash
-  $ tar xzvf /path/to/&lt;FILE&gt;.tar.gz</code></p>
-<ul>
-<li><strong>OPCIONAL</strong>. Mover el archivo binario a un directorio de path.</li>
-</ul>
-<p><code>bash
-  $ sudo cp docker/* /usr/bin/</code></p>
-<ul>
-<li>Empezar el Docker daemon:</li>
-</ul>
-<p><code>bash
-  $ sudo dockerd &amp;</code></p>
-<ul>
-<li>Verificar que Docker esta instalado correctamente, con una imagen de hello-world:</li>
-</ul>
-<p><code>bash 
-  $ sudo docker run hello-world</code></p>
-<p><strong>3).</strong> Descargar el paquete Arch en la siguiente pagina:</p>
-<p>https://docs.docker.com/desktop/release-notes/</p>
-<p><strong>4).</strong> Instalar el paquete: </p>
-<pre><code class="language-bash">$ sudo pacman -U ./docker-desktop-&lt;version&gt;-&lt;arch&gt;.pkg.tar.zst
-</code></pre>
-<h4 id="version">Versión:<a class="headerlink" href="#version" title="Permanent link">&para;</a></h4>
-<pre><code class="language-bash">$ docker compose version
-Docker Compose version v2.5.0
-
-$ docker --version
-Docker version 20.10.14, build a224086349
-
-$ docker version
-Client: Docker Engine - Community
-Cloud integration: 1.0.24
-Version:           20.10.14
-API version:       1.41
-...
-</code></pre>
-<p>by Yana Zhu</p>
 
 
 

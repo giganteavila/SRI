@@ -8020,7 +8020,7 @@ $ apt install nano
 <pre><code>«Sí»
 </code></pre>
 <p>Sal del contenedor, y bórralo. Crea un nuevo contenedor interactivo desde la misma imagen.</p>
-<pre><code>$ docker rm debian
+<pre><code>$ docker rm mi_contenedor
 $ docker ps -a
 $ docker run -it --name mi_nuevo_contenedor debian
 </code></pre>
@@ -8035,11 +8035,12 @@ $ docker run -it --name mi_nuevo_contenedor debian
 <p>Al crear el contenedor, ¿has tenido que indicar algún comando para que lo ejecute?</p>
 <pre><code>«No»
 </code></pre>
-<p>Accede al navegador web y comprueba que el servidor está funcionando. 
- <code>$ firefox localhost</code>
- Muestra los logs del contenedor.
- <code>shell
- $ docker logs servidor_nginx</code></p>
+<p>Accede al navegador web y comprueba que el servidor está funcionando. </p>
+<pre><code class="language-bash">$ firefox localhost
+</code></pre>
+<p>Muestra los logs del contenedor.</p>
+<pre><code class="language-shell">$ docker logs servidor_nginx
+</code></pre>
 <ul>
 <li>Crea un contenedor con la aplicación Nextcloud, mirando la <a href="https://hub.docker.com/_/nextcloud">documentación en docker Hub</a>, para personalizar el nombre de la base de datos sqlite que va a utilizar.</li>
 </ul>
