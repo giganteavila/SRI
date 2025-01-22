@@ -105,6 +105,7 @@ nav:
       - 02.-Remote forwarding: ./02.-SSH/06.-Túneles SSH/02.-Remote forwarding.md
       - 03.-Forwarding dinámico: ./02.-SSH/06.-Túneles SSH/03.-Forwarding dinámico.md
     - 07.-Prácticas:
+      - ./02.-SSH/07.-Prácticas/index.md
       - 01.-Descripción del laboratorio: ./02.-SSH/07.-Prácticas/01.-Descripción del laboratorio.md
       - 02.-Ejercicios: ./02.-SSH/07.-Prácticas/02.-Ejercicios.md
     - Archive: ./02.-SSH/Archive.tar
@@ -128,7 +129,7 @@ nav:
       - 02.-El servidor Kea DHCP: ./03.-DHCP/10.-Prácticas/02.-El servidor Kea DHCP.md
       - 03.-Escenario de prácticas:
         - ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/index.md
-        - 01.-Creación de la plantilla para las máquinas clientes escenario de prácticas: ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/01.-Creación de la plantilla para las máquinas clientes escenario de prácticas.md
+        - 01.-Creación de la plantilla para las máquinas clientes: ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/01.-Creación de la plantilla para las máquinas clientes.md
         - 02.-Creación del escenario: ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/02.-Creación del escenario.md
         - 03.-Creación de las máquinas clientes: ./03.-DHCP/10.-Prácticas/03.-Escenario de prácticas/03.-Creación de las máquinas clientes.md
       - 04.-Instalación de servidor DHCP:
@@ -160,9 +161,111 @@ nav:
     - 04.-Administración:
       - ./04.-DNS/04.-Administración/index.md
       - 01.-Zona de Autoridad y Zona: ./04.-DNS/04.-Administración/01.-Zona de Autoridad y Zona.md
-    - 10.-Prácticas:
-      - 01.-Consultas DNS: ./04.-DNS/10.-Prácticas/01.-Consultas DNS.md
+      - 02.-Componentes del servicio DNS: ./04.-DNS/04.-Administración/02.-Componentes del servicio DNS.md
+      - 03.-Servidores de nombres: ./04.-DNS/04.-Administración/03.-Servidores de nombres.md
+      - 04.-Clientes (resolvers): ./04.-DNS/04.-Administración/04.-Clientes (resolvers).md
+      - 05.-Resoluciones de Nombre: ./04.-DNS/04.-Administración/05.-Resoluciones de Nombre.md
+    - 05.-Zonas de autoridad:
+      - ./04.-DNS/05.-Zonas de autoridad/index.md
+      - 01.-Introducción: ./04.-DNS/05.-Zonas de autoridad/01.-Introducción.md
+      - 02.-Registros de Recursos (RRs): ./04.-DNS/05.-Zonas de autoridad/02.-Registros de Recursos (RRs).md
+      - 03.-Registro de recurso SOA: ./04.-DNS/05.-Zonas de autoridad/03.-Registro de recurso SOA.md
+      - 04.-Registro de recurso NS: ./04.-DNS/05.-Zonas de autoridad/04.-Registro de recurso NS.md
+      - 05.-Registro de recurso A: ./04.-DNS/05.-Zonas de autoridad/05.-Registro de recurso A.md
+      - 06.-Registro de Recurso PTR: ./04.-DNS/05.-Zonas de autoridad/06.-Registro de Recurso PTR.md
+      - 07.-Registro de recursos CNAME: ./04.-DNS/05.-Zonas de autoridad/07.-Registro de recursos CNAME.md
+      - 08.-Registro de Recurso SRV: ./04.-DNS/05.-Zonas de autoridad/08.-Registro de Recurso SRV.md
+    - 06.-Ejemplos:
+      - 01.-Ejemplo de Fichero de Configuración DNS: ./04.-DNS/06.-Ejemplos/01.-Ejemplo de Fichero de Configuración DNS.md
+      - 02.-Ejemplo de Archivo de Zona Inversa: ./04.-DNS/06.-Ejemplos/02.-Ejemplo de Archivo de Zona Inversa.md
+      - 03.-Pequeño ejemplo completo:
+        - 01.-Archivo ejemplo de configuración principal `named.conf`: ./04.-DNS/06.-Ejemplos/03.-Pequeño ejemplo completo/01.-Archivo ejemplo de configuración principal `named.conf`.md
+        - 02.-Archivo ejemplo de zona directa `iesromerovargas.com.zone`: ./04.-DNS/06.-Ejemplos/03.-Pequeño ejemplo completo/02.-Archivo ejemplo de zona directa `iesromerovargas.com.zone`.md
+        - 03.-Archivo ejemplo de zona inversa  `iesromerovargas.com.rev`: ./04.-DNS/06.-Ejemplos/03.-Pequeño ejemplo completo/03.-Archivo ejemplo de zona inversa  `iesromerovargas.com.rev`.md
+    - 07.-Comandos relacionados con el servicio DNS: ./04.-DNS/07.-Comandos relacionados con el servicio DNS.md
+    - 08.-Prácticas:
+      - 01.-Archivos de Zona DNS: ./04.-DNS/08.-Prácticas/01.-Archivos de Zona DNS.md
+      - 02.-Consultas DNS: ./04.-DNS/08.-Prácticas/02.-Consultas DNS.md
+      - 03.-Archivos de Zona DNS: ./04.-DNS/08.-Prácticas/03.-Archivos de Zona DNS.md
+      - 04.-Uso de comandos DNS: ./04.-DNS/08.-Prácticas/04.-Uso de comandos DNS.md
+      - 05.-DNS con Ubuntu Server: ./04.-DNS/08.-Prácticas/05.-DNS con Ubuntu Server.md
+      - 06.-Soluciones:
+        - 01.-Archivos de Zona DNS(Sol): ./04.-DNS/08.-Prácticas/06.-Soluciones/01.-Archivos de Zona DNS(Sol).md
+        - 02.-Consultas DNS (Sol): ./04.-DNS/08.-Prácticas/06.-Soluciones/02.-Consultas DNS (Sol).md
+        - 03.-Archivo de Zona DNS (Sol): ./04.-DNS/08.-Prácticas/06.-Soluciones/03.-Archivo de Zona DNS (Sol).md
+        - 04.-Uso de comandos DNS (Sol): ./04.-DNS/08.-Prácticas/06.-Soluciones/04.-Uso de comandos DNS (Sol).md
+        - 05.-DNS con Ubuntu Server(Sol): ./04.-DNS/08.-Prácticas/06.-Soluciones/05.-DNS con Ubuntu Server(Sol).md
     - 99.-Enlaces de interés: ./04.-DNS/99.-Enlaces de interés.md
+  - 05.-Docker:
+    - ./05.-Docker/index.md
+    - 01.-Introducción: ./05.-Docker/01.-Introducción.md
+    - 02.-Instalación:
+      - ./05.-Docker/02.-Instalación/index.md
+      - 01.-Instalación rápida en Arch Linux: ./05.-Docker/02.-Instalación/01.-Instalación rápida en Arch Linux.md
+      - 02.-Instalación rápida en Fedora: ./05.-Docker/02.-Instalación/02.-Instalación rápida en Fedora.md
+      - 03.-Instalación rápida en Ubuntu: ./05.-Docker/02.-Instalación/03.-Instalación rápida en Ubuntu.md
+    - 03.-Conceptos Clave:
+      - ./05.-Docker/03.-Conceptos Clave/index.md
+      - 01.-Imágenes:
+        - ./05.-Docker/03.-Conceptos Clave/01.-Imágenes/index.md
+        - 01.-Docker Hub: ./05.-Docker/03.-Conceptos Clave/01.-Imágenes/01.-Docker Hub.md
+      - 02.-Contenedores: ./05.-Docker/03.-Conceptos Clave/02.-Contenedores.md
+      - 03.-Volúmenes: ./05.-Docker/03.-Conceptos Clave/03.-Volúmenes.md
+      - 04.-Capas: ./05.-Docker/03.-Conceptos Clave/04.-Capas.md
+      - 05.-Redes: ./05.-Docker/03.-Conceptos Clave/05.-Redes.md
+      - 06.-Estructura de docker: ./05.-Docker/03.-Conceptos Clave/06.-Estructura de docker.md
+    - 04.-Manos a la obra:
+      - ./05.-Docker/04.-Manos a la obra/index.md
+      - 01.-Versión y Gestión del Servicio: ./05.-Docker/04.-Manos a la obra/01.-Versión y Gestión del Servicio.md
+      - 02.-Usar el comando docker: ./05.-Docker/04.-Manos a la obra/02.-Usar el comando docker.md
+      - 03.-Trabajar con imágenes de docker: ./05.-Docker/04.-Manos a la obra/03.-Trabajar con imágenes de docker.md
+      - 04.-Ejecutar un contenedor de Docker: ./05.-Docker/04.-Manos a la obra/04.-Ejecutar un contenedor de Docker.md
+      - 05.-Administrar contenedores de docker: ./05.-Docker/04.-Manos a la obra/05.-Administrar contenedores de docker.md
+      - 06.-Creación de una imagen personalizada a partir de un contenedor: ./05.-Docker/04.-Manos a la obra/06.-Creación de una imagen personalizada a partir de un contenedor.md
+      - 07.-Guardar imágenes de docker en un repositorio de docker: ./05.-Docker/04.-Manos a la obra/07.-Guardar imágenes de docker en un repositorio de docker.md
+      - 08.-Variables de entorno: ./05.-Docker/04.-Manos a la obra/08.-Variables de entorno.md
+      - 09.-Practica con Docker Playground: ./05.-Docker/04.-Manos a la obra/09.-Practica con Docker Playground.md
+      - 10.-Limpiándolo todo: ./05.-Docker/04.-Manos a la obra/10.-Limpiándolo todo.md
+      - 11.-Ejercicios creación de contenedores básicos I: ./05.-Docker/04.-Manos a la obra/11.-Ejercicios creación de contenedores básicos I.md
+    - 05.-Gestión de imágenes:
+      - ./05.-Docker/05.-Gestión de imágenes/index.md
+      - 01.-Imagen a partir de un contenedor: ./05.-Docker/05.-Gestión de imágenes/01.-Imagen a partir de un contenedor.md
+      - 02.-Imagen a partir de un fichero Dockerfile: ./05.-Docker/05.-Gestión de imágenes/02.-Imagen a partir de un fichero Dockerfile.md
+      - 03.-Construyendo imágenes con docker build: ./05.-Docker/05.-Gestión de imágenes/03.-Construyendo imágenes con docker build.md
+      - 04.-Organización de las imágenes: ./05.-Docker/05.-Gestión de imágenes/04.-Organización de las imágenes.md
+      - 05.-Registro de imágenes y Docker Hub: ./05.-Docker/05.-Gestión de imágenes/05.-Registro de imágenes y Docker Hub.md
+      - 06.-Buenas prácticas en creación de Dockerfile: ./05.-Docker/05.-Gestión de imágenes/06.-Buenas prácticas en creación de Dockerfile.md
+      - 07.-Ejercicios de creación de contenedores básicos II: ./05.-Docker/05.-Gestión de imágenes/07.-Ejercicios de creación de contenedores básicos II.md
+    - 06.-Volúmenes:
+      - ./05.-Docker/06.-Volúmenes/index.md
+      - 01.-Volúmenes docker y bind mount: ./05.-Docker/06.-Volúmenes/01.-Volúmenes docker y bind mount.md
+      - 02.-Asociando almacenamiento a los contenedores I: ./05.-Docker/06.-Volúmenes/02.-Asociando almacenamiento a los contenedores I.md
+      - 03.-Asociando almacenamiento a los contenedores II: ./05.-Docker/06.-Volúmenes/03.-Asociando almacenamiento a los contenedores II.md
+      - 04.-Redes en docker: ./05.-Docker/06.-Volúmenes/04.-Redes en docker.md
+      - 05.-Ejemplos: ./05.-Docker/06.-Volúmenes/05.-Ejemplos.md
+      - 06.-Otros usos del almacenamiento: ./05.-Docker/06.-Volúmenes/06.-Otros usos del almacenamiento.md
+      - Ejercicios de Volúmenes: ./05.-Docker/06.-Volúmenes/Ejercicios de Volúmenes.md
+    - 07.-Redes:
+      - ./05.-Docker/07.-Redes/index.md
+      - 01.-Introducción a las redes en docker: ./05.-Docker/07.-Redes/01.-Introducción a las redes en docker.md
+      - 02.-Tipos de redes en docker: ./05.-Docker/07.-Redes/02.-Tipos de redes en docker.md
+      - 03.-Gestionando redes en docker: ./05.-Docker/07.-Redes/03.-Gestionando redes en docker.md
+      - 04.-Uso de la red bridge por defecto: ./05.-Docker/07.-Redes/04.-Uso de la red bridge por defecto.md
+      - 05.-Uso de las redes bridge definidas por el usuario: ./05.-Docker/07.-Redes/05.-Uso de las redes bridge definidas por el usuario.md
+      - 06.-Convertir el uso de la red bridge por defecto por una definida por el usuario: ./05.-Docker/07.-Redes/06.-Convertir el uso de la red bridge por defecto por una definida por el usuario.md
+      - 07.-Ejemplos: ./05.-Docker/07.-Redes/07.-Ejemplos.md
+    - 08.-Escenarios multicontenedor:
+      - ./05.-Docker/08.-Escenarios multicontenedor/index.md
+      - 01.-Instalación de docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/01.-Instalación de docker-compose.md
+      - 02.-El fichero docker-compose.yml: ./05.-Docker/08.-Escenarios multicontenedor/02.-El fichero docker-compose.yml.md
+      - 03.-El comando docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/03.-El comando docker-compose.md
+      - 04.-Almacenamiento con docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/04.-Almacenamiento con docker-compose.md
+      - 05.-Redes con docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/05.-Redes con docker-compose.md
+      - 06.-Ejemplos: ./05.-Docker/08.-Escenarios multicontenedor/06.-Ejemplos.md
+    - 09.-Ejercicios:
+      - ./05.-Docker/09.-Ejercicios/index.md
+    - 10.-Cheatsheet:
+      - ./05.-Docker/10.-Cheatsheet/index.md
   - 99.-Anexos:
     - ./99.-Anexos/index.md
     - 00.-Mi clave pública: ./99.-Anexos/00.-Mi clave pública.md

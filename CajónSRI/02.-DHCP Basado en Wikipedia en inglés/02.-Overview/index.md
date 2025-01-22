@@ -1,2 +1,0 @@
-- Protocol that defines how devices communicate within and across local networks on the Internet
-- Allows DHCP servers to automatically and dynamically manage IP settings for devices on a local network
