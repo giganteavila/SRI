@@ -1,0 +1,7 @@
+CajónSRI/
+mkdocs.yml
+nav.py
+nav.yml
+poetry.lock
+publica.sh
+pyproject.toml

@@ -259,7 +259,7 @@ nav:
       - 04.-Redes en docker: ./05.-Docker/06.-Volúmenes/04.-Redes en docker.md
       - 05.-Ejemplos: ./05.-Docker/06.-Volúmenes/05.-Ejemplos.md
       - 06.-Otros usos del almacenamiento: ./05.-Docker/06.-Volúmenes/06.-Otros usos del almacenamiento.md
-      - Ejercicios de Volúmenes: ./05.-Docker/06.-Volúmenes/Ejercicios de Volúmenes.md
+      - 07.-Prácticas de Volúmenes: ./05.-Docker/06.-Volúmenes/07.-Prácticas de Volúmenes.md
     - 07.-Redes:
       - ./05.-Docker/07.-Redes/index.md
       - 01.-Introducción a las redes en docker: ./05.-Docker/07.-Redes/01.-Introducción a las redes en docker.md
@@ -268,7 +268,7 @@ nav:
       - 04.-Uso de la red bridge por defecto: ./05.-Docker/07.-Redes/04.-Uso de la red bridge por defecto.md
       - 05.-Uso de las redes bridge definidas por el usuario: ./05.-Docker/07.-Redes/05.-Uso de las redes bridge definidas por el usuario.md
       - 06.-Convertir el uso de la red bridge por defecto por una definida por el usuario: ./05.-Docker/07.-Redes/06.-Convertir el uso de la red bridge por defecto por una definida por el usuario.md
-      - 07.-Ejemplos: ./05.-Docker/07.-Redes/07.-Ejemplos.md
+      - 07.-Prácticas de Redes: ./05.-Docker/07.-Redes/07.-Prácticas de Redes.md
     - 08.-Escenarios multicontenedor:
       - ./05.-Docker/08.-Escenarios multicontenedor/index.md
       - 01.-Instalación de docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/01.-Instalación de docker-compose.md
@@ -276,9 +276,9 @@ nav:
       - 03.-El comando docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/03.-El comando docker-compose.md
       - 04.-Almacenamiento con docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/04.-Almacenamiento con docker-compose.md
       - 05.-Redes con docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/05.-Redes con docker-compose.md
-      - 06.-Ejemplos: ./05.-Docker/08.-Escenarios multicontenedor/06.-Ejemplos.md
-    - 09.-Ejercicios:
-      - ./05.-Docker/09.-Ejercicios/index.md
+      - 06.-Prácticas docker-compose: ./05.-Docker/08.-Escenarios multicontenedor/06.-Prácticas docker-compose.md
+    - 09.-Prácticas:
+      - ./05.-Docker/09.-Prácticas/index.md
     - 10.-Cheatsheet:
       - ./05.-Docker/10.-Cheatsheet/index.md
   - 99.-Anexos:

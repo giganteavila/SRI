@@ -10,7 +10,7 @@
 - [06.-Volúmenes](./06.-Volúmenes/index.html)
 - [07.-Redes](./06.-Redes/index.html)
 - [08.-Escenarios multicontenedor](./08.-Escenarios%20multicontenedor/index.html) 
-- [09.-Ejercicios](./09.-Ejercicios/index.html)
+- [09.-Prácticas](./09.-Prácticas/index.html)
 - [10.-Cheatsheet](./10.-Cheatsheet/index.html)
 
 - [Anexo: Docker en python y django](Docker%20en%20python%20y%20django.md)
