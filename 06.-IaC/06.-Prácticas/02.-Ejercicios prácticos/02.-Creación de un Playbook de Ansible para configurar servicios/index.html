@@ -9242,68 +9242,56 @@
 
 <h3 id="ejercicio-2-creacion-de-un-playbook-de-ansible-para-configurar-servicios"><strong>Ejercicio 2: Creación de un Playbook de Ansible para configurar servicios</strong><a class="headerlink" href="#ejercicio-2-creacion-de-un-playbook-de-ansible-para-configurar-servicios" title="Permanent link">&para;</a></h3>
 <p><strong>Objetivo:</strong> Aprender a automatizar la configuración de un servidor con Ansible.</p>
-<ol>
+<ul>
 <li>
 <p>Instala <strong>Ansible</strong> en tu sistema.</p>
 </li>
 <li>
-<p>Crea un directorio de proyecto y dentro de él, un archivo </p>
+<p>Crea un directorio de proyecto y dentro de él, un archivo <code>inventory</code> con la dirección de tu máquina Vagrant:</p>
 </li>
-</ol>
-<p>inventory</p>
-<pre><code>con la dirección de tu máquina Vagrant:
+</ul>
+<pre><code>   [servidores]
+   192.168.33.10 ansible_user=vagrant ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
 </code></pre>
-<p><code>[servidores]
-   192.168.33.10 ansible_user=vagrant ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key</code></p>
-<ol>
-<li>Crea un </li>
-</ol>
-<p>playbook.yml</p>
-<pre><code>que realice las siguientes tareas en la máquina:
-</code></pre>
+<ul>
+<li>
+<p>Crea un <code>playbook.yml</code> que realice las siguientes tareas en la máquina:</p>
 <ul>
 <li>Actualizar los paquetes del sistema</li>
 <li>Instalar Apache</li>
-<li>
-<p>Iniciar y habilitar el servicio Apache</p>
+<li>Iniciar y habilitar el servicio Apache</li>
+</ul>
 </li>
 <li>
-<p>El contenido del </p>
+<p>El contenido del <code>playbook.yml</code> debería ser similar a este:</p>
 </li>
 </ul>
-<p>playbook.yml</p>
-<pre><code>debería ser similar a este:
-</code></pre>
-<p>```yaml
-   - hosts: servidores
+<pre><code class="language-yaml">   - hosts: servidores
      become: yes
      tasks:
        - name: Actualizar paquetes
          apt:
-           update_cache: yes</p>
-<pre><code>   - name: Instalar Apache
-     apt:
-       name: apache2
-       state: present
+           update_cache: yes
 
-   - name: Iniciar y habilitar Apache
-     service:
-       name: apache2
-       state: started
-       enabled: yes
+       - name: Instalar Apache
+         apt:
+           name: apache2
+           state: present
+
+       - name: Iniciar y habilitar Apache
+         service:
+           name: apache2
+           state: started
+           enabled: yes
 </code></pre>
-<p>```</p>
-<ol>
-<li>Ejecuta el </li>
-</ol>
-<p>playbook</p>
-<pre><code>con:
+<ul>
+<li>Ejecuta el playbook con:</li>
+</ul>
+<pre><code class="language-bash">   ansible-playbook -i inventory playbook.yml
 </code></pre>
-<p><code>bash
-   ansible-playbook -i inventory playbook.yml</code></p>
-<ol>
+<ul>
 <li>Verifica que Apache está funcionando accediendo a <code>http://192.168.33.10</code> desde tu navegador.</li>
-</ol>
+</ul>
 
 
 

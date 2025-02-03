@@ -9184,35 +9184,29 @@
 <p><strong>Objetivo:</strong> Aprender a crear y gestionar máquinas virtuales con Vagrant.</p>
 <ol>
 <li>
-<p>Instala <strong>Vagrant</strong> y <strong>VirtualBox</strong> (o KVM/QEMU si usas Linux).</p>
+<p>Instala <strong>Vagrant</strong> y KVM/QEMU.</p>
 </li>
 <li>
-<p>Crea un directorio de trabajo y dentro de él, inicializa un nuevo </p>
+<p>Crea un directorio de trabajo y dentro de él, inicializa un nuevo <code>Vagrantfile</code> con el siguiente comando:</p>
 </li>
 </ol>
-<p>Vagrantfile</p>
-<pre><code>con el siguiente comando:
+<pre><code class="language-bash">    vagrant init ubuntu/bionic64
 </code></pre>
-<p><code>bash
-   vagrant init ubuntu/bionic64</code></p>
 <ol>
-<li>Modifica el </li>
-</ol>
-<p>Vagrantfile</p>
-<pre><code>para que la máquina tenga:
-</code></pre>
+<li>
+<p>Modifica el <code>Vagrantfile</code> para que la máquina tenga:</p>
 <ul>
 <li>2 GB de RAM</li>
 <li>2 CPU</li>
-<li>
-<p>Una carpeta compartida entre el host y la VM</p>
+<li>Una carpeta compartida entre el host y la VM</li>
+</ul>
 </li>
 <li>
 <p>Inicia la máquina con:</p>
 </li>
-</ul>
-<p><code>bash
-   vagrant up</code></p>
+</ol>
+<pre><code class="language-bash">    vagrant up
+</code></pre>
 <ol>
 <li>
 <p>Accede a la máquina mediante SSH y comprueba su conectividad con <code>ping 8.8.8.8</code>.</p>
@@ -9221,9 +9215,9 @@
 <p>Detén y elimina la máquina con:</p>
 </li>
 </ol>
-<p><code>bash
-   vagrant halt
-   vagrant destroy</code></p>
+<pre><code class="language-bash">    vagrant halt
+    vagrant destroy
+</code></pre>
 
 
 
